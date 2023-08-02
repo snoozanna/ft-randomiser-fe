@@ -10,7 +10,6 @@ module.exports = {
     twitter: '@KrishnaIstha',
   },
   plugins: [
-    `gatsby-plugin-scroll-reveal`,
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-material-ui`,
     'gatsby-plugin-styled-components',
