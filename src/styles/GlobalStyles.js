@@ -6,7 +6,7 @@ import { devices } from './breakpoints.js';
 const GlobalStyles = createGlobalStyle`
   :root {
     --red: #FF4949;
-    --black: #2E2E2E;
+    --black: 0000;
     --white: #fff;
     --grey: #efefef;
     --blue:#3e31de;
@@ -125,17 +125,18 @@ button * {
     background: var(--pink);
     color: black;
     font-weight: 600;
-    border: 0;
+    border: 2px solid black;
     padding: 0.6rem 1rem;
     border-radius: 2px;
     cursor: pointer;
-    --cast: 2px;
+    --cast: 4px;
     box-shadow: var(--cast) var(--cast) 0 var(--black);
-    text-shadow: 0.5px 0.5px 0 var(--black);
+    /* text-shadow: 0.5px 0.5px 0 var(--black); */
     transition: all 0.2s;
     &:hover {
-      --cast: 4px;
+      --cast: 6px;
     }
+  
   }
 
   .gatsby-image-wrapper img[src*=base64\\,] {

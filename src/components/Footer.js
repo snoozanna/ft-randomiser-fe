@@ -20,7 +20,7 @@ width: 100%;
   nav{
     width: 100%;
     display: flex;
-  justify-content: space-between; 
+  justify-content: space-around; 
   }
   .scroller-wrapper{
     back
