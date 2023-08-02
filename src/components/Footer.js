@@ -12,17 +12,32 @@ position:fixed;
 bottom:0;
 padding:  var(--padding);
 padding-top: 0;
-width: 90vw;
+width: 100%;
   display: flex;
   justify-content: flex-start;
-  justify-content: space-between; 
+  justify-content: space-around; 
    align-items:end;
+  nav{
+    width: 100%;
+    display: flex;
+  justify-content: space-between; 
+  }
   .scroller-wrapper{
     back
   }
     @media ${devices.mobileL} {
      align-items:end;
-
+     width: 100%;
+nav{
+    width: 100%;
+    display: flex;
+  justify-content: space-around; 
+  flex-direction: column;
+  a{
+    text-align:right;
+    margin-block-end:1rem;
+  }
+  }
     }
 `;
 
@@ -34,10 +49,12 @@ const Footer = () => {
       <button type="button" onClick={() => reset()}>
         RESET
       </button>
-      <Link to="/simple">Simple Randomiser</Link>
-      <Link to="/questions-list">Question List</Link>
-      <Link to="/by-category">Question by Category</Link>
-      <Link to="/by-level">Question by Level</Link>
+      <nav>
+        <Link to="/simple">Simple Randomiser</Link>
+        <Link to="/questions-list">Question List</Link>
+        <Link to="/by-category">Question by Category</Link>
+        <Link to="/by-level">Question by Level</Link>
+      </nav>
     </FooterStyles>
   );
 };

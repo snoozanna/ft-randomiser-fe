@@ -39,7 +39,6 @@
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-apollo": "^4.0.3",
-    "gatsby-plugin-material-ui": "^4.0.2",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-source-sanity": "^6.0.4",
