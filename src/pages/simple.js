@@ -53,11 +53,11 @@ const RandomQ = ({ data }) => {
   return (
     <>
       <RandomQStyles>
-        <span className="category">
+        {/* <span className="category">
           {quest.category.length > 0
             ? `Category: ${quest.category[0].name}`
             : ''}
-        </span>
+        </span> */}
         <div className="question-wrapper">
           <span className="question">
             {quest.question ? quest.question : ''}

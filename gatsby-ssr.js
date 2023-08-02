@@ -2,7 +2,7 @@ import React from 'react';
 import { ApolloProvider } from '@apollo/client';
 import { QuestionProvider } from './src/context/questions.context';
 import { MenuProvider } from './src/context/menu.context';
-import client from './src/utils/client';
+import client from './src/gatsby-plugin-apollo/client';
 import Layout from './src/components/Layout';
 import { FormProvider } from './src/context/form.context';
 

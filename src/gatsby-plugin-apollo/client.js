@@ -5,7 +5,11 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink({
     uri: 'https://vlp0qz8p.api.sanity.io/v1/graphql/production/default/',
-    fetch,
+    credentials: 'include',
+    fetchOptions: {
+      mode: 'cors',
+    },
+    https: fetch,
   }),
 });
 

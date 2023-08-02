@@ -1,13 +1,10 @@
-import { Link, graphql, useStaticQuery } from 'gatsby';
-import { useQuery, gql } from '@apollo/client';
+import { Link, useStaticQuery } from 'gatsby';
+import { useQuery } from '@apollo/client';
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
-// import Query from '../components/Query';
-import SEO from '../components/SEO';
-import { devices } from '../styles/breakpoints.js';
 import Loader from '../components/Loader/index.js';
 import { QuestionContext } from '../context/questions.context';
-// import Q_BY_CATEGORY_QUERY from '../queries/questByCat';
+import QUESTIONS_QUERY from '../queries/questions.js';
 
 const QByCatStyles = styled.div`
   display: flex;
@@ -39,97 +36,63 @@ const QByCatStyles = styled.div`
   }
 `;
 
-const Q_BY_CATEGORY_QUERY = gql`
-  query myQuery {
-    allSanityQuestions {
-      nodes {
-        id
-        name
-      }
-    }
-  }
-`;
+// const Q_BY_CATEGORY_QUERY = gql`
+//   query myQuery {
+//     allSanityQuestion {
+//       nodes {
+//         id
+//       }
+//     }
+//   }
+// `;
 
 const QByCat = () => {
   const { quest, setQuest, alreadyCalled, setAlreadyCalled } =
     useContext(QuestionContext);
   const [selectedCategory, setSelectedCategory] = useState('Life');
-  const { data, loading, error } = useQuery(Q_BY_CATEGORY_QUERY); // <-- just works
+
+  const { data, loading, error } = useQuery(QUESTIONS_QUERY);
+
   if (loading) return <Loader />;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
+  if (!data) return <text>Could not find data</text>;
   console.log(data);
   // const [selectedCategory, setSelectedCategory] = useState({ name: 'Life' });
   // // const [category, setCategory] = useState('Life');
-  // const catData = useStaticQuery(
-  //   graphql`
-  //     query QCatQuery($selectedCategory: String) {
-  //       questByCat: allSanityQuestion(
-  //         # filter: { category: { elemMatch: { name: { eq: $selectedCategory } } } }
-  //         filter: {
-  //           category: { elemMatch: { name: { eq: $selectedCategory } } }
-  //         }
-  //       ) {
-  //         nodes {
-  //           id
-  //           question
-  //           category {
-  //             name
-  //           }
-  //         }
-  //       }
-  //       categories: allSanityCategory {
-  //         nodes {
-  //           id
-  //           name
-  //         }
-  //       }
-  //     }
-  //   `
-  // );
 
-  // const categories = catData.categories.nodes;
+  const { categories } = data;
 
-  // const handleCategoryClick = (clickedCategory) => {
-  //   setSelectedCategory(clickedCategory);
-  //   console.log(catData.questByCat);
-  // };
+  const handleCategoryClick = (clickedCategory) => {
+    // setSelectedCategory(clickedCategory);
+    // console.log('data.questByCat', data.questByCat);
+    console.log(clickedCategory);
+  };
 
   return (
     <>
       <QByCatStyles>
         <header>
-          {/* <div className="cat-btn-wrapper">
+          <div className="cat-btn-wrapper">
             {categories.map((cat) => (
               <button
                 type="button"
-                key={cat.id}
+                key={cat._id}
                 onClick={() => handleCategoryClick(cat)}
               >
                 {cat.name}
               </button>
             ))}
-          </div> */}
+          </div>
         </header>
         {/* <Query query={Q_BY_CATEGORY_QUERY}>
           {({ data: { questions } }) => {
             console.log(questions);
           }}
         </Query> */}
-        <p>hi</p>
+        {selectedCategory.name}
       </QByCatStyles>
     </>
   );
 };
 
 export default QByCat;
-
-// export const query = graphql`
-//   query CategoryQuery {
-//     categories: allSanityCategories {
-//       nodes {
-//         id
-//         name
-//       }
-//     }
-//   }
-// `;

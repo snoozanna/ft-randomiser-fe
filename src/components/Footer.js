@@ -37,6 +37,7 @@ const Footer = () => {
       <Link to="/simple">Simple Randomiser</Link>
       <Link to="/questions-list">Question List</Link>
       <Link to="/by-category">Question by Category</Link>
+      <Link to="/by-level">Question by Level</Link>
     </FooterStyles>
   );
 };
