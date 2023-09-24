@@ -1,32 +1,33 @@
-import dotenv from 'dotenv';
+const dotenv = require("dotenv");
 
-dotenv.config({ path: '.env' });
+dotenv.config({ path: ".env" });
 
 module.exports = {
   siteMetadata: {
     title: `Randomiser Test`,
-    siteUrl: 'https://first.trimester',
-    description: 'First Trimester by Krisha Istha',
-    twitter: '@KrishnaIstha',
+    siteUrl: "https://first.trimester",
+    description: "First Trimester by Krisha Istha",
+    twitter: "@KrishnaIstha",
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-apollo',
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-image",
+    "gatsby-plugin-apollo",
     {
-      resolve: 'gatsby-plugin-anchor-links',
+      resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: -50,
       },
     },
     {
       // this is the name of the plugin you are adding
-      resolve: 'gatsby-source-sanity',
+      resolve: "gatsby-source-sanity",
       options: {
-        projectId: 'vlp0qz8p',
-        dataset: 'production',
+        projectId: "vlp0qz8p",
+        dataset: "production",
         watchMode: true,
-        apiVersion: '2023-08-01', // use a UTC date string
+        apiVersion: "2023-08-01", // use a UTC date string
         token: process.env.SANITY_TOKEN,
       },
     },
