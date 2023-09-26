@@ -7,21 +7,80 @@ import Sequence from '../components/Sequence.js';
 import { QuestionContext } from '../context/questions.context';
 
 const SequencePageStyles = styled.div`
+padding: 4rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  height: 100%;
+  /* height: 100%; */
+  width:100%;
   align-items: center;
+  h3{
+     margin-block-end: 2rem;
+  }
   .question-wrapper {
-    width: 100%;
+    /* width: 70%; */
     margin-block-end: 4rem;
     text-align: center;
+    display:flex;
+      flex-direction: column;
+     align-items: start;
+    justify-content:center ;
     span.question {
       font-size: 4rem;
       font-weight: 600;
     }
   }
+  .sequence-admin{
+    /* max-width:30%; */
+    display: flex;
+    gap:1rem;
+     ;
+  }
 `;
+
+const SeqBtnContainerStyles = styled.div`
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+border: 2px solid white;
+padding: 1.5rem;
+border-radius: 10px;
+h3{
+  font-size:2rem;
+   margin-bottom:2rem;
+}
+.label-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.5rem;
+   margin-bottom:2rem;
+   width:min-content ;
+}
+span.label{
+  text-align:left;
+  padding: 8px;
+  border-radius: 10px;
+  width: fit-content;
+  font-size:1.2rem;
+  font-weight:400;
+    margin-right:0.5rem;
+
+}
+span.category.label{
+  background: purple;
+}
+
+span.level.label.deep{
+  background: #a15526;
+}
+span.level.label.lighthearted{
+  background: #308b30;
+}
+span.level.label.medium{
+  background: #249faf;
+}
+`
 
 const SequencePage = ({ data }) => {
   const { currentQuestion, setCurrentQuestion, alreadyCalled, setAlreadyCalled } =
@@ -29,34 +88,75 @@ const SequencePage = ({ data }) => {
 const [currentSequence, setCurrentSequence] = useState([])
   const questions = data.questions.nodes;
 
-  const clickHandler = (questions) => {
+  const clickHandler = (questions, sequenceOrder) => {
     // console.log("building sequence")
-    const sequence = buildSequence(questions)
+    const sequence = buildSequence(questions, sequenceOrder)
     setCurrentSequence(sequence)
   }
+
+  const sequenceOrder1 = ["deep", "lighthearted", "deep", "deep", "medium", "lighthearted"];
+
+    const sequenceOrder2 = [ "lighthearted", "medium", "lighthearted", "medium", "deep","lighthearted"];
+  
+  const sequenceOrder3 = [ "medium", "lighthearted", "deep", "deep", "lighthearted","medium"];
 
   return (
     <>
       <SequencePageStyles>
-        {/* <span className="category">
-          {quest.category.length > 0
-            ? `Category: ${quest.category[0].name}`
-            : ''}
-        </span> */}
-        {/* {currentSequence[0].question} */}
+   
         <div className="question-wrapper">
-          <p>Sequence order: ["deep", "lighthearted", "deep", "deep", "medium", "lighthearted"] </p>
           {/* <h3 className="question">
             {currentQuestion.question ? currentQuestion.question : ''}
           </h3> */}
           {/* {currentSequence[0].question ? currentSequence[0].question : ""} */}
+          <h3>CURRENT SEQUENCE</h3>
           {currentSequence ? <Sequence sequence={currentSequence}/> : <p>no sequence yet</p>}
         </div>
-        <div className="button-wrapper">
-          <button type="button" onClick={() => clickHandler({questions})}>
-            Build sequence
-          </button>
-        </div>
+        <div className='sequence-admin'>
+
+            <SeqBtnContainerStyles>
+              <h3>Sequence 1</h3>
+  
+              <div className='label-container'>
+         {sequenceOrder1.map((level) => {
+          return(
+             <span className={`level label ${level}`}>{level}</span>
+          )
+         })}       
+      </div>
+              <button type="button" onClick={() => clickHandler({questions}, sequenceOrder1)}>
+                Build sequence
+              </button>
+            </SeqBtnContainerStyles>
+        <SeqBtnContainerStyles>
+              <h3>Sequence 2</h3>
+  
+              <div className='label-container'>
+         {sequenceOrder2.map((level) => {
+          return(
+             <span className={`level label ${level}`}>{level}</span>
+          )
+         })}       
+      </div>
+              <button type="button" onClick={() => clickHandler({questions}, sequenceOrder2)}>
+                Build sequence
+              </button>
+            </SeqBtnContainerStyles>
+        <SeqBtnContainerStyles>
+              <h3>Sequence 3</h3>
+  
+              <div className='label-container'>
+         {sequenceOrder3.map((level) => {
+          return(
+             <span className={`level label ${level}`}>{level}</span>
+          )
+         })}       
+      </div>
+              <button type="button" onClick={() => clickHandler({questions}, sequenceOrder3)}>
+                Build sequence
+              </button>
+            </SeqBtnContainerStyles>
+          </div>
       </SequencePageStyles>
     </>
   );

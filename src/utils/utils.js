@@ -70,13 +70,13 @@ function shuffleArray(array) {
 }
 
 
-const buildSequence = ({ questions }) => {
+const buildSequence = ({ questions }, sequenceOrder) => {
   console.log("building sequence");
   const sequence = [];
   const usedQuestionIds = new Set(); // To track used question IDs
   
-  // Define the sequence order
-  const sequenceOrder = ["deep", "lighthearted", "deep", "deep", "medium", "lighthearted"];
+  // // Define the sequence order
+  // const sequenceOrder = ["deep", "lighthearted", "deep", "deep", "medium", "lighthearted"];
   
   // Create a map to track the number of questions added for each level
   const addedCounts = {};

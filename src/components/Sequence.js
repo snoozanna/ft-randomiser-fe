@@ -28,8 +28,14 @@ span.category.label{
   background: purple;
 }
 
-span.level.label{
-  background: green;
+span.level.label.deep{
+  background: #a15526;
+}
+span.level.label.lighthearted{
+  background: #308b30;
+}
+span.level.label.medium{
+  background: #249faf;
 }
 `
 
@@ -42,7 +48,7 @@ return(
       <SequenceStyles>
     <div className='label-container'>
       <span className="category label">{question.category.name}</span>
-      <span className="level label">{question.level}</span>
+      <span className={`level label ${question.level}`}>{question.level}</span>
     </div>
     <p key={question.id}>{question.question}</p>
 
