@@ -5,7 +5,7 @@ import Loader from './Loader/index';
 import { getRandomQ } from '../utils/utils.js';
 import Q_BY_MEDIUM from '../queries/questionsMedium.js';
 
-const DeepBtn = ({ setQuest, alreadyCalled, setAlreadyCalled }) => {
+const DeepBtn = ({ allQuestions, setCurrentQuestion, alreadyCalled, setAlreadyCalled  }) => {
   const { data, loading, error } = useQuery(Q_BY_MEDIUM);
 
   if (loading) return <Loader />;
@@ -16,7 +16,7 @@ const DeepBtn = ({ setQuest, alreadyCalled, setAlreadyCalled }) => {
   const { questions } = data;
 
   const handleClick = () => {
-    getRandomQ({ questions, setQuest, alreadyCalled, setAlreadyCalled });
+  getRandomQ({ questionsToChoose:questions, allQuestions, setCurrentQuestion, alreadyCalled, setAlreadyCalled });
   };
 
   return (

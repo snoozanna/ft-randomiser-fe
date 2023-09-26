@@ -1,48 +1,25 @@
-// import { gql } from '@apollo/client';
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
+// import gql from 'graphql-tag';
+const GET_QUESTION_CATEGORY = gql`
 
-const Q_BY_CATEGORY_QUERY = gql`
-  # query QCatQuery {
-  #   allQuestion(where: { category: { some: { name: { eq: "Life" } } } }) {
-  #     category {
-  #       name
-  #     }
-  #     question
-  #   }
-  # }
-  {
-    allQuestion(where: { category: { name: { matches: "Life" } } }) {
+
+query QCQuery($name:String) {
+  questions:allQuestion(where: {category: {name: {eq: $name}}}) {
+    _id
       question
-      _id
       category {
         name
+        _id
       }
-    }
+    
   }
+  categories: allCategory{
+    name
+  }
+}
+  
 `;
 
-// const Q_BY_CATEGORY_QUERY = gql`
-//   query QC($category: String!) {
-//     allQuestion(filter: { name: { eq: $category } }) {
-//       _id
-//       question
-//       category {
-//         name
-//       }
-//     }
-//   }
-// `;
 
-// const Q_BY_CATEGORY_QUERY = gql`
-//   query QC($category: String!) {
-//     allQuestion(name: { eq: $category }) {
-//       _id
-//       question
-//       category {
-//         name
-//       }
-//     }
-//   }
-// `;
+export default GET_QUESTION_CATEGORY;
 
-export default Q_BY_CATEGORY_QUERY;

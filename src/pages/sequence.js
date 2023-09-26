@@ -1,13 +1,12 @@
 import { Link, graphql } from 'gatsby';
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
-
-import SEO from '../components/SEO';
 import { devices } from '../styles/breakpoints.js';
-
+import buildSequence from "./../utils/utils.js"
+import Sequence from '../components/Sequence.js';
 import { QuestionContext } from '../context/questions.context';
 
-const RandomQStyles = styled.div`
+const SequencePageStyles = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,57 +23,46 @@ const RandomQStyles = styled.div`
   }
 `;
 
-const RandomQ = ({ data }) => {
+const SequencePage = ({ data }) => {
   const { currentQuestion, setCurrentQuestion, alreadyCalled, setAlreadyCalled } =
     useContext(QuestionContext);
+const [currentSequence, setCurrentSequence] = useState([])
   const questions = data.questions.nodes;
-  const getRandomQ = () => {
-    const randomQ = questions[Math.floor(Math.random() * questions.length)];
-    // check if already been called
 
-    if (alreadyCalled.includes(randomQ.id)) {
-      if (alreadyCalled.length === questions.length) {
-        setCurrentQuestion({ question: 'No more questions left', category: [] });
-      } else {
-        getRandomQ();
-      }
-    } else {
-      console.log(randomQ);
-      setCurrentQuestion(randomQ);
-      if (randomQ.category.length) {
-        console.log('has a cat');
-      } else {
-        console.log('no cat');
-      }
-      setAlreadyCalled([...alreadyCalled, randomQ.id]);
-    }
-  };
+  const clickHandler = (questions) => {
+    // console.log("building sequence")
+    const sequence = buildSequence(questions)
+    setCurrentSequence(sequence)
+  }
 
   return (
     <>
-      <RandomQStyles>
+      <SequencePageStyles>
         {/* <span className="category">
           {quest.category.length > 0
             ? `Category: ${quest.category[0].name}`
             : ''}
         </span> */}
+        {/* {currentSequence[0].question} */}
         <div className="question-wrapper">
-          <h3 className="question">
+          <p>Sequence order: ["deep", "lighthearted", "deep", "deep", "medium", "lighthearted"] </p>
+          {/* <h3 className="question">
             {currentQuestion.question ? currentQuestion.question : ''}
-          </h3>
-          
+          </h3> */}
+          {/* {currentSequence[0].question ? currentSequence[0].question : ""} */}
+          {currentSequence ? <Sequence sequence={currentSequence}/> : <p>no sequence yet</p>}
         </div>
         <div className="button-wrapper">
-          <button type="button" onClick={() => getRandomQ()}>
-            Another
+          <button type="button" onClick={() => clickHandler({questions})}>
+            Build sequence
           </button>
         </div>
-      </RandomQStyles>
+      </SequencePageStyles>
     </>
   );
 };
 
-export default RandomQ;
+export default SequencePage;
 
 export const query = graphql`
   query QuestionQuery {
@@ -82,6 +70,7 @@ export const query = graphql`
       nodes {
         id
         question
+        level
         category {
           name
         }

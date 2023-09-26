@@ -41,7 +41,7 @@ const QByCatStyles = styled.div`
 `;
 
 const QByLevel = () => {
-  const { quest, setQuest, alreadyCalled, setAlreadyCalled } =
+  const { allQuestions, currentQuestion, setCurrentQuestion, alreadyCalled, setAlreadyCalled } =
     useContext(QuestionContext);
   const [selectedLevel, setSelectedLevel] = useState('Deep');
 
@@ -51,23 +51,24 @@ const QByLevel = () => {
         <header>
           <div className="cat-btn-wrapper">
             <LightBtn
-              setQuest={setQuest}
+            allQuestions={allQuestions}
+              setCurrentQuestion={setCurrentQuestion}
               alreadyCalled={alreadyCalled}
               setAlreadyCalled={setAlreadyCalled}
             />
             <MediumBtn
-              setQuest={setQuest}
+              setCurrentQuestion={setCurrentQuestion}
               alreadyCalled={alreadyCalled}
               setAlreadyCalled={setAlreadyCalled}
             />
             <DeepBtn
-              setQuest={setQuest}
+              setCurrentQuestion={setCurrentQuestion}
               alreadyCalled={alreadyCalled}
               setAlreadyCalled={setAlreadyCalled}
             />
           </div>
         </header>
-        <h3>{quest.question}</h3>
+        <h3>{currentQuestion.question}</h3>
 
         {/* <Query query={Q_BY_CATEGORY_QUERY}>
           {({ data: { questions } }) => {

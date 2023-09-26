@@ -4,7 +4,8 @@ import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import Loader from '../components/Loader/index.js';
 import { QuestionContext } from '../context/questions.context';
-import QUESTIONS_QUERY from '../queries/questions.js';
+import GET_QUESTION_CATEGORY from '../queries/questByCat.js';
+// import QUESTIONS_QUERY from '../queries/questions.js';
 
 const QByCatStyles = styled.div`
   display: flex;
@@ -12,6 +13,7 @@ const QByCatStyles = styled.div`
   justify-content: space-between;
   height: 100%;
   align-items: center;
+  gap:3rem;
   header {
     position: fixed;
     top: 3%;
@@ -46,53 +48,66 @@ const QByCatStyles = styled.div`
 //   }
 // `;
 
-const QByCat = () => {
-  const { quest, setQuest, alreadyCalled, setAlreadyCalled } =
-    useContext(QuestionContext);
-  const [selectedCategory, setSelectedCategory] = useState('Life');
+const QByCat = ({onCategorySelected}) => {
+  // const { quest, setQuest, alreadyCalled, setAlreadyCalled } =
+  //   useContext(QuestionContext);
+  const [selectedCategory, setSelectedCategory] = useState('Food');
 
-  const { data, loading, error } = useQuery(QUESTIONS_QUERY);
+  const { data, loading, error } = useQuery(GET_QUESTION_CATEGORY, {  
+      variables: {
+       name: selectedCategory
+    }
+  });
+  // const { data, loading, error } = useQuery(QUESTIONS_QUERY)
+  
 
   if (loading) return <Loader />;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
   if (!data) return <text>Could not find data</text>;
-  console.log(data);
-  // const [selectedCategory, setSelectedCategory] = useState({ name: 'Life' });
+  console.log("trying", data);
+
   // // const [category, setCategory] = useState('Life');
 
   const { categories } = data;
 
   const handleCategoryClick = (clickedCategory) => {
-    // setSelectedCategory(clickedCategory);
-    // console.log('data.questByCat', data.questByCat);
+    setSelectedCategory(clickedCategory);
     console.log(clickedCategory);
   };
 
-  return (
-    <>
+
+  return(
+     <>
       <QByCatStyles>
-        <header>
-          <div className="cat-btn-wrapper">
-            {categories.map((cat) => (
+     <header>
+      
+        </header>
+       
+        {selectedCategory.name}
+        <h2>{selectedCategory}</h2>
+         <div className="cat-btn-wrapper">
+         {categories.map((cat) => (
               <button
                 type="button"
                 key={cat._id}
-                onClick={() => handleCategoryClick(cat)}
+                onClick={() => handleCategoryClick(cat.name)}
               >
                 {cat.name}
               </button>
             ))}
           </div>
-        </header>
-        {/* <Query query={Q_BY_CATEGORY_QUERY}>
-          {({ data: { questions } }) => {
-            console.log(questions);
-          }}
-        </Query> */}
-        {selectedCategory.name}
+      <p>{data.questions.map((question) => {
+        return(
+          <p>{question.question}</p>
+        )
+      })}</p>
       </QByCatStyles>
-    </>
-  );
+     
+     </>
+
+  )
 };
 
 export default QByCat;
+
+

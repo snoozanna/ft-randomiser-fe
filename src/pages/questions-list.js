@@ -12,11 +12,15 @@ const QuestionListPageStyles = styled.div`
 
 const QuestionListPage = ({ data }) => {
   const questions = data.questions.nodes;
+  console.log(data)
 
   return (
     <QuestionListPageStyles>
       {questions.map((question) => (
-        <p key={question.id}>{question.question}</p>
+        <>
+          <p key={question.id}>{question.question}</p>
+          <p>Category: {question.category.name ? question.category.name : <p>none</p>}</p>
+        </>
       ))}
     </QuestionListPageStyles>
   );
@@ -32,6 +36,7 @@ export const query = graphql`
         question
         category {
           id
+          name
         }
       }
     }

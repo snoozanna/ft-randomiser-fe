@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 
 const Q_BY_DEEP = gql`
   {
-    questions: allQuestion(where: { level: { matches: "Deep" } }) {
+    questions: allQuestion(where: { level: { matches: "deep" } }) {
       question
       _id
       category {

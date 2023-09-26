@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 
 const Q_BY_MEDIUM = gql`
   {
-    questions: allQuestion(where: { level: { matches: "Medium" } }) {
+    questions: allQuestion(where: { level: { matches: "medium" } }) {
       question
       _id
       category {

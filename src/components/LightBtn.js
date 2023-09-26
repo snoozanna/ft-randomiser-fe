@@ -5,18 +5,18 @@ import Loader from './Loader/index';
 import { getRandomQ } from '../utils/utils.js';
 import Q_BY_LIGHT from '../queries/questionsLight.js';
 
-const DeepBtn = ({ setQuest, alreadyCalled, setAlreadyCalled }) => {
+const LightBtn = ({ allQuestions, setCurrentQuestion, alreadyCalled, setAlreadyCalled }) => {
   const { data, loading, error } = useQuery(Q_BY_LIGHT);
 
   if (loading) return <Loader />;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
   if (!data) return <text>Could not find data</text>;
-  // console.log(data);
+  console.log(data);
 
   const { questions } = data;
 
   const handleClick = () => {
-    getRandomQ({ questions, setQuest, alreadyCalled, setAlreadyCalled });
+    getRandomQ({ questionsToChoose:questions, allQuestions, setCurrentQuestion, alreadyCalled, setAlreadyCalled });
   };
 
   return (
@@ -26,4 +26,4 @@ const DeepBtn = ({ setQuest, alreadyCalled, setAlreadyCalled }) => {
   );
 };
 
-export default DeepBtn;
+export default LightBtn;
