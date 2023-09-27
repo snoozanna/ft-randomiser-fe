@@ -70,60 +70,38 @@ function shuffleArray(array) {
 }
 
 
-const buildSequence = ({ questions }, sequenceOrder) => {
-  console.log("building sequence");
+const buildSequence = ({ questions }, sequenceOrder, nonNegNum = 4) => {
+  const questionsCopy = questions.map((question) => {
+    return { ...question };
+  });
+  let shuffledQuestions = shuffleArray(questionsCopy);
   const sequence = [];
-  const usedQuestionIds = new Set(); // To track used question IDs
-  
-  // // Define the sequence order
-  // const sequenceOrder = ["deep", "lighthearted", "deep", "deep", "medium", "lighthearted"];
-  
-  // Create a map to track the number of questions added for each level
-  const addedCounts = {};
-  sequenceOrder.forEach((level) => {
-    addedCounts[level] = 0;
-  });
+  const usedCategories = [];
+  let nonNegCount = 0;
 
-  // Iterate through sequenceOrder and questions to build the sequence
   sequenceOrder.forEach((level) => {
-    const matchingQuestions = questions.filter((question) => question.level === level);
-    // console.log(`matching Q for ${level}`, matchingQuestions)
-
-    if (matchingQuestions.length) {
-      // Shuffle the questions for this level
-      shuffleArray(matchingQuestions);
-      // pick a random questions from matchingQuestions
-       let randomIndex = Math.floor(Math.random() * (matchingQuestions.length));
-      let nextQuestion = matchingQuestions[randomIndex];
-      console.log("nextQuestion.question", nextQuestion.question)
-      // Check if the question ID is already used in the sequence
-      if (!usedQuestionIds.has(nextQuestion.id)) {
-        sequence.push(nextQuestion);
-        addedCounts[level]++;
-        usedQuestionIds.add(nextQuestion.id); // Mark the question as used
+    const question = shuffledQuestions.find((question) => {
+      if (nonNegCount < nonNegNum) {
+        return (
+          question.level === level &&
+          !sequence.includes(question) &&
+          !usedCategories.includes(question.category.name) &&
+          question.nonNeg === true
+        );
       } else {
-        console.log(`Duplicate question with ID '${nextQuestion.id}' found for level '${level}'. Question is ${nextQuestion.question}`);
-        // TODO Need to try to pull another question 
-         randomIndex = Math.floor(Math.random() * (matchingQuestions.length));
-        nextQuestion = matchingQuestions[randomIndex];
-      console.log("nextQuestion.question in else", nextQuestion.question)
-      // Check if the question ID is already used in the sequence
-       if (!usedQuestionIds.has(nextQuestion.id)) {
-        sequence.push(nextQuestion);
-        addedCounts[level]++;
-        usedQuestionIds.add(nextQuestion.id); // Mark the question as used
-      } else{
-        console.log("not sure how to stop going round in circles")
+        return (
+          question.level === level &&
+          !sequence.includes(question) &&
+          !usedCategories.includes(question.category.name)
+        );
       }
-        return
-      }
-     
-    } else {
-      console.log(`No more questions of level '${level}' left.`);
-    }
-
+    });
+    if (question === undefined) return "not enough questions";
+    if (question.nonNeg) nonNegCount++;
+    sequence.push(question);
+    usedCategories.push(question.category.name);
   });
-       console.log("addedCounts", addedCounts)
+  if (sequence.length !== sequenceOrder.length) return "not enough questions";
   return sequence;
 };
 
