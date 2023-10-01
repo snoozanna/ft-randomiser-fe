@@ -1,0 +1,552 @@
+question,category,level,requireLockIn,nonNeg,documentary,beenAsked
+Who is your favourite Spice Girl?,50647b88-b49d-48c2-899f-01ec6f1ad77e,Light,TRUE,FALSE,TRUE,FALSE
+You find a wallet full of £20 notes on the floor. What do you do?,50647b88-b49d-48c2-899f-01ec6f1ad77e,Light,FALSE,FALSE,FALSE,FALSE
+What part of your personality would you rather not pass onto another child?,09704acd-f205-4afd-807d-692f8e513840,Deep,TRUE,FALSE,FALSE,FALSE
+What is your ideal date?,ccdac514-519c-4c2c-b9e6-643688ac73ba,Light,FALSE,TRUE,TRUE,FALSE
+How do you celebrate your birthday?,2521097c-128f-4720-8b0e-ca2d946d96c0,Light,FALSE,FALSE,FALSE,FALSE
+When do you feel most comfortable within yourself?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,Medium ,FALSE,FALSE,TRUE,FALSE
+What do you value more - kindness or intelligence?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,Medium ,FALSE,TRUE,TRUE,FALSE
+Who do you idolise?,2521097c-128f-4720-8b0e-ca2d946d96c0,Medium ,TRUE,FALSE,TRUE,FALSE
+Do you have any regrets?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,Deep,TRUE,TRUE,FALSE,FALSE
+Do you own a gun?,c76b8c70-efce-4474-832a-6c3cccb6550e,Medium ,TRUE,FALSE,FALSE,FALSE
+What parts of your personality would you rather not pass onto another child?,e4b7e410-7605-4bb8-b507-db5a3711a543,Deep,FALSE,TRUE,FALSE,FALSE
+Why did you want to do this?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,Medium ,TRUE,TRUE,FALSE,FALSE
+Are there any questions I haven’t asked that you think I should have asked you?,09704acd-f205-4afd-807d-692f8e513840,Medium ,TRUE,TRUE,TRUE,FALSE
+What makes you happy?,ccdac514-519c-4c2c-b9e6-643688ac73ba,Deep,TRUE,FALSE,TRUE,FALSE
+What are you hungry for?,024a264a-fe34-469d-b60d-e74c3a519ca3,Medium ,FALSE,FALSE,FALSE,FALSE
+Have you ever tried to conceive? For how long?,09704acd-f205-4afd-807d-692f8e513840,Deep,FALSE,TRUE,TRUE,FALSE
+Are any of your family mixed race?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,Medium ,TRUE,TRUE,TRUE,FALSE
+Do you own any Lucy and Yak,09704acd-f205-4afd-807d-692f8e513840,Light,FALSE,TRUE,TRUE,FALSE
+What is your favourite way to exercise/keep fit,c76b8c70-efce-4474-832a-6c3cccb6550e,Light,FALSE,TRUE,FALSE,FALSE
+Do you know any magic tricks? If so can you do it now?,0144753f-3590-4091-bfeb-7433d137e5ba,Light,FALSE,TRUE,TRUE,FALSE
+Do you wish you were famous?,9c219554-49de-4a99-8c14-86ea62a84c41,Light,TRUE,TRUE,FALSE,FALSE
+What embaresses you?,024a264a-fe34-469d-b60d-e74c3a519ca3,Medium ,TRUE,FALSE,FALSE,FALSE
+Have you ever had a lucid dream (dream where you know you are dreaming),e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,Light,FALSE,TRUE,FALSE,FALSE
+Do you love with your heart or your mind?,0144753f-3590-4091-bfeb-7433d137e5ba,Light,TRUE,TRUE,FALSE,FALSE
+When’s your sleep cycle?,e4b7e410-7605-4bb8-b507-db5a3711a543,Medium ,TRUE,FALSE,FALSE,FALSE
+What’s your discipline style?,50647b88-b49d-48c2-899f-01ec6f1ad77e,Medium ,FALSE,TRUE,TRUE,FALSE
+What do you want from me right now? In 5 years and in 20 years?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,Medium ,FALSE,FALSE,FALSE,FALSE
+At what age should you teach children about death?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,Medium ,FALSE,FALSE,FALSE,FALSE
+Do you plan? Or do you go with the flow?,e4b7e410-7605-4bb8-b507-db5a3711a543,Light,TRUE,FALSE,FALSE,FALSE
+Do you believe people are inherently good or bad?,09704acd-f205-4afd-807d-692f8e513840,Medium ,FALSE,TRUE,FALSE,FALSE
+When is the last time you lied?,2521097c-128f-4720-8b0e-ca2d946d96c0,Deep,FALSE,FALSE,FALSE,FALSE
+Are you a bad boi?,c76b8c70-efce-4474-832a-6c3cccb6550e,Light,FALSE,TRUE,TRUE,FALSE
+How did you play?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,Light,FALSE,TRUE,TRUE,FALSE
+How do you react to losing a game?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,Light,FALSE,TRUE,FALSE,FALSE
+What is your confrontation style?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,TRUE,FALSE,FALSE,FALSE
+What is your taste in TV shows? What are your top 3 shows,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,TRUE,FALSE,FALSE,FALSE
+Do you like rules?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,medium,TRUE,FALSE,TRUE,FALSE
+What is your greatest achievement?,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,FALSE,FALSE,TRUE,FALSE
+What relationship in your life are you most proud of?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,medium,TRUE,TRUE,TRUE,FALSE
+Do you get on with kids? Do you play games? Which games?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,TRUE,FALSE,TRUE,FALSE
+Do you like drawing?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,TRUE,FALSE,FALSE,FALSE
+What’s your favourite way to move your body?,ccdac514-519c-4c2c-b9e6-643688ac73ba,deep,TRUE,TRUE,TRUE,FALSE
+When making choices are you led by thought or feeling?,9c219554-49de-4a99-8c14-86ea62a84c41,medium,TRUE,TRUE,FALSE,FALSE
+What is your best physical feature?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,medium,FALSE,FALSE,TRUE,FALSE
+What kind of baby were you?,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,FALSE,FALSE
+Do you play musical instruments?,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,FALSE,TRUE,FALSE,FALSE
+Are you scared?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,TRUE,FALSE,TRUE,FALSE
+Do you have an addictive personality?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,TRUE,TRUE,FALSE,FALSE
+Do you tend to be friends with your exes? Why or why not?,9c219554-49de-4a99-8c14-86ea62a84c41,medium,FALSE,FALSE,FALSE,FALSE
+Would you go on a reality TV show? Why or why not?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,TRUE,FALSE,TRUE,FALSE
+Do your parents understand what you do for a living?,09704acd-f205-4afd-807d-692f8e513840,deep,FALSE,TRUE,TRUE,FALSE
+Are there queer people in your life?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,FALSE,FALSE,FALSE,FALSE
+Ethical brand consumption?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,TRUE,TRUE,TRUE,FALSE
+"If you were to run into a celebrity you love, would you pretend to ignore them or go over and chat?",0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,FALSE,FALSE
+Dance in the centre of a club or in a dark corner?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,TRUE,TRUE,TRUE,FALSE
+What’s your go to karaoke song?,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,TRUE,TRUE,FALSE,FALSE
+What is the biggest/firesects animal you think you could fight and win?,2521097c-128f-4720-8b0e-ca2d946d96c0,medium,FALSE,TRUE,FALSE,FALSE
+Do you think people are inherently good or bad?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,TRUE,TRUE,FALSE,FALSE
+Are you a planner?,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,TRUE,TRUE,TRUE,FALSE
+Are you a lawyer? Do you have a lawyer?,e4b7e410-7605-4bb8-b507-db5a3711a543,deep,TRUE,TRUE,FALSE,FALSE
+What if your relationship to social media?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,TRUE,FALSE,TRUE,FALSE
+Do you have paazaz?,e4b7e410-7605-4bb8-b507-db5a3711a543,deep,TRUE,TRUE,TRUE,FALSE
+Do you love with your heart or your mind?,e4b7e410-7605-4bb8-b507-db5a3711a543,lighthearted,TRUE,TRUE,TRUE,FALSE
+Would you lend me £5?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,FALSE,FALSE,TRUE,FALSE
+Do you like your own company?,c76b8c70-efce-4474-832a-6c3cccb6550e,deep,TRUE,TRUE,FALSE,FALSE
+Do you believe in life on other planets?,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,TRUE,TRUE,TRUE,FALSE
+What do you have to offer In the apocalypse?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,TRUE,FALSE,TRUE,FALSE
+Do you look for nice shells to take home when you’re on the beach?,0144753f-3590-4091-bfeb-7433d137e5ba,medium,TRUE,FALSE,FALSE,FALSE
+Tell me about the last time you did something brave?,2521097c-128f-4720-8b0e-ca2d946d96c0,medium,FALSE,FALSE,TRUE,FALSE
+How do you think you’re going to die?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,TRUE,FALSE,FALSE,FALSE
+What’s your star sign?,2521097c-128f-4720-8b0e-ca2d946d96c0,medium,TRUE,FALSE,TRUE,FALSE
+Would you inform us about any changes in your medical history in the furture?,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,TRUE,FALSE,FALSE,FALSE
+What would people say about you?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,TRUE,TRUE,FALSE,FALSE
+Do you perform well under pressure? (that's not a euphamism),50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,TRUE,FALSE,FALSE,FALSE
+Do you care about legacy?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,TRUE,FALSE,FALSE,FALSE
+How do you want to be remembered?,9c219554-49de-4a99-8c14-86ea62a84c41,deep,FALSE,FALSE,FALSE,FALSE
+Leader or follower? Listener or talker?,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,FALSE,TRUE,FALSE,FALSE
+Are you comfortable with a child being brought up in a financial situation in a lesser or greater situation than yours?,2521097c-128f-4720-8b0e-ca2d946d96c0,deep,TRUE,TRUE,FALSE,FALSE
+Would you donate to me again if I terminate in the first time?,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,FALSE,TRUE,TRUE,FALSE
+Are you doing this because…. Doing it for a favour/doing a good deed/doing it for yourself? To start a cult?,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,TRUE,TRUE,FALSE
+How do you feel about abortion?,024a264a-fe34-469d-b60d-e74c3a519ca3,deep,TRUE,TRUE,FALSE,FALSE
+What is your relationship with recreational substances?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,lighthearted,TRUE,FALSE,FALSE,FALSE
+What’s the most common piece of feedback you receive?,c76b8c70-efce-4474-832a-6c3cccb6550e,deep,FALSE,FALSE,TRUE,FALSE
+Early bird or night owl?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,FALSE,FALSE,TRUE,FALSE
+Your house is on fire- what do you save?,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,FALSE,TRUE,FALSE,FALSE
+What makes you laugh? When’s the last time you belly laughed?,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,TRUE,TRUE,TRUE,FALSE
+How do you deal with grief?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,TRUE,TRUE,FALSE
+Is there anything else you feel like you should tell me?,9c219554-49de-4a99-8c14-86ea62a84c41,medium,FALSE,TRUE,TRUE,FALSE
+What does community mean to you?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,FALSE,FALSE,FALSE,FALSE
+Do you perform well under pressure?,e4b7e410-7605-4bb8-b507-db5a3711a543,medium,TRUE,TRUE,FALSE,FALSE
+Do you care about legacy?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,FALSE,FALSE,TRUE,FALSE
+How do you want to be remembered?,c76b8c70-efce-4474-832a-6c3cccb6550e,deep,FALSE,FALSE,TRUE,FALSE
+How would you describe your generation?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,TRUE,FALSE,FALSE,FALSE
+Have you ever broken boundaries in a romantic relationship?,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,FALSE,TRUE,FALSE,FALSE
+Do you secretly wonder if we’re actually in a simulation?,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,FALSE,FALSE
+Do you believe crystals have special properties?,ccdac514-519c-4c2c-b9e6-643688ac73ba,deep,TRUE,TRUE,FALSE,FALSE
+What was your favourite toy as a child?,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,FALSE,FALSE,FALSE
+What do you think are the qualities of a life fully lived?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,TRUE,FALSE,TRUE,FALSE
+What’s your party trick?,36f6dee9-9426-42fb-a922-792c87db2e1e,medium,TRUE,TRUE,TRUE,FALSE
+What do you think about vaccinations?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,FALSE,FALSE,TRUE,FALSE
+Do you have a question I should ask the next person?,9c219554-49de-4a99-8c14-86ea62a84c41,deep,TRUE,TRUE,TRUE,FALSE
+How do you sleep?,e4b7e410-7605-4bb8-b507-db5a3711a543,medium,TRUE,TRUE,FALSE,FALSE
+What is your relationship to authority or authority figures?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,TRUE,FALSE,TRUE,FALSE
+What makes you jealous?,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,TRUE,FALSE,TRUE,FALSE
+Where do you store your memories?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,TRUE,TRUE,FALSE,FALSE
+Have you watched the princess diaries?,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,TRUE,FALSE,FALSE
+Do you have a partner? If so how do they feel about this?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,deep,TRUE,FALSE,TRUE,FALSE
+When’s the last time you had a sexual health test?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,deep,TRUE,FALSE,FALSE,FALSE
+Do you find it easy to make decision? Do you tend to stick to your decision?,0144753f-3590-4091-bfeb-7433d137e5ba,medium,TRUE,FALSE,FALSE,FALSE
+Who is the first person or thing that pops into your head when I say Family? Loyalty? Promise? World? Legacy?,9c219554-49de-4a99-8c14-86ea62a84c41,deep,FALSE,FALSE,FALSE,FALSE
+How do you define success?,9c219554-49de-4a99-8c14-86ea62a84c41,medium,TRUE,TRUE,TRUE,FALSE
+What are your three best qualities?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,TRUE,TRUE,FALSE,FALSE
+Have you donated sperm before?,0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,TRUE,FALSE
+Did you have any pets as a child?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,TRUE,TRUE,FALSE
+Can you please sing a song?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,TRUE,TRUE,TRUE,FALSE
+Do you imagine in colour?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,TRUE,TRUE,TRUE,FALSE
+Where do you go to hide?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,medium,FALSE,TRUE,FALSE,FALSE
+How old are you and what is your longest relationship and friendship?,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,TRUE,FALSE,FALSE,FALSE
+What’s your dream job?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,deep,FALSE,TRUE,FALSE,FALSE
+Do you think single people should get life insurance?,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,TRUE,FALSE,TRUE,FALSE
+Meet a unicorn or slide down a rainbow?,0144753f-3590-4091-bfeb-7433d137e5ba,deep,TRUE,TRUE,FALSE,FALSE
+When was the last time you apologized to someone and what for?,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,FALSE,TRUE,TRUE,FALSE
+How many days do you think a person ovulates for in a month?,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,TRUE,FALSE,FALSE,FALSE
+Tell me about a time you've had to deliver bad news to another person?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,TRUE,FALSE,FALSE
+How do you look after yourself?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,TRUE,FALSE,FALSE,FALSE
+At Nandos which spice level to do you choose?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,lighthearted,TRUE,TRUE,FALSE,FALSE
+"Say you donated, how would you feel about having a child thta's not the same race of culture as you?",0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,TRUE,FALSE
+What do you parents think about mixed race kids?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,medium,TRUE,TRUE,TRUE,FALSE
+What is your relationship to whiteness? / How do you feel about my partnert being white?,50647b88-b49d-48c2-899f-01ec6f1ad77e,lighthearted,TRUE,TRUE,FALSE,FALSE
+How do you feel about this child having white boomer grandparents?,e4b7e410-7605-4bb8-b507-db5a3711a543,medium,TRUE,FALSE,FALSE,FALSE
+What is your relationship to your family?,024a264a-fe34-469d-b60d-e74c3a519ca3,deep,FALSE,FALSE,TRUE,FALSE
+What would your parents think about your donating sperm? / How would you manage your parents expectations of their relationship to this child?,ccdac514-519c-4c2c-b9e6-643688ac73ba,deep,FALSE,TRUE,FALSE,FALSE
+Would you tell your parents or siblings if you donated?,2521097c-128f-4720-8b0e-ca2d946d96c0,deep,FALSE,FALSE,FALSE,FALSE
+What does ACAB mean to you?,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,FALSE,TRUE,TRUE,FALSE
+How would you feel if in five years time....,e4b7e410-7605-4bb8-b507-db5a3711a543,lighthearted,FALSE,TRUE,FALSE,FALSE
+How involved do you want to be. How would you feel if eg: I moved to another country and took the child?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,TRUE,FALSE,FALSE,FALSE
+How would you feel if you met/saw a picture of the child and they looked exactly like you? How would you feel?,9c219554-49de-4a99-8c14-86ea62a84c41,medium,TRUE,FALSE,FALSE,FALSE
+If this a one off donation/pregnancy? Would you donate for other children?,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,TRUE,FALSE,TRUE,FALSE
+What do you know about the menstrual cycle/ovulatioin?,2521097c-128f-4720-8b0e-ca2d946d96c0,deep,FALSE,TRUE,FALSE,FALSE
+Are you a cop/officer of the law?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,TRUE,FALSE,FALSE,FALSE
+Are you a confident dancer?,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,TRUE,TRUE,TRUE,FALSE
+How tall are you? How do you feel about your height?,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,TRUE,FALSE,TRUE,FALSE
+Describe the shape of the Earth?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,FALSE,FALSE,FALSE,FALSE
+Across the Earth or around the globe?,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,TRUE,FALSE,FALSE,FALSE
+Do you consider yourself fashionable?,09704acd-f205-4afd-807d-692f8e513840,deep,FALSE,TRUE,TRUE,FALSE
+You don't have to tell me but do you have any big juicy family secrets?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,FALSE,FALSE,TRUE,FALSE
+How do you feel about this child not having a mother?,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,FALSE,FALSE,FALSE,FALSE
+Have you changed your mind about something recently?,9c219554-49de-4a99-8c14-86ea62a84c41,medium,TRUE,FALSE,TRUE,FALSE
+Have you ever had an epiphany?,0144753f-3590-4091-bfeb-7433d137e5ba,medium,TRUE,TRUE,FALSE,FALSE
+What's your favourite colour?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,deep,FALSE,TRUE,FALSE,FALSE
+Have you ever had fertility tests?,e4b7e410-7605-4bb8-b507-db5a3711a543,lighthearted,FALSE,FALSE,TRUE,FALSE
+Can you imagine being told you're infertile?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,TRUE,FALSE,TRUE,FALSE
+How would you feel if your donation grew up to be a Tory?,2521097c-128f-4720-8b0e-ca2d946d96c0,medium,FALSE,TRUE,FALSE,FALSE
+Who would you climb any mountain for?,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,FALSE,TRUE,FALSE,FALSE
+Should children be seen and not heard?,e4b7e410-7605-4bb8-b507-db5a3711a543,deep,FALSE,FALSE,FALSE,FALSE
+How to do you feel about flathead screws?,e4b7e410-7605-4bb8-b507-db5a3711a543,medium,TRUE,TRUE,FALSE,FALSE
+Have you ever faked an injury?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,FALSE,FALSE,TRUE,FALSE
+Do you think it's funny to lie to naive people?,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,TRUE,FALSE
+How often do you masturbate?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,medium,FALSE,TRUE,FALSE,FALSE
+How is sperm made?,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,TRUE,TRUE,FALSE,FALSE
+"Imagine you're at a school fete, you have enough money for one game: you.. bob for apples, splat a rat, how ma ny sweets/ go for a spliff?",e4b7e410-7605-4bb8-b507-db5a3711a543,deep,TRUE,TRUE,TRUE,FALSE
+Are you pleased the Queen is dead?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,TRUE,FALSE,TRUE,FALSE
+If you donated and it was twins/triplets would you want to keep one?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,TRUE,FALSE,TRUE,FALSE
+After an argument do you want to be alone or talk it out?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,TRUE,TRUE,TRUE,FALSE
+How do you feel about socksand sandals being in fashion again?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,FALSE,TRUE,FALSE
+Can you explain what PI is? ,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,deep,TRUE,TRUE,TRUE,FALSE
+How many pips in an orange? (Fibonacci sequence),36f6dee9-9426-42fb-a922-792c87db2e1e,deep,FALSE,TRUE,TRUE,FALSE
+Would you rather be too hot or too cold?,50647b88-b49d-48c2-899f-01ec6f1ad77e,lighthearted,FALSE,FALSE,FALSE,FALSE
+Do you like to win?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,medium,FALSE,FALSE,TRUE,FALSE
+Is it important to you t be right?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,FALSE,TRUE,TRUE,FALSE
+Do you think people finf you attractive?,0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,FALSE,FALSE
+Board games or computer games?,2521097c-128f-4720-8b0e-ca2d946d96c0,deep,TRUE,TRUE,TRUE,FALSE
+Whats your favourite conspiracy theory?,0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,FALSE,FALSE
+Do you have a signature dish?,c76b8c70-efce-4474-832a-6c3cccb6550e,deep,FALSE,TRUE,TRUE,FALSE
+Do you believe in aliens?,36f6dee9-9426-42fb-a922-792c87db2e1e,lighthearted,FALSE,FALSE,FALSE,FALSE
+Do you believe in astrology?,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,TRUE,FALSE,FALSE,FALSE
+Do you think the moon landing is real?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,FALSE,FALSE,TRUE,FALSE
+Can dogs look up?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,FALSE,FALSE,FALSE,FALSE
+Do you ever wonder what you're missing out on?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,TRUE,FALSE,TRUE,FALSE
+Can you keep a secret?,c76b8c70-efce-4474-832a-6c3cccb6550e,deep,TRUE,FALSE,FALSE,FALSE
+Do you like meeting people with the same name as you?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,FALSE,FALSE,TRUE,FALSE
+Do you think anyone can be a good parent?,9c219554-49de-4a99-8c14-86ea62a84c41,deep,TRUE,FALSE,TRUE,FALSE
+Do you think there's a certain income you need to have to be a good parent?,2521097c-128f-4720-8b0e-ca2d946d96c0,medium,FALSE,FALSE,FALSE,FALSE
+Dpo you have an alteria motive?,2521097c-128f-4720-8b0e-ca2d946d96c0,lighthearted,FALSE,TRUE,TRUE,FALSE
+Are you punctual?,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,TRUE,TRUE,FALSE,FALSE
+What would  you choose to go to bed?,36f6dee9-9426-42fb-a922-792c87db2e1e,lighthearted,FALSE,TRUE,FALSE,FALSE
+Do you parents want grandchildren?,09704acd-f205-4afd-807d-692f8e513840,medium,TRUE,TRUE,TRUE,FALSE
+How many people do you call aunty that you are not related to?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,FALSE,TRUE,TRUE,FALSE
+How do you define family?,0144753f-3590-4091-bfeb-7433d137e5ba,medium,TRUE,TRUE,FALSE,FALSE
+Is it rude to call someone aunty if they are only a couple months older than you?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,TRUE,FALSE,TRUE,FALSE
+Would you be less inclined to donate to someone with opposing political views than yourself?,024a264a-fe34-469d-b60d-e74c3a519ca3,medium,TRUE,TRUE,TRUE,FALSE
+Do you think children need to be crocodile savvy?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,FALSE,TRUE,FALSE
+Do you like people ordering food for you in a restaurant?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,FALSE,FALSE,TRUE,FALSE
+Why re ypou here today?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,TRUE,FALSE,FALSE,FALSE
+Is this the hoghlight of your week?,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,TRUE,FALSE,FALSE
+Have you met your hand twin?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,FALSE,TRUE,TRUE,FALSE
+Have you met your doppleganger?,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,TRUE,TRUE,TRUE,FALSE
+Who relies on you?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,lighthearted,TRUE,FALSE,FALSE,FALSE
+Have you sent a dick pick?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,FALSE,TRUE,FALSE,FALSE
+What's the last mistake you made? / Do you think being here is a mistake?,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,FALSE,TRUE,FALSE,FALSE
+Do you think you might regret being here in the future?,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,FALSE,FALSE,TRUE,FALSE
+Do you know for sure what your chromosomes are?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,TRUE,TRUE,FALSE,FALSE
+Do you know your hormone levels?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,TRUE,TRUE,FALSE,FALSE
+Do you know the minimum amount of sperm for fertility?,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,FALSE,FALSE,TRUE,FALSE
+Do you like kids?,024a264a-fe34-469d-b60d-e74c3a519ca3,deep,TRUE,TRUE,FALSE,FALSE
+"If a 6 yo asked you if Santa was real, what would you do?",3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,TRUE,TRUE,FALSE,FALSE
+"If it ended up that I had quintuplets, how would you feel?",0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,FALSE,FALSE
+"If I had a multiple birth pregnancy, how would you feel if I aborted some?",ccdac514-519c-4c2c-b9e6-643688ac73ba,deep,TRUE,FALSE,TRUE,FALSE
+What if I aborted a child made from your donation?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,FALSE,TRUE,FALSE,FALSE
+"If your neighbour came and asked you for sugar, would you assume that they wanted sex or sugar?",ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,TRUE,FALSE,TRUE,FALSE
+"If someone threw a tomato at us here on stage, what would you do?",c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,TRUE,FALSE,FALSE,FALSE
+"If you could have any fictional creature as a pet, what would it be and what adeventures would you go on together?",e4b7e410-7605-4bb8-b507-db5a3711a543,medium,TRUE,TRUE,TRUE,FALSE
+"If we could instantly learn any skill, what would you choose for both or us and how would we use them to help others?",c76b8c70-efce-4474-832a-6c3cccb6550e,medium,TRUE,TRUE,FALSE,FALSE
+"If you could live in any period of history, what era would you want to experience?",e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,medium,TRUE,FALSE,TRUE,FALSE
+What era would you time travel?,024a264a-fe34-469d-b60d-e74c3a519ca3,lighthearted,TRUE,TRUE,TRUE,FALSE
+"If you could design a brand new amusement park, what theme would you choose?",e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,FALSE,TRUE,FALSE,FALSE
+"If you could have any superpower for the day, what would it be and how would you use it to make a positive impact on the world?",36f6dee9-9426-42fb-a922-792c87db2e1e,lighthearted,TRUE,FALSE,FALSE,FALSE
+Who would play you in the movie of your life?,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,TRUE,FALSE,FALSE,FALSE
+"If you're a character in a classic fairy tale, what story would ypou be in? Would you change the narrative?",024a264a-fe34-469d-b60d-e74c3a519ca3,deep,FALSE,FALSE,FALSE,FALSE
+How did you get here today?,e4b7e410-7605-4bb8-b507-db5a3711a543,medium,FALSE,TRUE,FALSE,FALSE
+"Long live the king, question mark?",3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,TRUE,FALSE,TRUE,FALSE
+Favourite lyric or song?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,deep,FALSE,TRUE,FALSE,FALSE
+How do you feel about forest schools/boarding school/montessori/steiner etc,e4b7e410-7605-4bb8-b507-db5a3711a543,deep,TRUE,FALSE,TRUE,FALSE
+Do you believe in innate or genetic intelligence?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,deep,TRUE,FALSE,FALSE,FALSE
+Nature or nurture?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,FALSE,TRUE,FALSE,FALSE
+"If you were given the power to solve one major world problem but to do so would result in major personal sacrifice or risk, would you still do it?",c76b8c70-efce-4474-832a-6c3cccb6550e,medium,TRUE,FALSE,FALSE,FALSE
+Can you juggle/rubiks cube (hand over toys),09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,TRUE,FALSE,FALSE
+What do you see? (rorschach test),024a264a-fe34-469d-b60d-e74c3a519ca3,lighthearted,TRUE,FALSE,TRUE,FALSE
+"If you could choose between pursuing your passion or guaranteeing financial security for the rest of your life, what would you choose?",d5b5c96b-91ea-403e-bc52-a8fcf141fa03,lighthearted,TRUE,TRUE,FALSE,FALSE
+Do you have any painful memories that you would like to erase from your mind?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,TRUE,FALSE,TRUE,FALSE
+"If you dsicover that someone close to you was involved in illegal activites, would you report them?",e4b7e410-7605-4bb8-b507-db5a3711a543,medium,FALSE,TRUE,FALSE,FALSE
+Is there anything that you think merits calling the police?,024a264a-fe34-469d-b60d-e74c3a519ca3,medium,TRUE,TRUE,TRUE,FALSE
+You see someone shoplifting what would you do?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,TRUE,FALSE,FALSE,FALSE
+How do you feel about polyamourous people having children?,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,TRUE,FALSE,TRUE,FALSE
+How do you feel about open relationships?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,TRUE,TRUE,TRUE,FALSE
+What do you think makes a good parent?,024a264a-fe34-469d-b60d-e74c3a519ca3,medium,TRUE,FALSE,TRUE,FALSE
+What motivated you to be here?,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,FALSE,TRUE,TRUE,FALSE
+"Say we did this and had a baby, would you want to be involved in the child's life and to what extent?",2521097c-128f-4720-8b0e-ca2d946d96c0,medium,TRUE,FALSE,FALSE,FALSE
+How tall are you?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,TRUE,TRUE,FALSE,FALSE
+What's the last book you read?,9c219554-49de-4a99-8c14-86ea62a84c41,medium,TRUE,FALSE,TRUE,FALSE
+Do you own a gun?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,lighthearted,TRUE,FALSE,FALSE,FALSE
+Do you carry a weapon? What? Why?,ccdac514-519c-4c2c-b9e6-643688ac73ba,deep,TRUE,FALSE,TRUE,FALSE
+Do you trust doctors?,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,FALSE,TRUE,TRUE,FALSE
+On a typical Friday/Sunday night what do you do?,9c219554-49de-4a99-8c14-86ea62a84c41,deep,TRUE,TRUE,TRUE,FALSE
+"What's your favourite flower, tree, park?",39a95767-630b-44f9-8d08-67ae64c6ab35,medium,TRUE,FALSE,FALSE,FALSE
+Is there anything else you think I should know?,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,TRUE,TRUE,TRUE,FALSE
+Would you be happy to undergo fertility testing?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,TRUE,TRUE,TRUE,FALSE
+Sweet or salt?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,TRUE,FALSE,FALSE,FALSE
+Comedy or drama?,024a264a-fe34-469d-b60d-e74c3a519ca3,lighthearted,FALSE,TRUE,TRUE,FALSE
+What's the first book you read that really stuck with you?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,FALSE,FALSE,FALSE
+What's your relationship to your parents? What would they think of this?,024a264a-fe34-469d-b60d-e74c3a519ca3,lighthearted,FALSE,TRUE,FALSE,FALSE
+What is something you've always wanted to do but were afraid to?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,lighthearted,TRUE,TRUE,FALSE,FALSE
+What's something you'd like to learn or be better at?,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,TRUE,FALSE,FALSE
+Introvert or extrovert?,024a264a-fe34-469d-b60d-e74c3a519ca3,deep,TRUE,TRUE,FALSE,FALSE
+What were you like as a kid?,0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,FALSE,FALSE
+What do you like to do in your free time?,50647b88-b49d-48c2-899f-01ec6f1ad77e,lighthearted,FALSE,TRUE,FALSE,FALSE
+What's your family unit?,024a264a-fe34-469d-b60d-e74c3a519ca3,lighthearted,TRUE,FALSE,TRUE,FALSE
+What's your relationship to your family?,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,TRUE,FALSE
+How would you feel in five years time if I.... ?,9c219554-49de-4a99-8c14-86ea62a84c41,medium,FALSE,FALSE,FALSE,FALSE
+Do you have a five year plan?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,FALSE,TRUE,FALSE
+Do you have a vision board for your life?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,deep,FALSE,TRUE,FALSE,FALSE
+"Are you in any relationships? How would this impact your partners' five year plan? How would they feel about this? How would they feel about you abstaining for 4-5 days, every month for x amount of time?",d5b5c96b-91ea-403e-bc52-a8fcf141fa03,medium,FALSE,FALSE,TRUE,FALSE
+What do you think about the concept of billionaires?,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,FALSE,FALSE,FALSE
+What do you think about Jeff Bezos?,2521097c-128f-4720-8b0e-ca2d946d96c0,medium,FALSE,FALSE,TRUE,FALSE
+What do you think about Elon Musk?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,TRUE,TRUE,TRUE,FALSE
+What do you think about big Pharma?,e4b7e410-7605-4bb8-b507-db5a3711a543,medium,TRUE,FALSE,FALSE,FALSE
+What do you think about universal healthcare?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,TRUE,FALSE,TRUE,FALSE
+What do you think is more important: individual choice or collective wellbeing?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,FALSE,FALSE,FALSE,FALSE
+How much do you tip your uber/rideshare/taxi driver?,09704acd-f205-4afd-807d-692f8e513840,deep,FALSE,FALSE,TRUE,FALSE
+How often do you thank the bus driver?,36f6dee9-9426-42fb-a922-792c87db2e1e,medium,TRUE,FALSE,FALSE,FALSE
+How often do you give money to people on the street?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,deep,TRUE,TRUE,TRUE,FALSE
+Are you friends with anyone who works in law enforcement?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,TRUE,TRUE,FALSE
+Are you friends with anyone who works in child protection?,c76b8c70-efce-4474-832a-6c3cccb6550e,deep,FALSE,TRUE,TRUE,FALSE
+What do you think about marriage?,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,FALSE,TRUE,FALSE,FALSE
+What do you think about AI?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,FALSE,TRUE,TRUE,FALSE
+What do you think about humans colonising other planets?,024a264a-fe34-469d-b60d-e74c3a519ca3,medium,FALSE,FALSE,FALSE,FALSE
+What are you afraid of?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,FALSE,TRUE,TRUE,FALSE
+How often do you talk to your best friend?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,TRUE,FALSE,FALSE,FALSE
+How quickly do you expect people to reply to a text message?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,TRUE,TRUE,FALSE,FALSE
+How quickly do you expect people to reply to an email?,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,FALSE,TRUE,FALSE,FALSE
+How quickly do you usually reply to a text message?,9c219554-49de-4a99-8c14-86ea62a84c41,deep,TRUE,TRUE,TRUE,FALSE
+How quickly do you usually respond to an email?,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,FALSE,FALSE,TRUE,FALSE
+"When your guard is down, how do you express joy?",39a95767-630b-44f9-8d08-67ae64c6ab35,medium,FALSE,FALSE,FALSE,FALSE
+"When your guard is down, how do you express anger?",024a264a-fe34-469d-b60d-e74c3a519ca3,lighthearted,FALSE,TRUE,FALSE,FALSE
+What’s the last show you binged?,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,TRUE,FALSE
+What song is your happy place?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,TRUE,FALSE,FALSE,FALSE
+What movie have you watched the most amount of times?,9c219554-49de-4a99-8c14-86ea62a84c41,deep,FALSE,TRUE,TRUE,FALSE
+Do you prefer spending time in big groups or just with one or two other people?,024a264a-fe34-469d-b60d-e74c3a519ca3,deep,TRUE,FALSE,TRUE,FALSE
+Do you like to be the centre of attention?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,FALSE,FALSE,FALSE,FALSE
+Do you think how much someone earns is an accurate measure of how good they are at their job?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,TRUE,FALSE,FALSE,FALSE
+What do you think of gender reveal parties?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,deep,FALSE,TRUE,TRUE,FALSE
+Have you ever ghosted someone you’ve slept with?,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,TRUE,FALSE,FALSE,FALSE
+Have you ever ghosted a workplace?,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,TRUE,FALSE,FALSE
+Have you ever ghosted a friend?,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,TRUE,FALSE
+How much importance do you put on social etiquette?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,deep,TRUE,TRUE,TRUE,FALSE
+What’s your relationship to social media?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,TRUE,TRUE,TRUE,FALSE
+What do you think about the criminal justice system?,09704acd-f205-4afd-807d-692f8e513840,medium,TRUE,TRUE,FALSE,FALSE
+Do you think some people are inherently “bad”?,2521097c-128f-4720-8b0e-ca2d946d96c0,deep,FALSE,TRUE,TRUE,FALSE
+How do you deal with rupture in your close relationships?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,TRUE,TRUE,FALSE,FALSE
+How do you approach repair after a rupture in your close relationships?,e4b7e410-7605-4bb8-b507-db5a3711a543,lighthearted,FALSE,TRUE,TRUE,FALSE
+How good are you at remembering your friends’ birthdays?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,FALSE,TRUE,FALSE,FALSE
+Do you think Sin cos and tan are essential parts of high school education?,ccdac514-519c-4c2c-b9e6-643688ac73ba,deep,TRUE,FALSE,FALSE,FALSE
+UFO or UAP?,024a264a-fe34-469d-b60d-e74c3a519ca3,medium,TRUE,FALSE,FALSE,FALSE
+Are you a fast runner?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,FALSE,TRUE,FALSE
+Did you enjoy sports day as a kid?,024a264a-fe34-469d-b60d-e74c3a519ca3,deep,FALSE,TRUE,FALSE,FALSE
+Have you ever been a bully?,0144753f-3590-4091-bfeb-7433d137e5ba,medium,TRUE,FALSE,FALSE,FALSE
+Can you stroke your tummy and pat your head at the same time?,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,TRUE,FALSE,FALSE
+Were you good at designing houses on sims?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,FALSE,TRUE,TRUE,FALSE
+What harry potter house would you say you are in?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,FALSE,FALSE,TRUE,FALSE
+Does anybody have a vendetta against you?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,FALSE,FALSE,FALSE
+Are you a good dancer?,ccdac514-519c-4c2c-b9e6-643688ac73ba,deep,FALSE,TRUE,TRUE,FALSE
+What’s your opinion on performance art?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,FALSE,FALSE,TRUE,FALSE
+Have you volunteered for performance art stuff before?,2521097c-128f-4720-8b0e-ca2d946d96c0,deep,TRUE,FALSE,FALSE,FALSE
+Do you wish you made performance art?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,TRUE,TRUE,FALSE,FALSE
+"Oh shit, are you a pertformanc artist?",2521097c-128f-4720-8b0e-ca2d946d96c0,lighthearted,TRUE,TRUE,TRUE,FALSE
+What’s a cult classic that you hate?,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,TRUE,TRUE,TRUE,FALSE
+Your favourite movie quotes?,e4b7e410-7605-4bb8-b507-db5a3711a543,lighthearted,TRUE,FALSE,TRUE,FALSE
+What is the most common recurring feedback you get about yourself in your life?,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,TRUE,FALSE,TRUE,FALSE
+Describe your ideal gender reveal party?,09704acd-f205-4afd-807d-692f8e513840,deep,FALSE,TRUE,FALSE,FALSE
+Who’s your favourite Kardashian and why?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,FALSE,FALSE,TRUE,FALSE
+Do you want kids in the future?,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,FALSE,FALSE
+What is the most common personality quirk you think you and your family share?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,TRUE,FALSE,TRUE,FALSE
+Do you expect to financially be involved with this kid? Do you have a family trust fund?,50647b88-b49d-48c2-899f-01ec6f1ad77e,lighthearted,FALSE,TRUE,TRUE,FALSE
+Who’s your least favourite family member and why?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,FALSE,TRUE,FALSE
+"In a burning building, there’s your most prize possession or 6 other strangers prize",50647b88-b49d-48c2-899f-01ec6f1ad77e,lighthearted,FALSE,FALSE,TRUE,FALSE
+possessions – which do you grab?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,deep,TRUE,FALSE,FALSE,FALSE
+Are you a door slammer?,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,TRUE,TRUE,FALSE,FALSE
+Your favourite swear word?,2521097c-128f-4720-8b0e-ca2d946d96c0,medium,FALSE,TRUE,TRUE,FALSE
+The swear word you use the most?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,FALSE,FALSE,TRUE,FALSE
+When do you think life begins?,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,TRUE,TRUE,FALSE,FALSE
+"What is your relationship to whiteness? – WITH A FOLLOW UP (if they hate whiteness, then",7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,TRUE,TRUE,FALSE,FALSE
+how do you feel about white people?),3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,FALSE,FALSE,TRUE,FALSE
+"When someone comes to you with a problem, what is your response?",024a264a-fe34-469d-b60d-e74c3a519ca3,medium,TRUE,TRUE,FALSE,FALSE
+Is there a fetish you used to be ashamed of but now 4you aren’t?,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,TRUE,FALSE,FALSE
+"At nandos, which spice level do you choose?",e4b7e410-7605-4bb8-b507-db5a3711a543,lighthearted,TRUE,TRUE,FALSE,FALSE
+What associations do you have to the word lineage?,9c219554-49de-4a99-8c14-86ea62a84c41,medium,TRUE,TRUE,TRUE,FALSE
+Would you want to keep this a secret?,024a264a-fe34-469d-b60d-e74c3a519ca3,medium,FALSE,TRUE,TRUE,FALSE
+What made you sign up for this?,ccdac514-519c-4c2c-b9e6-643688ac73ba,deep,FALSE,FALSE,TRUE,FALSE
+What do you think about vaccinations?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,FALSE,TRUE,TRUE,FALSE
+How do you sleep?,36f6dee9-9426-42fb-a922-792c87db2e1e,lighthearted,FALSE,FALSE,FALSE,FALSE
+What is your best physical feature?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,FALSE,FALSE,FALSE
+Have you donated sperm before?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,TRUE,FALSE,FALSE,FALSE
+When's the last time you had a sexual health test?,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,FALSE,FALSE,FALSE,FALSE
+Do you have any allergies?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,FALSE,FALSE,FALSE
+Can you describe what your parents/guardians looked like? Are they hot?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,TRUE,TRUE,TRUE,FALSE
+Are you more of a listener or a talker?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,medium,TRUE,FALSE,TRUE,FALSE
+"If you had enough money to never work again, how would you spend your time?",50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,TRUE,FALSE
+Would you rather sew your own clothes or build your own home?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,lighthearted,TRUE,FALSE,TRUE,FALSE
+What are you optimistic about?,024a264a-fe34-469d-b60d-e74c3a519ca3,lighthearted,FALSE,FALSE,TRUE,FALSE
+What relationship in your life are you most proud of?,36f6dee9-9426-42fb-a922-792c87db2e1e,medium,TRUE,TRUE,FALSE,FALSE
+How do you look after yourself?/What does it mean to you to look after ytourself?,09704acd-f205-4afd-807d-692f8e513840,medium,TRUE,TRUE,FALSE,FALSE
+Are you someone who enjoys playing with children? What games?,0144753f-3590-4091-bfeb-7433d137e5ba,deep,TRUE,TRUE,TRUE,FALSE
+What makes you jealous?,024a264a-fe34-469d-b60d-e74c3a519ca3,medium,FALSE,TRUE,TRUE,FALSE
+"Do you hold grudges? If so, who is on top of your list?",2521097c-128f-4720-8b0e-ca2d946d96c0,deep,FALSE,FALSE,TRUE,FALSE
+What are your three best qualities?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,FALSE,FALSE,TRUE,FALSE
+How do you react to losing a game?,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,TRUE,FALSE,FALSE,FALSE
+How do you define success?,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,TRUE,FALSE,FALSE,FALSE
+What is your greatest achievement?,2521097c-128f-4720-8b0e-ca2d946d96c0,medium,TRUE,FALSE,FALSE,FALSE
+What is your longest relationship or friendship?,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,TRUE,FALSE
+What is your confrontation style?,2521097c-128f-4720-8b0e-ca2d946d96c0,lighthearted,TRUE,TRUE,TRUE,FALSE
+How concerned are you by the climate crisis?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,TRUE,TRUE,TRUE,FALSE
+When was the last time you lied?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,FALSE,FALSE,FALSE,FALSE
+Are you honest?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,TRUE,FALSE,TRUE,FALSE
+How informed would you say you are aboit the ethics of the brands you regularly support?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,TRUE,TRUE,FALSE,FALSE
+What is your relationship to authority or authority figures?,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,TRUE,TRUE,FALSE
+Have you ever broken boundaries in a romantic relationship?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,FALSE,FALSE,FALSE
+Do you like rules?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,FALSE,TRUE,TRUE,FALSE
+Do you find it easy to make decisions? Do you tend to stick to your decisions?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,TRUE,FALSE,TRUE,FALSE
+When making choices are you lead by thought or feeling?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,FALSE,TRUE,TRUE,FALSE
+What do you think are the qualities of a life fully lived?,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,TRUE,TRUE,TRUE,FALSE
+Would you like a tail?,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,FALSE,TRUE,TRUE,FALSE
+What animal do you think you could beat in a fight?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,TRUE,TRUE,TRUE,FALSE
+How high can you jump? (Not very accessible Q),3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,TRUE,TRUE,FALSE,FALSE
+Are you in the zone?,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,FALSE,FALSE,FALSE,FALSE
+Are you a bad boi?,024a264a-fe34-469d-b60d-e74c3a519ca3,deep,TRUE,FALSE,TRUE,FALSE
+Can you please sing a song?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,TRUE,TRUE,TRUE,FALSE
+"Are you funny? Can you prove it, tell me a joke?",d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,TRUE,FALSE,TRUE,FALSE
+Do you like the taste of corriander?,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,TRUE,FALSE,FALSE
+What's your party trick?,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,TRUE,TRUE,FALSE,FALSE
+"Have you ever been unfaithful to a partner? If so, why? And did you tell them?",50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,TRUE,TRUE,TRUE,FALSE
+Do you have rhythm?,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,TRUE,FALSE,TRUE,FALSE
+Do you think you have pizazz?,9c219554-49de-4a99-8c14-86ea62a84c41,deep,FALSE,FALSE,TRUE,FALSE
+Have you seen The Princess Diaries?,024a264a-fe34-469d-b60d-e74c3a519ca3,lighthearted,TRUE,FALSE,FALSE,FALSE
+"Do you play any musical instruments? If so, what?",e4b7e410-7605-4bb8-b507-db5a3711a543,lighthearted,TRUE,FALSE,TRUE,FALSE
+What is your taste in TV shows?,50647b88-b49d-48c2-899f-01ec6f1ad77e,lighthearted,FALSE,TRUE,TRUE,FALSE
+What are your top three shows?,e4b7e410-7605-4bb8-b507-db5a3711a543,medium,FALSE,TRUE,FALSE,FALSE
+Would you go on a reality programme? Why or why not?,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,TRUE,TRUE,FALSE,FALSE
+What's your favourite song and why?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,medium,FALSE,TRUE,FALSE,FALSE
+Are you related to or close friends with anyone famous?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,FALSE,TRUE,FALSE,FALSE
+Do you have a favouriter Doctor Who?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,TRUE,TRUE,FALSE,FALSE
+What was your favourite toy as a child?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,FALSE,FALSE,TRUE,FALSE
+What is the first memory you have from childhood?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,FALSE,TRUE,FALSE
+Where would you like to go on holiday and why?,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,FALSE,TRUE,FALSE,FALSE
+Do you think single parents should get life insurance?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,TRUE,TRUE,FALSE,FALSE
+What kind of baby were you?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,lighthearted,FALSE,FALSE,TRUE,FALSE
+Are any of your family queer?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,medium,TRUE,TRUE,TRUE,FALSE
+"Who is the first person or thing that pops into your head when I say family, loyalty, promise, world, legacy, connection?",e4b7e410-7605-4bb8-b507-db5a3711a543,deep,TRUE,FALSE,FALSE,FALSE
+Did you have any pets as a child? What were their names?,09704acd-f205-4afd-807d-692f8e513840,deep,FALSE,TRUE,FALSE,FALSE
+How did you play as a child?,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,FALSE,FALSE,FALSE,FALSE
+Do you secretly wonder if we're actually in a simulation?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,deep,FALSE,TRUE,FALSE,FALSE
+Do you believe in special properties of crystals?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,medium,TRUE,TRUE,TRUE,FALSE
+How do you think you're going to die?,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,TRUE,TRUE,FALSE,FALSE
+Where do you store your memories?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,FALSE,TRUE,TRUE,FALSE
+Do you believe in signs from the universe? Do you think they come from the universe or from wlesehere?,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,TRUE,FALSE
+Are you a parent? (Yes) Do you plan to have more children? (No) Do you want to have children? Have you ever tried?,024a264a-fe34-469d-b60d-e74c3a519ca3,medium,FALSE,TRUE,TRUE,FALSE
+"Do you have a partner? If so, how would they feel about this?",3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,FALSE,TRUE,FALSE,FALSE
+"Why did you want to do this? / Do you want to do this and if so, why?",3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,TRUE,TRUE,FALSE,FALSE
+What is your relationship to fear?,2521097c-128f-4720-8b0e-ca2d946d96c0,deep,TRUE,TRUE,TRUE,FALSE
+What happens when you die?,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,FALSE,FALSE,FALSE,FALSE
+Can you.. swim/ride a bike/juggle/roll your tongue/do a handstand/speak more than one language/play an instrument?,2521097c-128f-4720-8b0e-ca2d946d96c0,medium,FALSE,FALSE,TRUE,FALSE
+Do you have any fears and phobias and can you place the roots of them?,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,FALSE,TRUE,FALSE
+Do you have a question I should ask the next person?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,TRUE,TRUE,FALSE,FALSE
+Who did you vote for in the last election and why?,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,TRUE,FALSE,FALSE,FALSE
+What makes you laugh?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,FALSE,TRUE,TRUE,FALSE
+When was the last time you belly laughed?,024a264a-fe34-469d-b60d-e74c3a519ca3,lighthearted,FALSE,TRUE,TRUE,FALSE
+Tell me about a precious childhood memory.,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,TRUE,TRUE,TRUE,FALSE
+How do you stay connected with people in your life? / people in your life who have passed away?,0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,TRUE,FALSE
+Are you a strong swimmer?,2521097c-128f-4720-8b0e-ca2d946d96c0,deep,TRUE,TRUE,TRUE,FALSE
+What's your favourite place in the world?,09704acd-f205-4afd-807d-692f8e513840,deep,TRUE,FALSE,FALSE,FALSE
+What does community mean to you?,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,TRUE,FALSE,FALSE
+What responsibilities do you have towards me?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,TRUE,FALSE,FALSE,FALSE
+Do you work well under pressure?,9c219554-49de-4a99-8c14-86ea62a84c41,medium,FALSE,FALSE,TRUE,FALSE
+Do you believe in life on other planets?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,TRUE,FALSE,FALSE,FALSE
+Are you scared?,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,TRUE,TRUE,FALSE,FALSE
+Do you care about legacy?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
+Are you a lawyer? Do you have a lawyer?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,deep,FALSE,TRUE,FALSE,FALSE
+What are your thoughts on sex work?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,medium,TRUE,TRUE,FALSE,FALSE
+What is your relationship to social media?,2521097c-128f-4720-8b0e-ca2d946d96c0,lighthearted,FALSE,FALSE,FALSE,FALSE
+How do you deal with grief?,2521097c-128f-4720-8b0e-ca2d946d96c0,medium,TRUE,TRUE,TRUE,FALSE
+Would you donate to me again if I terminate a pregnancy the first time?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,FALSE,FALSE,FALSE,FALSE
+"Do you get on with kids? Do you play games, which games?",e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,FALSE,FALSE,TRUE,FALSE
+How do you feel about euthanasia/assisted dying?,09704acd-f205-4afd-807d-692f8e513840,deep,FALSE,TRUE,TRUE,FALSE
+What are your thoughts on owning property? Are you a landlord?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,FALSE,FALSE,TRUE,FALSE
+What is your relationship with recreational substances?,0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,TRUE,FALSE
+How much does a Big Issue cost?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,lighthearted,TRUE,TRUE,TRUE,FALSE
+Do you look for nice shells to take home when you're on a beach?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,TRUE,TRUE,TRUE,FALSE
+What do you have to offer in the apocalypse?,9c219554-49de-4a99-8c14-86ea62a84c41,medium,TRUE,FALSE,TRUE,FALSE
+Do you like drawing?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,FALSE,FALSE,TRUE,FALSE
+How do you feel about abortion?,c76b8c70-efce-4474-832a-6c3cccb6550e,deep,TRUE,FALSE,FALSE,FALSE
+What's your disicpline style?,2521097c-128f-4720-8b0e-ca2d946d96c0,lighthearted,FALSE,FALSE,TRUE,FALSE
+Do you run hot or cold?,024a264a-fe34-469d-b60d-e74c3a519ca3,medium,TRUE,FALSE,FALSE,FALSE
+Do you tend to be friends with your exes? Why or why not?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,TRUE,FALSE,FALSE,FALSE
+Dance in the centre of in the dark corners?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,FALSE,FALSE,FALSE,FALSE
+How would you feel if you never got to see the child?,c76b8c70-efce-4474-832a-6c3cccb6550e,deep,FALSE,TRUE,TRUE,FALSE
+Are you comfortable with a child being brought up in a financial situation that is a lesser or greater than yours?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,FALSE,TRUE,FALSE,FALSE
+"If you had enough money to never work again, how would you spend your time?",c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,FALSE,FALSE,TRUE,FALSE
+"If you were to run into a celebrity you love, would you pretend you didn't see them or go over and chat?",e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,medium,TRUE,TRUE,FALSE,FALSE
+Are there queer people in your family?,9c219554-49de-4a99-8c14-86ea62a84c41,medium,TRUE,TRUE,TRUE,FALSE
+What's your go-to kareoke song?,024a264a-fe34-469d-b60d-e74c3a519ca3,medium,FALSE,FALSE,FALSE,FALSE
+When is the last time you lied?,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,TRUE,FALSE,FALSE
+Your house is on fire - what do you save?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,TRUE,TRUE,TRUE,FALSE
+Would you lend me 5 pounds?,e4b7e410-7605-4bb8-b507-db5a3711a543,lighthearted,TRUE,FALSE,FALSE,FALSE
+Have you ever broken a promise?,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,TRUE,TRUE,TRUE,FALSE
+Are you in the public eye?,50647b88-b49d-48c2-899f-01ec6f1ad77e,lighthearted,TRUE,FALSE,FALSE,FALSE
+"What are you doing to avert the climate crisis? If nothing, why nothing?",d5b5c96b-91ea-403e-bc52-a8fcf141fa03,deep,FALSE,FALSE,FALSE,FALSE
+What embarrasses you?,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,FALSE,FALSE,TRUE,FALSE
+Do you have any regrets?,09704acd-f205-4afd-807d-692f8e513840,deep,TRUE,FALSE,FALSE,FALSE
+Do your parents understand what you do for a living?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,FALSE,TRUE,TRUE,FALSE
+What do you find easy?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,TRUE,TRUE,FALSE
+Do you believe crystals have special properties?,ccdac514-519c-4c2c-b9e6-643688ac73ba,deep,FALSE,FALSE,FALSE,FALSE
+At what age should you teach chuildren about death?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,TRUE,FALSE,FALSE,FALSE
+Do you have an addictive personality?,024a264a-fe34-469d-b60d-e74c3a519ca3,lighthearted,TRUE,FALSE,FALSE,FALSE
+What kind of baby were you?,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,TRUE,FALSE,FALSE,FALSE
+What's the most common pieces of feedback you receive?,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,FALSE,FALSE,TRUE,FALSE
+Are you doing this because it's a) doing me a favour b) doing a good deed c) doing it for yourself d) to start a cult?,2521097c-128f-4720-8b0e-ca2d946d96c0,medium,TRUE,FALSE,TRUE,FALSE
+"If you had enough money to never work again, how would you spend your time?",024a264a-fe34-469d-b60d-e74c3a519ca3,lighthearted,FALSE,FALSE,FALSE,FALSE
+What relationship in your life are you most proud of?,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,TRUE,TRUE,TRUE,FALSE
+"If the child needed a kidney and you were a match, would you give them a kidney?",3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,FALSE,TRUE,FALSE,FALSE
+What would people say about you?,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,TRUE,TRUE,FALSE
+Do you lover with your heart or mind?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,TRUE,TRUE,TRUE,FALSE
+"If you were the donor, what do you see as your responsibiilties?",d5b5c96b-91ea-403e-bc52-a8fcf141fa03,deep,FALSE,TRUE,FALSE,FALSE
+Is there anything else you feel like you should tell me?,2521097c-128f-4720-8b0e-ca2d946d96c0,lighthearted,TRUE,TRUE,FALSE,FALSE
+What does community mean to you?,e4b7e410-7605-4bb8-b507-db5a3711a543,lighthearted,TRUE,FALSE,TRUE,FALSE
+How do you think you're going to die?,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,FALSE,TRUE,TRUE,FALSE
+What;s your star sign?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,FALSE,FALSE,FALSE
+Would you inform us about any changes in your medical mhistory in the future?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,TRUE,TRUE,FALSE
+How would you feel about being a donor for an interracial couple?/ How would you feel about your child being raised by a white parent?,9c219554-49de-4a99-8c14-86ea62a84c41,deep,FALSE,TRUE,FALSE,FALSE
+How would your parents feel if you donated to me?,ccdac514-519c-4c2c-b9e6-643688ac73ba,deep,FALSE,FALSE,TRUE,FALSE
+"If you are the donor, how much involvement would you want?",39a95767-630b-44f9-8d08-67ae64c6ab35,medium,TRUE,TRUE,FALSE,FALSE
+What are your thoughts on kids being raised without gender?,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,FALSE,FALSE,FALSE
+Are you happy? ,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,FALSE,FALSE,FALSE,FALSE
+Do you have a will? Why/why not?,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,FALSE,FALSE,TRUE,FALSE
+Statistically 49% ,36f6dee9-9426-42fb-a922-792c87db2e1e,lighthearted,FALSE,TRUE,TRUE,FALSE
+Do you think its important your child looks like you?,2521097c-128f-4720-8b0e-ca2d946d96c0,medium,TRUE,FALSE,TRUE,FALSE
+How would you if all children in the future were conceieved through donors?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,TRUE,FALSE,FALSE
+"1 in 7 is through egg or sperm donation, how do you feel about that?",36f6dee9-9426-42fb-a922-792c87db2e1e,medium,TRUE,TRUE,TRUE,FALSE
+how do you feel about trans people having children?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,medium,FALSE,TRUE,TRUE,FALSE
+How do you feel about us being perceieved as two men raising a child?,024a264a-fe34-469d-b60d-e74c3a519ca3,medium,TRUE,FALSE,TRUE,FALSE
+How do you feel about men being pregnant?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,lighthearted,FALSE,TRUE,TRUE,FALSE
+Would you be concerned about this child potentially being bullied for having trans parents?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,medium,TRUE,TRUE,FALSE,FALSE
+Would you be concerned about this child potentially being bullied for having gay parents?,50647b88-b49d-48c2-899f-01ec6f1ad77e,lighthearted,TRUE,TRUE,FALSE,FALSE
+"If I were to have a miscarriage, would you donate again?",09704acd-f205-4afd-807d-692f8e513840,lighthearted,TRUE,TRUE,TRUE,FALSE
+Would you tell people if I miscarried?,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,TRUE,FALSE,FALSE,FALSE
+"If you were to be the donor, how much information would you want to share with your family about my pregnancy?",c76b8c70-efce-4474-832a-6c3cccb6550e,deep,FALSE,TRUE,TRUE,FALSE
+"If you were to be my donor, would you tell people? ",3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,FALSE,TRUE,TRUE,FALSE
+What do you think about gender reveals?,0144753f-3590-4091-bfeb-7433d137e5ba,deep,TRUE,FALSE,FALSE,FALSE
+"If i were to raise this child without gender, how would you feel?",09704acd-f205-4afd-807d-692f8e513840,medium,TRUE,TRUE,FALSE,FALSE
+How important is gender to you?,e4b7e410-7605-4bb8-b507-db5a3711a543,deep,TRUE,TRUE,TRUE,FALSE
+How do you think this child's life will be impacted by having trans parents?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,TRUE,FALSE,TRUE,FALSE
+Do you know who Le Tigre are?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,medium,FALSE,FALSE,FALSE,FALSE
+Do you think you'll make a good parent?,2521097c-128f-4720-8b0e-ca2d946d96c0,medium,FALSE,TRUE,FALSE,FALSE
+Do you think this child will have a happier life if they grow up to be a man?,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,TRUE,FALSE,TRUE,FALSE
+"Do you think children raise by queer people are more likely to be queer or trans? If so, why?",9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,TRUE,TRUE,TRUE,FALSE
+"If this child says they are trans, how would you feel about us getting gender affirming healthcare?",2521097c-128f-4720-8b0e-ca2d946d96c0,lighthearted,TRUE,FALSE,FALSE,FALSE
+"Say you were my donor and you donated to multiple families, would you be comfortable with the children being friends?",36f6dee9-9426-42fb-a922-792c87db2e1e,medium,FALSE,TRUE,FALSE,FALSE
+"If you were the donor, would you donate to us to have multiple children?",09704acd-f205-4afd-807d-692f8e513840,lighthearted,TRUE,TRUE,TRUE,FALSE
+How many children is too many children?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,TRUE,FALSE,FALSE
+How important do you think it is for a child to have siblings?,2521097c-128f-4720-8b0e-ca2d946d96c0,lighthearted,FALSE,FALSE,FALSE,FALSE
+"If you have a family of four, how many rooms should you have in your house?",024a264a-fe34-469d-b60d-e74c3a519ca3,deep,FALSE,FALSE,TRUE,FALSE
+How do you feel about donating to a couple who are immigrants to the UK and may have to move away?,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,FALSE,FALSE,FALSE
+How do you feel about children being raised in a single parent household?,50647b88-b49d-48c2-899f-01ec6f1ad77e,lighthearted,FALSE,TRUE,TRUE,FALSE
+How do you feel about trans people adopting? ,09704acd-f205-4afd-807d-692f8e513840,lighthearted,TRUE,TRUE,FALSE,FALSE
+Should a couple stay together for the sake of their children?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,deep,FALSE,TRUE,FALSE,FALSE
+Do you think people should have a child to help improve their relationship?,2521097c-128f-4720-8b0e-ca2d946d96c0,deep,TRUE,FALSE,TRUE,FALSE
+Do you think having children can improve relationships?,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,FALSE,FALSE,TRUE,FALSE
+"If I passed away, would you be comfortable with my partner raising this child as a single parent?",09704acd-f205-4afd-807d-692f8e513840,lighthearted,FALSE,TRUE,FALSE,FALSE
+Do you think people should be paid to be donors?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,FALSE,FALSE,TRUE,FALSE
+How do you feel about trans people adopting? ,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,TRUE,TRUE,TRUE,FALSE
+Would you feel about donating to me if I were single?,024a264a-fe34-469d-b60d-e74c3a519ca3,deep,FALSE,FALSE,TRUE,FALSE
+Would you be more inclined to donate to us if my partner was with me on stage asking the questions?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,FALSE,FALSE,FALSE,FALSE
+Do you think donors should be paid for their hard work?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,FALSE,FALSE,TRUE,FALSE
+"If you were to donate, how would you feel about your name going on the birth certificate if required?",ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,TRUE,FALSE,TRUE,FALSE
+How do you feel about the fact that my partnert and I have to get married to both be recognised as legal parents in this country?,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,TRUE,TRUE,FALSE,FALSE
+Do you think parents need to be legally married?,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,TRUE,TRUE,TRUE,FALSE
+"How do you feel about the fact that in this country, I would be pout down legally as the mother on this child's birth certificate?",50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,TRUE,FALSE,FALSE
+How do you feel about this child not having a mother?,36f6dee9-9426-42fb-a922-792c87db2e1e,medium,TRUE,FALSE,TRUE,FALSE
+Do twins run in own family?,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,FALSE,FALSE,FALSE,FALSE
+Did you have hair when you were born?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,lighthearted,TRUE,TRUE,FALSE,FALSE
+Were you a cute baby?,024a264a-fe34-469d-b60d-e74c3a519ca3,deep,FALSE,TRUE,FALSE,FALSE
+"If me and my partner turn to full time work when the child is a year old, how do you feel about that?",39a95767-630b-44f9-8d08-67ae64c6ab35,deep,TRUE,TRUE,TRUE,FALSE
+"As the birthing parent, do you think I should spend more time with the child in their first three years?",7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,TRUE,TRUE,FALSE,FALSE
+How soon is too soon to begin full time work following child birth?,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,FALSE,FALSE,FALSE,FALSE
+How do you feel about this child not being able to breast feed?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,TRUE,FALSE,TRUE,FALSE
+How do you feel about people buying breast milk?,09704acd-f205-4afd-807d-692f8e513840,medium,TRUE,FALSE,TRUE,FALSE
+Who do you think should stay at home with the baby?,09704acd-f205-4afd-807d-692f8e513840,lighthearted,TRUE,TRUE,TRUE,FALSE
+Whats your relationship to your grandparents?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,FALSE,FALSE,FALSE,FALSE
+How involved do you think grandparents need to be?,c76b8c70-efce-4474-832a-6c3cccb6550e,deep,TRUE,FALSE,TRUE,FALSE
+Would your parents want to be considered grandparents to this child?,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,TRUE,FALSE,FALSE,FALSE
+What do you think constitutes a family?,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,FALSE,FALSE,FALSE,FALSE
+"Im allergic to dogs, how do you feel about thus child never having a pet dog?",c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,FALSE,TRUE,TRUE,FALSE
+Do you think parents should have a good relationship with their parents?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,TRUE,FALSE,TRUE,FALSE
+How important is it for children to have intergenerational relationships?,e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,TRUE,TRUE,FALSE,FALSE
+Do you think it's a priviledge to have a child?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,medium,TRUE,TRUE,FALSE,FALSE
+"I'm allergic to dogs, how do you feel about this child never having a pet dog?",e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,lighthearted,FALSE,TRUE,TRUE,FALSE
+"Given the climate crisis, do you think its appropriate for me to have this child?",e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb,deep,TRUE,TRUE,FALSE,FALSE
+Do you think its selfish to have a child?,024a264a-fe34-469d-b60d-e74c3a519ca3,deep,TRUE,TRUE,FALSE,FALSE
+Is having a child good for the economy?,024a264a-fe34-469d-b60d-e74c3a519ca3,lighthearted,TRUE,FALSE,TRUE,FALSE
+Do you think choosing to not have children is selfish?,d5b5c96b-91ea-403e-bc52-a8fcf141fa03,deep,TRUE,FALSE,TRUE,FALSE
+How do you feel anout this child being born into a burning world?,9c219554-49de-4a99-8c14-86ea62a84c41,deep,FALSE,TRUE,TRUE,FALSE
+"My partner is from New Zealand, do you think you'd be able to point to that on a globe? Here's the map, can you point it out. ",09704acd-f205-4afd-807d-692f8e513840,deep,FALSE,TRUE,TRUE,FALSE
+How do you feel about children being raised outside their cultures? ,c76b8c70-efce-4474-832a-6c3cccb6550e,deep,FALSE,FALSE,TRUE,FALSE
