@@ -87,7 +87,7 @@ const SequencePage = ({ data }) => {
     useContext(QuestionContext);
 const [currentSequence, setCurrentSequence] = useState([])
   const questions = data.questions.nodes;
-
+console.log(questions)
   const clickHandler = (questions, sequenceOrder) => {
     // console.log("building sequence")
     const sequence = buildSequence(questions, sequenceOrder)
@@ -174,6 +174,9 @@ export const query = graphql`
         category {
           name
         }
+        requireLockIn
+        nonNeg
+        documentary
       }
     }
   }
