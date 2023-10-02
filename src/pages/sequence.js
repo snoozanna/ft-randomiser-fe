@@ -2,7 +2,7 @@ import { Link, graphql } from 'gatsby';
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import { devices } from '../styles/breakpoints.js';
-import buildSequence from "./../utils/utils.js"
+import {buildSequence} from "./../utils/utils.js"
 import Sequence from '../components/Sequence.js';
 import { QuestionContext } from '../context/questions.context';
 

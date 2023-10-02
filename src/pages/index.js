@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { devices } from '../styles/breakpoints.js';
 import { MenuContext } from '../context/menu.context.js';
 
+
 const HomePageStyles = styled.section`
   /* padding: clamp(5px, 5vw, 25px); */
   min-height: 70vh;

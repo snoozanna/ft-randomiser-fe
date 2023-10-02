@@ -2,9 +2,9 @@ import { Link, useStaticQuery } from 'gatsby';
 import { useQuery } from '@apollo/client';
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
-import DeepBtn from '../components/DeepBtn.js';
-import MediumBtn from '../components/MediumBtn.js';
-import LightBtn from '../components/LightBtn.js';
+import DeepBtn from '../components/Buttons/DeepBtn.js';
+import MediumBtn from '../components/Buttons/MediumBtn.js';
+import LightBtn from '../components/Buttons/LightBtn.js';
 
 import { getRandomQ } from '../utils/utils.js';
 import { QuestionContext } from '../context/questions.context';
@@ -70,7 +70,7 @@ const QByLevel = () => {
         </header>
         <h3>{currentQuestion.question}</h3>
 
-        {/* <Query query={Q_BY_CATEGORY_QUERY}>
+        {/* <Query query={Q_BY_GET_ALL_CATEGORIES}>
           {({ data: { questions } }) => {
             console.log(questions);
           }}

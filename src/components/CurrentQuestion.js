@@ -1,7 +1,5 @@
-import { graphql } from 'gatsby';
-import React, { useContext } from 'react';
+import React, { useContext } from 'react'
 import styled from 'styled-components';
-
 import { QuestionContext } from '../context/questions.context';
 
 const CurrentQStyles = styled.div`
@@ -23,20 +21,21 @@ const CurrentQStyles = styled.div`
 
 const CurrentQ = () => {
   // TODO Make repeatable
-  const { quest } = useContext(QuestionContext);
-
+  const { currentQuestion } = useContext(QuestionContext);
+console.log("currentQuestion", currentQuestion)
   return (
     <>
       <CurrentQStyles>
         <span className="category">
-          {quest.category.length > 0
-            ? `Category: ${quest.category[0].name}`
-            : ''}
+          {currentQuestion.category.length > 0
+            ? `Category: ${currentQuestion.category[0].name}`
+            : ""}
         </span>
         <div className="question-wrapper">
           <span className="question">
-            {quest.question ? quest.question : ''}
+            {currentQuestion.question ? currentQuestion.question : ""}
           </span>
+        
         </div>
       </CurrentQStyles>
     </>

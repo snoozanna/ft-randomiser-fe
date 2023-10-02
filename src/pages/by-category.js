@@ -38,7 +38,7 @@ const QByCatStyles = styled.div`
   }
 `;
 
-// const Q_BY_CATEGORY_QUERY = gql`
+// const Q_BY_GET_ALL_CATEGORIES = gql`
 //   query myQuery {
 //     allSanityQuestion {
 //       nodes {

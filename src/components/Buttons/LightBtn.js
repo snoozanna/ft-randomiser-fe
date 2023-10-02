@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { useQuery } from '@apollo/client';
-import Loader from './Loader/index';
-import { getRandomQ } from '../utils/utils.js';
-import Q_BY_LIGHT from '../queries/questionsLight.js';
+import Loader from '../Loader/index';
+import { getRandomQ } from '../../utils/utils.js';
+import Q_BY_LIGHT from "../../queries/questionsLight.js";
 
 const LightBtn = ({ allQuestions, setCurrentQuestion, alreadyCalled, setAlreadyCalled }) => {
   const { data, loading, error } = useQuery(Q_BY_LIGHT);
@@ -11,7 +11,7 @@ const LightBtn = ({ allQuestions, setCurrentQuestion, alreadyCalled, setAlreadyC
   if (loading) return <Loader />;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
   if (!data) return <text>Could not find data</text>;
-  console.log(data);
+  // console.log(data);
 
   const { questions } = data;
 

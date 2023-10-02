@@ -54,7 +54,8 @@ const Footer = () => {
         <Link to="/questions-list">Question List</Link>
         <Link to="/by-category">Question by Category</Link>
         <Link to="/by-level">Question by Level</Link>
-         <Link to="/sequence">Build Sequence</Link>
+        <Link to="/sequence">Build Sequence</Link>
+        <Link to="/randomiser">Randomiser</Link>
       </nav>
     </FooterStyles>
   );
