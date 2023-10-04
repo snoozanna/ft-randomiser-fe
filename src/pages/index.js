@@ -32,11 +32,13 @@ const HomePageStyles = styled.section`
   }
 `;
 
-const HomePage = () => (
-  <>
+const HomePage = () => {
+
+   return(
     <p>Randomiser</p>
-  </>
-);
+   )
+}
+;
 
 export default HomePage;
 

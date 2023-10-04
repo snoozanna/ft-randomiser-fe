@@ -64,7 +64,7 @@ const QByCat = ({onCategorySelected}) => {
   if (loading) return <Loader />;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
   if (!data) return <text>Could not find data</text>;
-  console.log("trying", data);
+  // console.log("trying", data);
 
   // // const [category, setCategory] = useState('Life');
 

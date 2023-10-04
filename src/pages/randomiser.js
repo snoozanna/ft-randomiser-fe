@@ -25,42 +25,76 @@ const RandomiserPageStyles = styled.section`
   /* align-items: center; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 5% 1fr 10%;
   grid-template-areas:
     "a a a a"
-    "b b b b"
-    "c c c c"
-    "d d d d";
-  max-width: 100%;
+    "e b b d"
+    ". c c d";
+  width: 100%;
 
   /* gap: 2rem; */
 
   .current-q-wrapper {
-    grid-column-start: b;
-    grid-column-end: b;
+ 
+    grid-area: b;
+    display:flex;
+    justify-content:center;
+    align-items:center;
   }
-  .btn-container-left{
-display:flex;
-flex-direction:column ;
-  } 
+  .btn-container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .mini-status{
+      border:2px solid white;
+      padding: 1rem;
+      width:fit-content;
+      max-width: 10rem;
+      display:flex;
+      flex-direction:column;
+
+    }
+  }
+  .btn-container-right {
+    display: flex;
+    flex-direction: column;
+    grid-area: d;
+    justify-content: space-around;
+    align-items: end;
+  }
+  .btn-container-lower {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-area: c;
+    align-items: flex-end;
+  }
+  .btn-container-upper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: a;
+  }
+
   @media ${devices.mobileL} {
     grid-template-columns: repeat(3, minmax(50px, 1fr));
     grid-template-rows: auto auto auto;
     grid-template-areas:
-      "a a ."
-      "a a b"
+      "a a a"
+      "b b b"
       ". e d";
     gap: 2rem;
   }
 `;
 
-const LevelBtnWrapperStyles = styled.div`
-width: 100%;
-display: flex;
-justify-content: center;
-align-items:center;
-grid-area: a;
-`
+// const LevelBtnWrapperStyles = styled.div`
+// width: 100%;
+// display: flex;
+// justify-content: center;
+// align-items:center;
+// grid-area: a;
+// `
 
 const RandomiserPage = () => {
      const {
@@ -72,7 +106,7 @@ const RandomiserPage = () => {
      } = useContext(QuestionContext);
     return (
       <RandomiserPageStyles>
-        <LevelBtnWrapperStyles>
+        <div className="btn-container-upper">
           <LightBtn
             allQuestions={allQuestions}
             setCurrentQuestion={setCurrentQuestion}
@@ -89,20 +123,21 @@ const RandomiserPage = () => {
             alreadyCalled={alreadyCalled}
             setAlreadyCalled={setAlreadyCalled}
           />
-        </LevelBtnWrapperStyles>
+        </div>
 
         <div className="btn-container-left">
+          <div className="mini-status">
+            <strong>Status</strong>
+            <span>eg Medium Sequence loaded!</span>
+          </div>
           <div className="btn-wrapper lockin">
             <LockInBtn />
           </div>
-          <div className="btn-wrapper skip">
-            <SkipBtn />
-          </div>
-          <div className="btn-wrapper go">
-            <GoBtn />
-          </div>
+          <div />
         </div>
-        <CurrentQ />
+        <div className="current-q-wrapper">
+          <CurrentQ />
+        </div>
         <div className="btn-container-right">
           <div className="btn-wrapper lockin">
             <RapidFireBtn />
@@ -111,7 +146,20 @@ const RandomiserPage = () => {
             <NonNegBtn />
           </div>
           <div className="btn-wrapper go">
-            <RandomLightBtn />
+            <LightBtn
+              allQuestions={allQuestions}
+              setCurrentQuestion={setCurrentQuestion}
+              alreadyCalled={alreadyCalled}
+              setAlreadyCalled={setAlreadyCalled}
+            />
+          </div>
+        </div>
+        <div className="btn-container-lower">
+          <div className="btn-wrapper skip">
+            <SkipBtn />
+          </div>
+          <div className="btn-wrapper go">
+            <GoBtn />
           </div>
         </div>
       </RandomiserPageStyles>

@@ -21,10 +21,10 @@ const ContentStyles = styled.div`
 
 const MainStyles = styled.main`
   height: 100%;
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   padding: 4rem;
   @media ${devices.mobileL} {
     margin-bottom: 8rem;

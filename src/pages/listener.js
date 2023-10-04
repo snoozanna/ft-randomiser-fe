@@ -1,9 +1,9 @@
-// import React from "react";
+import React from "react";
 // import { useEffect, useState } from "react";
 // import useSanityListener from "./../hooks/useSanityListener.js";
 // import { createClient } from "@sanity/client";
 
-// function ListenerPage() {
+function ListenerPage() {
 //   const client = createClient({
 //     projectId: "vlp0qz8p",
 //     dataset: "production",
@@ -61,14 +61,14 @@
 //     }
 //   }, [questionsListen]);
 
-//   return (
-//     <div className="ListenerPage">
-//       <h1>Questions</h1>
-//       {questions.map((question) => {
-//         <p>{question.question}</p>;
-//       })}
-//     </div>
-//   );
-// }
+  return (
+    <div className="ListenerPage">
+      <h1>Current Question</h1>
+      {/* {questions.map((question) => {
+        <p>{question.question}</p>;
+      })} */}
+    </div>
+  );
+}
 
-// export default ListenerPage;
+export default ListenerPage;

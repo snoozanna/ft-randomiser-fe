@@ -5,7 +5,13 @@ import Loader from '../Loader/index';
 import { getRandomQ } from '../../utils/utils.js';
 import Q_BY_LIGHT from "../../queries/questionsLight.js";
 
-const LightBtn = ({ allQuestions, setCurrentQuestion, alreadyCalled, setAlreadyCalled }) => {
+const LightBtn = ({
+  allQuestions,
+  setCurrentQuestion,
+  alreadyCalled,
+  setAlreadyCalled,
+  btnName,
+}) => {
   const { data, loading, error } = useQuery(Q_BY_LIGHT);
 
   if (loading) return <Loader />;
@@ -16,12 +22,18 @@ const LightBtn = ({ allQuestions, setCurrentQuestion, alreadyCalled, setAlreadyC
   const { questions } = data;
 
   const handleClick = () => {
-    getRandomQ({ questionsToChoose:questions, allQuestions, setCurrentQuestion, alreadyCalled, setAlreadyCalled });
+    getRandomQ({
+      questionsToChoose: questions,
+      allQuestions,
+      setCurrentQuestion,
+      alreadyCalled,
+      setAlreadyCalled,
+    });
   };
 
   return (
     <button type="button" onClick={() => handleClick()}>
-      Light
+      {btnName ? btnName : "Light"}
     </button>
   );
 };

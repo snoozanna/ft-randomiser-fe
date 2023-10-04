@@ -15,7 +15,7 @@ const NonNegBtn = () => {
 
   return (
     <NonNegBtnStyles type="button" onClick={() => handleClick()}  className="test">
-      Rapid Fire
+    Non Negotiable
     </NonNegBtnStyles>
   );
 };

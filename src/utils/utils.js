@@ -157,3 +157,39 @@ exports.buildSequence = ({ questions }, sequenceOrder, nonNegNum = 4) => {
 //       console.log("Conversion completed.");
 //     });
 // };
+
+
+exports.markAsAskedDB = async ({ questionId }) => {
+  console.log("trying to mark as called:", questionId);
+  try {
+    // Define the mutation object
+    const mutation = {
+      patch: {
+        id: questionId, // Use the provided questionId
+        set: {
+          beenAsked: true,
+        },
+      },
+    };
+
+    // Send the mutation using fetch
+    const apiUrl = `${process.env.MUTATE_SANITY_API_URL}`;
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.SANITY_TOKEN}`,
+      },
+      body: JSON.stringify({ mutations: [mutation] }),
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      console.log("Document updated:", result);
+    } else {
+      console.error("Failed to update document:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error updating document:", error);
+  }
+};

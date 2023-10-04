@@ -5,7 +5,7 @@ import { QuestionContext } from '../context/questions.context';
 const CurrentQStyles = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   align-items: center;
   .question-wrapper {
@@ -26,15 +26,10 @@ console.log("currentQuestion", currentQuestion)
   return (
     <>
       <CurrentQStyles>
-        <span className="category">
-          {currentQuestion.category.length > 0
-            ? `Category: ${currentQuestion.category[0].name}`
-            : ""}
-        </span>
         <div className="question-wrapper">
-          <span className="question">
+          <h3 className="question">
             {currentQuestion.question ? currentQuestion.question : ""}
-          </span>
+          </h3>
         
         </div>
       </CurrentQStyles>
