@@ -9,6 +9,10 @@ const GET_ALL_UNASKED_Q = gql`
         name
       }
       level
+      beenAsked
+      requireLockIn
+      nonNeg
+      documentary
     }
   }
 `;

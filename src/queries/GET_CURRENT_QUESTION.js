@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 // import gql from 'graphql-tag';
+
 const GET_CURRENT_QUESTION = gql`
 query CurQueQuery  {
     currentQ: allCurrent(limit: 1) {

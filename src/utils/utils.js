@@ -159,9 +159,9 @@ exports.buildSequence = ({ questions }, sequenceOrder, nonNegNum = 4) => {
 // };
 
 
-exports.markAsAskedDB = async ({ questionToMark }) => {
-    console.log("q", questionToMark);
-  const { _id } = questionToMark.question;
+exports.markAsAskedDB = async (questionToMark ) => {
+    console.log("questionToMark in markAsAskedDB", questionToMark);
+  const { _id } = questionToMark;
   const newQuestionID = _id
   console.log("trying to mark as called:", newQuestionID);
   try {
@@ -188,7 +188,7 @@ exports.markAsAskedDB = async ({ questionToMark }) => {
 
     if (response.ok) {
       const result = await response.json();
-      console.log("Document updated:", result);
+      console.log("Document updated (Marked as called):", result);
     } else {
       console.error("Failed to update document:", response.statusText);
     }
@@ -197,12 +197,13 @@ exports.markAsAskedDB = async ({ questionToMark }) => {
   }
 };
 
-exports.sendCurrentCallToDB = async ({ questionToSend }) => {
-   const { _id } = questionToSend.question;
+exports.sendCurrentCallToDB = async (questionToSend ) => {
+   console.log("questionToSend in sendCurrentCallToDB", questionToSend);
+   const { _id } = questionToSend
    const newQuestionID = _id;
-  const currentQuestionId = "7aef1dd4-f52a-46e4-93f2-7919677a2a89";
+  const currentQuestionId = "ac0e8ce6-7159-4fce-980c-84afcafb4972";
   // TODO Need better way of identifying the Current Question field in the database?
-  console.log("Current Question doc id", currentQuestionId);
+  // console.log("Current Question doc id", currentQuestionId);
   console.log("setting as Current Question:", newQuestionID);
   try {
     // Define the mutation object
@@ -231,7 +232,7 @@ exports.sendCurrentCallToDB = async ({ questionToSend }) => {
 
     if (response.ok) {
       const result = await response.json();
-      console.log("Document updated:", result);
+      console.log("Document updated (Current call sent to DB):", result);
     } else {
       console.error("Failed to update document:", response.statusText);
     }

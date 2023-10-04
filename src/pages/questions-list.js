@@ -6,6 +6,7 @@ import GET_ALL_UNASKED_Q from "./../queries/GET_ALL_UNASKED_Q";
 import { markAsAskedDB, sendCurrentCallToDB } from '../utils/utils.js';
 import { useQuery } from "@apollo/client";
 import Loader from '../components/Loader';
+import AskQuestion from '../components/AskQuestion.js';
 
 const QuestionListPageStyles = styled.div`
   display: flex;
@@ -68,6 +69,7 @@ const SetToCurrentCallBtn = (questionToSend) => {
 };
 
 
+
 const QuestionListPage = () => {
   const { data, loading, error } = useQuery(GET_ALL_UNASKED_Q);
   if (loading) return <Loader />;
@@ -81,19 +83,20 @@ const QuestionListPage = () => {
     <QuestionListPageStyles>
       <h2>Unasked Questions</h2>
       {questions.map((question) => {
-
+// console.log(question)
          return (
            <div className="qcontainer" key={question._id}>
              <p> {question.question}</p>
-             <p> {question._id}</p>
+             {/* <p> {question._id}</p> */}
              <div className="label-container">
                <span className="category label">
                  {" "}
                  {question.category.name ? question.category.name : <p>none</p>}
                </span>
              </div>
-             <UpdateQuestionButton questionToMark={{ question }} />
-             <SetToCurrentCallBtn questionToSend={{ question }} />
+             {/* <UpdateQuestionButton questionToMark={{ question }} />
+             <SetToCurrentCallBtn questionToSend={{ question }} /> */}
+             <AskQuestion questionToAsk={{question}}/>
            </div>
          );
       })}
