@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { devices } from '../styles/breakpoints.js';
 import GET_ALL_UNASKED_Q from "./../queries/GET_ALL_UNASKED_Q";
-import { markAsAskedDB } from '../utils/utils.js';
+import { markAsAskedDB, sendCurrentCallToDB } from '../utils/utils.js';
 import { useQuery } from "@apollo/client";
 import Loader from '../components/Loader';
 
@@ -43,19 +43,29 @@ const QuestionListPageStyles = styled.div`
 
 
 
-const UpdateQuestionButton = ({ questionId }) => {
-
-  const handleUpdate = ({questionId}) => {
-    markAsAskedDB({questionId});
+const UpdateQuestionButton = ( questionToMark ) => {
+  const handleUpdate = () => {
+    markAsAskedDB(questionToMark);
   };
 
   return (
-    <button onClick={() => handleUpdate({questionId})}>Mark as Asked</button>
+    <button onClick={() => handleUpdate({ questionToMark })}>
+      Mark as Asked
+    </button>
   );
 };
 
 
-
+const SetToCurrentCallBtn = (questionToSend) => {
+  const handleUpdate = () => {
+    sendCurrentCallToDB(questionToSend);
+  };
+  return (
+    <button onClick={() => handleUpdate({ questionToSend })}>
+      Set To Current Call
+    </button>
+  );
+};
 
 
 const QuestionListPage = () => {
@@ -73,21 +83,18 @@ const QuestionListPage = () => {
       {questions.map((question) => {
 
          return (
-             <div className="qcontainer" key={question._id}>
-               <p> {question.question}</p>
-               <div className="label-container">
-                 <span className="category label">
-                   {" "}
-                   {question.category.name ? (
-                     question.category.name
-                   ) : (
-                     <p>none</p>
-                   )}
-                 </span>
-               </div>
-               <UpdateQuestionButton questionId={question._id} />
+           <div className="qcontainer" key={question._id}>
+             <p> {question.question}</p>
+             <p> {question._id}</p>
+             <div className="label-container">
+               <span className="category label">
+                 {" "}
+                 {question.category.name ? question.category.name : <p>none</p>}
+               </span>
              </div>
- 
+             <UpdateQuestionButton questionToMark={{ question }} />
+             <SetToCurrentCallBtn questionToSend={{ question }} />
+           </div>
          );
       })}
     </QuestionListPageStyles>

@@ -159,15 +159,61 @@ exports.buildSequence = ({ questions }, sequenceOrder, nonNegNum = 4) => {
 // };
 
 
-exports.markAsAskedDB = async ({ questionId }) => {
-  console.log("trying to mark as called:", questionId);
+exports.markAsAskedDB = async ({ questionToMark }) => {
+    console.log("q", questionToMark);
+  const { _id } = questionToMark.question;
+  const newQuestionID = _id
+  console.log("trying to mark as called:", newQuestionID);
   try {
     // Define the mutation object
     const mutation = {
       patch: {
-        id: questionId, // Use the provided questionId
+        id: newQuestionID, // Use the provided questionId
         set: {
           beenAsked: true,
+        },
+      },
+    };
+
+    // Send the mutation using fetch
+    const apiUrl = `${process.env.MUTATE_SANITY_API_URL}`;
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.SANITY_TOKEN}`,
+      },
+      body: JSON.stringify({ mutations: [mutation] }),
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      console.log("Document updated:", result);
+    } else {
+      console.error("Failed to update document:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error updating document:", error);
+  }
+};
+
+exports.sendCurrentCallToDB = async ({ questionToSend }) => {
+   const { _id } = questionToSend.question;
+   const newQuestionID = _id;
+  const currentQuestionId = "7aef1dd4-f52a-46e4-93f2-7919677a2a89";
+  // TODO Need better way of identifying the Current Question field in the database?
+  console.log("Current Question doc id", currentQuestionId);
+  console.log("setting as Current Question:", newQuestionID);
+  try {
+    // Define the mutation object
+    const mutation = {
+      patch: {
+        id: currentQuestionId, // Use the provided questionId
+        set: {
+          question: {
+            _type: "reference",
+            _ref: newQuestionID, // Reference the question using _ref
+          },
         },
       },
     };

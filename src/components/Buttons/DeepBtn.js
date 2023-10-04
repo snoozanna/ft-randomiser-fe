@@ -13,7 +13,7 @@ const DeepBtn = ({ allQuestions, setCurrentQuestion, alreadyCalled, setAlreadyCa
   if (!data) return <text>Could not find data</text>;
   // console.log(data);
 
-  const { questions } = data;
+v
 
   const handleClick = () => {
       getRandomQ({ questionsToChoose:questions, allQuestions, setCurrentQuestion, alreadyCalled, setAlreadyCalled });
