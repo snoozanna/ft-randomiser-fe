@@ -4,6 +4,7 @@ import { QuestionContext } from '../context/questions.context';
 import GET_CURRENT_QUESTION from "../queries/GET_CURRENT_QUESTION";
 import Loader from './Loader';
 import { useQuery } from '@apollo/client';
+import { askQuestion } from '../utils/utils';
 
 const CurrentQStyles = styled.div`
   display: flex;
@@ -33,13 +34,52 @@ const CurrentQ = ({lockInMoment}) => {
 
   // const currentQuestion = data.currentQ[0].question
 
-  const { currentQuestion } = useContext(QuestionContext);
+  const { currentQuestion, setCurrentQuestion, setQuestionSequenceIndex} = useContext(QuestionContext);
   console.log("currentQuestion", currentQuestion);
 
+  const standInLockInQ = {
+    __typename: "Question",
+    question: "Do you have a favouriter Doctor Who?",  
+    _id: "0c11fb08-4568-4c2b-9e29-c2d9e0d24c17",
+    category: {
+      __typename: "Category",
+      name: "Material Possessions",
+    },
+    level: "deep",
+    beenAsked: false,
+    requireLockIn: false,
+    nonNeg: true,
+    documentary: false,
+  };
+
   //useEffect triggered by ?/
+  const lockInOptions = [currentQuestion, standInLockInQ]
+  const confirmBtnHandler = async (selectedQuestion) => {
+    console.log("selectedQuestion", selectedQuestion)
+        await askQuestion(selectedQuestion);
+        setCurrentQuestion(selectedQuestion);
+        setQuestionSequenceIndex((currentIndex) => {
+          return currentIndex + 1;
+        })}
+
+
   return (
     <>
-      {lockInMoment ?  <p>show lock ins</p>:
+      {lockInMoment ?   lockInOptions.map((option) => {
+            console.log("option", option);
+            return (
+              <div key={option._id}>
+                <p>{option.question}</p>
+                <button
+                  // onClick={() => confirmBtnHandler({option})}
+                  onClick={() => confirmBtnHandler(option)}
+                  className="lock-in"
+                >
+                  Lock in ?
+                </button>
+              </div>
+            );
+          }):
       
       (
         <CurrentQStyles>

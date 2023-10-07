@@ -27,15 +27,14 @@ const GoBtn = ({setLockInMoment} ) => {
       //STOP LOCK IN HAPPENING NOW
       // choose one option
       // ask that option
-      if( nextQuestion.requiresLockIn){
+      if(nextQuestion.requireLockIn){
       setLockInMoment(true);
-        } else {
-    
-      await askQuestion(nextQuestion);
-      setCurrentQuestion(nextQuestion);
-      setQuestionSequenceIndex((currentIndex) => {
-        return currentIndex + 1;
-      })
+      }else{  
+        await askQuestion(nextQuestion);
+        setCurrentQuestion(nextQuestion);
+        setQuestionSequenceIndex((currentIndex) => {
+          return currentIndex + 1;
+        })}
       
     } else {
       setQuestionSequenceIndex(-1);
@@ -44,7 +43,7 @@ const GoBtn = ({setLockInMoment} ) => {
         questions: [],
       });
     }}
-    }
+    
 
 
   
