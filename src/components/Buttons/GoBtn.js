@@ -36,13 +36,14 @@ const GoBtn = ({setLockInMoment} ) => {
       setQuestionSequenceIndex((currentIndex) => {
         return currentIndex + 1;
       })
-    }
+      
     } else {
       setQuestionSequenceIndex(-1);
       setQuestionSequence({
         sequenceLevel: null,
         questions: [],
       });
+    }}
     }
 
 
