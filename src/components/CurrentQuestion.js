@@ -23,26 +23,30 @@ const CurrentQStyles = styled.div`
 `;
 
 const CurrentQ = () => {
-  const { data, loading, error } = useQuery(GET_CURRENT_QUESTION);
-  if (loading) return <Loader />;
-  if (error) return <p>Error: {JSON.stringify(error)}</p>;
-  if (!data) return <text>Could not find data</text>;
-  console.log(data);
+  //TODO EVENTUALLY NEEDS TO LISTEN TO DB
+  // const { data, loading, error } = useQuery(GET_CURRENT_QUESTION);
+  // if (loading) return <Loader />;
+  // if (error) return <p>Error: {JSON.stringify(error)}</p>;
+  // if (!data) return <text>Could not find data</text>;
+  // console.log(data);
 
-  const currentQuestion = data.currentQ[0].question
+  // const currentQuestion = data.currentQ[0].question
 
-  // const { currentQuestion } = useContext(QuestionContext);
-  // console.log("currentQuestion", currentQuestion);
+  const { currentQuestion } = useContext(QuestionContext);
+  console.log("currentQuestion", currentQuestion);
 
+  //useEffect triggered by ?/
   return (
     <>
       <CurrentQStyles>
         <div className="question-wrapper">
-          <span>Current Question from DB:</span>
+          <span>Current Question from context:</span>
           <h3 className="question">
-            {currentQuestion.question ? currentQuestion.question : ""}
+            {currentQuestion ? currentQuestion.question : null}
           </h3>
+          <p> {currentQuestion ? currentQuestion._id : null}</p>
         </div>
+        {/* <button>Refresh</button> */}
       </CurrentQStyles>
     </>
   );

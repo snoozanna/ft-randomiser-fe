@@ -3,7 +3,10 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { devices } from '../styles/breakpoints.js';
 import GET_ALL_UNASKED_Q from "./../queries/GET_ALL_UNASKED_Q";
-import { markAsAskedDB, sendCurrentCallToDB } from '../utils/utils.js';
+import {
+  updateQuestionBeenAsked,
+  sendCurrentCallToDB,
+} from "../utils/utils.js";
 import { useQuery } from "@apollo/client";
 import Loader from '../components/Loader';
 import AskQuestion from '../components/AskQuestion.js';
@@ -46,7 +49,7 @@ const QuestionListPageStyles = styled.div`
 
 const UpdateQuestionButton = ( questionToMark ) => {
   const handleUpdate = () => {
-    markAsAskedDB(questionToMark);
+    updateQuestionBeenAsked(questionToMark);
   };
 
   return (
@@ -96,7 +99,7 @@ const QuestionListPage = () => {
              </div>
              {/* <UpdateQuestionButton questionToMark={{ question }} />
              <SetToCurrentCallBtn questionToSend={{ question }} /> */}
-             <AskQuestion questionToAsk={{question}}/>
+             <AskQuestion questionToAsk={question}/>
            </div>
          );
       })}

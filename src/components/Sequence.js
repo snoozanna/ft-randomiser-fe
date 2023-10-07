@@ -40,20 +40,19 @@ span.level.label.medium{
 `
 
 const Sequence = ({sequence}) => {
-
+// console.log(sequence)/
   return(
   sequence.map((question)=> {
 
-return(
-      <SequenceStyles>
-    <div className='label-container'>
+return (
+  <SequenceStyles key={question._id}>
+    <div className="label-container">
       <span className="category label">{question.category.name}</span>
       <span className={`level label ${question.level}`}>{question.level}</span>
     </div>
-    <p key={question.id}>{question.question}</p>
-
-    </SequenceStyles>
-  )
+    <p key={question._id}>{question.question}</p>
+  </SequenceStyles>
+);
 }
   )
   )

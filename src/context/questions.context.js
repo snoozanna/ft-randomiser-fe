@@ -5,27 +5,38 @@ export const QuestionContext = createContext({
   questions: {
     allQuestions: [],
     currentQuestion: {
-      question: '',
+      question: "",
       category: [],
     },
-    alreadyCalled: [''],
+    alreadyCalled: [""],
     questionError: "",
     reset: () => {},
     setAlreadyCalled: () => {},
     setAllQuestions: () => {},
-    setCurrentQuestion:() => {},
-    setQuestionError: () => {}
+    setCurrentQuestion: () => {},
+    setQuestionError: () => {},
   },
+  sequence: {
+    questionSequence: {
+      sequenceLevel: "",
+      questions: [],
+    },
+    questionSequenceIndex: 0,
+  },
+
 });
 
 export function QuestionProvider({ children }) {
-  const [currentQuestion, setCurrentQuestion] = useState({
-    question: '',
-    category: [],
-  });
+  const [currentQuestion, setCurrentQuestion] = useState(null);
   const [alreadyCalled, setAlreadyCalled] = useState('');
 const [questionError, setQuestionError] = useState('');
 const [allQuestions, setAllQuestions] = useState([]);
+
+const [questionSequence, setQuestionSequence] = useState({
+  sequenceLevel: null,
+  questions: [],
+});
+const [questionSequenceIndex, setQuestionSequenceIndex] = useState(-1);
 
   const reset = () => {
     if (window.confirm('are you sure')) {
@@ -43,10 +54,14 @@ const [allQuestions, setAllQuestions] = useState([]);
         setCurrentQuestion,
         alreadyCalled,
         setAlreadyCalled,
-        questionError, 
+        questionError,
         setQuestionError,
         allQuestions,
         setAllQuestions,
+        questionSequence,
+        setQuestionSequence,
+        questionSequenceIndex,
+        setQuestionSequenceIndex,
         reset,
       }}
     >

@@ -7,14 +7,16 @@ const SkipBtnStyles = styled.button`
 
 `;
 
-const SkipBtn = () => {
-
+const SkipBtn = ({ setQuestionSequenceIndex }) => {
   const handleClick = () => {
-    console.log("Skip button fires")
+    console.log("Go button fires");
+    setQuestionSequenceIndex((currentIndex) => {
+      return currentIndex + 1;
+    });
   };
 
   return (
-    <SkipBtnStyles type="button" onClick={() => handleClick()}  className="test">
+    <SkipBtnStyles type="button" onClick={() => handleClick()} className="test">
       Skip
     </SkipBtnStyles>
   );

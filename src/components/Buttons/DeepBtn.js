@@ -21,7 +21,7 @@ const DeepBtn = ({ allQuestions, setCurrentQuestion, alreadyCalled, setAlreadyCa
 
   return (
     <button type="button" onClick={() => handleClick()}>
-      Deep
+      Sequence 3
     </button>
   );
 };

@@ -4,15 +4,15 @@ import styled from 'styled-components';
 import { devices } from '../styles/breakpoints.js';
 import { QuestionContext } from "../context/questions.context";
 import CurrentQ from "./../components/CurrentQuestion.js"
-import LightBtn from '../components/Buttons/LightBtn.js';
-import MediumBtn from "../components/Buttons/MediumBtn.js";
-import DeepBtn from '../components/Buttons/DeepBtn.js';
+import SequenceBtn from "../components/Buttons/SequenceBtn.js";
+
 import LockInBtn from '../components/Buttons/LockInBtn.js';
 import SkipBtn from "../components/Buttons/SkipBtn.js";
 import GoBtn from '../components/Buttons/GoBtn.js';
 import RapidFireBtn from '../components/Buttons/RapidFireBtn.js';
 import NonNegBtn from '../components/Buttons/NonNegBtn.js';
-import RandomLightBtn from '../components/Buttons/RandomLight.js';
+import CallSequence from '../components/CallSequence.js';
+// import RandomLightBtn from '../components/Buttons/RandomLight.js';
 
 
 const RandomiserPageStyles = styled.section`
@@ -97,45 +97,27 @@ const RandomiserPageStyles = styled.section`
 // `
 
 const RandomiserPage = () => {
-     const {
-       allQuestions,
-       currentQuestion,
-       setCurrentQuestion,
-       alreadyCalled,
-       setAlreadyCalled,
-     } = useContext(QuestionContext);
+     const {questionSequence} = useContext(QuestionContext);
     return (
       <RandomiserPageStyles>
         <div className="btn-container-upper">
-          <LightBtn
-            allQuestions={allQuestions}
-            setCurrentQuestion={setCurrentQuestion}
-            alreadyCalled={alreadyCalled}
-            setAlreadyCalled={setAlreadyCalled}
-          />
-          <MediumBtn
-            setCurrentQuestion={setCurrentQuestion}
-            alreadyCalled={alreadyCalled}
-            setAlreadyCalled={setAlreadyCalled}
-          />
-          <DeepBtn
-            setCurrentQuestion={setCurrentQuestion}
-            alreadyCalled={alreadyCalled}
-            setAlreadyCalled={setAlreadyCalled}
-          />
+          <SequenceBtn levelSequenceLabel={1} />
+          <SequenceBtn levelSequenceLabel={2} />
+          <SequenceBtn levelSequenceLabel={3} />
         </div>
 
         <div className="btn-container-left">
           <div className="mini-status">
             <strong>Status</strong>
-            <span>eg Medium Sequence loaded!</span>
+            <span>eg Sequence {questionSequence.sequenceLevel} loaded!</span>
           </div>
-          <div className="btn-wrapper lockin">
+          {/* <div className="btn-wrapper lockin">
             <LockInBtn />
-          </div>
+          </div> */}
           <div />
         </div>
         <div className="current-q-wrapper">
+          <CallSequence/>
           <CurrentQ />
         </div>
         <div className="btn-container-right">
@@ -146,22 +128,15 @@ const RandomiserPage = () => {
             <NonNegBtn />
           </div>
           <div className="btn-wrapper go">
-            <LightBtn
+            {/* <RandomLightBtn
               allQuestions={allQuestions}
               setCurrentQuestion={setCurrentQuestion}
               alreadyCalled={alreadyCalled}
               setAlreadyCalled={setAlreadyCalled}
-            />
+            /> */}
           </div>
         </div>
-        <div className="btn-container-lower">
-          <div className="btn-wrapper skip">
-            <SkipBtn />
-          </div>
-          <div className="btn-wrapper go">
-            <GoBtn />
-          </div>
-        </div>
+       
       </RandomiserPageStyles>
     );
 }

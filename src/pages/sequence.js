@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import { devices } from '../styles/breakpoints.js';
 import {buildSequence} from "./../utils/utils.js"
 import Sequence from '../components/Sequence.js';
+import CallSequence from '../components/CallSequence.js';
 import { QuestionContext } from '../context/questions.context';
+import { Call } from '@mui/icons-material';
 
 const SequencePageStyles = styled.div`
 padding: 4rem;
@@ -87,11 +89,12 @@ const SequencePage = ({ data }) => {
     useContext(QuestionContext);
 const [currentSequence, setCurrentSequence] = useState([])
   const questions = data.questions.nodes;
-console.log(questions)
+
   const clickHandler = (questions, sequenceOrder) => {
     // console.log("building sequence")
     const sequence = buildSequence(questions, sequenceOrder)
     setCurrentSequence(sequence)
+    console.log(currentSequence);
   }
 
   const sequenceOrder1 = ["deep", "lighthearted", "deep", "deep", "medium", "lighthearted"];
@@ -113,14 +116,16 @@ console.log(questions)
           {currentSequence ? <Sequence sequence={currentSequence}/> : <p>no sequence yet</p>}
         </div>
         <div className='sequence-admin'>
+          {/* <CallSequence sequence={currentSequence}/> */}
 
             <SeqBtnContainerStyles>
               <h3>Sequence 1</h3>
   
               <div className='label-container'>
-         {sequenceOrder1.map((level) => {
+         {sequenceOrder1.map((level, i) => {
+
           return(
-             <span className={`level label ${level}`}>{level}</span>
+             <span key={i} className={`level label ${level}`}>{level}</span>
           )
          })}       
       </div>
@@ -132,10 +137,12 @@ console.log(questions)
               <h3>Sequence 2</h3>
   
               <div className='label-container'>
-         {sequenceOrder2.map((level) => {
-          return(
-             <span className={`level label ${level}`}>{level}</span>
-          )
+         {sequenceOrder2.map((level, i) => {
+          return (
+            <span key={i} className={`level label ${level}`}>
+              {level}
+            </span>
+          );
          })}       
       </div>
               <button type="button" onClick={() => clickHandler({questions}, sequenceOrder2)}>
@@ -146,10 +153,12 @@ console.log(questions)
               <h3>Sequence 3</h3>
   
               <div className='label-container'>
-         {sequenceOrder3.map((level) => {
-          return(
-             <span className={`level label ${level}`}>{level}</span>
-          )
+         {sequenceOrder3.map((level, i) => {
+          return (
+            <span key={i} className={`level label ${level}`}>
+              {level}
+            </span>
+          );
          })}       
       </div>
               <button type="button" onClick={() => clickHandler({questions}, sequenceOrder3)}>
@@ -168,11 +177,12 @@ export const query = graphql`
   query QuestionQuery {
     questions: allSanityQuestion {
       nodes {
-        id
+        _id
         question
         level
         category {
           name
+          _id
         }
         requireLockIn
         nonNeg

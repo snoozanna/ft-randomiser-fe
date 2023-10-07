@@ -159,18 +159,18 @@ exports.buildSequence = ({ questions }, sequenceOrder, nonNegNum = 4) => {
 // };
 
 
-exports.markAsAskedDB = async (questionToMark ) => {
-    console.log("questionToMark in markAsAskedDB", questionToMark);
-  const { _id } = questionToMark;
+exports.updateQuestionBeenAsked = async (questionToUpdate, setTo=true ) => {
+    console.log("questionToUpdate in updateQuestionBeenAsked", questionToUpdate);
+  const { _id } = questionToUpdate;
   const newQuestionID = _id
-  console.log("trying to mark as called:", newQuestionID);
+  console.log(`trying to update as ${setTo}:`, newQuestionID);
   try {
     // Define the mutation object
     const mutation = {
       patch: {
         id: newQuestionID, // Use the provided questionId
         set: {
-          beenAsked: true,
+          beenAsked: setTo,
         },
       },
     };
@@ -188,7 +188,7 @@ exports.markAsAskedDB = async (questionToMark ) => {
 
     if (response.ok) {
       const result = await response.json();
-      console.log("Document updated (Marked as called):", result);
+      console.log("Document updated (Marked as asked):", result);
     } else {
       console.error("Failed to update document:", response.statusText);
     }
@@ -197,12 +197,15 @@ exports.markAsAskedDB = async (questionToMark ) => {
   }
 };
 
+
+
 exports.sendCurrentCallToDB = async (questionToSend ) => {
    console.log("questionToSend in sendCurrentCallToDB", questionToSend);
-   const { _id } = questionToSend
-   const newQuestionID = _id;
-  const currentQuestionId = "ac0e8ce6-7159-4fce-980c-84afcafb4972";
+   const { _id : newQuestionID } = questionToSend;
+
+  const currentQuestionId = "-7590b98b-b7ac-5d55-a7bb-c9b1b2dacffd";
   // TODO Need better way of identifying the Current Question field in the database?
+  // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
   console.log("setting as Current Question:", newQuestionID);
   try {
@@ -240,3 +243,14 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
     console.error("Error updating document:", error);
   }
 };
+
+
+exports.askQuestion = async (
+  question,
+) => {
+  console.log("asking q");
+   exports.sendCurrentCallToDB(question);
+  // - updates as having been asked
+   exports.updateQuestionBeenAsked(question);
+};
+

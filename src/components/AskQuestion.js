@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from 'styled-components';
-import { markAsAskedDB, sendCurrentCallToDB } from "../utils/utils.js";
+import {
+  updateQuestionBeenAsked,
+  sendCurrentCallToDB,
+} from "../utils/utils.js";
 import { QuestionContext } from '../context/questions.context';
 import Loader from './Loader';
 import { useQuery } from '@apollo/client';
@@ -21,11 +24,12 @@ const AskQuestionStyles = styled.div`
 
 const AskQuestion = ({questionToAsk}) => {
   // TODO YOU HAVE TO PRESS AN ALREADY LOCKED IN QUESTION TWICE
-  console.log("Ask Question Renders")
+  // console.log("Ask Question Renders", questionToAsk);
   const [status, setStatus] = useState(false)
   const [requireLockInState, setRequireLockInState] = useState(false);
   const [lockInOptions, setLockInOptions] = useState([]);
-  const [alreadyLockedIn, setAlreadyLockedIn] = useState(false)
+  const [alreadyLockedIn, setAlreadyLockedIn] = useState(false);
+  const [chosenQuestion, setChosenQuestion] = useState({});
  const { question } = questionToAsk;
  const standInLockInQ = {
    __typename: "Question",
@@ -41,34 +45,33 @@ const AskQuestion = ({questionToAsk}) => {
    nonNeg: true,
    documentary: false,
  };
-useEffect(() => {
-  console.log("alreadyLockedIn has changed", alreadyLockedIn);
-}, [alreadyLockedIn]);
+// useEffect(() => {
+//   console.log("useEffect fires", alreadyLockedIn);
+
+// }, [alreadyLockedIn]);
 
   const askQuestion = (questionToAsk) => {
-
       // - takes in question
-      const { question } = questionToAsk;
-      console.log("trying to ask", question);
+      console.log("trying to ask", questionToAsk);
+    
+       const { question } = questionToAsk;
+      
+             console.log("after destructure", question);
       // - check for lock in and offer alternative
-
-      if (alreadyLockedIn===true){
-        console.log("already locked in ")
-      }
         if (question.requireLockIn && !alreadyLockedIn) {
           console.log("requires lock in");
           setRequireLockInState(true);
           // save lockin options in state and offer options
           setLockInOptions([question, standInLockInQ]);
+
         } else {
           console.log("no lock in required, trying to update");
           // - updates current question
           sendCurrentCallToDB(question);
           // - updates as having been asked
-          markAsAskedDB(question);
+          updateQuestionBeenAsked(question);
           setLockInOptions([]);
-          setStatus(true)
-        
+          setStatus(true);
         }
       // - provide options for skipping
     };
@@ -78,23 +81,23 @@ useEffect(() => {
 const confirmBtnHandler = (question) => {
   console.log("question in confirmBtnHandler", question);
  setAlreadyLockedIn(true); 
+ console.log("Question given to askQuection post lockin", question);
+// setChosenQuestion(question)
 askQuestion({question});
 };
-
-
 
  
   return (
     <>
+      
+
       <AskQuestionStyles>
         {status ? "Asked!" : ""}
         <p>{question.requireLockIn ? "Requires Lockin" : "Doesn't require"}</p>
         {requireLockInState ? (
-    
           lockInOptions.map((option) => {
             console.log("option", option);
 
-    
             return (
               <div key={option._id}>
                 <p>{option.question}</p>
@@ -114,7 +117,7 @@ askQuestion({question});
               ""
             ) : (
               <button
-                onClick={() => askQuestion({ question }, alreadyLockedIn)}
+                onClick={() => askQuestion({ question })}
               >
                 Ask Question
               </button>

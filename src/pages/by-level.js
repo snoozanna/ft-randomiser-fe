@@ -2,9 +2,9 @@ import { Link, useStaticQuery } from 'gatsby';
 import { useQuery } from '@apollo/client';
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
-import DeepBtn from '../components/Buttons/DeepBtn.js';
-import MediumBtn from '../components/Buttons/MediumBtn.js';
-import LightBtn from '../components/Buttons/LightBtn.js';
+// import DeepBtn from '../components/Buttons/DeepBtn.js';
+// import MediumBtn from '../components/Buttons/MediumBtn.js';
+// import LightBtn from '../components/Buttons/SequenceOneBtn.js';
 
 import { getRandomQ } from '../utils/utils.js';
 import { QuestionContext } from '../context/questions.context';
@@ -50,7 +50,7 @@ const QByLevel = () => {
       <QByCatStyles>
         <header>
           <div className="cat-btn-wrapper">
-            <LightBtn
+            {/* <LightBtn
             allQuestions={allQuestions}
               setCurrentQuestion={setCurrentQuestion}
               alreadyCalled={alreadyCalled}
@@ -65,7 +65,7 @@ const QByLevel = () => {
               setCurrentQuestion={setCurrentQuestion}
               alreadyCalled={alreadyCalled}
               setAlreadyCalled={setAlreadyCalled}
-            />
+            /> */}
           </div>
         </header>
         <h3>{currentQuestion.question}</h3>
