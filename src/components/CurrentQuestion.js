@@ -22,7 +22,8 @@ const CurrentQStyles = styled.div`
   }
 `;
 
-const CurrentQ = () => {
+const CurrentQ = ({lockInMoment}) => {
+
   //TODO EVENTUALLY NEEDS TO LISTEN TO DB
   // const { data, loading, error } = useQuery(GET_CURRENT_QUESTION);
   // if (loading) return <Loader />;
@@ -38,16 +39,20 @@ const CurrentQ = () => {
   //useEffect triggered by ?/
   return (
     <>
-      <CurrentQStyles>
-        <div className="question-wrapper">
-          <span>Current Question from context:</span>
-          <h3 className="question">
-            {currentQuestion ? currentQuestion.question : null}
-          </h3>
-          <p> {currentQuestion ? currentQuestion._id : null}</p>
-        </div>
-        {/* <button>Refresh</button> */}
-      </CurrentQStyles>
+      {lockInMoment ?  <p>show lock ins</p>:
+      
+      (
+        <CurrentQStyles>
+          <div className="question-wrapper">
+            <span>Current Question from context:</span>
+            <h3 className="question">
+              {currentQuestion ? currentQuestion.question : null}
+            </h3>
+            <p> {currentQuestion ? currentQuestion._id : null}</p>
+          </div>
+          {/* <button>Refresh</button> */}
+        </CurrentQStyles>
+      )}
     </>
   );
 };

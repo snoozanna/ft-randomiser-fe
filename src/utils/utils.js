@@ -161,8 +161,8 @@ exports.buildSequence = ({ questions }, sequenceOrder, nonNegNum = 4) => {
 
 exports.updateQuestionBeenAsked = async (questionToUpdate, setTo=true ) => {
     console.log("questionToUpdate in updateQuestionBeenAsked", questionToUpdate);
-  const { _id } = questionToUpdate;
-  const newQuestionID = _id
+  const { _id: newQuestionID } = questionToUpdate;
+
   console.log(`trying to update as ${setTo}:`, newQuestionID);
   try {
     // Define the mutation object
@@ -188,7 +188,7 @@ exports.updateQuestionBeenAsked = async (questionToUpdate, setTo=true ) => {
 
     if (response.ok) {
       const result = await response.json();
-      console.log("Document updated (Marked as asked):", result);
+      console.log(`Document updated (Marked as ${setTo ? "asked": "not asked"}):`, result);
     } else {
       console.error("Failed to update document:", response.statusText);
     }
@@ -200,10 +200,13 @@ exports.updateQuestionBeenAsked = async (questionToUpdate, setTo=true ) => {
 
 
 exports.sendCurrentCallToDB = async (questionToSend ) => {
-   console.log("questionToSend in sendCurrentCallToDB", questionToSend);
-   const { _id : newQuestionID } = questionToSend;
 
-  const currentQuestionId = "-7590b98b-b7ac-5d55-a7bb-c9b1b2dacffd";
+   console.log("questionToSend in sendCurrentCallToDB", questionToSend);
+  //  const { _id : newQuestionID } = questionToSend;
+  const { _id } = questionToSend;
+  const newQuestionID = _id;
+
+  const currentQuestion_Id = "b4ec0e70-32d2-49e4-831c-213f9eb69ff0";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -212,7 +215,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
     // Define the mutation object
     const mutation = {
       patch: {
-        id: currentQuestionId, // Use the provided questionId
+        id: currentQuestion_Id, // Use the provided questionId
         set: {
           question: {
             _type: "reference",

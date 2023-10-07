@@ -98,6 +98,8 @@ const RandomiserPageStyles = styled.section`
 
 const RandomiserPage = () => {
      const {questionSequence} = useContext(QuestionContext);
+       const [lockInMoment, setLockInMoment] = useState(false);
+       console.log("lockin moment in page", lockInMoment);
     return (
       <RandomiserPageStyles>
         <div className="btn-container-upper">
@@ -117,8 +119,8 @@ const RandomiserPage = () => {
           <div />
         </div>
         <div className="current-q-wrapper">
-          <CallSequence/>
-          <CurrentQ />
+          <CallSequence setLockInMoment={setLockInMoment} />
+          <CurrentQ lockInMoment={lockInMoment} />
         </div>
         <div className="btn-container-right">
           <div className="btn-wrapper lockin">
@@ -136,7 +138,6 @@ const RandomiserPage = () => {
             /> */}
           </div>
         </div>
-       
       </RandomiserPageStyles>
     );
 }

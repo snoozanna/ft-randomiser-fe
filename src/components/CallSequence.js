@@ -7,11 +7,12 @@ import GoBtn from './Buttons/GoBtn';
 
 const CallSequenceStyles = styled.div`
 `
-const CallSequence = () => {
+const CallSequence = ({setLockInMoment}) => {
   const { questionSequence, questionSequenceIndex, setQuestionSequenceIndex } =
     useContext(QuestionContext);
   const [showGoButton, setShowGoButton] = useState(false);
   console.log("questionSequence", questionSequence);
+   
 
   // useEffect(() => {
   //   console.log("questionSequence has changed", questionSequence);
@@ -40,17 +41,14 @@ const CallSequence = () => {
           questionSequenceIndex === -1 ? (
             <>
               <span>Question sequence loaded!</span>
-              <GoBtn
-                setQuestionSequenceIndex={setQuestionSequenceIndex}
-                questionSequence={questionSequence}
-              />
+              <GoBtn setLockInMoment={setLockInMoment} />
             </>
           ) : null}
           {questionSequence.questions.length !== 0 &&
           questionSequenceIndex > -1 ? (
             <>
-              <GoBtn/>
-              <SkipBtn setQuestionSequenceIndex={setQuestionSequenceIndex} />
+              <GoBtn setLockInMoment={setLockInMoment} />
+              <SkipBtn />
             </>
           ) : null}
         </div>
