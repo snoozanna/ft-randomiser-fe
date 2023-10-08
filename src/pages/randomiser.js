@@ -13,6 +13,7 @@ import RapidFireBtn from '../components/Buttons/RapidFireBtn.js';
 import NonNegBtn from '../components/Buttons/NonNegBtn.js';
 import CallSequence from '../components/CallSequence.js';
 import RandomLightBtn from '../components/Buttons/RandomLight.js';
+import EndSequenceBtn from '../components/Buttons/EndSequence.js';
 // import RandomLightBtn from '../components/Buttons/RandomLight.js';
 
 
@@ -46,7 +47,7 @@ const RandomiserPageStyles = styled.section`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-around;
     .mini-status {
       border: 2px solid white;
       padding: 1rem;
@@ -103,15 +104,16 @@ const RandomiserPage = () => {
      const { questionSequence, questionSequenceIndex } =
        useContext(QuestionContext);
        const [lockInMoment, setLockInMoment] = useState(false);
-       console.log(questionSequence)
+      
   
     return (
       <RandomiserPageStyles>
         <div className="btn-container-upper">
-          <SequenceBtn levelSequenceLabel={1}/>
+          <SequenceBtn levelSequenceLabel={1} />
           <SequenceBtn levelSequenceLabel={2} />
           <SequenceBtn levelSequenceLabel={3} />
         </div>
+        
 
         <div className="btn-container-left">
           <div className="mini-status">
@@ -132,9 +134,9 @@ const RandomiserPage = () => {
               </p>
             </span>
           </div>
-          {/* <div className="btn-wrapper lockin">
-            <LockInBtn />
-          </div> */}
+          <div className="btn-wrapper endsequence">
+        <EndSequenceBtn/>
+          </div>
           <div />
         </div>
         <CallSequence
