@@ -127,7 +127,7 @@ button * {
     font-weight: 600;
     border: 2px solid black;
     padding: 0.6rem 1rem;
-    border-radius: 2px;
+    border-radius: 8px;
     cursor: pointer;
     --cast: 4px;
     box-shadow: var(--cast) var(--cast) 0 var(--black);

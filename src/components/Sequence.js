@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const SequenceStyles = styled.div`
 display:flex;
 flex-direction:column;
@@ -40,7 +41,7 @@ span.level.label.medium{
 `
 
 const Sequence = ({sequence}) => {
-// console.log(sequence)/
+
   return(
   sequence.map((question)=> {
 

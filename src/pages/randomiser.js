@@ -12,6 +12,7 @@ import GoBtn from '../components/Buttons/GoBtn.js';
 import RapidFireBtn from '../components/Buttons/RapidFireBtn.js';
 import NonNegBtn from '../components/Buttons/NonNegBtn.js';
 import CallSequence from '../components/CallSequence.js';
+import RandomLightBtn from '../components/Buttons/RandomLight.js';
 // import RandomLightBtn from '../components/Buttons/RandomLight.js';
 
 
@@ -35,24 +36,25 @@ const RandomiserPageStyles = styled.section`
   /* gap: 2rem; */
 
   .current-q-wrapper {
- 
     grid-area: b;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
   .btn-container-left {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    .mini-status{
-      border:2px solid white;
+    align-items: flex-start;
+    justify-content: center;
+    .mini-status {
+      border: 2px solid white;
       padding: 1rem;
-      width:fit-content;
-      max-width: 10rem;
-      display:flex;
-      flex-direction:column;
-
+      width: min-content;
+      /* max-width: 10rem; */
+      display: flex;
+      flex-direction: column;
+      text-align: center;
     }
   }
   .btn-container-right {
@@ -62,7 +64,8 @@ const RandomiserPageStyles = styled.section`
     justify-content: space-around;
     align-items: end;
   }
-  .btn-container-lower {
+  .btn-container-lower,
+  .callSequence {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -97,29 +100,48 @@ const RandomiserPageStyles = styled.section`
 // `
 
 const RandomiserPage = () => {
-     const {questionSequence} = useContext(QuestionContext);
+     const { questionSequence, questionSequenceIndex } =
+       useContext(QuestionContext);
        const [lockInMoment, setLockInMoment] = useState(false);
-       console.log("lockin moment in page", lockInMoment);
+       console.log(questionSequence)
+  
     return (
       <RandomiserPageStyles>
         <div className="btn-container-upper">
-          <SequenceBtn levelSequenceLabel={1} />
+          <SequenceBtn levelSequenceLabel={1}/>
           <SequenceBtn levelSequenceLabel={2} />
           <SequenceBtn levelSequenceLabel={3} />
         </div>
 
         <div className="btn-container-left">
           <div className="mini-status">
-            <strong>Status</strong>
-            <span>eg Sequence {questionSequence.sequenceLevel} loaded!</span>
+            <h4>
+              <strong>Status</strong>
+            </h4>
+            <span>
+              <p>
+                {questionSequence.questions.length === 0
+                  ? "Waiting to choose sequence"
+                  : `Sequence ${questionSequence.sequenceLevel} loaded!`}
+              </p>
+              <p>
+                {questionSequenceIndex >= 0 &&
+                questionSequenceIndex === questionSequence.questions.length - 1
+                  ? "Last question"
+                  : null}
+              </p>
+            </span>
           </div>
           {/* <div className="btn-wrapper lockin">
             <LockInBtn />
           </div> */}
           <div />
         </div>
+        <CallSequence
+          setLockInMoment={setLockInMoment}
+          className="callSequence"
+        />
         <div className="current-q-wrapper">
-          <CallSequence setLockInMoment={setLockInMoment} />
           <CurrentQ
             lockInMoment={lockInMoment}
             setLockInMoment={setLockInMoment}
@@ -133,12 +155,7 @@ const RandomiserPage = () => {
             <NonNegBtn />
           </div>
           <div className="btn-wrapper go">
-            {/* <RandomLightBtn
-              allQuestions={allQuestions}
-              setCurrentQuestion={setCurrentQuestion}
-              alreadyCalled={alreadyCalled}
-              setAlreadyCalled={setAlreadyCalled}
-            /> */}
+            <RandomLightBtn />
           </div>
         </div>
       </RandomiserPageStyles>

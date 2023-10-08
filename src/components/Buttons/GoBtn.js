@@ -5,6 +5,8 @@ import { askQuestion } from "../../utils/utils";
 
 const GoBtnStyles = styled.button`
   width: fit-content;
+  padding: 1.6rem;
+  font-size: 3rem;
 `;
 
 const GoBtn = ({ setLockInMoment }) => {

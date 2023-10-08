@@ -5,9 +5,24 @@ import { useQuery } from '@apollo/client';
 import GET_ALL_UNASKED_Q from '../../queries/GET_ALL_UNASKED_Q';
 import Loader from '../Loader';
 import levelSequences from '../../utils/constants';
+import styled from 'styled-components';
+
+const SequenceButtonStyles = styled.div`
+  padding: 1.5rem;
+  &.highlight {
+    border: #ffc100 solid 3px;
+    background: #6fc36f;
+  }
+`;
+
 
 const SequenceBtn = ({ levelSequenceLabel }) => {
-  const { setQuestionSequence, setQuestionSequenceIndex } = useContext(QuestionContext);
+  const {
+    setQuestionSequence,
+    setQuestionSequenceIndex,
+    questionSequence,
+    questionSequenceIndex,
+  } = useContext(QuestionContext);
   const { data, loading, error } = useQuery(GET_ALL_UNASKED_Q);
   if (loading) return <Loader />;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
@@ -26,13 +41,21 @@ const SequenceBtn = ({ levelSequenceLabel }) => {
   };
 
   return (
-    <button
-      type="button"
-      onClick={() => clickHandler({ questions }, levelSequence)}
+    <SequenceButtonStyles
+      className={
+        questionSequence.sequenceLevel === levelSequenceLabel
+          ? "highlight"
+          : null
+      }
     >
-      {/* {btnName ? btnName : "Light"} */}
-      Sequence {levelSequenceLabel}
-    </button>
+      <button
+        type="button"
+        onClick={() => clickHandler({ questions }, levelSequence)}
+      >
+        {/* {btnName ? btnName : "Light"} */}
+        Sequence {levelSequenceLabel}
+      </button>
+    </SequenceButtonStyles>
   );
 };
 

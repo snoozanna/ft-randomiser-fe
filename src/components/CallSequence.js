@@ -6,7 +6,18 @@ import GoBtn from './Buttons/GoBtn';
 
 
 const CallSequenceStyles = styled.div`
-`
+width:100%;
+display: flex;
+justify-content:space-between;
+align-items:center;
+grid-area: c;
+.go-container{
+  display:flex;
+  flex-direction: column;
+  width: min-content;
+}
+`;
+
 const CallSequence = ({ setLockInMoment }) => {
   const { questionSequence, questionSequenceIndex, setQuestionSequenceIndex } =
     useContext(QuestionContext);
@@ -27,65 +38,31 @@ const CallSequence = ({ setLockInMoment }) => {
   //marks as called
   //sent to db current question
 
-  // return (
-  //   <>
-  //     <div className="btn-container-lower">
-  //       {/* <div className="btn-wrapper skip">
-  //         <SkipBtn />
-  //       </div> */}
-  //       <div className="btn-wrapper go">
-  //         {/* question sequence loaded  */}
-  //         {questionSequence.questions.length !== 0 &&
-  //         questionSequenceIndex === -1 ? (
-  //           <>
-  //             <span>Question sequence loaded!</span>
-  //             <GoBtn setLockInMoment={setLockInMoment} />
-  //           </>
-  //         ) : null}
-  //         {questionSequence.questions.length !== 0 &&
-  //         questionSequenceIndex > -1 &&
-  //         questionSequenceIndex < questionSequence.questions.length ? (
-  //           <>
-  //             <GoBtn setLockInMoment={setLockInMoment} />
-  //             <SkipBtn />
-  //           </>
-  //         ) : null}
-  //         {questionSequence.questions.length !== 0 &&
-  //         questionSequenceIndex === questionSequence.questions.length - 1 ? (
-  //           <>
-  //             <SkipBtn />
-  //           </>
-  //         ) : null}
-  //       </div>
-  //     </div>
-  //   </>
-  // );
-  // }
-
   return (
-    <>
-      {questionSequenceIndex}
-      {questionSequence.questions.length}
-      <div className="btn-container-lower">
-        <div className="btn-wrapper go">
-          {questionSequence.questions.length !== 0 &&
-          questionSequenceIndex === -1 ? (
-            <>
-              <span>Question sequence loaded!</span>
-              <GoBtn setLockInMoment={setLockInMoment} />
-            </>
-          ) : null}
-          {questionSequenceIndex >= 0 && 
-          questionSequenceIndex !== questionSequence.questions.length - 1 ? (
+    <CallSequenceStyles>
+  
+      {/* <div className="btn-wrapper goskip"> */}
+        {questionSequence.questions.length !== 0 &&
+        questionSequenceIndex === -1 ? (
+          <>
+            {/* <span>Question sequence loaded!</span> */}
+            <div/>
             <GoBtn setLockInMoment={setLockInMoment} />
-          ) : null}
-          {questionSequenceIndex >= 0 &&
-          questionSequenceIndex === questionSequence.questions.length - 1 ? (
+          </>
+        ) : null}
+        {questionSequenceIndex >= 0 &&
+        questionSequenceIndex !== questionSequence.questions.length - 1 ? (
+          <>
             <SkipBtn />
-          ) : null}
-        </div>
-      </div>
-    </>
+            <GoBtn setLockInMoment={setLockInMoment} />
+          </>
+        ) : null}
+        {questionSequenceIndex >= 0 &&
+        questionSequenceIndex === questionSequence.questions.length - 1 ? (
+          <SkipBtn />
+        ) : null}
+      {/* </div> */}
+    </CallSequenceStyles>
   );
 };
 

@@ -12,6 +12,7 @@ const CurrentQStyles = styled.div`
   justify-content: center;
   height: 100%;
   align-items: center;
+  
   .question-wrapper {
     width: 100%;
     margin-block-end: 4rem;
@@ -20,6 +21,46 @@ const CurrentQStyles = styled.div`
       font-size: 4rem;
       font-weight: 600;
     }
+  }
+ 
+`;
+
+const LockInOuterWrapperStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+`;
+
+const LockInWrapperStyles = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
+`;
+
+const LockInOptionsStyles = styled.div`
+  text-align: center;
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: #b3750f; */
+  padding: 2rem;
+  border: black 3px solid;
+  p {
+    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: var(--subheadings);
+  }
+  button.lock-in {
+    background: #6fc36f;
   }
 `;
 
@@ -67,30 +108,35 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
 
   return (
     <>
-      {lockInMoment ?   lockInOptions.map((option) => {
-            console.log("option", option);
-            return (
-              <div key={option._id}>
-                <p>{option.question}</p>
-                <button
-                  // onClick={() => confirmBtnHandler({option})}
-                  onClick={() => confirmBtnHandler(option)}
-                  className="lock-in"
-                >
-                  Lock in ?
-                </button>
-              </div>
-            );
-          }):
-      
-      (
+      {lockInMoment ? (
+        <LockInOuterWrapperStyles>
+          {/* <h2>LOCK IN ONE OPTION</h2> */}
+          <LockInWrapperStyles className="options-wrapper">
+            {lockInOptions.map((option) => {
+              console.log("option", option);
+              return (
+                <LockInOptionsStyles key={option._id}>
+                  <p>{option.question}</p>
+                  <button
+                    // onClick={() => confirmBtnHandler({option})}
+                    onClick={() => confirmBtnHandler(option)}
+                    className="lock-in"
+                  >
+                    Lock in ?
+                  </button>
+                </LockInOptionsStyles>
+              );
+            })}
+          </LockInWrapperStyles>
+        </LockInOuterWrapperStyles>
+      ) : (
         <CurrentQStyles>
           <div className="question-wrapper">
-            <span>Current Question from context:</span>
+            {/* <span>Current Question from context:</span> */}
             <h3 className="question">
               {currentQuestion ? currentQuestion.question : null}
             </h3>
-            <p> {currentQuestion ? currentQuestion._id : null}</p>
+            {/* <p> {currentQuestion ? currentQuestion._id : null}</p> */}
           </div>
           {/* <button>Refresh</button> */}
         </CurrentQStyles>
