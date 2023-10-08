@@ -120,7 +120,10 @@ const RandomiserPage = () => {
         </div>
         <div className="current-q-wrapper">
           <CallSequence setLockInMoment={setLockInMoment} />
-          <CurrentQ lockInMoment={lockInMoment} />
+          <CurrentQ
+            lockInMoment={lockInMoment}
+            setLockInMoment={setLockInMoment}
+          />
         </div>
         <div className="btn-container-right">
           <div className="btn-wrapper lockin">

@@ -23,7 +23,7 @@ const CurrentQStyles = styled.div`
   }
 `;
 
-const CurrentQ = ({lockInMoment}) => {
+const CurrentQ = ({lockInMoment, setLockInMoment}) => {
 
   //TODO EVENTUALLY NEEDS TO LISTEN TO DB
   // const { data, loading, error } = useQuery(GET_CURRENT_QUESTION);
@@ -34,7 +34,7 @@ const CurrentQ = ({lockInMoment}) => {
 
   // const currentQuestion = data.currentQ[0].question
 
-  const { currentQuestion, setCurrentQuestion, setQuestionSequenceIndex} = useContext(QuestionContext);
+  const { potentialQuestion,currentQuestion, setCurrentQuestion, setQuestionSequenceIndex} = useContext(QuestionContext);
   console.log("currentQuestion", currentQuestion);
 
   const standInLockInQ = {
@@ -53,14 +53,16 @@ const CurrentQ = ({lockInMoment}) => {
   };
 
   //useEffect triggered by ?/
-  const lockInOptions = [currentQuestion, standInLockInQ]
+  const lockInOptions = [potentialQuestion, standInLockInQ];
+  console.log("lockInOptions", lockInOptions);
   const confirmBtnHandler = async (selectedQuestion) => {
     console.log("selectedQuestion", selectedQuestion)
         await askQuestion(selectedQuestion);
         setCurrentQuestion(selectedQuestion);
         setQuestionSequenceIndex((currentIndex) => {
           return currentIndex + 1;
-        })}
+        })
+      setLockInMoment(false)}
 
 
   return (

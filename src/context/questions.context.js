@@ -4,15 +4,14 @@ import React, { createContext, useState } from 'react';
 export const QuestionContext = createContext({
   questions: {
     allQuestions: [],
-    currentQuestion: {
-      question: "",
-      category: [],
-    },
+    potentialQuestion: {},
+    currentQuestion: {},
     alreadyCalled: [""],
     questionError: "",
     reset: () => {},
     setAlreadyCalled: () => {},
     setAllQuestions: () => {},
+    setPotentialQuestion: () => {},
     setCurrentQuestion: () => {},
     setQuestionError: () => {},
   },
@@ -27,6 +26,7 @@ export const QuestionContext = createContext({
 });
 
 export function QuestionProvider({ children }) {
+  const [potentialQuestion, setPotentialQuestion] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [alreadyCalled, setAlreadyCalled] = useState('');
 const [questionError, setQuestionError] = useState('');
@@ -50,6 +50,8 @@ const [questionSequenceIndex, setQuestionSequenceIndex] = useState(-1);
   return (
     <QuestionContext.Provider
       value={{
+        potentialQuestion,
+        setPotentialQuestion,
         currentQuestion,
         setCurrentQuestion,
         alreadyCalled,
