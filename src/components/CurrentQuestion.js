@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import styled from 'styled-components';
 import { QuestionContext } from '../context/questions.context';
 import GET_CURRENT_QUESTION from "../queries/GET_CURRENT_QUESTION";
 import Loader from './Loader';
 import { useQuery } from '@apollo/client';
-import { askQuestion } from '../utils/utils';
+import { askQuestion, updateCurrentQuestionNotInProgress } from '../utils/utils';
 
 const CurrentQStyles = styled.div`
   display: flex;
@@ -77,6 +77,15 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
 
   const { potentialQuestion,currentQuestion, setCurrentQuestion, setQuestionSequenceIndex} = useContext(QuestionContext);
   console.log("currentQuestion", currentQuestion);
+
+ useEffect(() => {
+  console.log("useEffect fires")
+  if(currentQuestion === null){
+      console.log("tying to update current Q iin useEffect");
+  updateCurrentQuestionNotInProgress();
+  }
+
+ }, [currentQuestion]);
 
   const standInLockInQ = {
     __typename: "Question",

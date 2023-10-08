@@ -169,3 +169,14 @@ const RandomiserPage = () => {
 export default RandomiserPage;
 
 // export const query = graphql``;
+
+
+
+// app starts
+// call to db for all unasked q
+// saved in sattae / context
+// build sequence runs from the qeustions in context
+// those questions are removed from state
+// question are marked as asked as they are clicked go
+// pressing a non neg button takes a non neg question from the remaining unasked q saved in state
+// that q is amrked as asekd 

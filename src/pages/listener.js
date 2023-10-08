@@ -72,3 +72,10 @@ function ListenerPage() {
 }
 
 export default ListenerPage;
+
+
+
+///  a useEffect which listens for when currentQuestion changes to null
+// then sets question in progress to false in db
+
+// in progress marked as true each time current q updated

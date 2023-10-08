@@ -3,14 +3,14 @@ import React, { createContext, useState } from 'react';
 // we provide empty fn as defaults so it doesn't break the app if forget to pass a fn
 export const QuestionContext = createContext({
   questions: {
-    allQuestions: [],
+    allUnaskedQuestionsAtStart: [],
     potentialQuestion: {},
     currentQuestion: {},
     alreadyCalled: [""],
     questionError: "",
     reset: () => {},
     setAlreadyCalled: () => {},
-    setAllQuestions: () => {},
+    setAllUnaskedQuestionsAtStart: () => {},
     setPotentialQuestion: () => {},
     setCurrentQuestion: () => {},
     setQuestionError: () => {},
@@ -22,7 +22,6 @@ export const QuestionContext = createContext({
     },
     questionSequenceIndex: 0,
   },
-
 });
 
 export function QuestionProvider({ children }) {
@@ -30,7 +29,7 @@ export function QuestionProvider({ children }) {
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [alreadyCalled, setAlreadyCalled] = useState('');
 const [questionError, setQuestionError] = useState('');
-const [allQuestions, setAllQuestions] = useState([]);
+const [allUnaskedQuestionsAtStart, setAllUnaskedQuestionsAtStart] = useState([]);
 
 const [questionSequence, setQuestionSequence] = useState({
   sequenceLevel: null,
@@ -58,8 +57,8 @@ const [questionSequenceIndex, setQuestionSequenceIndex] = useState(-1);
         setAlreadyCalled,
         questionError,
         setQuestionError,
-        allQuestions,
-        setAllQuestions,
+        allUnaskedQuestionsAtStart,
+        setAllUnaskedQuestionsAtStart,
         questionSequence,
         setQuestionSequence,
         questionSequenceIndex,

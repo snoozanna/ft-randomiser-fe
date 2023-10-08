@@ -221,6 +221,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
             _type: "reference",
             _ref: newQuestionID, // Reference the question using _ref
           },
+          questionInProgress:true,
         },
       },
     };
@@ -247,6 +248,45 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
   }
 };
 
+exports.updateCurrentQuestionNotInProgress = async () => {
+  const currentQuestion_Id = "b4ec0e70-32d2-49e4-831c-213f9eb69ff0";
+  // TODO Need better way of identifying the Current Question field in the database?
+  // TODO find the first id in the array
+  // console.log("Current Question doc id", currentQuestionId);
+  console.log("setting as Current Question as not in progress");
+  try {
+    // Define the mutation object
+    const mutation = {
+      patch: {
+        id: currentQuestion_Id, // Use the provided questionId
+        set: {
+          questionInProgress: false,
+        },
+      },
+    };
+
+    // Send the mutation using fetch
+    const apiUrl = `${process.env.MUTATE_SANITY_API_URL}`;
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.SANITY_TOKEN}`,
+      },
+      body: JSON.stringify({ mutations: [mutation] }),
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      console.log("Document updated (Current call marked as not in progress):", result);
+    } else {
+      console.error("Failed to update document:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error updating document:", error);
+  }
+};
+
 
 exports.askQuestion = async (
   question,
@@ -257,3 +297,57 @@ exports.askQuestion = async (
    exports.updateQuestionBeenAsked(question);
 };
 
+exports.reset = async (questions) => {
+
+// for (const questionId of questionIds) {
+//   const mutation = {
+//     patch: {
+//       id: questionId,
+//       set: {
+//         beenAsked: setTo,
+//       },
+//     },
+//   };
+
+//   // Execute the patch mutation for each question
+//   await sanityClient
+//     .transaction()
+//     .patch(questionId, (p) => p.set({ beenAsked: setTo }))
+//     .commit();
+// }
+
+ try {
+   // Define the mutation object
+   const mutation = {
+     patch: {
+       id: newQuestionID, // Use the provided questionId
+       set: {
+         beenAsked: setTo,
+       },
+     },
+   };
+
+   // Send the mutation using fetch
+   const apiUrl = `${process.env.MUTATE_SANITY_API_URL}`;
+   const response = await fetch(apiUrl, {
+     method: "POST",
+     headers: {
+       "Content-Type": "application/json",
+       Authorization: `Bearer ${process.env.SANITY_TOKEN}`,
+     },
+     body: JSON.stringify({ mutations: [mutation] }),
+   });
+
+   if (response.ok) {
+     const result = await response.json();
+     console.log(
+       `Document updated (Marked as ${setTo ? "asked" : "not asked"}):`,
+       result,
+     );
+   } else {
+     console.error("Failed to update document:", response.statusText);
+   }
+ } catch (error) {
+   console.error("Error updating document:", error);
+ }
+}

@@ -19,12 +19,15 @@ const EndSequenceBtn = () => {
 
   const handleClick = async () => {
     console.log("ending sequence")
+    // clear sequence 
     setQuestionSequenceIndex(-1);
     setQuestionSequence({
       sequenceLevel: null,
       questions: [],
     });
+    
     setCurrentQuestion(null)
+    // TODO NEED TO SEND TO DATABASE 
   };
 
 
