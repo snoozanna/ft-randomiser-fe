@@ -46,9 +46,9 @@ const Footer = () => {
 
   return (
     <FooterStyles>
-      <button type="button" onClick={() => reset()}>
+      {/* <button type="button" onClick={() => reset()}>
         RESET
-      </button>
+      </button> */}
       <nav>
         {/* <Link to="/simple">Simple Randomiser</Link> */}
         {/* <Link to="/questions-list">Question List</Link> */}

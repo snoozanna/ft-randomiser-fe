@@ -168,7 +168,7 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
         <CurrentQStyles>
           <div className="question-wrapper">
             {/* <span>Current Question from context:</span> */}
-            <div className="label-container">
+            {currentQuestion ?  <div className="label-container">
               <span className="category label">
                 {" "}
                 {currentQuestion ? currentQuestion.category.name : null}
@@ -180,7 +180,7 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
               >
                 {currentQuestion ? currentQuestion.level : null}
               </span>
-            </div>
+            </div> :null}
 
             <h3 className="question">
               {currentQuestion ? currentQuestion.question : null}

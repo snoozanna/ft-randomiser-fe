@@ -44,10 +44,6 @@ exports.getRandomQ = ({
   }
 };
 
-// const checkIfAlreadyCalled = () => {
-
-// }
-
 exports.sortQByLevel = ({ questions }) => {
   const sequence = [];
 
@@ -72,6 +68,42 @@ exports.shuffleArray = (array) => {
   return array;
 }
 
+
+// put this back in to show sequences on sequence page 
+exports.buildSequence = ({ questions }, sequenceOrder, nonNegNum = 4) => {
+  const questionsCopy = questions.map((question) => {
+    return { ...question };
+  });
+  let shuffledQuestions = this.shuffleArray(questionsCopy);
+  const sequence = [];
+  const usedCategories = [];
+  let nonNegCount = 0;
+
+  sequenceOrder.forEach((level) => {
+    const question = shuffledQuestions.find((question) => {
+      if (nonNegCount < nonNegNum) {
+        return (
+          question.level === level &&
+          !sequence.includes(question) &&
+          !usedCategories.includes(question.category.name) &&
+          question.nonNeg === true
+        );
+      } else {
+        return (
+          question.level === level &&
+          !sequence.includes(question) &&
+          !usedCategories.includes(question.category.name)
+        );
+      }
+    });
+    if (question === undefined) return "not enough questions";
+    if (question.nonNeg) nonNegCount++;
+    sequence.push(question);
+    usedCategories.push(question.category.name);
+  });
+  if (sequence.length !== sequenceOrder.length) return "not enough questions";
+  return sequence;
+};
 
 
 // exports.sortData = () => {

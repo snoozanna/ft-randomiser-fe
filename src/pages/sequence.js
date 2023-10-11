@@ -112,7 +112,7 @@ const [currentSequence, setCurrentSequence] = useState([])
             {currentQuestion.question ? currentQuestion.question : ''}
           </h3> */}
           {/* {currentSequence[0].question ? currentSequence[0].question : ""} */}
-          <h3>CURRENT SEQUENCE</h3>
+        
           {currentSequence ? <Sequence sequence={currentSequence}/> : <p>no sequence yet</p>}
         </div>
         <div className='sequence-admin'>
