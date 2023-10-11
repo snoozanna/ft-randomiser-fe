@@ -3,17 +3,17 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { devices } from '../styles/breakpoints.js';
 import { QuestionContext } from "../context/questions.context";
+import { useQuery } from "@apollo/client";
+import GET_ALL_UNASKED_Q from "../queries/GET_ALL_UNASKED_Q.js";
 import CurrentQ from "./../components/CurrentQuestion.js"
 import SequenceBtn from "../components/Buttons/SequenceBtn.js";
-
-import LockInBtn from '../components/Buttons/LockInBtn.js';
-import SkipBtn from "../components/Buttons/SkipBtn.js";
-import GoBtn from '../components/Buttons/GoBtn.js';
 import RapidFireBtn from '../components/Buttons/RapidFireBtn.js';
 import NonNegBtn from '../components/Buttons/NonNegBtn.js';
 import CallSequence from '../components/CallSequence.js';
 import RandomLightBtn from '../components/Buttons/RandomLight.js';
 import EndSequenceBtn from '../components/Buttons/EndSequence.js';
+import Loader from '../components/Loader/index.js';
+import LoadQuestionsBtn from '../components/Buttons/LoadQuestions.js';
 // import RandomLightBtn from '../components/Buttons/RandomLight.js';
 
 
@@ -92,24 +92,23 @@ const RandomiserPageStyles = styled.section`
   }
 `;
 
-// const LevelBtnWrapperStyles = styled.div`
-// width: 100%;
-// display: flex;
-// justify-content: center;
-// align-items:center;
-// grid-area: a;
-// `
+
 
 const RandomiserPage = () => {
-     const { questionSequence, questionSequenceIndex } =
-       useContext(QuestionContext);
+     const {
+       questionSequence,
+       questionSequenceIndex,
+       setAllUnaskedQuestions,
+     } = useContext(QuestionContext);
        const [lockInMoment, setLockInMoment] = useState(false);
+
+ 
       
   
     return (
       <RandomiserPageStyles>
         <div className="btn-container-upper">
-          <SequenceBtn levelSequenceLabel={1} />
+          <SequenceBtn levelSequenceLabel={1}  />
           <SequenceBtn levelSequenceLabel={2} />
           <SequenceBtn levelSequenceLabel={3} />
         </div>
@@ -135,6 +134,7 @@ const RandomiserPage = () => {
             </span>
           </div>
           <div className="btn-wrapper endsequence">
+            <LoadQuestionsBtn/>
         <EndSequenceBtn/>
           </div>
           <div />

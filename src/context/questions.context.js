@@ -1,4 +1,7 @@
+import { useQuery } from '@apollo/client';
 import React, { createContext, useState } from 'react';
+import GET_ALL_UNASKED_Q from '../queries/GET_ALL_UNASKED_Q';
+import Loader from '../components/Loader';
 
 // we provide empty fn as defaults so it doesn't break the app if forget to pass a fn
 export const QuestionContext = createContext({
@@ -10,7 +13,7 @@ export const QuestionContext = createContext({
     questionError: "",
     reset: () => {},
     setAlreadyCalled: () => {},
-    setAllUnaskedQuestionsAtStart: () => {},
+    setAllUnaskedQuestions: () => {},
     setPotentialQuestion: () => {},
     setCurrentQuestion: () => {},
     setQuestionError: () => {},
@@ -27,22 +30,24 @@ export const QuestionContext = createContext({
 export function QuestionProvider({ children }) {
   const [potentialQuestion, setPotentialQuestion] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(null);
-  const [alreadyCalled, setAlreadyCalled] = useState('');
-const [questionError, setQuestionError] = useState('');
-const [allUnaskedQuestionsAtStart, setAllUnaskedQuestionsAtStart] = useState([]);
+  const [alreadyCalled, setAlreadyCalled] = useState("");
+  const [questionError, setQuestionError] = useState("");
+ 
+  const [questionSequence, setQuestionSequence] = useState({
+    sequenceLevel: null,
+    questions: [],
+  });
+  const [questionSequenceIndex, setQuestionSequenceIndex] = useState(-1);
+   const [allUnaskedQuestions, setAllUnaskedQuestions] = useState([]);
 
-const [questionSequence, setQuestionSequence] = useState({
-  sequenceLevel: null,
-  questions: [],
-});
-const [questionSequenceIndex, setQuestionSequenceIndex] = useState(-1);
+
 
   const reset = () => {
-    if (window.confirm('are you sure')) {
-      setCurrentQuestion('...');
+    if (window.confirm("are you sure")) {
+      setCurrentQuestion("...");
       setAlreadyCalled([]);
     } else {
-      console.log('no thanks');
+      console.log("no thanks");
     }
   };
 
@@ -57,8 +62,8 @@ const [questionSequenceIndex, setQuestionSequenceIndex] = useState(-1);
         setAlreadyCalled,
         questionError,
         setQuestionError,
-        allUnaskedQuestionsAtStart,
-        setAllUnaskedQuestionsAtStart,
+        allUnaskedQuestions,
+        setAllUnaskedQuestions,
         questionSequence,
         setQuestionSequence,
         questionSequenceIndex,

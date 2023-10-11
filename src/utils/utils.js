@@ -63,7 +63,7 @@ exports.sortQByLevel = ({ questions }) => {
 };
 
 // Function to shuffle an array using the Fisher-Yates algorithm
-function shuffleArray(array) {
+exports.shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -71,40 +71,7 @@ function shuffleArray(array) {
   return array;
 }
 
-exports.buildSequence = ({ questions }, sequenceOrder, nonNegNum = 4) => {
-  const questionsCopy = questions.map((question) => {
-    return { ...question };
-  });
-  let shuffledQuestions = shuffleArray(questionsCopy);
-  const sequence = [];
-  const usedCategories = [];
-  let nonNegCount = 0;
 
-  sequenceOrder.forEach((level) => {
-    const question = shuffledQuestions.find((question) => {
-      if (nonNegCount < nonNegNum) {
-        return (
-          question.level === level &&
-          !sequence.includes(question) &&
-          !usedCategories.includes(question.category.name) &&
-          question.nonNeg === true
-        );
-      } else {
-        return (
-          question.level === level &&
-          !sequence.includes(question) &&
-          !usedCategories.includes(question.category.name)
-        );
-      }
-    });
-    if (question === undefined) return "not enough questions";
-    if (question.nonNeg) nonNegCount++;
-    sequence.push(question);
-    usedCategories.push(question.category.name);
-  });
-  if (sequence.length !== sequenceOrder.length) return "not enough questions";
-  return sequence;
-};
 
 // exports.sortData = () => {
 //   // Define a mapping of category IDs to their names
@@ -206,7 +173,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
   const { _id } = questionToSend;
   const newQuestionID = _id;
 
-  const currentQuestion_Id = "b4ec0e70-32d2-49e4-831c-213f9eb69ff0";
+  const currentQuestion_Id = "ae43fac5-005a-456f-b4bc-f7d5ba974e34";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -249,7 +216,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
 };
 
 exports.updateCurrentQuestionNotInProgress = async () => {
-  const currentQuestion_Id = "b4ec0e70-32d2-49e4-831c-213f9eb69ff0";
+  const currentQuestion_Id = "ae43fac5-005a-456f-b4bc-f7d5ba974e34";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);

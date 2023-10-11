@@ -89,8 +89,8 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
 
   const standInLockInQ = {
     __typename: "Question",
-    question: "Do you have a favouriter Doctor Who?",  
-    _id: "0c11fb08-4568-4c2b-9e29-c2d9e0d24c17",
+    question: "Do you have a favouriter Doctor Who?",
+    _id: "5f72ba63-e50d-4bba-9cf5-011317f082bb",
     category: {
       __typename: "Category",
       name: "Material Possessions",
