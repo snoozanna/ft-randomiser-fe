@@ -23,110 +23,22 @@ const AskQuestionStyles = styled.div`
 `;
 
 const AskQuestion = ({questionToAsk}) => {
-  // TODO YOU HAVE TO PRESS AN ALREADY LOCKED IN QUESTION TWICE
-  // console.log("Ask Question Renders", questionToAsk);
-  const [status, setStatus] = useState(false)
-  const [requireLockInState, setRequireLockInState] = useState(false);
-  const [lockInOptions, setLockInOptions] = useState([]);
-  const [alreadyLockedIn, setAlreadyLockedIn] = useState(false);
-  const [chosenQuestion, setChosenQuestion] = useState({});
- const { question } = questionToAsk;
- const standInLockInQ = {
-   __typename: "Question",
-   question: "Do you have a favouriter Doctor Who?",  
-   _id: "0c11fb08-4568-4c2b-9e29-c2d9e0d24c17",
-   category: {
-     __typename: "Category",
-     name: "Material Possessions",
-   },
-   level: "deep",
-   beenAsked: false,
-   requireLockIn: false,
-   nonNeg: true,
-   documentary: false,
- };
-// useEffect(() => {
-//   console.log("useEffect fires", alreadyLockedIn);
-
-// }, [alreadyLockedIn]);
-
-  const askQuestion = (questionToAsk) => {
-      // - takes in question
-      console.log("trying to ask", questionToAsk);
-    
-       const { question } = questionToAsk;
-      
-             console.log("after destructure", question);
-      // - check for lock in and offer alternative
-        if (question.requireLockIn && !alreadyLockedIn) {
-          console.log("requires lock in");
-          setRequireLockInState(true);
-          // save lockin options in state and offer options
-          setLockInOptions([question, standInLockInQ]);
-
-        } else {
-          console.log("no lock in required, trying to update");
-          // - updates current question
-          sendCurrentCallToDB(question);
-          // - updates as having been asked
-          updateQuestionBeenAsked(question);
-          setLockInOptions([]);
-          setStatus(true);
-        }
-      // - provide options for skipping
-    };
-
-
-
-const confirmBtnHandler = (question) => {
-  console.log("question in confirmBtnHandler", question);
- setAlreadyLockedIn(true); 
- console.log("Question given to askQuection post lockin", question);
-// setChosenQuestion(question)
-askQuestion({question});
-};
-
+  
  
   return (
     <>
-      
-
+    
       <AskQuestionStyles>
-        {status ? "Asked!" : ""}
-        <p>{question.requireLockIn ? "Requires Lockin" : "Doesn't require"}</p>
-        {requireLockInState ? (
-          lockInOptions.map((option) => {
-            console.log("option", option);
-
-            return (
-              <div key={option._id}>
-                <p>{option.question}</p>
-                <button
-                  // onClick={() => confirmBtnHandler({option})}
-                  onClick={() => confirmBtnHandler(option)}
-                  className="lock-in"
-                >
-                  Lock in ?
-                </button>
-              </div>
-            );
-          })
-        ) : (
-          <>
-            {status ? (
-              ""
-            ) : (
-              <button
-                onClick={() => askQuestion({ question })}
-              >
-                Ask Question
-              </button>
-            )}
-          </>
-        )}
+   
       </AskQuestionStyles>
     </>
   );
 };
 
 export default AskQuestion;
+
+// returns a button that is either Go, Skip, Single Question
+// does api calls
+// upon a sucessful response updates state
+// thsi means that single questions can be drawn from state rather than an api calll. 
+

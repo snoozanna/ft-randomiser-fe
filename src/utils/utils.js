@@ -1,6 +1,7 @@
 // const fs = require("fs");
 // const csv = require("csv-parser"); 
 
+
 // start up process - retrevie all questions from the database
 
 // questions that enter this fn in questionsToChoose will be in one of three categories: light, medium, deep
@@ -128,6 +129,10 @@ exports.shuffleArray = (array) => {
 
 exports.updateQuestionBeenAsked = async (questionToUpdate, setTo=true ) => {
     console.log("questionToUpdate in updateQuestionBeenAsked", questionToUpdate);
+     if (!questionToUpdate.question) {
+       console.log("Not a valid question.");
+       return;
+     }
   const { _id: newQuestionID } = questionToUpdate;
 
   console.log(`trying to update as ${setTo}:`, newQuestionID);
@@ -167,13 +172,17 @@ exports.updateQuestionBeenAsked = async (questionToUpdate, setTo=true ) => {
 
 
 exports.sendCurrentCallToDB = async (questionToSend ) => {
-
-   console.log("questionToSend in sendCurrentCallToDB", questionToSend);
+ console.log("questionToSend in sendCurrentCallToDB", questionToSend);
+  if (!questionToSend.question){
+    console.log("Not a valid question.")
+    return
+  }
+   
   //  const { _id : newQuestionID } = questionToSend;
   const { _id } = questionToSend;
   const newQuestionID = _id;
 
-  const currentQuestion_Id = "ae43fac5-005a-456f-b4bc-f7d5ba974e34";
+  const currentQuestion_Id = "82513c32-16c5-4ed1-9e16-ab1ca76da0a5";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -216,7 +225,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
 };
 
 exports.updateCurrentQuestionNotInProgress = async () => {
-  const currentQuestion_Id = "ae43fac5-005a-456f-b4bc-f7d5ba974e34";
+  const currentQuestion_Id = "82513c32-16c5-4ed1-9e16-ab1ca76da0a5";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -318,3 +327,4 @@ exports.reset = async (questions) => {
    console.error("Error updating document:", error);
  }
 }
+

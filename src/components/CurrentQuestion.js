@@ -12,7 +12,7 @@ const CurrentQStyles = styled.div`
   justify-content: center;
   height: 100%;
   align-items: center;
-  
+
   .question-wrapper {
     width: 100%;
     margin-block-end: 4rem;
@@ -22,7 +22,33 @@ const CurrentQStyles = styled.div`
       font-weight: 600;
     }
   }
- 
+  .label-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  span.label {
+    text-align: left;
+    padding: 8px;
+    border-radius: 10px;
+    width: fit-content;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-right: 2rem;
+  }
+  span.category.label {
+    background: purple;
+  }
+
+  span.level.label.deep {
+    background: #a15526;
+  }
+  span.level.label.lighthearted {
+    background: #308b30;
+  }
+  span.level.label.medium {
+    background: #249faf;
+  }
 `;
 
 const LockInOuterWrapperStyles = styled.div`
@@ -79,7 +105,7 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
   console.log("currentQuestion", currentQuestion);
 
  useEffect(() => {
-  console.log("useEffect fires")
+  // console.log("useEffect fires")
   if(currentQuestion === null){
       console.log("tying to update current Q iin useEffect");
   updateCurrentQuestionNotInProgress();
@@ -104,9 +130,9 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
 
   //useEffect triggered by ?/
   const lockInOptions = [potentialQuestion, standInLockInQ];
-  console.log("lockInOptions", lockInOptions);
+  // console.log("lockInOptions", lockInOptions);
   const confirmBtnHandler = async (selectedQuestion) => {
-    console.log("selectedQuestion", selectedQuestion)
+    // console.log("selectedQuestion", selectedQuestion)
         await askQuestion(selectedQuestion);
         setCurrentQuestion(selectedQuestion);
         setQuestionSequenceIndex((currentIndex) => {
@@ -142,6 +168,19 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
         <CurrentQStyles>
           <div className="question-wrapper">
             {/* <span>Current Question from context:</span> */}
+            <div className="label-container">
+              <span className="category label">
+                {" "}
+                {currentQuestion ? (
+                  currentQuestion.category.name
+                ) : null}
+              </span>
+            </div>
+
+            <span className={`level label ${currentQuestion ?currentQuestion.level : null}`}
+            >
+              {currentQuestion ? currentQuestion.level : null}
+            </span>
             <h3 className="question">
               {currentQuestion ? currentQuestion.question : null}
             </h3>

@@ -18,7 +18,7 @@ const EndSequenceBtn = () => {
    } = useContext(QuestionContext);
 
   const handleClick = async () => {
-    console.log("ending sequence")
+    // console.log("ending sequence")
     // clear sequence 
     setQuestionSequenceIndex(-1);
     setQuestionSequence({

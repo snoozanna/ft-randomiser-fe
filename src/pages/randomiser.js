@@ -7,13 +7,12 @@ import { useQuery } from "@apollo/client";
 import GET_ALL_UNASKED_Q from "../queries/GET_ALL_UNASKED_Q.js";
 import CurrentQ from "./../components/CurrentQuestion.js"
 import SequenceBtn from "../components/Buttons/SequenceBtn.js";
-import RapidFireBtn from '../components/Buttons/RapidFireBtn.js';
-import NonNegBtn from '../components/Buttons/NonNegBtn.js';
 import CallSequence from '../components/CallSequence.js';
-import RandomLightBtn from '../components/Buttons/RandomLight.js';
+
 import EndSequenceBtn from '../components/Buttons/EndSequence.js';
 import Loader from '../components/Loader/index.js';
 import LoadQuestionsBtn from '../components/Buttons/LoadQuestions.js';
+import SingleQuestionBtn from '../components/Buttons/SingleQuestionBtn.js';
 // import RandomLightBtn from '../components/Buttons/RandomLight.js';
 
 
@@ -108,11 +107,10 @@ const RandomiserPage = () => {
     return (
       <RandomiserPageStyles>
         <div className="btn-container-upper">
-          <SequenceBtn levelSequenceLabel={1}  />
+          <SequenceBtn levelSequenceLabel={1} />
           <SequenceBtn levelSequenceLabel={2} />
           <SequenceBtn levelSequenceLabel={3} />
         </div>
-        
 
         <div className="btn-container-left">
           <div className="mini-status">
@@ -134,8 +132,8 @@ const RandomiserPage = () => {
             </span>
           </div>
           <div className="btn-wrapper endsequence">
-            <LoadQuestionsBtn/>
-        <EndSequenceBtn/>
+            <LoadQuestionsBtn />
+            <EndSequenceBtn />
           </div>
           <div />
         </div>
@@ -150,14 +148,14 @@ const RandomiserPage = () => {
           />
         </div>
         <div className="btn-container-right">
-          <div className="btn-wrapper lockin">
-            <RapidFireBtn />
+          <div className="btn-wrapper">
+            <SingleQuestionBtn buttonType="Rapid Fire" />
           </div>
-          <div className="btn-wrapper skip">
-            <NonNegBtn />
+          <div className="btn-wrapper ">
+            <SingleQuestionBtn buttonType="Non Negotiable" />
           </div>
-          <div className="btn-wrapper go">
-            <RandomLightBtn />
+          <div className="btn-wrapper">
+            <SingleQuestionBtn buttonType="Random Light" />
           </div>
         </div>
       </RandomiserPageStyles>

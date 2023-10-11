@@ -1,10 +1,9 @@
 import { gql } from '@apollo/client';
 // import gql from 'graphql-tag';
-const GET_ALL_RAPID_Q = gql`
+const GET_ALL_NONNEG_Q = gql`
   {
     # questions: allQuestion(where: { beenAsked: { eq: false } }, limit: 10) {
-       questions: allRapidFire(where: { beenAsked: { eq: false } }) {
-    
+       questions: allQuestion(where: { beenAsked: { eq: false }, nonNeg: {eq: true} }) {
       question
       _id
       category {
@@ -16,10 +15,9 @@ const GET_ALL_RAPID_Q = gql`
       nonNeg
       documentary
     }
-  
   }
 `;
 
 
-export default GET_ALL_RAPID_Q;
+export default GET_ALL_NONNEG_Q;
 

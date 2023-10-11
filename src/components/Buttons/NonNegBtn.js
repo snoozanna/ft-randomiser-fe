@@ -10,7 +10,7 @@ const NonNegBtnStyles = styled.button`
 const NonNegBtn = () => {
 
   const handleClick = () => {
-    console.log("Non Neg button fires")
+    // console.log("Non Neg button fires")
   };
 
   return (

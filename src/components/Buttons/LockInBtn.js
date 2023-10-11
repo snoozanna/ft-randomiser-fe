@@ -14,7 +14,7 @@ const LockInBtnStyles = styled.button`
 const LockInBtn = () => {
 const [disabled, setDisabled] = useState(true)
   const handleClick = () => {
-    console.log("Locked in button fires")
+    // console.log("Locked in button fires")
   };
 
   return (
