@@ -84,12 +84,13 @@ return question._id;
     // questionSequence.questions,
     questionSequence,
   );
-  
+
   setAreQuestionsRemaining(nextQuestion);
   if (areQuestionsRemaining){
     await askQuestion(nextQuestion);
     setCurrentQuestion(nextQuestion);
     refetch();
+    //TODO LOOK AT REFETCH
   }
 
   };

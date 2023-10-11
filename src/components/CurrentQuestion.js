@@ -171,16 +171,17 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
             <div className="label-container">
               <span className="category label">
                 {" "}
-                {currentQuestion ? (
-                  currentQuestion.category.name
-                ) : null}
+                {currentQuestion ? currentQuestion.category.name : null}
+              </span>
+              <span
+                className={`level label ${
+                  currentQuestion ? currentQuestion.level : null
+                }`}
+              >
+                {currentQuestion ? currentQuestion.level : null}
               </span>
             </div>
 
-            <span className={`level label ${currentQuestion ?currentQuestion.level : null}`}
-            >
-              {currentQuestion ? currentQuestion.level : null}
-            </span>
             <h3 className="question">
               {currentQuestion ? currentQuestion.question : null}
             </h3>

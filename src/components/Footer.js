@@ -56,6 +56,7 @@ const Footer = () => {
         {/* <Link to="/by-level">Question by Level</Link> */}
         <Link to="/sequence">Build Sequence</Link>
         <Link to="/randomiser">Randomiser</Link>
+        <Link to="/listener">Listener</Link>
       </nav>
     </FooterStyles>
   );
