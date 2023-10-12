@@ -180,7 +180,7 @@ exports.updateQuestionBeenAsked = async (questionToUpdate, setTo=true ) => {
     };
 
     // Send the mutation using fetch
-    const apiUrl = `${process.env.MUTATE_SANITY_API_URL}`;
+    const apiUrl = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
@@ -235,7 +235,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
     };
 
     // Send the mutation using fetch
-    const apiUrl = `${process.env.MUTATE_SANITY_API_URL}`;
+    const apiUrl = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
@@ -274,7 +274,7 @@ exports.updateCurrentQuestionNotInProgress = async () => {
     };
 
     // Send the mutation using fetch
-    const apiUrl = `${process.env.MUTATE_SANITY_API_URL}`;
+    const apiUrl = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
      const test = `${process.env.GATSBY_TEST}`;
     console.log("apiurl", apiUrl)
         console.log("test", test);
@@ -339,7 +339,7 @@ exports.reset = async (questions) => {
    };
 
    // Send the mutation using fetch
-   const apiUrl = `${process.env.MUTATE_SANITY_API_URL}`;
+   const apiUrl = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
    const response = await fetch(apiUrl, {
      method: "POST",
      headers: {
