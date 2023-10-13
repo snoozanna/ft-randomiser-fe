@@ -274,6 +274,7 @@ exports.updateCurrentQuestionNotInProgress = async () => {
     };
 
     // Send the mutation using fetch
+    console.log("process env:", process.env)
     const apiUrl = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
      const test = `${process.env.GATSBY_TEST}`;
     console.log("apiurl", apiUrl)
