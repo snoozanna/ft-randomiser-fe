@@ -21,10 +21,10 @@ padding: 4rem;
 
 
 
-const SequencePage = () => {
+const AdminPage = () => {
   const { currentQuestion, setCurrentQuestion, alreadyCalled, setAlreadyCalled } = useContext(QuestionContext);
 const [currentSequence, setCurrentSequence] = useState([])
-  const questions = data.questions.nodes;
+
 
   const clickHandler = () => {
  
@@ -40,6 +40,6 @@ const [currentSequence, setCurrentSequence] = useState([])
   );
 };
 
-export default SequencePage;
+export default AdminPage;
 
 
