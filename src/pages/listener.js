@@ -55,8 +55,8 @@ console.log(qFromDBAtStart);
 
   const query = `*[_type == "current"]`;
   const params = { _id: "82513c32-16c5-4ed1-9e16-ab1ca76da0a5" };
-
-  const subscription = sanityClient
+useEffect(() => {
+ const subscription = sanityClient
     .listen(query, params)
     .subscribe((update) => {
        console.log("begin");
@@ -70,6 +70,11 @@ console.log(qFromDBAtStart);
      
     });
 
+  return () => {
+    subscription.unsubscribe();
+  };
+}, [sanityClient]);
+  
 
   // to unsubscribe later on
   // subscription.unsubscribe();
