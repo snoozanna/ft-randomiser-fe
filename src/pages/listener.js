@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 // import useSanityListener from "./../hooks/useSanityListener.js";
-// import { createClient } from "@sanity/client";
-import { useQuery } from "@apollo/client";
+import {graphql} from "gatsby"
+import { createClient } from "@sanity/client";
+import { useLazyQuery, useQuery } from "@apollo/client";
 import Loader from "../components/Loader";
 import GET_CURRENT_QUESTION from "../queries/GET_CURRENT_QUESTION";
 import styled from "styled-components";
+import client from "../gatsby-plugin-apollo/client";
+import QuestionContext from "../context/questions.context";
+// const sanityClient = require("@sanity/client");
 
 const ListenerPageStyles = styled.section`
 display: flex;
@@ -12,26 +16,89 @@ flex-direction:column;
 justify-content: center;
 align-items: center;
 `
-function ListenerPage() {
-    const { data, loading, error } = useQuery(GET_CURRENT_QUESTION, {
-      pollInterval: 200,
+function ListenerPage( {data} ) {
+const [questionInProgressState, setQuestionInProgressState] = useState(
+  data.current.nodes[0].questionInProgress,
+);
+    const [questionToDisplay, setQuestionToDisplay] = useState(null)
+// const [currentQIDFromListener, setCurrentQIDFromListener] = useState("")
+
+  //   const [getCurrentQuestion, { data, loading, error }] = useLazyQuery(
+  //     GET_CURRENT_QUESTION,
+  //     {
+  //       fetchPolicy: "network-only",
+  //       // pollInterval: 1000,
+  //     },
+  //   );
+  //   if (loading) return <Loader />;
+  //   if (error) return <p>Error: {JSON.stringify(error)}</p>;
+  //   // if (!data) return <text>Could not find data</text>;
+  //   if(data){
+  //     console.log("data", data)
+  //  const {currentQ} = data;
+  //  const {question} = currentQ[0];
+  //   }
+
+console.log(data)
+const allQuestions = data.questions.nodes;
+const questionInProgress = data.current.nodes[0].questionInProgress;
+const qFromDBAtStart = data.current.nodes[0].question.question;
+console.log(qFromDBAtStart);
+
+  // Listen for changes with Sanity Client Listening 
+    const sanityClient = createClient({
+      projectId: "vlp0qz8p",
+      dataset: "production",
+      apiVersion: "v2023-08-01",
+      useCdn: false, // `false` if you want to ensure fresh data
     });
-    if (loading) return <Loader />;
-    if (error) return <p>Error: {JSON.stringify(error)}</p>;
-    if (!data) return <text>Could not find data</text>;
 
-   console.log("listener data", data)
-   const {currentQ} = data;
-   const {question} = currentQ[0];
-    console.log("listener data q ", question);
+  const query = `*[_type == "current"]`;
+  const params = { _id: "82513c32-16c5-4ed1-9e16-ab1ca76da0a5" };
 
+  const subscription = sanityClient
+    .listen(query, params)
+    .subscribe((update) => {
+      const question = update.result;
+      const newID = question.question._ref;
+      const inProgress = question.questionInProgress;
+      console.log("subscribing", question);
+      const newQuestion = allQuestions.find((q)=> {return q._id === newID})
+      setQuestionInProgressState(inProgress)
+      setQuestionToDisplay(newQuestion);
+    });
+
+
+  // to unsubscribe later on
+  // subscription.unsubscribe();
+// console.log("hello")
+
+// useEffect(() => {
+//   console.log("useEffect fires")
+
+// }, [currentQIDFromListener]);
+
+
+// const clickHandler = () => {
+//   console.log("trying to refresh")
+// //  refetch();
+// getCurrentQuestion()
+// }
 
   return (
     <ListenerPageStyles className="ListenerPage">
-    
-      <h3 className="question">
-        <p>{question.question}</p>
-      </h3>
+      {questionInProgressState ? (
+        <h3 className="question">
+
+          <p>
+            {questionToDisplay ? questionToDisplay.question : qFromDBAtStart}
+          </p>
+        </h3>
+      ) : (
+        <p> Nothing to see here</p>
+      )}
+
+      {/* {currentQIDFromListener} */}
     </ListenerPageStyles>
   );
 }
@@ -44,3 +111,31 @@ export default ListenerPage;
 // then sets question in progress to false in db
 
 // in progress marked as true each time current q updated
+
+
+export const query = graphql`
+  query QuestionQuery {
+    questions: allSanityQuestion {
+      nodes {
+        _id
+        question
+        level
+        category {
+          name
+          _id
+        }
+        requireLockIn
+        nonNeg
+        documentary
+      }
+    }
+    current: allSanityCurrent {
+      nodes {
+        question {
+          question
+        }
+        questionInProgress
+      }
+    }
+  }
+`;

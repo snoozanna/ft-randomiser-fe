@@ -57,6 +57,7 @@ const Footer = () => {
         <Link to="/sequence">Build Sequence</Link>
         <Link to="/randomiser">Randomiser</Link>
         <Link to="/listener">Listener</Link>
+        <Link to="/admin">Admin</Link>
       </nav>
     </FooterStyles>
   );

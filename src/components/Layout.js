@@ -1,14 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import styled from 'styled-components';
 import { navigate } from 'gatsby';
-import NavButton from './NavButton';
 import Footer from './Footer';
 import 'normalize.css';
 import GlobalStyles from '../styles/GlobalStyles';
 import Typography from '../styles/Typography';
-import stripes from '../assets/images/stripes.svg';
 // import { ScrollReveal } from 'gatsby-plugin-scroll-reveal';
 import { devices } from '../styles/breakpoints.js';
+
 
 const ContentStyles = styled.div`
   min-height: 100vh;
@@ -31,7 +30,10 @@ const MainStyles = styled.main`
   }
 `;
 
-const Layout = ({ children }) => (
+const Layout = ({ children }) => {
+
+
+return (
   <>
     <GlobalStyles />
     <Typography />
@@ -49,5 +51,9 @@ const Layout = ({ children }) => (
     {/* </SiteBorderStyles> */}
   </>
 );
+
+}
+ 
+
 
 export default Layout;
