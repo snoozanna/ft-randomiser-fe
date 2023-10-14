@@ -46,31 +46,31 @@ const qFromDBAtStart = data.current.nodes[0].question.question;
 console.log(qFromDBAtStart);
 
   // Listen for changes with Sanity Client Listening 
-    // const sanityClient = createClient({
-    //   projectId: "vlp0qz8p",
-    //   dataset: "production",
-    //   apiVersion: "v2023-08-01",
-    //   useCdn: false, // `false` if you want to ensure fresh data
-    // });
+    const sanityClient = createClient({
+      projectId: "vlp0qz8p",
+      dataset: "production",
+      apiVersion: "v2023-08-01",
+      useCdn: false, // `false` if you want to ensure fresh data
+    });
 
-  // const query = `*[_type == "current"]`;
-  // const params = { _id: "82513c32-16c5-4ed1-9e16-ab1ca76da0a5" };
+  const query = `*[_type == "current"]`;
+  const params = { _id: "82513c32-16c5-4ed1-9e16-ab1ca76da0a5" };
 
-  // const subscription = sanityClient
-  //   .listen(query, params)
-  //   .subscribe((update) => {
-  //      console.log("begin");
-  //     const question = update.result;
-  //     const newID = question.question._ref;
-  //     const inProgress = question.questionInProgress;
-  //     console.log("subscribing", question);
-  //     const newQuestion = allQuestions.find((q)=> {return q._id === newID})
-  //     setQuestionInProgressState(inProgress)
-  //     setQuestionToDisplay(newQuestion);
+  const subscription = sanityClient
+    .listen(query, params)
+    .subscribe((update) => {
+       console.log("begin");
+      const question = update.result;
+      const newID = question.question._ref;
+      const inProgress = question.questionInProgress;
+      console.log("subscribing", question);
+      const newQuestion = allQuestions.find((q)=> {return q._id === newID})
+      setQuestionInProgressState(inProgress)
+      setQuestionToDisplay(newQuestion);
      
-  //   });
+    });
 
-//  subscription.unsubscribe();
+
   // to unsubscribe later on
   // subscription.unsubscribe();
 // console.log("hello")
