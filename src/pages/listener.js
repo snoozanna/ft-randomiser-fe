@@ -83,7 +83,7 @@ console.log(qFromDBAtStart);
         <h3 className="question">
 
           <p>
-            {questionToDisplay ? questionToDisplay.question : "qFromDBAtStart"}
+            {questionToDisplay ? questionToDisplay.question : qFromDBAtStart}
           </p>
         </h3>
       ) : (
