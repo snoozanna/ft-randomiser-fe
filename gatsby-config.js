@@ -31,7 +31,7 @@ module.exports = {
         dataset: "production",
         watchMode: true,
         apiVersion: "2023-08-01", // use a UTC date string
-        token: process.env.SANITY_TOKEN,
+        token: process.env.GATSBY_SANITY_TOKEN,
       },
     },
     {
