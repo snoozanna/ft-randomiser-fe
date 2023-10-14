@@ -240,7 +240,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.SANITY_TOKEN}`,
+        Authorization: `Bearer ${process.env.GATSBY_SANITY_TOKEN}`,
       },
       body: JSON.stringify({ mutations: [mutation] }),
     });
@@ -283,7 +283,7 @@ exports.updateCurrentQuestionNotInProgress = async () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.SANITY_TOKEN}`,
+        Authorization: `Bearer ${process.env.GATSBY_SANITY_TOKEN}`,
       },
       body: JSON.stringify({ mutations: [mutation] }),
     });
@@ -345,7 +345,7 @@ exports.reset = async (questions) => {
      method: "POST",
      headers: {
        "Content-Type": "application/json",
-       Authorization: `Bearer ${process.env.SANITY_TOKEN}`,
+       Authorization: `Bearer ${process.env.GATSBY_SANITY_TOKEN}`,
      },
      body: JSON.stringify({ mutations: [mutation] }),
    });
