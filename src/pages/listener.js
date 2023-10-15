@@ -21,6 +21,7 @@ const [questionInProgressState, setQuestionInProgressState] = useState(
   data.current.nodes[0].questionInProgress,
 );
     const [questionToDisplay, setQuestionToDisplay] = useState(null)
+    console.log(data.current.nodes[0].questionInProgress);
 // const [currentQIDFromListener, setCurrentQIDFromListener] = useState("")
 
   //   const [getCurrentQuestion, { data, loading, error }] = useLazyQuery(
