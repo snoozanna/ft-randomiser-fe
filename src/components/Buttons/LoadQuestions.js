@@ -18,6 +18,7 @@ const LoadQuestionsBtn = () => {
      setQuestionSequenceIndex,
      setQuestionSequence,
      setCurrentQuestion,
+     setLoadAllQuestionsRequired,
    } = useContext(QuestionContext);
 const { data, loading, error } = useQuery(GET_ALL_UNASKED_Q);
 if (loading) return <Loader />;
@@ -35,7 +36,7 @@ const { questions } = data;
 
     setCurrentQuestion(null);
     setAllUnaskedQuestions(questions)
-
+    setLoadAllQuestionsRequired(false)
   };
 
 

@@ -1,10 +1,8 @@
-import { Link, graphql } from 'gatsby';
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { useQuery } from "@apollo/client";
+import React from 'react';
 import styled from 'styled-components';
 import { devices } from '../styles/breakpoints.js';
-import GET_CURRENT_QUESTION from '../queries/GET_CURRENT_QUESTION.js';
-import Loader from '../components/Loader/index.js';
+
+
 
 
 
@@ -36,14 +34,8 @@ const HomePageStyles = styled.section`
 `;
 
 const HomePage = () => {
-  const { data, loading, error } = useQuery(GET_CURRENT_QUESTION);
-
-  if (loading) return <Loader />;
-  if (error) return <p>Error: {JSON.stringify(error)}</p>;
-  if (!data) return <text>Could not find data</text>;
-  console.log(data);
-    const { currentQ } = data;
-  return <p>Randomiser {currentQ[0].question.question}</p>;
+ 
+  return <p>Randomiser </p>;
 }
 ;
 

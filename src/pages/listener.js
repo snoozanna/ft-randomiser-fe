@@ -20,8 +20,7 @@ function ListenerPage( {data} ) {
 const [questionInProgressState, setQuestionInProgressState] = useState(
   data.current.nodes[0].questionInProgress,
 );
-    const [questionToDisplay, setQuestionToDisplay] = useState(null)
-    console.log(data.current.nodes[0].questionInProgress);
+const [questionToDisplay, setQuestionToDisplay] = useState(null)
 // const [currentQIDFromListener, setCurrentQIDFromListener] = useState("")
 
   //   const [getCurrentQuestion, { data, loading, error }] = useLazyQuery(
@@ -44,7 +43,7 @@ console.log(data)
 const allQuestions = data.questions.nodes;
 const questionInProgress = data.current.nodes[0].questionInProgress;
 const qFromDBAtStart = data.current.nodes[0].question.question;
-console.log(qFromDBAtStart);
+
 
   // Listen for changes with Sanity Client Listening 
     const sanityClient = createClient({
@@ -54,9 +53,11 @@ console.log(qFromDBAtStart);
       useCdn: false, // `false` if you want to ensure fresh data
     });
 
-  const query = `*[_type == "current"]`;
+  const query = `*[_type == "currentQ"]`;
   const params = { _id: "82513c32-16c5-4ed1-9e16-ab1ca76da0a5" };
+
 useEffect(() => {
+  console.log("useEffect fires")
  const subscription = sanityClient
     .listen(query, params)
     .subscribe((update) => {
@@ -127,7 +128,7 @@ export const query = graphql`
         documentary
       }
     }
-    current: allSanityCurrent {
+    current: allSanityCurrentQ {
       nodes {
         question {
           question

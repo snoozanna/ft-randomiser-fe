@@ -45,15 +45,15 @@ const SingleQuestionBtn = ( {buttonType}) => {
   if (loading) return <Loader />;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
   if (!data) return <text>Could not find data</text>;
-  console.log(`data in Single Q ${buttonType}`, data)
+  // console.log(`data in Single Q ${buttonType}`, data)
   const { questions } = data;
 
 
   const handleClick = async () => {
 
   const randomQCheckedAgainstSequence = (questions, questionSequence) => {
-    console.log("checking q", questions);
-    console.log("checking qs", questionSequence.questions);
+    // console.log("checking q", questions);
+    // console.log("checking qs", questionSequence.questions);
     //shuffle q
     const questionsCopy = questions.map((question) => {
       return { ...question };

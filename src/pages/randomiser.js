@@ -1,14 +1,12 @@
 import { Link, graphql } from 'gatsby';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { devices } from '../styles/breakpoints.js';
 import { QuestionContext } from "../context/questions.context";
 import { useQuery } from "@apollo/client";
-import GET_ALL_UNASKED_Q from "../queries/GET_ALL_UNASKED_Q.js";
 import CurrentQ from "./../components/CurrentQuestion.js"
 import SequenceBtn from "../components/Buttons/SequenceBtn.js";
 import CallSequence from '../components/CallSequence.js';
-
 import EndSequenceBtn from '../components/Buttons/EndSequence.js';
 import Loader from '../components/Loader/index.js';
 import LoadQuestionsBtn from '../components/Buttons/LoadQuestions.js';
@@ -79,7 +77,12 @@ const RandomiserPageStyles = styled.section`
     align-items: center;
     grid-area: a;
   }
-
+  .load-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: b;
+  }
   @media ${devices.mobileL} {
     grid-template-columns: repeat(3, minmax(50px, 1fr));
     grid-template-rows: auto auto auto;
@@ -98,66 +101,85 @@ const RandomiserPage = () => {
        questionSequence,
        questionSequenceIndex,
        setAllUnaskedQuestions,
+       loadAllQuestionsRequired,
      } = useContext(QuestionContext);
        const [lockInMoment, setLockInMoment] = useState(false);
 
- 
+
+ useEffect(()=> {
+
+ }, [])
       
   
     return (
       <RandomiserPageStyles>
-        <div className="btn-container-upper">
-          <SequenceBtn levelSequenceLabel={1} />
-          <SequenceBtn levelSequenceLabel={2} />
-          <SequenceBtn levelSequenceLabel={3} />
-        </div>
+        {loadAllQuestionsRequired ? (
+          <div className="load-btn-wrapper">
+            <LoadQuestionsBtn />{" "}
+          </div>
+        ) : (
+          <>
+            <div className="btn-container-upper">
+              <SequenceBtn levelSequenceLabel={1} />
+              <SequenceBtn levelSequenceLabel={2} />
+              <SequenceBtn levelSequenceLabel={3} />
+            </div>
 
-        <div className="btn-container-left">
-          <div className="mini-status">
-            <h4>
-              <strong>Status</strong>
-            </h4>
-            <span>
-              <p>
-                {questionSequence.questions.length === 0
-                  ? "Waiting to choose sequence"
-                  : `Sequence ${questionSequence.sequenceLevel} loaded!`}
-              </p>
-              <p>
-                {questionSequenceIndex >= 0 &&
-                questionSequenceIndex === questionSequence.questions.length - 1
-                  ? "Last question"
-                  : null}
-              </p>
-            </span>
-          </div>
-          <div className="btn-wrapper endsequence">
-            <LoadQuestionsBtn />
-            <EndSequenceBtn />
-          </div>
-          <div />
-        </div>
-        <CallSequence
-          setLockInMoment={setLockInMoment}
-          className="callSequence"
-        />
-        <div className="current-q-wrapper">
-          <CurrentQ
-            lockInMoment={lockInMoment}
-            setLockInMoment={setLockInMoment}
-          />
-        </div>
-        <div className="btn-container-right">
-          <div className="btn-wrapper">
-            <SingleQuestionBtn buttonType="Rapid Fire" />
-          </div>
-          <div className="btn-wrapper ">
-            <SingleQuestionBtn buttonType="Non Negotiable" />
-          </div>
-          <div className="btn-wrapper">
-            <SingleQuestionBtn buttonType="Random Light" />
-          </div>
-        </div>
+            <div className="btn-container-left">
+              <div className="mini-status">
+                <h4>
+                  <strong>Status</strong>
+                </h4>
+                <span>
+                  <p>
+                    {questionSequence.questions.length === 0
+                      ? "Waiting to choose sequence"
+                      : `Sequence ${questionSequence.sequenceLevel} loaded!`}
+                  </p>
+                  
+                    {questionSequenceIndex >= 0  ? 
+                    <p>{`Sequence Progress:
+                    ${questionSequenceIndex + 1}/${questionSequence.questions.length}`}
+                       </p>
+                      : null}
+              
+                  <p>
+                    {questionSequenceIndex >= 0 &&
+                    questionSequenceIndex ===
+                      questionSequence.questions.length - 1
+                      ? "Last question"
+                      : null}
+                  </p>
+                </span>
+              </div>
+              <div className="btn-wrapper endsequence">
+                <EndSequenceBtn />
+              </div>
+              <div />
+            </div>
+            <CallSequence
+              setLockInMoment={setLockInMoment}
+              className="callSequence"
+            />
+            <div className="current-q-wrapper">
+              <CurrentQ
+                lockInMoment={lockInMoment}
+                setLockInMoment={setLockInMoment}
+              />
+            </div>
+            <div className="btn-container-right">
+              <div className="btn-wrapper">
+                <SingleQuestionBtn buttonType="Rapid Fire" />
+              </div>
+              <div className="btn-wrapper ">
+                <SingleQuestionBtn buttonType="Non Negotiable" />
+              </div>
+              <div className="btn-wrapper">
+                <SingleQuestionBtn buttonType="Random Light" />
+              </div>
+            </div>
+          </>
+        )}
       </RandomiserPageStyles>
     );
 }

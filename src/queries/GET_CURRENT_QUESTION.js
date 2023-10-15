@@ -3,7 +3,7 @@ import { gql } from '@apollo/client';
 
 const GET_CURRENT_QUESTION = gql`
 query CurQueQuery  {
-    currentQ: allCurrent(limit: 1) {
+    currentQ: allCurrentQ(limit: 1) {
       question {
         _id
         question

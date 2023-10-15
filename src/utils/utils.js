@@ -214,7 +214,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
   const { _id } = questionToSend;
   const newQuestionID = _id;
 
-  const currentQuestion_Id = "82513c32-16c5-4ed1-9e16-ab1ca76da0a5";
+  const currentQuestion_Id = "5fb10a60-40a4-4e3d-8753-182356463cdf";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -257,7 +257,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
 };
 
 exports.updateCurrentQuestionNotInProgress = async () => {
-  const currentQuestion_Id = "82513c32-16c5-4ed1-9e16-ab1ca76da0a5";
+  const currentQuestion_Id = "5fb10a60-40a4-4e3d-8753-182356463cdf";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -274,11 +274,9 @@ exports.updateCurrentQuestionNotInProgress = async () => {
     };
 
     // Send the mutation using fetch
-    console.log("process env:", process.env)
+
     const apiUrl = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
-     const test = `${process.env.GATSBY_TEST}`;
-    console.log("apiurl", apiUrl)
-        console.log("test", test);
+
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
@@ -309,8 +307,8 @@ exports.askQuestion = async (
    exports.updateQuestionBeenAsked(question);
 };
 
-exports.reset = async (questions) => {
-
+exports.markAllQuestionsAsUnasked = async () => {
+// find all the question ids
 // for (const questionId of questionIds) {
 //   const mutation = {
 //     patch: {
@@ -319,7 +317,7 @@ exports.reset = async (questions) => {
 //         beenAsked: setTo,
 //       },
 //     },
-//   };
+//   };x§
 
 //   // Execute the patch mutation for each question
 //   await sanityClient
@@ -332,9 +330,9 @@ exports.reset = async (questions) => {
    // Define the mutation object
    const mutation = {
      patch: {
-       id: newQuestionID, // Use the provided questionId
+      query: "*[_type == 'question']",
        set: {
-         beenAsked: setTo,
+         beenAsked: false,
        },
      },
    };
@@ -353,7 +351,7 @@ exports.reset = async (questions) => {
    if (response.ok) {
      const result = await response.json();
      console.log(
-       `Document updated (Marked as ${setTo ? "asked" : "not asked"}):`,
+       `Document updated  - all questions marked as not asked"):`,
        result,
      );
    } else {

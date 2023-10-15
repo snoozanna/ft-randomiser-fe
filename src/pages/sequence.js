@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import { devices } from '../styles/breakpoints.js';
 import {buildSequence} from "./../utils/utils.js"
 import Sequence from '../components/Sequence.js';
-import CallSequence from '../components/CallSequence.js';
 import { QuestionContext } from '../context/questions.context';
-import { Call } from '@mui/icons-material';
+import {levelSequences} from '../utils/constants.js';
+
 
 const SequencePageStyles = styled.div`
 padding: 4rem;
@@ -97,75 +97,89 @@ const [currentSequence, setCurrentSequence] = useState([])
     console.log(currentSequence);
   }
 
-  const sequenceOrder1 = ["deep", "lighthearted", "deep", "deep", "medium", "lighthearted"];
 
-    const sequenceOrder2 = [ "lighthearted", "medium", "lighthearted", "medium", "deep","lighthearted"];
-  
-  const sequenceOrder3 = [ "medium", "lighthearted", "deep", "deep", "lighthearted","medium"];
 
   return (
     <>
       <SequencePageStyles>
-   
         <div className="question-wrapper">
           {/* <h3 className="question">
             {currentQuestion.question ? currentQuestion.question : ''}
           </h3> */}
           {/* {currentSequence[0].question ? currentSequence[0].question : ""} */}
-        
-          {currentSequence ? <Sequence sequence={currentSequence}/> : <p>no sequence yet</p>}
+
+          {currentSequence ? (
+            <Sequence sequence={currentSequence} />
+          ) : (
+            <p>no sequence yet</p>
+          )}
         </div>
-        <div className='sequence-admin'>
+        <div className="sequence-admin">
           {/* <CallSequence sequence={currentSequence}/> */}
 
-            <SeqBtnContainerStyles>
-              <h3>Sequence 1</h3>
-  
-              <div className='label-container'>
-         {sequenceOrder1.map((level, i) => {
+          <SeqBtnContainerStyles>
+            <h3>Sequence 1</h3>
 
-          return(
-             <span key={i} className={`level label ${level}`}>{level}</span>
-          )
-         })}       
-      </div>
-              <button type="button" onClick={() => clickHandler({questions}, sequenceOrder1)}>
-                Build sequence
-              </button>
-            </SeqBtnContainerStyles>
-        <SeqBtnContainerStyles>
-              <h3>Sequence 2</h3>
-  
-              <div className='label-container'>
-         {sequenceOrder2.map((level, i) => {
-          return (
-            <span key={i} className={`level label ${level}`}>
-              {level}
-            </span>
-          );
-         })}       
-      </div>
-              <button type="button" onClick={() => clickHandler({questions}, sequenceOrder2)}>
-                Build sequence
-              </button>
-            </SeqBtnContainerStyles>
-        <SeqBtnContainerStyles>
-              <h3>Sequence 3</h3>
-  
-              <div className='label-container'>
-         {sequenceOrder3.map((level, i) => {
-          return (
-            <span key={i} className={`level label ${level}`}>
-              {level}
-            </span>
-          );
-         })}       
-      </div>
-              <button type="button" onClick={() => clickHandler({questions}, sequenceOrder3)}>
-                Build sequence
-              </button>
-            </SeqBtnContainerStyles>
-          </div>
+            <div className="label-container">
+              {levelSequences["1"].map((level, i) => {
+                return (
+                  <span key={i} className={`level label ${level}`}>
+                    {level}
+                  </span>
+                );
+              })}
+            </div>
+            <button
+              type="button"
+              onClick={() => clickHandler({ questions }, levelSequences["1"])}
+            >
+              Build sequence
+            </button>
+          </SeqBtnContainerStyles>
+          <SeqBtnContainerStyles>
+            <h3>Sequence 2</h3>
+
+            <div className="label-container">
+              {levelSequences["2"].map((level, i) => {
+                return (
+                  <span key={i} className={`level label ${level}`}>
+                    {level}
+                  </span>
+                );
+              })}
+            </div>
+            <button
+              type="button"
+              onClick={() => clickHandler({ questions }, levelSequences["2"])}
+            >
+              Build sequence
+            </button>
+          </SeqBtnContainerStyles>
+          <SeqBtnContainerStyles>
+            <h3>Sequence 3</h3>
+
+            <div className="label-container">
+              {levelSequences["3"].map((level, i) => {
+                return (
+                  <span key={i} className={`level label ${level}`}>
+                    {level}
+                  </span>
+                );
+              })}
+            </div>
+            <button
+              type="button"
+              onClick={() => clickHandler({ questions }, levelSequences["3"])}
+            >
+              Build sequence
+            </button>
+          </SeqBtnContainerStyles>
+        </div>
+        <div className="explainer">
+          <h3>Sequence Outline</h3>
+          <p>Shuffles the questions. </p>
+          <p>At least two non neg in the firts 8 questions</p>
+        </div>
       </SequencePageStyles>
     </>
   );

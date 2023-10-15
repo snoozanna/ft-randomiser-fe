@@ -1,4 +1,4 @@
-const levelSequences = {
+exports.levelSequences = {
   1: ["deep", "lighthearted", "deep", "deep", "medium", "lighthearted"],
   2: [
     "lighthearted",
@@ -11,4 +11,57 @@ const levelSequences = {
   3: ["medium", "lighthearted", "deep", "deep", "lighthearted", "medium"],
 };
 
-export default levelSequences;
+exports.levelSequences2 = {
+  1: ["light",
+"light",
+"medium",
+"medium",
+"deep",
+"deep",
+"light",
+"medium",
+"medium",
+"deep",
+"deep",
+"light",
+"medium",
+"light",
+"medium",
+"light"],
+2: [
+  "medium", 
+"light",
+"medium", 
+"deep",
+"deep",
+"light",
+"medium", 
+"medium", 
+"light",
+"deep",
+"medium", 
+"medium", 
+"light",
+"deep",
+"medium", 
+"light"
+],
+3: [
+"deep",
+"light",
+"medium", 
+"medium", 
+"deep",
+"light",
+"light",
+"medium", 
+"medium", 
+"deep",
+"light",
+"light",
+"medium", 
+"light",
+"deep",
+"deep",
+]
+};
