@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { QuestionContext } from "../../context/questions.context";
 
-import {levelSequences} from '../../utils/constants';
+import {levelSequences2} from '../../utils/constants';
 import styled from 'styled-components';
 import { shuffleArray } from '../../utils/utils';
 
@@ -29,7 +29,7 @@ const SequenceBtn = ({ levelSequenceLabel }) => {
   // if (!data) return <text>Could not find data</text>;
   // const { questions } = data;
 
-  const levelSequence = levelSequences[levelSequenceLabel];
+  const levelSequence = levelSequences2[levelSequenceLabel];
 
   const buildSequence = (sequenceOrder, nonNegNum = 2) => {
   const questionsCopy = allUnaskedQuestions.map((question) => {

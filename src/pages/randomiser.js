@@ -9,6 +9,9 @@ import SequenceBtn from "../components/Buttons/SequenceBtn.js";
 import CallSequence from '../components/CallSequence.js';
 import EndSequenceBtn from '../components/Buttons/EndSequence.js';
 import Loader from '../components/Loader/index.js';
+import mark from "./../assets/images/mark.png";
+import progress from "./../assets/images/progress.png";
+import tick from "./../assets/images/tick-b.png";
 import LoadQuestionsBtn from '../components/Buttons/LoadQuestions.js';
 import SingleQuestionBtn from '../components/Buttons/SingleQuestionBtn.js';
 // import RandomLightBtn from '../components/Buttons/RandomLight.js';
@@ -45,15 +48,6 @@ const RandomiserPageStyles = styled.section`
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    .mini-status {
-      border: 2px solid white;
-      padding: 1rem;
-      width: min-content;
-      /* max-width: 10rem; */
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-    }
   }
   .btn-container-right {
     display: flex;
@@ -73,9 +67,37 @@ const RandomiserPageStyles = styled.section`
   .btn-container-upper {
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     grid-area: a;
+    .mini-status {
+      border: 3px solid black;
+      border-radius: 5px;
+      padding: 1rem;
+      width: min-content;
+      /* max-width: 10rem; */
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: black;
+      background: var(--lightgreen);
+      h4 {
+        margin-bottom: 1rem;
+      }
+      p {
+        line-height: 2rem;
+        font-weight: 600;
+        span > img {
+          max-width: 25px;
+          margin-inline-end: 0.5rem;
+        }
+        span.status-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
   }
   .load-btn-wrapper {
     display: flex;
@@ -120,42 +142,52 @@ const RandomiserPage = () => {
         ) : (
           <>
             <div className="btn-container-upper">
-              <SequenceBtn levelSequenceLabel={1} />
-              <SequenceBtn levelSequenceLabel={2} />
-              <SequenceBtn levelSequenceLabel={3} />
-            </div>
-
-            <div className="btn-container-left">
               <div className="mini-status">
                 <h4>
                   <strong>Status</strong>
                 </h4>
                 <span>
                   <p>
-                    {questionSequence.questions.length === 0
-                      ? "Waiting to choose sequence"
-                      : `Sequence ${questionSequence.sequenceLevel} loaded!`}
+                    {questionSequence.questions.length === 0 ? (
+                      "Pick a sequence..."
+                    ) : (
+                      <span className="status-wrapper">
+                        <img src={tick} alt="Tick" /> Sequence{" "}
+                        {questionSequence.sequenceLevel} loaded!
+                      </span>
+                    )}
                   </p>
-                  
-                    {questionSequenceIndex >= 0  ? 
-                    <p>{`Sequence Progress:
-                    ${questionSequenceIndex + 1}/${questionSequence.questions.length}`}
-                       </p>
-                      : null}
-              
+
+                  <p>
+                    {questionSequenceIndex >= 0 ? (
+                      <span className="status-wrapper">
+                        <img src={progress} alt="progress" /> Sequence Progress:
+                        {questionSequenceIndex + 1}/
+                        {questionSequence.questions.length}
+                      </span>
+                    ) : null}
+                  </p>
+
                   <p>
                     {questionSequenceIndex >= 0 &&
                     questionSequenceIndex ===
-                      questionSequence.questions.length - 1
-                      ? "Last question"
-                      : null}
+                      questionSequence.questions.length - 1 ? (
+                      <span className="status-wrapper">
+                        <img src={mark} alt="mark" /> Last question
+                      </span>
+                    ) : null}
                   </p>
                 </span>
               </div>
+              <SequenceBtn levelSequenceLabel={1} />
+              <SequenceBtn levelSequenceLabel={2} />
+              <SequenceBtn levelSequenceLabel={3} />
+            </div>
+
+            <div className="btn-container-left">
               <div className="btn-wrapper endsequence">
                 <EndSequenceBtn />
               </div>
-              <div />
             </div>
             <CallSequence
               setLockInMoment={setLockInMoment}

@@ -75,7 +75,7 @@ const LockInOptionsStyles = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   /* background: #b3750f; */
   padding: 2rem;
   border: black 3px solid;

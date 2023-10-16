@@ -11,16 +11,8 @@ const HomePageStyles = styled.section`
   min-height: 70vh;
 
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    'a a b b'
-    'a a . d';
-  /* gap: 2rem; */
+  justify-content:center;
+  align-items:center;
 
   @media ${devices.mobileL} {
     grid-template-columns: repeat(3, minmax(50px, 1fr));
@@ -35,7 +27,11 @@ const HomePageStyles = styled.section`
 
 const HomePage = () => {
  
-  return <p>Randomiser </p>;
+  return (
+    <HomePageStyles>
+      <h3>First Trimester Randomiser </h3>
+    </HomePageStyles>
+  );
 }
 ;
 

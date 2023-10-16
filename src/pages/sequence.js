@@ -5,38 +5,39 @@ import { devices } from '../styles/breakpoints.js';
 import {buildSequence} from "./../utils/utils.js"
 import Sequence from '../components/Sequence.js';
 import { QuestionContext } from '../context/questions.context';
-import {levelSequences} from '../utils/constants.js';
+import {levelSequences2} from '../utils/constants.js';
 
 
 const SequencePageStyles = styled.div`
-padding: 4rem;
+  padding: 4rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: space-between;
   /* height: 100%; */
-  width:100%;
+  width: 100%;
   align-items: center;
-  h3{
-     margin-block-end: 2rem;
+  h3 {
+    margin-block-end: 2rem;
   }
   .question-wrapper {
-    /* width: 70%; */
+    width: 100%;
     margin-block-end: 4rem;
     text-align: center;
-    display:flex;
-      flex-direction: column;
-     align-items: start;
-    justify-content:center ;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
     span.question {
       font-size: 4rem;
       font-weight: 600;
     }
   }
-  .sequence-admin{
-    /* max-width:30%; */
+  .sequence-admin {
+    width: 100%;
     display: flex;
-    gap:1rem;
-     ;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 3rem;
   }
 `;
 
@@ -116,12 +117,15 @@ const [currentSequence, setCurrentSequence] = useState([])
         </div>
         <div className="sequence-admin">
           {/* <CallSequence sequence={currentSequence}/> */}
-
+          <div className="explainer">
+            <h3>Sequence Outline</h3>
+            <p>Test out building seuqences here:</p>
+          </div>
           <SeqBtnContainerStyles>
             <h3>Sequence 1</h3>
 
             <div className="label-container">
-              {levelSequences["1"].map((level, i) => {
+              {levelSequences2["1"].map((level, i) => {
                 return (
                   <span key={i} className={`level label ${level}`}>
                     {level}
@@ -131,7 +135,7 @@ const [currentSequence, setCurrentSequence] = useState([])
             </div>
             <button
               type="button"
-              onClick={() => clickHandler({ questions }, levelSequences["1"])}
+              onClick={() => clickHandler({ questions }, levelSequences2["1"])}
             >
               Build sequence
             </button>
@@ -140,7 +144,7 @@ const [currentSequence, setCurrentSequence] = useState([])
             <h3>Sequence 2</h3>
 
             <div className="label-container">
-              {levelSequences["2"].map((level, i) => {
+              {levelSequences2["2"].map((level, i) => {
                 return (
                   <span key={i} className={`level label ${level}`}>
                     {level}
@@ -150,7 +154,7 @@ const [currentSequence, setCurrentSequence] = useState([])
             </div>
             <button
               type="button"
-              onClick={() => clickHandler({ questions }, levelSequences["2"])}
+              onClick={() => clickHandler({ questions }, levelSequences2["2"])}
             >
               Build sequence
             </button>
@@ -159,7 +163,7 @@ const [currentSequence, setCurrentSequence] = useState([])
             <h3>Sequence 3</h3>
 
             <div className="label-container">
-              {levelSequences["3"].map((level, i) => {
+              {levelSequences2["3"].map((level, i) => {
                 return (
                   <span key={i} className={`level label ${level}`}>
                     {level}
@@ -169,16 +173,11 @@ const [currentSequence, setCurrentSequence] = useState([])
             </div>
             <button
               type="button"
-              onClick={() => clickHandler({ questions }, levelSequences["3"])}
+              onClick={() => clickHandler({ questions }, levelSequences2["3"])}
             >
               Build sequence
             </button>
           </SeqBtnContainerStyles>
-        </div>
-        <div className="explainer">
-          <h3>Sequence Outline</h3>
-          <p>Shuffles the questions. </p>
-          <p>At least two non neg in the firts 8 questions</p>
         </div>
       </SequencePageStyles>
     </>

@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import bg from '../assets/images/bg.svg';
-import stripes from '../assets/images/stripes.svg';
+
 import { devices } from './breakpoints.js';
 
 const GlobalStyles = createGlobalStyle`
@@ -164,7 +163,7 @@ button * {
   hr {
     border: 0;
     height: 8px;
-    background-image: url(${stripes});
+
     background-size: 1500px;
   }
 

@@ -43,19 +43,23 @@ span.level.label.medium{
 const Sequence = ({sequence}) => {
 
   return(
-  sequence.map((question)=> {
-
-return (
-  <SequenceStyles key={question._id}>
-    <div className="label-container">
-      <span className="category label">{question.category.name}</span>
-      <span className={`level label ${question.level}`}>{question.level}</span>
-    </div>
-    <p key={question._id}>{question.question}</p>
-  </SequenceStyles>
-);
+<>
+<h3>Sequence</h3>
+ {sequence.map((question)=> {
+      return (
+        <SequenceStyles key={question._id}>
+        
+          <div className="label-container">
+            <span className="category label">{question.category.name}</span>
+            <span className={`level label ${question.level}`}>{question.level}</span>
+          </div>
+          <p key={question._id}>{question.question}</p>
+        </SequenceStyles>
+      );
 }
-  )
+  )}
+</>
+ 
   )
     
 }
