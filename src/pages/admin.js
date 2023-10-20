@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { devices } from '../styles/breakpoints.js';
 import { QuestionContext } from '../context/questions.context';
 import { Call } from '@mui/icons-material';
-import { markAllQuestionsAsUnasked, updateCurrentQuestionNotInProgress } from '../utils/utils.js';
+import { markAllQuestionsAsUnasked, markAllRapidFireAsUnasked, updateCurrentQuestionNotInProgress } from '../utils/utils.js';
 
 const AdminPageStyles = styled.div`
 padding: 4rem;
@@ -44,6 +44,7 @@ const [isLoading, setIsLoading] = useState(false)
 const fullReset = async () => {
 setIsLoading(true)
 await markAllQuestionsAsUnasked()
+await markAllRapidFireAsUnasked();
  setQuestionSequenceIndex(-1);
  setQuestionSequence({
    sequenceLevel: null,

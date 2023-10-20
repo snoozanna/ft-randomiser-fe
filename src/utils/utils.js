@@ -308,24 +308,6 @@ exports.askQuestion = async (
 };
 
 exports.markAllQuestionsAsUnasked = async () => {
-// find all the question ids
-// for (const questionId of questionIds) {
-//   const mutation = {
-//     patch: {
-//       id: questionId,
-//       set: {
-//         beenAsked: setTo,
-//       },
-//     },
-//   };x§
-
-//   // Execute the patch mutation for each question
-//   await sanityClient
-//     .transaction()
-//     .patch(questionId, (p) => p.set({ beenAsked: setTo }))
-//     .commit();
-// }
-
  try {
    // Define the mutation object
    const mutation = {
@@ -361,4 +343,41 @@ exports.markAllQuestionsAsUnasked = async () => {
    console.error("Error updating document:", error);
  }
 }
+
+exports.markAllRapidFireAsUnasked = async () => {
+  try {
+    // Define the mutation object
+    const mutation = {
+      patch: {
+        query: "*[_type == 'rapidFire']",
+        set: {
+          beenAsked: false,
+        },
+      },
+    };
+
+    // Send the mutation using fetch
+    const apiUrl = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.GATSBY_SANITY_TOKEN}`,
+      },
+      body: JSON.stringify({ mutations: [mutation] }),
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      console.log(
+        `Document updated  - all questions marked as not asked"):`,
+        result,
+      );
+    } else {
+      console.error("Failed to update document:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error updating document:", error);
+  }
+};
 

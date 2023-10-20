@@ -99,12 +99,16 @@ const RandomiserPageStyles = styled.section`
       }
     }
   }
+  .seqBtnWrapper{
+display:flex;
+  } 
   .load-btn-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     grid-area: b;
   }
+
   @media ${devices.mobileL} {
     grid-template-columns: repeat(3, minmax(50px, 1fr));
     grid-template-rows: auto auto auto;
@@ -179,9 +183,12 @@ const RandomiserPage = () => {
                   </p>
                 </span>
               </div>
-              <SequenceBtn levelSequenceLabel={1} />
-              <SequenceBtn levelSequenceLabel={2} />
-              <SequenceBtn levelSequenceLabel={3} />
+              <div className='seqBtnWrapper'>
+                <SequenceBtn levelSequenceLabel={1} label={"Easy"} />
+                <SequenceBtn levelSequenceLabel={2} label={"Medium"} />
+                <SequenceBtn levelSequenceLabel={3} label={"Hard"} />
+              </div>
+              <div/>
             </div>
 
             <div className="btn-container-left">

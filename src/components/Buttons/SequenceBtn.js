@@ -14,7 +14,7 @@ const SequenceButtonStyles = styled.div`
 `;
 
 
-const SequenceBtn = ({ levelSequenceLabel }) => {
+const SequenceBtn = ({ levelSequenceLabel, label }) => {
   const {
     setQuestionSequence,
     setQuestionSequenceIndex,
@@ -96,7 +96,8 @@ return question._id !== questionInSequence._id;
         onClick={() => clickHandler(levelSequence)}
       >
         {/* {btnName ? btnName : "Light"} */}
-        Sequence {levelSequenceLabel}
+        {/* Sequence {levelSequenceLabel} */}
+        {label}
       </button>
     </SequenceButtonStyles>
   );
