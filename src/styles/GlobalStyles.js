@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     --blue:#3e31de;
      --yellow: #FDC24C;
     --pink:#ff87e5;
+    --orange:#dc7a30;
     --mustyblue: #5E87EF;
     --mintgreen: #32D7B9;
     --lightgreen: #98e9d4;
@@ -28,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
   html {
     /* background-image: url(${bg}); */
     background-color: var(--blue) ;
+    /* background-color: black ; */
 
     font-size: 10px;
   }

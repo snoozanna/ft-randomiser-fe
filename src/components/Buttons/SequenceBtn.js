@@ -74,11 +74,12 @@ return question._id !== questionInSequence._id;
 };
 
   const clickHandler = (sequenceOrder) => {
-    console.log("allUnaskedQuestions in btn", allUnaskedQuestions);
+    // console.log("allUnaskedQuestions in btn", allUnaskedQuestions);
     const sequence = buildSequence(sequenceOrder);
     setQuestionSequence({
       sequenceLevel: levelSequenceLabel,
-      questions: sequence
+      questions: sequence, 
+      label:label
     });
     setQuestionSequenceIndex(-1);
   };

@@ -2,42 +2,61 @@ import React, { useContext, useEffect, useState } from "react";
 // import useSanityListener from "./../hooks/useSanityListener.js";
 import {graphql} from "gatsby"
 import { createClient } from "@sanity/client";
-import { useLazyQuery, useQuery } from "@apollo/client";
-import Loader from "../components/Loader";
-import GET_CURRENT_QUESTION from "../queries/GET_CURRENT_QUESTION";
 import styled from "styled-components";
-import client from "../gatsby-plugin-apollo/client";
-import QuestionContext from "../context/questions.context";
 // const sanityClient = require("@sanity/client");
+import glowlogo from "./../assets/images/logo-glow.png"
 
 const ListenerPageStyles = styled.section`
-display: flex;
-flex-direction:column;
-justify-content: center;
-align-items: center;
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  width: 100%;
+  color: var(--orange);
+  .listener-question-container {
+    border: solid 2px white;
+    width: 70vw;
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: 35vh;
+    
+    .glow-logo-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .glow-logo-wrapper > img {
+     max-width: 50%;
+    }
+    p {
+      margin-bottom: 0;
+      text-align: center;
+      text-wrap: pretty;
+      line-height: 4rem;
+    }
+    .neon-button {
+      color: var(--clr-blue-neon);
+      color: var(--clr-neon);
+
+      /* color: var(--orange); */
+      padding: 0.25em 0.5em;
+      text-shadow:
+        0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em currentColor;
+      position: relative;
+    }
+  }
+`;
 function ListenerPage( {data} ) {
 const [questionInProgressState, setQuestionInProgressState] = useState(
   data.current.nodes[0].questionInProgress,
 );
 const [questionToDisplay, setQuestionToDisplay] = useState(null)
-// const [currentQIDFromListener, setCurrentQIDFromListener] = useState("")
-
-  //   const [getCurrentQuestion, { data, loading, error }] = useLazyQuery(
-  //     GET_CURRENT_QUESTION,
-  //     {
-  //       fetchPolicy: "network-only",
-  //       // pollInterval: 1000,
-  //     },
-  //   );
-  //   if (loading) return <Loader />;
-  //   if (error) return <p>Error: {JSON.stringify(error)}</p>;
-  //   // if (!data) return <text>Could not find data</text>;
-  //   if(data){
-  //     console.log("data", data)
-  //  const {currentQ} = data;
-  //  const {question} = currentQ[0];
-  //   }
 
 console.log(data)
 const allQuestions = data.questions.nodes;
@@ -86,18 +105,21 @@ useEffect(() => {
 
   return (
     <ListenerPageStyles className="ListenerPage">
-      {questionInProgressState ? (
-        <h3 className="question">
+      <div className="listener-question-container">
+        {questionInProgressState ? (
+          <h3 className="question">
+            <p className="neon-button">
+              {questionToDisplay ? questionToDisplay.question : qFromDBAtStart}
+            </p>
+          </h3>
+        ) : (
+          <div className="glow-logo-wrapper">
+            <img src={glowlogo} />
+          </div>
+        )}
 
-          <p>
-            {questionToDisplay ? questionToDisplay.question : qFromDBAtStart}
-          </p>
-        </h3>
-      ) : (
-        <p> Nothing to see here</p>
-      )}
-
-      {/* {currentQIDFromListener} */}
+        {/* {currentQIDFromListener} */}
+      </div>
     </ListenerPageStyles>
   );
 }

@@ -18,16 +18,9 @@ import SingleQuestionBtn from '../components/Buttons/SingleQuestionBtn.js';
 
 
 const RandomiserPageStyles = styled.section`
-  /* padding: clamp(5px, 5vw, 25px); */
-  /* min-height: 70vh; */
-
-  /* display: flex; */
-  /* flex-direction: row-reverse;
-  justify-content: space-between; */
-  /* align-items: center; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 5% 1fr 10%;
+  grid-template-rows: 12% 1fr 15%;
   grid-template-areas:
     "a a a a"
     "e b b d"
@@ -99,9 +92,9 @@ const RandomiserPageStyles = styled.section`
       }
     }
   }
-  .seqBtnWrapper{
-display:flex;
-  } 
+  .seqBtnWrapper {
+    display: flex;
+  }
   .load-btn-wrapper {
     display: flex;
     justify-content: center;
@@ -156,8 +149,8 @@ const RandomiserPage = () => {
                       "Pick a sequence..."
                     ) : (
                       <span className="status-wrapper">
-                        <img src={tick} alt="Tick" /> Sequence{" "}
-                        {questionSequence.sequenceLevel} loaded!
+                        <img src={tick} alt="Tick" />{" "}
+                        {questionSequence.label} Sequence loaded!
                       </span>
                     )}
                   </p>
@@ -183,12 +176,12 @@ const RandomiserPage = () => {
                   </p>
                 </span>
               </div>
-              <div className='seqBtnWrapper'>
+              <div className="seqBtnWrapper">
                 <SequenceBtn levelSequenceLabel={1} label={"Easy"} />
                 <SequenceBtn levelSequenceLabel={2} label={"Medium"} />
                 <SequenceBtn levelSequenceLabel={3} label={"Hard"} />
               </div>
-              <div/>
+              <div />
             </div>
 
             <div className="btn-container-left">

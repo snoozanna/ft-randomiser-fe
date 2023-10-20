@@ -25,6 +25,7 @@ export const QuestionContext = createContext({
     questionSequence: {
       sequenceLevel: "",
       questions: [],
+      label: ""
     },
     questionSequenceIndex: 0,
   },
@@ -38,6 +39,7 @@ export function QuestionProvider({ children }) {
   const [questionSequence, setQuestionSequence] = useState({
     sequenceLevel: null,
     questions: [],
+    label: ''
   });
   const [questionSequenceIndex, setQuestionSequenceIndex] = useState(-1);
    const [allUnaskedQuestions, setAllUnaskedQuestions] = useState([]);

@@ -32,6 +32,7 @@ const { questions } = data;
     setQuestionSequence({
       sequenceLevel: null,
       questions: [],
+      label: ""
     });
 
     setCurrentQuestion(null);

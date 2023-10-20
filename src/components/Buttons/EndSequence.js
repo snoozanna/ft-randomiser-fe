@@ -24,6 +24,7 @@ const EndSequenceBtn = () => {
     setQuestionSequence({
       sequenceLevel: null,
       questions: [],
+      label: ""
     });
     
     setCurrentQuestion(null)
