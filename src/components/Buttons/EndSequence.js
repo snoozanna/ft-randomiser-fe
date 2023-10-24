@@ -6,7 +6,7 @@ import { sendCurrentCallToDB, updateQuestionBeenAsked } from "../../utils/utils"
 
 const EndSequenceBtnStyles = styled.button`
   width: min-content;
-  background: #d8380c;
+  background: #fe4d1c;
 `;
 
 const EndSequenceBtn = () => {

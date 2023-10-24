@@ -14,7 +14,7 @@ import progress from "./../assets/images/progress.png";
 import tick from "./../assets/images/tick-b.png";
 import LoadQuestionsBtn from '../components/Buttons/LoadQuestions.js';
 import SingleQuestionBtn from '../components/Buttons/SingleQuestionBtn.js';
-// import RandomLightBtn from '../components/Buttons/RandomLight.js';
+
 
 
 const RandomiserPageStyles = styled.section`

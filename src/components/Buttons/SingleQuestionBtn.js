@@ -11,7 +11,8 @@ import { askQuestion, shuffleArray } from "../../utils/utils";
 
 const SingleQuestionBtnStyles = styled.button`
   width: fit-content;
-  background: #e7a069;
+  /* background: #e7a069; */
+  background: var(--yellow) ;
 `;
 
 const ButtonInfoStyles = styled.div`

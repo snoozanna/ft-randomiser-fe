@@ -17,10 +17,11 @@ const CurrentQStyles = styled.div`
     width: 100%;
     margin-block-end: 4rem;
     text-align: center;
-    span.question {
+    h3.question {
       font-size: 4rem;
       font-weight: 600;
     }
+    
   }
   .label-container {
     display: flex;
@@ -65,7 +66,7 @@ const LockInWrapperStyles = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   gap:2rem;
 `;
 
@@ -168,7 +169,8 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
         <CurrentQStyles>
           <div className="question-wrapper">
             {/* <span>Current Question from context:</span> */}
-            {currentQuestion ?  <div className="label-container">
+            {/* {currentQuestion ?  
+            <div className="label-container">
               <span className="category label">
                 {" "}
                 {currentQuestion ? currentQuestion.category.name : null}
@@ -180,7 +182,8 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
               >
                 {currentQuestion ? currentQuestion.level : null}
               </span>
-            </div> :null}
+            </div>
+             :null} */}
 
             <h3 className="question">
               {currentQuestion ? currentQuestion.question : null}

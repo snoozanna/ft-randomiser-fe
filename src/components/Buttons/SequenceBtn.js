@@ -10,6 +10,14 @@ const SequenceButtonStyles = styled.div`
   &.highlight {
     border: #ffc100 solid 3px;
     background: #6fc36f;
+      background: var(--lightgreen);
+      border: var(--lightgreen) 0.125em solid;
+      border-radius: 0.25em;
+      box-shadow:
+        inset 0 0 0.5em 0 var(--lightgreen),
+        0 0 0.5em 0 var(--lightgreen);
+
+  
   }
 `;
 
@@ -31,46 +39,61 @@ const SequenceBtn = ({ levelSequenceLabel, label }) => {
 
   const levelSequence = levelSequences2[levelSequenceLabel];
 
-  const buildSequence = (sequenceOrder, nonNegNum = 2) => {
+// NEW ONE 
+const buildSequence = ( sequenceOrder, nonNegNum = 2) => {
   const questionsCopy = allUnaskedQuestions.map((question) => {
     return { ...question };
   });
   let shuffledQuestions = shuffleArray(questionsCopy);
-  const sequence = [];
-  const usedCategories = [];
-  let nonNegCount = 0;
 
-  sequenceOrder.forEach((level) => {
-    const question = shuffledQuestions.find((question) => {
-      if (nonNegCount < nonNegNum) {
-        return (
-          question.level === level &&
-          !sequence.includes(question) &&
-          !usedCategories.includes(question.category.name) &&
-          question.nonNeg === true
-        );
-      } else {
-        return (
-          question.level === level &&
-          !sequence.includes(question) &&
-          !usedCategories.includes(question.category.name)
-        );
-      }
+  for (let i = 0; i < 150; i++) {
+    //make an array of nonNegIndexes
+    const arrayOfIndexes = [];
+    for (let i = 0; i < sequenceOrder.length; i++) {
+      arrayOfIndexes.push(i);
+    }
+
+    const randomisedIndexes = shuffleArray(arrayOfIndexes);
+    const nonNegNumOfRandomisedIndexes = randomisedIndexes.slice(0, nonNegNum);
+    const sequence = [];
+    sequenceOrder.forEach((level, index) => {
+      const chosenQuestion = shuffledQuestions.find((question) => {
+        const isQuestionPickedAlready = sequence.includes(question);
+        if (nonNegNumOfRandomisedIndexes.includes(index)) {
+          return (
+            question.level === level &&
+            !isQuestionPickedAlready &&
+            question.nonNeg
+          );
+        } else {
+          return question.level === level && !isQuestionPickedAlready;
+        }
+      });
+      sequence.push(chosenQuestion);
     });
-    if (question === undefined) return "not enough questions";
-    if (question.nonNeg) nonNegCount++;
-    sequence.push(question);
-    usedCategories.push(question.category.name);
-  });
-  if (sequence.length !== sequenceOrder.length) return "not enough questions";
-  sequence.forEach((questionInSequence)=>{
-    setAllUnaskedQuestions((currentAllUnaskedQuestions)=> {
-return currentAllUnaskedQuestions.filter((question)=> {
-return question._id !== questionInSequence._id;
-})
-    })
-  })
-  return sequence;
+
+    if (!sequence.includes(undefined)) {
+      const listOfCategories = sequence.map((question) => question.category);
+      const listOfUniqueCategories = new Set(listOfCategories);
+      const arrayOfUniqueCategories = [...listOfUniqueCategories];
+      if (
+        arrayOfUniqueCategories.length >= 5 ||
+        arrayOfUniqueCategories.length > sequenceOrder.length / 2
+      ) {
+        return sequence;
+      }
+    }
+  }
+
+  return "not enough questions";
+};
+// Function to shuffle an array using the Fisher-Yates algorithm
+const shuffleArray = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 };
 
   const clickHandler = (sequenceOrder) => {

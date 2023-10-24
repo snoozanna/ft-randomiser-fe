@@ -70,93 +70,115 @@ exports.shuffleArray = (array) => {
 
 
 // put this back in to show sequences on sequence page 
-exports.buildSequence = ({ questions }, sequenceOrder, nonNegNum = 4) => {
+exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
+  // Function to shuffle an array using the Fisher-Yates algorithm
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+
   const questionsCopy = questions.map((question) => {
     return { ...question };
   });
-  let shuffledQuestions = this.shuffleArray(questionsCopy);
-  const sequence = [];
-  const usedCategories = [];
-  let nonNegCount = 0;
+  let shuffledQuestions = shuffleArray(questionsCopy);
 
-  sequenceOrder.forEach((level) => {
-    const question = shuffledQuestions.find((question) => {
-      if (nonNegCount < nonNegNum) {
-        return (
-          question.level === level &&
-          !sequence.includes(question) &&
-          !usedCategories.includes(question.category.name) &&
-          question.nonNeg === true
-        );
-      } else {
-        return (
-          question.level === level &&
-          !sequence.includes(question) &&
-          !usedCategories.includes(question.category.name)
-        );
-      }
+  for (let i = 0; i < 150; i++) {
+    //make an array of nonNegIndexes
+    const arrayOfIndexes = [];
+    for (let i = 0; i < sequenceOrder.length; i++) {
+      arrayOfIndexes.push(i);
+    }
+
+    const randomisedIndexes = shuffleArray(arrayOfIndexes);
+    const nonNegNumOfRandomisedIndexes = randomisedIndexes.slice(0, nonNegNum);
+    const sequence = [];
+    sequenceOrder.forEach((level, index) => {
+      const chosenQuestion = shuffledQuestions.find((question) => {
+        const isQuestionPickedAlready = sequence.includes(question);
+        if (nonNegNumOfRandomisedIndexes.includes(index)) {
+          return (
+            question.level === level &&
+            !isQuestionPickedAlready &&
+            question.nonNeg
+          );
+        } else {
+          return question.level === level && !isQuestionPickedAlready;
+        }
+      });
+      sequence.push(chosenQuestion);
     });
-    if (question === undefined) return "not enough questions";
-    if (question.nonNeg) nonNegCount++;
-    sequence.push(question);
-    usedCategories.push(question.category.name);
-  });
-  if (sequence.length !== sequenceOrder.length) return "not enough questions";
-  return sequence;
+
+    if (!sequence.includes(undefined)) {
+      const listOfCategories = sequence.map((question) => question.category);
+      const listOfUniqueCategories = new Set(listOfCategories);
+      const arrayOfUniqueCategories = [...listOfUniqueCategories];
+      if (
+        arrayOfUniqueCategories.length >= 5 ||
+        arrayOfUniqueCategories.length > sequenceOrder.length / 2
+      ) {
+        return sequence;
+      }
+    }
+  }
+
+  return "not enough questions";
 };
 
 
-// exports.sortData = () => {
-//   // Define a mapping of category IDs to their names
-//   const categoryMapping = {
-//     "09704acd-f205-4afd-807d-692f8e513840": "Love & Relationships",
-//     "0144753f-3590-4091-bfeb-7433d137e5ba": "Cultural Background",
-//     "3e87b2c3-3314-44ae-9126-fccd8f27b1eb": "Health & Fertility",
-//     "d7afa659-277e-47f5-8d8a-3e12a53ca5d7": "Work",
-//     "2521097c-128f-4720-8b0e-ca2d946d96c0": "Pop Culture",
-//     "ccdac514-519c-4c2c-b9e6-643688ac73ba": "Humour",
-//     "c76b8c70-efce-4474-832a-6c3cccb6550e": "Life",
-//     "d5b5c96b-91ea-403e-bc52-a8fcf141fa03": "Ethics",
-//     "9c219554-49de-4a99-8c14-86ea62a84c41": "Literature or Cultural",
-//     "7de96aae-e318-4718-bfa1-c7ecfeaa47f0": "Communication",
-//     "50647b88-b49d-48c2-899f-01ec6f1ad77e": "Philosophical & Spiritual",
-//     "e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb": "Family & personal History",
-//     "39a95767-630b-44f9-8d08-67ae64c6ab35": "Social practice & dependability",
-//     "36f6dee9-9426-42fb-a922-792c87db2e1e": "Material Possessions",
-//     "024a264a-fe34-469d-b60d-e74c3a519ca3": "Childhood",
-//     "e4b7e410-7605-4bb8-b507-db5a3711a543": "Social",
-//   };
+exports.sortData = () => {
+  // Define a mapping of category IDs to their names
+  const categoryMapping = {
+    "09704acd-f205-4afd-807d-692f8e513840": "Love & Relationships",
+    "0144753f-3590-4091-bfeb-7433d137e5ba": "Cultural Background & Family or Personal History",
+    "3e87b2c3-3314-44ae-9126-fccd8f27b1eb": "Health & Fertility",
+    "d7afa659-277e-47f5-8d8a-3e12a53ca5d7": "Work & Ambition",
+    "ccdac514-519c-4c2c-b9e6-643688ac73ba": "Humour",
+    "c76b8c70-efce-4474-832a-6c3cccb6550e": "Life & Ethics",
+    "9c219554-49de-4a99-8c14-86ea62a84c41": "Literature or Cultural",
+    "7de96aae-e318-4718-bfa1-c7ecfeaa47f0": "Communication",
+    "50647b88-b49d-48c2-899f-01ec6f1ad77e": "Philosophical & Spiritual",
+    "e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb": "Family & personal History",
+    "39a95767-630b-44f9-8d08-67ae64c6ab35": "Social practice & dependability",
+    "36f6dee9-9426-42fb-a922-792c87db2e1e": "Material Possessions & Finance",
+     "d2886006-d0b3-4e77-abc9-b263ba51e79e": "Personal Views",
+  };
 
-//   // Create an array to store the ndJSON data
-//   const ndjsonData = [];
+  // Create an array to store the ndJSON data
+  const ndjsonData = [];
 
-//   // Read the CSV file and convert it to ndJSON
-//   fs.createReadStream("input.csv")
-//     .pipe(csv())
-//     .on("data", (row) => {
-//       const categoryId = row.category;
+  // Read the CSV file and convert it to ndJSON
+  fs.createReadStream("input.csv")
+    .pipe(csv())
+    .on("data", (row) => {
+      const categoryId = row.category;
 
-//       const ndjsonItem = {
-//         _type: "question",
-//         category: {
-//           _ref: categoryId,
-//           _type: "reference",
-//         },
-//         documentary: row.documentary === "TRUE",
-//         level: row.level.toLowerCase(),
-//         nonNeg: row.nonNeg === "TRUE",
-//         question: row.question,
-//         requireLockIn: row.requireLockIn === "TRUE",
-//         beenAsked: row.beenAsked === "TRUE",
-//       };
-//       ndjsonData.push(JSON.stringify(ndjsonItem));
-//     })
-//     .on("end", () => {
-//       // Write the ndJSON data to a file
-//       fs.writeFileSync("../../output.ndjson", ndjsonData.join("\n"));
-//       console.log("Conversion completed.");
-//     });
-// };
+      const ndjsonItem = {
+        _type: "question",
+        category: {
+          _ref: categoryId,
+          _type: "reference",
+        },
+        documentary: row.documentary === "TRUE",
+        level: row.level.toLowerCase(),
+        nonNeg: row.nonNeg === "TRUE",
+        question: row.question,
+        altQuestion: row.altQuestion,
+        requireLockIn: row.requireLockIn === "TRUE",
+        beenAsked: row.beenAsked === "TRUE",
+      };
+      ndjsonData.push(JSON.stringify(ndjsonItem));
+    })
+    .on("end", () => {
+      // Write the ndJSON data to a file
+      fs.writeFileSync("../../output.ndjson", ndjsonData.join("\n"));
+      console.log("Conversion completed.");
+    });
+};
+
+// sortData();
 
 
 exports.updateQuestionBeenAsked = async (questionToUpdate, setTo=true ) => {
@@ -214,7 +236,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
   const { _id } = questionToSend;
   const newQuestionID = _id;
 
-  const currentQuestion_Id = "5fb10a60-40a4-4e3d-8753-182356463cdf";
+  const currentQuestion_Id = "2f3e3082-ddfd-4be3-a4f4-cf3f1bdf0172";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -257,7 +279,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
 };
 
 exports.updateCurrentQuestionNotInProgress = async () => {
-  const currentQuestion_Id = "5fb10a60-40a4-4e3d-8753-182356463cdf";
+  const currentQuestion_Id = "2f3e3082-ddfd-4be3-a4f4-cf3f1bdf0172";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);

@@ -9,7 +9,7 @@ import Loader from "../Loader";
 
 const LoadQuestionsBtnStyles = styled.button`
   width: min-content;
-  background: #d8380c;
+  background: #fe4d1c;
 `;
 
 const LoadQuestionsBtn = () => {
@@ -25,7 +25,7 @@ if (loading) return <Loader />;
 if (error) return <p>Error: {JSON.stringify(error)}</p>;
 if (!data) return <text>Could not find data</text>;
 const { questions } = data;
-// console.log("loading data in load button",questions);
+console.log("loading data in load button",questions);
   const handleClick = async () => {
     // clear sequence
     setQuestionSequenceIndex(-1);

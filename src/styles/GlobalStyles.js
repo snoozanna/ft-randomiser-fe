@@ -9,12 +9,15 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --grey: #efefef;
     --blue:#3e31de;
+       --mustyblue: #5E87EF;
+    /* SET COLOURS  */
      --yellow: #FDC24C;
     --pink:#ff87e5;
     --orange:#dc7a30;
-    --mustyblue: #5E87EF;
+    --coral:#ff7f50;
+    --brown: hsl(323 21% 16%);
     --mintgreen: #32D7B9;
-    --lightgreen: #98e9d4;
+     --lightgreen: #98e9d4;
     /* --purple: hsl(16.88deg 96.55% 45.49% / 30.98%); */
      --purple:#d866a7;
     --clr-neon: hsl(300 85% 73%);
@@ -29,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
   html {
     /* background-image: url(${bg}); */
     background-color: var(--blue) ;
-    /* background-color: black ; */
+    background-color: var(--orange) ;
 
     font-size: 10px;
   }
@@ -40,7 +43,7 @@ body {
   min-height: 100vh;
     font-size: 1.6rem;
   margin: 0;
-  color: white;
+  color: black;
 }
 
 *,

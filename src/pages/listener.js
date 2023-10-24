@@ -39,7 +39,7 @@ const ListenerPageStyles = styled.section`
       text-wrap: pretty;
       line-height: 4rem;
     }
-    .neon-button {
+    .neon {
       color: var(--clr-blue-neon);
       color: var(--clr-neon);
 
@@ -73,7 +73,7 @@ const qFromDBAtStart = data.current.nodes[0].question.question;
     });
 
   const query = `*[_type == "currentQ"]`;
-  const params = { _id: "5fb10a60-40a4-4e3d-8753-182356463cdf" };
+  const params = { _id: "2f3e3082-ddfd-4be3-a4f4-cf3f1bdf0172" };
 
 useEffect(() => {
   console.log("useEffect fires")
@@ -108,7 +108,7 @@ useEffect(() => {
       <div className="listener-question-container">
         {questionInProgressState ? (
           <h3 className="question">
-            <p className="neon-button">
+            <p className="neon">
               {questionToDisplay ? questionToDisplay.question : qFromDBAtStart}
             </p>
           </h3>

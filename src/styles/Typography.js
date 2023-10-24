@@ -76,7 +76,7 @@ h2{
 
   
   a {
-    color: var(--lightgreen);
+    /* color: var(--lightgreen); */
     text-decoration-color: var(--red);
     /* Chrome renders this weird with this font, so we turn it off */
     text-decoration-skip-ink: none;
@@ -84,7 +84,7 @@ h2{
   }
 
     a:hover {
-    color: var(--yellow);
+    color: var(--lightgreen);
     
   }
 

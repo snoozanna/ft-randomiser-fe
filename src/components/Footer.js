@@ -7,6 +7,7 @@ import { devices } from '../styles/breakpoints';
 
 const FooterStyles = styled.footer`
 background-color:var(--blue);
+background-color:var(--orange);
 z-index: 9999;
 position:fixed;
 bottom:0;

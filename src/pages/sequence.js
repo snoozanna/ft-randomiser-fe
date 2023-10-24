@@ -72,6 +72,7 @@ span.label{
 }
 span.category.label{
   background: purple;
+  color:white;
 }
 
 span.level.label.deep{
