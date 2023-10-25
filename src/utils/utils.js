@@ -128,55 +128,56 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
 };
 
 
-exports.sortData = () => {
-  // Define a mapping of category IDs to their names
-  const categoryMapping = {
-    "09704acd-f205-4afd-807d-692f8e513840": "Love & Relationships",
-    "0144753f-3590-4091-bfeb-7433d137e5ba": "Cultural Background & Family or Personal History",
-    "3e87b2c3-3314-44ae-9126-fccd8f27b1eb": "Health & Fertility",
-    "d7afa659-277e-47f5-8d8a-3e12a53ca5d7": "Work & Ambition",
-    "ccdac514-519c-4c2c-b9e6-643688ac73ba": "Humour",
-    "c76b8c70-efce-4474-832a-6c3cccb6550e": "Life & Ethics",
-    "9c219554-49de-4a99-8c14-86ea62a84c41": "Literature or Cultural",
-    "7de96aae-e318-4718-bfa1-c7ecfeaa47f0": "Communication",
-    "50647b88-b49d-48c2-899f-01ec6f1ad77e": "Philosophical & Spiritual",
-    "e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb": "Family & personal History",
-    "39a95767-630b-44f9-8d08-67ae64c6ab35": "Social practice & dependability",
-    "36f6dee9-9426-42fb-a922-792c87db2e1e": "Material Possessions & Finance",
-     "d2886006-d0b3-4e77-abc9-b263ba51e79e": "Personal Views",
-  };
+// exports.sortData = () => {
+//   // Define a mapping of category IDs to their names
+//   const categoryMapping = {
+//     "09704acd-f205-4afd-807d-692f8e513840": "Love & Relationships",
+//     "0144753f-3590-4091-bfeb-7433d137e5ba": "Cultural Background & Family or Personal History",
+//     "3e87b2c3-3314-44ae-9126-fccd8f27b1eb": "Health & Fertility",
+//     "d7afa659-277e-47f5-8d8a-3e12a53ca5d7": "Work & Ambition",
+//     "ccdac514-519c-4c2c-b9e6-643688ac73ba": "Humour",
+//     "c76b8c70-efce-4474-832a-6c3cccb6550e": "Life & Ethics",
+//     "9c219554-49de-4a99-8c14-86ea62a84c41": "Literature or Cultural",
+//     "7de96aae-e318-4718-bfa1-c7ecfeaa47f0": "Communication",
+//     "50647b88-b49d-48c2-899f-01ec6f1ad77e": "Philosophical & Spiritual",
+//     "e0a0a70c-aaba-4a57-a0dc-dcc0bf98dfbb": "Family & personal History",
+//     "39a95767-630b-44f9-8d08-67ae64c6ab35": "Social practice & dependability",
+//     "36f6dee9-9426-42fb-a922-792c87db2e1e": "Material Possessions & Finance",
+//      "d2886006-d0b3-4e77-abc9-b263ba51e79e": "Personal Views",
+//   };
 
-  // Create an array to store the ndJSON data
-  const ndjsonData = [];
+//   // Create an array to store the ndJSON data
+//   const ndjsonData = [];
 
-  // Read the CSV file and convert it to ndJSON
-  fs.createReadStream("input.csv")
-    .pipe(csv())
-    .on("data", (row) => {
-      const categoryId = row.category;
+//   // Read the CSV file and convert it to ndJSON
+//   fs.createReadStream("input.csv")
+//     .pipe(csv())
+//     .on("data", (row) => {
+//       const categoryId = row.category;
 
-      const ndjsonItem = {
-        _type: "question",
-        category: {
-          _ref: categoryId,
-          _type: "reference",
-        },
-        documentary: row.documentary === "TRUE",
-        level: row.level.toLowerCase(),
-        nonNeg: row.nonNeg === "TRUE",
-        question: row.question,
-        altQuestion: row.altQuestion,
-        requireLockIn: row.requireLockIn === "TRUE",
-        beenAsked: row.beenAsked === "TRUE",
-      };
-      ndjsonData.push(JSON.stringify(ndjsonItem));
-    })
-    .on("end", () => {
-      // Write the ndJSON data to a file
-      fs.writeFileSync("../../output.ndjson", ndjsonData.join("\n"));
-      console.log("Conversion completed.");
-    });
-};
+//       const ndjsonItem = {
+//         // _type: "question",
+//         _type: "rapidFire",
+//         category: {
+//           _ref: categoryId,
+//           _type: "reference",
+//         },
+//         documentary: row.documentary === "TRUE",
+//         level: row.level.toLowerCase(),
+//         nonNeg: row.nonNeg === "TRUE",
+//         question: row.question,
+//         altQuestion: row.altQuestion,
+//         requireLockIn: row.requireLockIn === "TRUE",
+//         beenAsked: row.beenAsked === "TRUE",
+//       };
+//       ndjsonData.push(JSON.stringify(ndjsonItem));
+//     })
+//     .on("end", () => {
+//       // Write the ndJSON data to a file
+//       fs.writeFileSync("../../output.ndjson", ndjsonData.join("\n"));
+//       console.log("Conversion completed.");
+//     });
+// };
 
 // sortData();
 
@@ -320,6 +321,9 @@ exports.updateCurrentQuestionNotInProgress = async () => {
 };
 
 
+
+
+
 exports.askQuestion = async (
   question,
 ) => {
@@ -328,6 +332,74 @@ exports.askQuestion = async (
   // - updates as having been asked
    exports.updateQuestionBeenAsked(question);
 };
+
+exports.swapToAlternativeQuestionDB = async (potentialQ_Id, altQuestion, originalQuestion) => {
+  try {
+    // Define the mutation object
+    const mutation = {
+      patch: {
+        id: potentialQ_Id,
+        set: {
+          question: altQuestion,
+          altQuestion: originalQuestion,
+        },
+      },
+    };
+
+    // Send the mutation using fetch
+    const apiUrl = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.GATSBY_SANITY_TOKEN}`,
+      },
+      body: JSON.stringify({ mutations: [mutation] }),
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      console.log(
+        `Document updated  - alt and orig question swapped"):`,
+        result,
+      );
+    } else {
+      console.error("Failed to update document:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error updating document:", error);
+  }
+};
+
+exports.fetchQuestion = async (question_id) => {
+  console.log("fetching q")
+  try {
+    // Construct the API URL for fetching a single question by ID
+    const apiUrl = `${process.env.GATSBY_SANITY_API_URL}/data/question/${question_id}`;
+console.log("apiUrl", apiUrl);
+    // Send a GET request to fetch the question
+    const response = await fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.GATSBY_SANITY_TOKEN}`,
+      },
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      console.log("Question fetched successfully:", result);
+      return result; // Return the fetched question data if needed
+    } else {
+      console.error("Failed to fetch question:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error fetching question:", error);
+  }
+};
+
+
+
 
 exports.markAllQuestionsAsUnasked = async () => {
  try {

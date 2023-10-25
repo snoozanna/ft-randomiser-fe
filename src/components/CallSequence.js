@@ -23,29 +23,13 @@ const CallSequence = ({ setLockInMoment }) => {
     useContext(QuestionContext);
   console.log("questionSequence", questionSequence);
 
-  // useEffect(() => {
-  //   console.log("questionSequence has changed", questionSequence);
-  //   setShowGoButton(true);
-  // }, [questionSequence]);
-  // takes in sequence
-  // go/next button appears
-  // skip button appears
-  //iterates through sequence
-  // update sequence index
-  //runs askQuestion on the question within the sequence
-  // asks a question
-  //checks Lockin
-  //marks as called
-  //sent to db current question
+ 
 
   return (
     <CallSequenceStyles>
-  
-      {/* <div className="btn-wrapper goskip"> */}
         {questionSequence.questions.length !== 0 &&
         questionSequenceIndex === -1 ? (
           <>
-            {/* <span>Question sequence loaded!</span> */}
             <div/>
             <GoBtn setLockInMoment={setLockInMoment} />
           </>
@@ -61,7 +45,6 @@ const CallSequence = ({ setLockInMoment }) => {
         questionSequenceIndex === questionSequence.questions.length - 1 ? (
           <SkipBtn />
         ) : null}
-      {/* </div> */}
     </CallSequenceStyles>
   );
 };

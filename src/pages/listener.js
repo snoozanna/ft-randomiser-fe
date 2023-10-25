@@ -5,6 +5,7 @@ import { createClient } from "@sanity/client";
 import styled from "styled-components";
 // const sanityClient = require("@sanity/client");
 import glowlogo from "./../assets/images/logo-glow.png"
+import { fetchQuestion } from "../utils/utils";
 
 const ListenerPageStyles = styled.section`
   display: flex;
@@ -85,9 +86,19 @@ useEffect(() => {
       const newID = question.question._ref;
       const inProgress = question.questionInProgress;
       console.log("subscribing", question);
-      const newQuestion = allQuestions.find((q)=> {return q._id === newID})
+       setQuestionToDisplay(null);
+//fetch the question from the db 
+// TODO THIS DOES CAUSE A LITTLE FLASH
+    sanityClient.getDocument(newID).then((question) => {
+     
+        console.log(
+          `getting doc from db ${question.question} (${question.altQuestion}`,
+        );
+     setQuestionToDisplay(question);
+      });
+      // const newQuestion = allQuestions.find((q)=> {return q._id === newID})
       setQuestionInProgressState(inProgress)
-      setQuestionToDisplay(newQuestion);
+     
      
     });
 
@@ -109,7 +120,12 @@ useEffect(() => {
         {questionInProgressState ? (
           <h3 className="question">
             <p className="neon">
-              {questionToDisplay ? questionToDisplay.question : qFromDBAtStart}
+              {/* {questionToDisplay ? questionToDisplay.question : qFromDBAtStart} */}
+              {questionToDisplay ? (
+                questionToDisplay.question
+              ) : (
+                null
+              )}
             </p>
           </h3>
         ) : (

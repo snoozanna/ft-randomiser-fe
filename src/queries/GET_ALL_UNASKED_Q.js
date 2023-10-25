@@ -5,6 +5,7 @@ const GET_ALL_UNASKED_Q = gql`
     # questions: allQuestion(where: { beenAsked: { eq: false } }, limit: 10) {
        questions: allQuestion(where: { beenAsked: { eq: false } }) {
       question
+      altQuestion
       _id
       category {
         name

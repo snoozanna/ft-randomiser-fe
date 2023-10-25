@@ -4,7 +4,7 @@ import { QuestionContext } from '../context/questions.context';
 import GET_CURRENT_QUESTION from "../queries/GET_CURRENT_QUESTION";
 import Loader from './Loader';
 import { useQuery } from '@apollo/client';
-import { askQuestion, updateCurrentQuestionNotInProgress } from '../utils/utils';
+import { askQuestion, swapToAlternativeQuestionDB, updateCurrentQuestionNotInProgress } from '../utils/utils';
 
 const CurrentQStyles = styled.div`
   display: flex;
@@ -114,55 +114,81 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
 
  }, [currentQuestion]);
 
-  const standInLockInQ = {
-    __typename: "Question",
-    question: "Do you have a favourite Doctor Who?",
-    _id: "5f72ba63-e50d-4bba-9cf5-011317f082bb",
-    category: {
-      __typename: "Category",
-      name: "Material Possessions",
-    },
-    level: "deep",
-    beenAsked: false,
-    requireLockIn: false,
-    nonNeg: true,
-    documentary: false,
-  };
 
-  //useEffect triggered by ?/
-  const lockInOptions = [potentialQuestion, standInLockInQ];
-  // console.log("lockInOptions", lockInOptions);
+
   const confirmBtnHandler = async (selectedQuestion) => {
-    // console.log("selectedQuestion", selectedQuestion)
-        await askQuestion(selectedQuestion);
-        setCurrentQuestion(selectedQuestion);
-        setQuestionSequenceIndex((currentIndex) => {
-          return currentIndex + 1;
-        })
-      setLockInMoment(false)}
+    await askQuestion(selectedQuestion);
+    setCurrentQuestion(selectedQuestion);
+    setQuestionSequenceIndex((currentIndex) => {
+      return currentIndex + 1;
+    });
+    setLockInMoment(false);
+  }
+
+    const confirmAltBtnHandler = async (selectedQuestion) => {
+      // in state too?
+
+      // if alternative is chosen, mutate question.question to question.altQuestion and inverse
+      await swapToAlternativeQuestionDB(
+        selectedQuestion._id,
+        selectedQuestion.altQuestion,
+        selectedQuestion.question,
+      );
+      // up date state with new question ??
+  
+      const correctedQuestion = {
+        __typename: selectedQuestion.__typename,
+        question: selectedQuestion.altQuestion,
+        altQuestion: selectedQuestion.question,
+        _id: selectedQuestion._id,
+        category: {
+          __typename: selectedQuestion.category.__typename,
+          name: "Material Possessions",
+        },
+        level: selectedQuestion.level,
+        beenAsked: selectedQuestion.beenAsked,
+        requireLockIn: selectedQuestion.requireLockIn,
+        nonNeg: selectedQuestion.nonNeg,
+        documentary: selectedQuestion.documentary,
+      };
+      console.log("correctedQuestion", correctedQuestion);
+      // TODO NEED To CHANGE THIS SWAPPED QUEsTION IN "allQuestions" in state, becuase the listener searches that for its id.
+      // TODO update cant do this becasue state doesn't persist.
+      await askQuestion(correctedQuestion);
+      setCurrentQuestion(correctedQuestion);
+      setQuestionSequenceIndex((currentIndex) => {
+        return currentIndex + 1;
+      });
+      setLockInMoment(false);
+    };
 
 
   return (
     <>
       {lockInMoment ? (
         <LockInOuterWrapperStyles>
-          {/* <h2>LOCK IN ONE OPTION</h2> */}
           <LockInWrapperStyles className="options-wrapper">
-            {lockInOptions.map((option) => {
-              console.log("option", option);
-              return (
-                <LockInOptionsStyles key={option._id}>
-                  <p>{option.question}</p>
-                  <button
-                    // onClick={() => confirmBtnHandler({option})}
-                    onClick={() => confirmBtnHandler(option)}
-                    className="lock-in"
-                  >
-                    Lock in ?
-                  </button>
-                </LockInOptionsStyles>
-              );
-            })}
+            
+            <LockInOptionsStyles>
+              <p>{potentialQuestion.question}</p>
+              <button
+            
+                onClick={() => confirmBtnHandler(potentialQuestion)}
+                className="lock-in"
+              >
+                Lock in ?
+              </button>
+            </LockInOptionsStyles>
+            <LockInOptionsStyles>
+              <p>{potentialQuestion.altQuestion}</p>
+              <button
+          
+                onClick={() => confirmAltBtnHandler(potentialQuestion)}
+                className="lock-in"
+              >
+                Lock in ?
+              </button>
+            </LockInOptionsStyles>
           </LockInWrapperStyles>
         </LockInOuterWrapperStyles>
       ) : (
@@ -188,9 +214,8 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
             <h3 className="question">
               {currentQuestion ? currentQuestion.question : null}
             </h3>
-            {/* <p> {currentQuestion ? currentQuestion._id : null}</p> */}
           </div>
-          {/* <button>Refresh</button> */}
+
         </CurrentQStyles>
       )}
     </>
