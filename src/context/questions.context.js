@@ -61,7 +61,9 @@ export function QuestionProvider({ children }) {
      return categoryCounts;
    };
    const categoryCounts = countQuestionsByCategory(allUnaskedQuestions);
-   console.log("categoryCounts", categoryCounts);
+  //  console.log("categoryCounts", categoryCounts);
+    console.log("no of unasked q", allUnaskedQuestions.length);
+
 
   return (
     <QuestionContext.Provider

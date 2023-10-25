@@ -51,8 +51,8 @@ h3.question.show > p{
  font-family: var(--subheadings); 
  font-family: var(--listener); 
  letter-spacing: 0.3rem;
- font-size: 2.5rem;
- color: white
+ font-size: 2.7rem;
+ /* color: white */
  /* text-transform: uppercase */
 }
 

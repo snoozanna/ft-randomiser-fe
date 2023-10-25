@@ -42,7 +42,7 @@ const ListenerPageStyles = styled.section`
     .neon {
       color: var(--clr-blue-neon);
       color: var(--clr-neon);
-      color: white;
+      /* color: white; */
 
       /* color: var(--orange); */
       padding: 0.25em 0.5em;
@@ -119,13 +119,9 @@ useEffect(() => {
       <div className="listener-question-container">
         {questionInProgressState ? (
           <h3 className="question show">
-            <p>
+            <p className="neon">
               {/* {questionToDisplay ? questionToDisplay.question : qFromDBAtStart} */}
-              {questionToDisplay ? (
-                questionToDisplay.question
-              ) : (
-                null
-              )}
+              {questionToDisplay ? questionToDisplay.question : null}
             </p>
           </h3>
         ) : (
