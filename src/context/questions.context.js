@@ -7,19 +7,22 @@ import Loader from '../components/Loader';
 export const QuestionContext = createContext({
   questions: {
 
-    allUnaskedQuestionsAtStart: [],
+    allUnaskedQuestions: [],
     potentialQuestion: {},
     currentQuestion: {},
     alreadyCalled: [""],
     questionError: "",
     loadAllQuestionsRequired: "",
+    resetRequired: "",
     reset: () => {},
+    removeQuestionFromUnasked: () => {},
     setAlreadyCalled: () => {},
     setAllUnaskedQuestions: () => {},
     setPotentialQuestion: () => {},
     setCurrentQuestion: () => {},
     setQuestionError: () => {},
-    setLoadAllQuestionsRequired: () => {}
+    setLoadAllQuestionsRequired: () => {}, 
+    setResetRequired: () => {}
   },
   sequence: {
     questionSequence: {
@@ -44,8 +47,17 @@ export function QuestionProvider({ children }) {
   const [questionSequenceIndex, setQuestionSequenceIndex] = useState(-1);
    const [allUnaskedQuestions, setAllUnaskedQuestions] = useState([]);
    const [loadAllQuestionsRequired, setLoadAllQuestionsRequired] = useState(true)
+     const [resetRequired, setResetRequired] = useState(false);
 
    console.log("question context");
+
+   const removeQuestionFromUnasked = (questionToRemove) => {
+    console.log(`removing ${questionToRemove.question} from unasked`)
+     setAllUnaskedQuestions((questions) =>
+       questions.filter((question) => question._id !== questionToRemove._id),
+     );
+   };
+
 
    const countQuestionsByCategory = (questions) => {
      const categoryCounts = {};
@@ -60,9 +72,73 @@ export function QuestionProvider({ children }) {
 
      return categoryCounts;
    };
+    const countQuestionsByLevel = (questions) => {
+      const levelCounts = {};
+      questions.forEach((question) => {
+        const level = question.level;
+        if (levelCounts[level]) {
+          levelCounts[level]++;
+        } else {
+          levelCounts[level] = 1;
+        }
+      });
+
+      return levelCounts;
+    };
+
+  const countQuestionsByNonNeg = (questions) => {
+       const nonNegCounts = {};
+       questions.forEach((question) => {
+         const nonNeg = question.nonNeg;
+         if (nonNegCounts[nonNeg]) {
+           nonNegCounts[nonNeg]++;
+         } else {
+           nonNegCounts[nonNeg] = 1;
+         }
+       });
+
+       return nonNegCounts;
+     };
+
    const categoryCounts = countQuestionsByCategory(allUnaskedQuestions);
-  //  console.log("categoryCounts", categoryCounts);
-    console.log("no of unasked q", allUnaskedQuestions.length);
+
+  const levelCounts = countQuestionsByLevel(allUnaskedQuestions);
+  
+  const nonNegCounts = countQuestionsByNonNeg(allUnaskedQuestions);
+  
+   console.log("categoryCounts", categoryCounts);
+      console.log("levelCounts", levelCounts);
+  console.log("nonNegCounts", nonNegCounts);
+
+//TODO Put this in an if block 
+    Object.keys(categoryCounts).forEach((category) => {
+      if (categoryCounts[category] <= 5) {
+        console.log(
+          `Category "${category}" has ${categoryCounts[category]} or fewer questions.`,
+        );
+        //  setResetRequired(true)
+      }
+    });
+
+   Object.keys(nonNegCounts).forEach((nonNeg) => {
+     if (nonNegCounts[nonNeg] <= 5) {
+       console.log(
+         `Category "${nonNeg}" has ${nonNegCounts[nonNeg]} or fewer questions.`,
+       );
+      //  setResetRequired(true);
+     }
+   });
+
+
+   Object.keys(levelCounts).forEach((level) => {
+     if (levelCounts[level] <= 5) {
+       console.log(
+         `Category "${level}" has ${levelCounts[level]} or fewer questions.`,
+       );
+      //  setResetRequired(true);
+     }
+   });
+    // console.log("no of unasked q", allUnaskedQuestions.length);
 
 
   return (
@@ -84,6 +160,9 @@ export function QuestionProvider({ children }) {
         setQuestionSequenceIndex,
         loadAllQuestionsRequired,
         setLoadAllQuestionsRequired,
+        resetRequired, 
+        setResetRequired,
+        removeQuestionFromUnasked,
 
       }}
     >

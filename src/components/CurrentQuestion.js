@@ -21,7 +21,6 @@ const CurrentQStyles = styled.div`
       font-size: 4rem;
       font-weight: 600;
     }
-    
   }
   .label-container {
     display: flex;
@@ -49,6 +48,18 @@ const CurrentQStyles = styled.div`
   }
   span.level.label.medium {
     background: #249faf;
+  }
+  .follow-container {
+    font-size: 2rem;
+    font-weight: 600;
+    /* background: white; */
+    padding: 1rem;
+    border-radius: 10px;
+    font-style: italic;
+    color: darkslategrey;
+     p {
+      margin-bottom: 0;
+    }
   }
 `;
 
@@ -89,6 +100,8 @@ const LockInOptionsStyles = styled.div`
   button.lock-in {
     background: #6fc36f;
   }
+
+
 `;
 
 const CurrentQ = ({lockInMoment, setLockInMoment}) => {
@@ -102,7 +115,13 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
 
   // const currentQuestion = data.currentQ[0].question
 
-  const { potentialQuestion,currentQuestion, setCurrentQuestion, setQuestionSequenceIndex} = useContext(QuestionContext);
+  const {
+    potentialQuestion,
+    currentQuestion,
+    setCurrentQuestion,
+    setQuestionSequenceIndex,
+    removeQuestionFromUnasked,
+  } = useContext(QuestionContext);
   console.log("currentQuestion", currentQuestion);
 
  useEffect(() => {
@@ -122,6 +141,7 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
     setQuestionSequenceIndex((currentIndex) => {
       return currentIndex + 1;
     });
+    removeQuestionFromUnasked(selectedQuestion);
     setLockInMoment(false);
   }
 
@@ -140,6 +160,7 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
         __typename: selectedQuestion.__typename,
         question: selectedQuestion.altQuestion,
         altQuestion: selectedQuestion.question,
+        // followUp: selectedQuestion.followUp,
         _id: selectedQuestion._id,
         category: {
           __typename: selectedQuestion.category.__typename,
@@ -152,13 +173,13 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
         documentary: selectedQuestion.documentary,
       };
       console.log("correctedQuestion", correctedQuestion);
-      // TODO NEED To CHANGE THIS SWAPPED QUEsTION IN "allQuestions" in state, becuase the listener searches that for its id.
-      // TODO update cant do this becasue state doesn't persist.
+  
       await askQuestion(correctedQuestion);
       setCurrentQuestion(correctedQuestion);
       setQuestionSequenceIndex((currentIndex) => {
         return currentIndex + 1;
       });
+      removeQuestionFromUnasked(selectedQuestion);
       setLockInMoment(false);
     };
 
@@ -168,11 +189,9 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
       {lockInMoment ? (
         <LockInOuterWrapperStyles>
           <LockInWrapperStyles className="options-wrapper">
-            
             <LockInOptionsStyles>
               <p>{potentialQuestion.question}</p>
               <button
-            
                 onClick={() => confirmBtnHandler(potentialQuestion)}
                 className="lock-in"
               >
@@ -182,7 +201,6 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
             <LockInOptionsStyles>
               <p>{potentialQuestion.altQuestion}</p>
               <button
-          
                 onClick={() => confirmAltBtnHandler(potentialQuestion)}
                 className="lock-in"
               >
@@ -215,7 +233,10 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
               {currentQuestion ? currentQuestion.question : null}
             </h3>
           </div>
-
+          <div className="follow-container">
+            {" "}
+            <p>{currentQuestion ? currentQuestion.followUp : null}</p>
+          </div>
         </CurrentQStyles>
       )}
     </>

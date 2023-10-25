@@ -38,7 +38,7 @@ const SequenceBtn = ({ levelSequenceLabel, label }) => {
   // const { questions } = data;
 
   const levelSequence = levelSequences2[levelSequenceLabel];
-
+console.log("all unasked questions in sequence", allUnaskedQuestions.length);
 // NEW ONE 
 const buildSequence = ( sequenceOrder, nonNegNum = 2) => {
   const questionsCopy = allUnaskedQuestions.map((question) => {
@@ -85,7 +85,7 @@ const buildSequence = ( sequenceOrder, nonNegNum = 2) => {
     }
   }
 
-  return "not enough questions";
+  return "not enough questions 1";
 };
 // Function to shuffle an array using the Fisher-Yates algorithm
 const shuffleArray = (array) => {

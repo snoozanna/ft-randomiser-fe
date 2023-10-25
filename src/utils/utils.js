@@ -327,7 +327,7 @@ exports.updateCurrentQuestionNotInProgress = async () => {
 exports.askQuestion = async (
   question,
 ) => {
-  console.log("asking q");
+  // console.log("asking q");
    exports.sendCurrentCallToDB(question);
   // - updates as having been asked
    exports.updateQuestionBeenAsked(question);

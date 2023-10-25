@@ -6,6 +6,7 @@ const GET_ALL_UNASKED_Q = gql`
        questions: allQuestion(where: { beenAsked: { eq: false } }) {
       question
       altQuestion
+      followUp
       _id
       category {
         name

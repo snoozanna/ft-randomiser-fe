@@ -17,8 +17,9 @@ const GoBtn = ({ setLockInMoment }) => {
     setQuestionSequence,
     setQuestionSequenceIndex,
     setPotentialQuestion,
+    allUnaskedQuestions, removeQuestionFromUnasked
   } = useContext(QuestionContext);
-
+console.log("allUnaskedQuestions",allUnaskedQuestions)
   const handleClick = async () => {
    
     const nextQuestion = questionSequence.questions[questionSequenceIndex + 1];
@@ -33,10 +34,12 @@ const GoBtn = ({ setLockInMoment }) => {
         setLockInMoment(true);
       } else {
         await askQuestion(nextQuestion);
+        // TODO REMOVE FROM UNASKED QUESTIONS 
         setCurrentQuestion(nextQuestion);
         setQuestionSequenceIndex((currentIndex) => {
           return currentIndex + 1;
         });
+        removeQuestionFromUnasked(nextQuestion);
       }
     } else {
       setQuestionSequenceIndex(-1);
