@@ -119,7 +119,7 @@ useEffect(() => {
       <div className="listener-question-container">
         {questionInProgressState ? (
           <h3 className="question show">
-            <p className="neon">
+            <p>
               {/* {questionToDisplay ? questionToDisplay.question : qFromDBAtStart} */}
               {questionToDisplay ? (
                 questionToDisplay.question
