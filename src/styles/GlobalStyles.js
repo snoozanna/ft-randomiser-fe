@@ -25,6 +25,7 @@ const GlobalStyles = createGlobalStyle`
   --clr-blue-neon: #32D7B9;
     --headings: "Pretoria";
     --subheadings: "Inconsolata";
+    --listener: "Young Serif";
     --body:"Roboto";
     --padding: 3rem;
   }

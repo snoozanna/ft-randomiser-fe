@@ -49,6 +49,7 @@ h2{
 h3.question.show, 
 h3.question.show > p{
  font-family: var(--subheadings); 
+ font-family: var(--listener); 
  letter-spacing: 0.4rem;
  /* text-transform: uppercase */
 }

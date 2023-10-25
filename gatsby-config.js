@@ -56,6 +56,10 @@ module.exports = {
             file: `https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600;700;800;900&display=swap`,
           },
           {
+            name: `Young Serif`,
+            file: `https://fonts.googleapis.com/css2?family=Young+Serif&display=swap`,
+          },
+          {
             name: `Roboto`,
             file: `https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400;1,700&display=swap`,
           },
