@@ -1,11 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 import { devices } from './breakpoints.js';
-import heading from '../assets/fonts/KantataAksara.ttf';
+import heading from '../assets/fonts/Pretoria.otf';
 
 const Typography = createGlobalStyle`
 
  @font-face {
-    font-family: KantataAksara;
+    font-family: Pretoria;
     src: url(${heading});
   } 
 
@@ -46,33 +46,12 @@ h2{
     letter-spacing: 0.15rem;
   }
 
-  li{
-    
-  }
-
-  .funTitle{
-    border-bottom: 2px solid var(--yellow);
-    width: fit-content;
- line-height: 5rem;
-  
-  }
-
-  .funTitle > h3{
-  font-weight: 600;
-     width: calc(fit-content + 5rem);
-  }
-
-    .funTitle > h3.catName{
-    font-family: var(--headings);
-  }
-
-  .funTitle > .color.pink{
-    color: var(--pink);
-  }
-
-   .funTitle.green{
-    color: var(--lightgreen);
-  }
+h3.question.show, 
+h3.question.show > p{
+ font-family: var(--headings); 
+ letter-spacing: 0.4rem;
+ text-transform: uppercase
+}
 
   
   a {

@@ -23,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
     --clr-neon: hsl(300 85% 73%);
   --clr-bg: hsl(323 21% 16%);
   --clr-blue-neon: #32D7B9;
-    --headings: "KantataAksara";
+    --headings: "Pretoria";
     --subheadings: "Inconsolata";
     --body:"Roboto";
     --padding: 3rem;

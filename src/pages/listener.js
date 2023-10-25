@@ -118,7 +118,7 @@ useEffect(() => {
     <ListenerPageStyles className="ListenerPage">
       <div className="listener-question-container">
         {questionInProgressState ? (
-          <h3 className="question">
+          <h3 className="question show">
             <p className="neon">
               {/* {questionToDisplay ? questionToDisplay.question : qFromDBAtStart} */}
               {questionToDisplay ? (
