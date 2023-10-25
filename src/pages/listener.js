@@ -24,15 +24,14 @@ const ListenerPageStyles = styled.section`
     align-items: center;
     padding: 2rem;
     height: 35vh;
-    
+
     .glow-logo-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
-      
     }
     .glow-logo-wrapper > img {
-     max-width: 50%;
+      max-width: 50%;
     }
     p {
       margin-bottom: 0;
@@ -43,6 +42,7 @@ const ListenerPageStyles = styled.section`
     .neon {
       color: var(--clr-blue-neon);
       color: var(--clr-neon);
+      color: white;
 
       /* color: var(--orange); */
       padding: 0.25em 0.5em;

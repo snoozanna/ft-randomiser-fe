@@ -45,6 +45,23 @@ export function QuestionProvider({ children }) {
    const [allUnaskedQuestions, setAllUnaskedQuestions] = useState([]);
    const [loadAllQuestionsRequired, setLoadAllQuestionsRequired] = useState(true)
 
+   console.log("question context");
+
+   const countQuestionsByCategory = (questions) => {
+     const categoryCounts = {};
+     questions.forEach((question) => {
+       const category = question.category.name;
+       if (categoryCounts[category]) {
+         categoryCounts[category]++;
+       } else {
+         categoryCounts[category] = 1;
+       }
+     });
+
+     return categoryCounts;
+   };
+   const categoryCounts = countQuestionsByCategory(allUnaskedQuestions);
+   console.log("categoryCounts", categoryCounts);
 
   return (
     <QuestionContext.Provider
