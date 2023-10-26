@@ -4,7 +4,7 @@ import { devices } from './breakpoints.js';
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --red: #FF4949;
+    --red: #fe4d1c;
     --black: 0000;
     --white: #fff;
     --grey: #efefef;

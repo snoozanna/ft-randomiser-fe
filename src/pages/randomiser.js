@@ -90,6 +90,12 @@ const RandomiserPageStyles = styled.section`
           align-items: center;
         }
       }
+      p.resetRequired {
+        background: var(--red);
+        padding: 0.5rem;
+        border: 3px solid black;
+        border-radius: 5px;
+      }
     }
   }
   .seqBtnWrapper {
@@ -121,6 +127,7 @@ const RandomiserPage = () => {
        questionSequenceIndex,
        setAllUnaskedQuestions,
        loadAllQuestionsRequired,
+       resetRequired,
      } = useContext(QuestionContext);
        const [lockInMoment, setLockInMoment] = useState(false);
 
@@ -143,38 +150,47 @@ const RandomiserPage = () => {
                 <h4>
                   <strong>Status</strong>
                 </h4>
-                <span>
-                  <p>
-                    {questionSequence.questions.length === 0 ? (
-                      "Pick a sequence..."
-                    ) : (
-                      <span className="status-wrapper">
-                        <img src={tick} alt="Tick" />{" "}
-                        {questionSequence.label} Sequence loaded!
-                      </span>
-                    )}
-                  </p>
+                {/* <span>s */}
+                <p>
+                  {questionSequence.questions.length === 0 ? (
+                    "Pick a sequence..."
+                  ) : (
+                    <span className="status-wrapper">
+                      <img src={tick} alt="Tick" /> {questionSequence.label}{" "}
+                      Sequence loaded!
+                    </span>
+                  )}
+                </p>
 
-                  <p>
-                    {questionSequenceIndex >= 0 ? (
-                      <span className="status-wrapper">
-                        <img src={progress} alt="progress" /> Sequence Progress:
-                        {questionSequenceIndex + 1}/
-                        {questionSequence.questions.length}
-                      </span>
-                    ) : null}
-                  </p>
+                <p>
+                  {questionSequenceIndex >= 0 ? (
+                    <span className="status-wrapper">
+                      <img src={progress} alt="progress" /> Sequence Progress:
+                      {questionSequenceIndex + 1}/
+                      {questionSequence.questions.length}
+                    </span>
+                  ) : null}
+                </p>
 
-                  <p>
-                    {questionSequenceIndex >= 0 &&
-                    questionSequenceIndex ===
-                      questionSequence.questions.length - 1 ? (
-                      <span className="status-wrapper">
-                        <img src={mark} alt="mark" /> Last question
-                      </span>
-                    ) : null}
+                <p>
+                  {questionSequenceIndex >= 0 &&
+                  questionSequenceIndex ===
+                    questionSequence.questions.length - 1 ? (
+                    <span className="status-wrapper">
+                      <img src={mark} alt="mark" /> Last question
+                    </span>
+                  ) : null}
+                </p>
+
+                {resetRequired ? (
+                  <p className="resetRequired">
+                    <span className="status-wrapper">
+                      <img src={mark} alt="mark" />
+                      RESET REQUIRED!
+                    </span>
                   </p>
-                </span>
+                ) : null}
+                {/* </span> */}
               </div>
               <div className="seqBtnWrapper">
                 <SequenceBtn levelSequenceLabel={1} label={"Easy"} />
@@ -185,6 +201,7 @@ const RandomiserPage = () => {
             </div>
 
             <div className="btn-container-left">
+              <div />
               <div className="btn-wrapper endsequence">
                 <EndSequenceBtn />
               </div>

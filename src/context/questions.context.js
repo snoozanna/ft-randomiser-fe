@@ -1,5 +1,5 @@
 import { useQuery } from '@apollo/client';
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import GET_ALL_UNASKED_Q from '../queries/GET_ALL_UNASKED_Q';
 import Loader from '../components/Loader';
 
@@ -49,7 +49,6 @@ export function QuestionProvider({ children }) {
    const [loadAllQuestionsRequired, setLoadAllQuestionsRequired] = useState(true)
      const [resetRequired, setResetRequired] = useState(false);
 
-   console.log("question context");
 
    const removeQuestionFromUnasked = (questionToRemove) => {
     console.log(`removing ${questionToRemove.question} from unasked`)
@@ -100,44 +99,51 @@ export function QuestionProvider({ children }) {
        return nonNegCounts;
      };
 
-   const categoryCounts = countQuestionsByCategory(allUnaskedQuestions);
+  useEffect(() => {
+    console.log("useEffect runs");
+    const categoryCounts = countQuestionsByCategory(allUnaskedQuestions);
 
-  const levelCounts = countQuestionsByLevel(allUnaskedQuestions);
-  
-  const nonNegCounts = countQuestionsByNonNeg(allUnaskedQuestions);
-  
-   console.log("categoryCounts", categoryCounts);
-      console.log("levelCounts", levelCounts);
-  console.log("nonNegCounts", nonNegCounts);
+    const levelCounts = countQuestionsByLevel(allUnaskedQuestions);
 
-//TODO Put this in an if block 
+    const nonNegCounts = countQuestionsByNonNeg(allUnaskedQuestions);
     Object.keys(categoryCounts).forEach((category) => {
       if (categoryCounts[category] <= 5) {
         console.log(
           `Category "${category}" has ${categoryCounts[category]} or fewer questions.`,
         );
-        //  setResetRequired(true)
+         setResetRequired(true)
       }
     });
 
-   Object.keys(nonNegCounts).forEach((nonNeg) => {
-     if (nonNegCounts[nonNeg] <= 5) {
-       console.log(
-         `Category "${nonNeg}" has ${nonNegCounts[nonNeg]} or fewer questions.`,
-       );
-      //  setResetRequired(true);
-     }
-   });
+    Object.keys(nonNegCounts).forEach((nonNeg) => {
+      if (nonNegCounts[nonNeg] <=5) {
+        console.log(
+          `Category "${nonNeg}" has ${nonNegCounts[nonNeg]} or fewer questions.`,
+        );
+         setResetRequired(true);
+      }
+    });
 
+    Object.keys(levelCounts).forEach((level) => {
+      if (levelCounts[level] <= 5) {
+        console.log(
+          `Category "${level}" has ${levelCounts[level]} or fewer questions.`,
+        );
+         setResetRequired(true);
+      }
+    });
 
-   Object.keys(levelCounts).forEach((level) => {
-     if (levelCounts[level] <= 5) {
-       console.log(
-         `Category "${level}" has ${levelCounts[level]} or fewer questions.`,
-       );
-      //  setResetRequired(true);
-     }
-   });
+    console.log("categoryCounts", categoryCounts);
+    console.log("levelCounts", levelCounts);
+    console.log("nonNegCounts", nonNegCounts);
+  }, [allUnaskedQuestions]);   
+
+   
+  
+ 
+
+//TODO Put this in an if block 
+  
     // console.log("no of unasked q", allUnaskedQuestions.length);
 
 

@@ -54,6 +54,7 @@ await markAllRapidFireAsUnasked();
  setCurrentQuestion(null);
  setLoadAllQuestionsRequired(true);
 setIsLoading(false);
+window.location.reload();
 }
 
   const clickHandler = () => {
