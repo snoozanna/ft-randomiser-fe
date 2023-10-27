@@ -60,9 +60,7 @@ const [questionInProgressState, setQuestionInProgressState] = useState(
 const [questionToDisplay, setQuestionToDisplay] = useState(null)
 
 console.log(data)
-const allQuestions = data.questions.nodes;
-const questionInProgress = data.current.nodes[0].questionInProgress;
-const qFromDBAtStart = data.current.nodes[0].question.question;
+
 
 
   // Listen for changes with Sanity Client Listening 
