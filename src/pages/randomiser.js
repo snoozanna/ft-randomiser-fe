@@ -170,6 +170,7 @@ const RandomiserPage = () => {
                       {questionSequence.questions.length}
                     </span>
                   ) : null}
+
                 </p>
 
                 <p>
@@ -193,9 +194,8 @@ const RandomiserPage = () => {
                 {/* </span> */}
               </div>
               <div className="seqBtnWrapper">
-                <SequenceBtn levelSequenceLabel={1} label={"Easy"} />
-                <SequenceBtn levelSequenceLabel={2} label={"Medium"} />
-                <SequenceBtn levelSequenceLabel={3} label={"Hard"} />
+                <SequenceBtn levelSequenceLabel={1} label={"Medium"} />
+                <SequenceBtn levelSequenceLabel={2} label={"Hard"} />
               </div>
               <div />
             </div>

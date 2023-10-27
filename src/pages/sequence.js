@@ -5,7 +5,7 @@ import { devices } from '../styles/breakpoints.js';
 import {buildSequence} from "./../utils/utils.js"
 import Sequence from '../components/Sequence.js';
 import { QuestionContext } from '../context/questions.context';
-import {levelSequences2} from '../utils/constants.js';
+import {levelSequences3} from '../utils/constants.js';
 
 
 const SequencePageStyles = styled.div`
@@ -123,10 +123,10 @@ const [currentSequence, setCurrentSequence] = useState([])
             <p>Test out building seuqences here:</p>
           </div>
           <SeqBtnContainerStyles>
-            <h3>Sequence 1</h3>
+            <h3>Sequence 1 - Medium</h3>
 
             <div className="label-container">
-              {levelSequences2["1"].map((level, i) => {
+              {levelSequences3["1"].map((level, i) => {
                 return (
                   <span key={i} className={`level label ${level}`}>
                     {level}
@@ -136,16 +136,16 @@ const [currentSequence, setCurrentSequence] = useState([])
             </div>
             <button
               type="button"
-              onClick={() => clickHandler({ questions }, levelSequences2["1"])}
+              onClick={() => clickHandler({ questions }, levelSequences3["1"])}
             >
               Build sequence
             </button>
           </SeqBtnContainerStyles>
           <SeqBtnContainerStyles>
-            <h3>Sequence 2</h3>
+            <h3>Sequence 2 - Hard</h3>
 
             <div className="label-container">
-              {levelSequences2["2"].map((level, i) => {
+              {levelSequences3["2"].map((level, i) => {
                 return (
                   <span key={i} className={`level label ${level}`}>
                     {level}
@@ -155,16 +155,16 @@ const [currentSequence, setCurrentSequence] = useState([])
             </div>
             <button
               type="button"
-              onClick={() => clickHandler({ questions }, levelSequences2["2"])}
+              onClick={() => clickHandler({ questions }, levelSequences3["2"])}
             >
               Build sequence
             </button>
           </SeqBtnContainerStyles>
-          <SeqBtnContainerStyles>
-            <h3>Sequence 3</h3>
+          {/* <SeqBtnContainerStyles>
+            <h3>Sequence - Build your own</h3>
 
             <div className="label-container">
-              {levelSequences2["3"].map((level, i) => {
+              {levelSequences3["3"].map((level, i) => {
                 return (
                   <span key={i} className={`level label ${level}`}>
                     {level}
@@ -174,11 +174,11 @@ const [currentSequence, setCurrentSequence] = useState([])
             </div>
             <button
               type="button"
-              onClick={() => clickHandler({ questions }, levelSequences2["3"])}
+              onClick={() => clickHandler({ questions }, levelSequences3["3"])}
             >
               Build sequence
             </button>
-          </SeqBtnContainerStyles>
+          </SeqBtnContainerStyles> */}
         </div>
       </SequencePageStyles>
     </>

@@ -6,7 +6,6 @@ import Loader from '../components/Loader';
 // we provide empty fn as defaults so it doesn't break the app if forget to pass a fn
 export const QuestionContext = createContext({
   questions: {
-
     allUnaskedQuestions: [],
     potentialQuestion: {},
     currentQuestion: {},
@@ -21,14 +20,15 @@ export const QuestionContext = createContext({
     setPotentialQuestion: () => {},
     setCurrentQuestion: () => {},
     setQuestionError: () => {},
-    setLoadAllQuestionsRequired: () => {}, 
-    setResetRequired: () => {}
+    setLoadAllQuestionsRequired: () => {},
+    setResetRequired: () => {},
   },
   sequence: {
     questionSequence: {
       sequenceLevel: "",
       questions: [],
-      label: ""
+      label: "",
+      timer: "",
     },
     questionSequenceIndex: 0,
   },
@@ -42,7 +42,8 @@ export function QuestionProvider({ children }) {
   const [questionSequence, setQuestionSequence] = useState({
     sequenceLevel: null,
     questions: [],
-    label: ''
+    label: '',
+    timer: 0
   });
   const [questionSequenceIndex, setQuestionSequenceIndex] = useState(-1);
    const [allUnaskedQuestions, setAllUnaskedQuestions] = useState([]);
