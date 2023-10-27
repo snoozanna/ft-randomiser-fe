@@ -43,12 +43,14 @@ export function QuestionProvider({ children }) {
     sequenceLevel: null,
     questions: [],
     label: '',
-    timer: 0
   });
   const [questionSequenceIndex, setQuestionSequenceIndex] = useState(-1);
    const [allUnaskedQuestions, setAllUnaskedQuestions] = useState([]);
    const [loadAllQuestionsRequired, setLoadAllQuestionsRequired] = useState(true)
      const [resetRequired, setResetRequired] = useState(false);
+
+   const [time, setTime] = useState(600); 
+   const [isRunning, setIsRunning] = useState(false);
 
 
    const removeQuestionFromUnasked = (questionToRemove) => {
@@ -139,8 +141,24 @@ export function QuestionProvider({ children }) {
     console.log("nonNegCounts", nonNegCounts);
   }, [allUnaskedQuestions]);   
 
-   
-  
+// // TIMER    
+//   useEffect(() => {
+//     let interval;
+
+//     if (isRunning) {
+//       interval = setInterval(() => {
+//         if (time > 0) {
+//           setTime(time - 1);
+//         } else {
+//           clearInterval(interval);
+//         }
+//       }, 1000);
+//     } else {
+//       clearInterval(interval);
+//     }
+
+//     return () => clearInterval(interval);
+//   }, [isRunning, time]);
  
 
 //TODO Put this in an if block 
