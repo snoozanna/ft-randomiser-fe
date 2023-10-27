@@ -74,7 +74,7 @@ const qFromDBAtStart = data.current.nodes[0].question.question;
     });
 
   const query = `*[_type == "currentQ"]`;
-  const params = { _id: "2f3e3082-ddfd-4be3-a4f4-cf3f1bdf0172" };
+  const params = { _id: "ea3de420-22c9-4ed1-90c9-f4117ec68b75" };
 
 useEffect(() => {
   console.log("useEffect fires")
