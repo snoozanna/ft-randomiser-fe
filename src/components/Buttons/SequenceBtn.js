@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { QuestionContext } from "../../context/questions.context";
 
-import {levelSequences3} from '../../utils/constants';
+import {levelSequences4} from '../../utils/constants';
 import styled from 'styled-components';
 import { shuffleArray } from '../../utils/utils';
 
@@ -37,10 +37,19 @@ const SequenceBtn = ({ levelSequenceLabel, label }) => {
   // if (!data) return <text>Could not find data</text>;
   // const { questions } = data;
 
-  const levelSequence = levelSequences3[levelSequenceLabel];
+  const levelSequence = levelSequences4[levelSequenceLabel];
 console.log("all unasked questions in sequence", allUnaskedQuestions.length);
 // NEW ONE 
 const buildSequence = ( sequenceOrder, nonNegNum = 2) => {
+  // Function to shuffle an array using the Fisher-Yates algorithm
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+
   const questionsCopy = allUnaskedQuestions.map((question) => {
     return { ...question };
   });
@@ -52,21 +61,25 @@ const buildSequence = ( sequenceOrder, nonNegNum = 2) => {
     for (let i = 0; i < sequenceOrder.length; i++) {
       arrayOfIndexes.push(i);
     }
-
     const randomisedIndexes = shuffleArray(arrayOfIndexes);
     const nonNegNumOfRandomisedIndexes = randomisedIndexes.slice(0, nonNegNum);
     const sequence = [];
     sequenceOrder.forEach((level, index) => {
+      // console.log("index", index)
       const chosenQuestion = shuffledQuestions.find((question) => {
         const isQuestionPickedAlready = sequence.includes(question);
         if (nonNegNumOfRandomisedIndexes.includes(index)) {
           return (
-            question.level === level &&
+            question.level === level.level &&
             !isQuestionPickedAlready &&
-            question.nonNeg
+            question.nonNeg == level.nonNeg
           );
         } else {
-          return question.level === level && !isQuestionPickedAlready;
+          return (
+            question.level === level.level &&
+            !isQuestionPickedAlready &&
+            question.nonNeg == level.nonNeg
+          );
         }
       });
       sequence.push(chosenQuestion);
@@ -80,13 +93,15 @@ const buildSequence = ( sequenceOrder, nonNegNum = 2) => {
         arrayOfUniqueCategories.length >= 5 ||
         arrayOfUniqueCategories.length > sequenceOrder.length / 2
       ) {
+        console.log("sequence", sequence);
         return sequence;
       }
     }
   }
 
-  return "not enough questions 1";
+  return "Mot enough questions";
 };
+
 // Function to shuffle an array using the Fisher-Yates algorithm
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {

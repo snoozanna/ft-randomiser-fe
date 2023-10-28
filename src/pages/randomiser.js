@@ -14,15 +14,18 @@ import progress from "./../assets/images/progress.png";
 import tick from "./../assets/images/tick-b.png";
 import LoadQuestionsBtn from '../components/Buttons/LoadQuestions.js';
 import SingleQuestionBtn from '../components/Buttons/SingleQuestionBtn.js';
+import Timer from "./../components/Timer.js"
+import BlankScreenBtn from '../components/Buttons/BlankScreen.js';
 
 
 
 const RandomiserPageStyles = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 12% 1fr 15%;
+  grid-template-rows: 12% 1fr 1fr 15%;
   grid-template-areas:
-    "a a a a"
+    "f a a g"
+    "f b b d"
     "e b b d"
     ". c c d";
   width: 100%;
@@ -41,6 +44,7 @@ const RandomiserPageStyles = styled.section`
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
+    grid-area: e;
   }
   .btn-container-right {
     display: flex;
@@ -60,43 +64,16 @@ const RandomiserPageStyles = styled.section`
   .btn-container-upper {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     grid-area: a;
-    .mini-status {
-      border: 3px solid black;
-      border-radius: 5px;
-      padding: 1rem;
-      width: min-content;
-      /* max-width: 10rem; */
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      color: black;
-      background: var(--lightgreen);
-      h4 {
-        margin-bottom: 1rem;
-      }
-      p {
-        line-height: 2rem;
-        font-weight: 600;
-        span > img {
-          max-width: 25px;
-          margin-inline-end: 0.5rem;
-        }
-        span.status-wrapper {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-      p.resetRequired {
-        background: var(--red);
-        padding: 0.5rem;
-        border: 3px solid black;
-        border-radius: 5px;
-      }
-    }
+  }
+  .timer-wrapper {
+    grid-area: g;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
   }
   .seqBtnWrapper {
     display: flex;
@@ -107,12 +84,48 @@ const RandomiserPageStyles = styled.section`
     align-items: center;
     grid-area: b;
   }
+  .mini-status {
+    grid-area: f;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+    width: min-content;
+    height: fit-content;
+    /* max-width: 10rem; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: black;
+    background: var(--lightgreen);
+    h4 {
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 2rem;
+      font-weight: 600;
+      span > img {
+        max-width: 25px;
+        margin-inline-end: 0.5rem;
+      }
+      span.status-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    p.resetRequired {
+      background: var(--red);
+      padding: 0.5rem;
+      border: 3px solid black;
+      border-radius: 5px;
+    }
+  }
 
   @media ${devices.mobileL} {
     grid-template-columns: repeat(3, minmax(50px, 1fr));
     grid-template-rows: auto auto auto;
     grid-template-areas:
-      "a a a"
+      "f a a"
       "b b b"
       ". e d";
     gap: 2rem;
@@ -146,64 +159,67 @@ const RandomiserPage = () => {
         ) : (
           <>
             <div className="btn-container-upper">
-              <div className="mini-status">
-                <h4>
-                  <strong>Status</strong>
-                </h4>
-                {/* <span>s */}
-                <p>
-                  {questionSequence.questions.length === 0 ? (
-                    "Pick a sequence..."
-                  ) : (
-                    <span className="status-wrapper">
-                      <img src={tick} alt="Tick" /> {questionSequence.label}{" "}
-                      Sequence loaded!
-                    </span>
-                  )}
-                </p>
-
-                <p>
-                  {questionSequenceIndex >= 0 ? (
-                    <span className="status-wrapper">
-                      <img src={progress} alt="progress" /> Sequence Progress:
-                      {questionSequenceIndex + 1}/
-                      {questionSequence.questions.length}
-                    </span>
-                  ) : null}
-
-                </p>
-
-                <p>
-                  {questionSequenceIndex >= 0 &&
-                  questionSequenceIndex ===
-                    questionSequence.questions.length - 1 ? (
-                    <span className="status-wrapper">
-                      <img src={mark} alt="mark" /> Last question
-                    </span>
-                  ) : null}
-                </p>
-
-                {resetRequired ? (
-                  <p className="resetRequired">
-                    <span className="status-wrapper">
-                      <img src={mark} alt="mark" />
-                      RESET REQUIRED!
-                    </span>
-                  </p>
-                ) : null}
-                {/* </span> */}
-              </div>
+            
               <div className="seqBtnWrapper">
                 <SequenceBtn levelSequenceLabel={1} label={"Medium"} />
                 <SequenceBtn levelSequenceLabel={2} label={"Hard"} />
               </div>
-              <div />
             </div>
+            <div className="timer-wrapper">
+              <Timer />
+            </div>
+            <div className="mini-status">
+              <h4>
+                <strong>Status</strong>
+              </h4>
+              {/* <span>s */}
+              <p>
+                {questionSequence.questions.length === 0 ? (
+                  "Pick a sequence..."
+                ) : (
+                  <span className="status-wrapper">
+                    <img src={tick} alt="Tick" /> {questionSequence.label}{" "}
+                    Sequence loaded!
+                  </span>
+                )}
+              </p>
 
+              <p>
+                {questionSequenceIndex >= 0 ? (
+                  <span className="status-wrapper">
+                    <img src={progress} alt="progress" /> Sequence Progress:
+                    {questionSequenceIndex + 1}/
+                    {questionSequence.questions.length}
+                  </span>
+                ) : null}
+              </p>
+
+              <p>
+                {questionSequenceIndex >= 0 &&
+                questionSequenceIndex ===
+                  questionSequence.questions.length - 1 ? (
+                  <span className="status-wrapper">
+                    <img src={mark} alt="mark" /> Last question
+                  </span>
+                ) : null}
+              </p>
+
+              {resetRequired ? (
+                <p className="resetRequired">
+                  <span className="status-wrapper">
+                    <img src={mark} alt="mark" />
+                    RESET REQUIRED!
+                  </span>
+                </p>
+              ) : null}
+              {/* </span> */}
+            </div>
             <div className="btn-container-left">
-              <div />
               <div className="btn-wrapper endsequence">
                 <EndSequenceBtn />
+              </div>
+              <div className="btn-wrapper endsequence">
+                <BlankScreenBtn />
               </div>
             </div>
             <CallSequence

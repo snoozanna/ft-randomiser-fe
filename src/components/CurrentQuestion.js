@@ -122,7 +122,7 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
     setQuestionSequenceIndex,
     removeQuestionFromUnasked,
   } = useContext(QuestionContext);
-  console.log("currentQuestion", currentQuestion);
+  // console.log("currentQuestion", currentQuestion);
 
  useEffect(() => {
   // console.log("useEffect fires")
@@ -172,7 +172,7 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
         nonNeg: selectedQuestion.nonNeg,
         documentary: selectedQuestion.documentary,
       };
-      console.log("correctedQuestion", correctedQuestion);
+      // console.log("correctedQuestion", correctedQuestion);
   
       await askQuestion(correctedQuestion);
       setCurrentQuestion(correctedQuestion);
@@ -212,23 +212,6 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
       ) : (
         <CurrentQStyles>
           <div className="question-wrapper">
-            {/* <span>Current Question from context:</span> */}
-            {/* {currentQuestion ?  
-            <div className="label-container">
-              <span className="category label">
-                {" "}
-                {currentQuestion ? currentQuestion.category.name : null}
-              </span>
-              <span
-                className={`level label ${
-                  currentQuestion ? currentQuestion.level : null
-                }`}
-              >
-                {currentQuestion ? currentQuestion.level : null}
-              </span>
-            </div>
-             :null} */}
-
             <h3 className="question">
               {currentQuestion ? currentQuestion.question : null}
             </h3>
@@ -236,6 +219,7 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
           <div className="follow-container">
             {" "}
             <p>{currentQuestion ? currentQuestion.followUp : null}</p>
+            <p>{currentQuestion ? (currentQuestion.nonNeg? "Non neg": null) : null}</p>
           </div>
         </CurrentQStyles>
       )}

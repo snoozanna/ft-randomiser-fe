@@ -21,7 +21,7 @@ grid-area: c;
 const CallSequence = ({ setLockInMoment }) => {
   const { questionSequence, questionSequenceIndex, setQuestionSequenceIndex } =
     useContext(QuestionContext);
-  console.log("questionSequence", questionSequence);
+  // console.log("questionSequence", questionSequence);
 
  
 

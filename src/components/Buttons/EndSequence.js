@@ -14,7 +14,7 @@ const EndSequenceBtn = () => {
      setCurrentQuestion,
      setQuestionSequence,
      setQuestionSequenceIndex,
-
+     resetTimer,
    } = useContext(QuestionContext);
 
   const handleClick = async () => {
@@ -26,7 +26,7 @@ const EndSequenceBtn = () => {
       questions: [],
       label: ""
     });
-    
+    resetTimer();
     setCurrentQuestion(null)
     // TODO NEED TO SEND TO DATABASE 
   };

@@ -5,7 +5,7 @@ import { devices } from '../styles/breakpoints.js';
 import {buildSequence} from "./../utils/utils.js"
 import Sequence from '../components/Sequence.js';
 import { QuestionContext } from '../context/questions.context';
-import {levelSequences3} from '../utils/constants.js';
+import {levelSequences4} from '../utils/constants.js';
 
 
 const SequencePageStyles = styled.div`
@@ -42,49 +42,48 @@ const SequencePageStyles = styled.div`
 `;
 
 const SeqBtnContainerStyles = styled.div`
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-border: 2px solid white;
-padding: 1.5rem;
-border-radius: 10px;
-h3{
-  font-size:2rem;
-   margin-bottom:2rem;
-}
-.label-container{
-  display:flex;
-  flex-wrap:wrap;
-  gap:0.5rem;
-   margin-bottom:2rem;
-   width:min-content ;
-}
-span.label{
-  text-align:left;
-  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  padding: 1.5rem;
   border-radius: 10px;
-  width: fit-content;
-  font-size:1.2rem;
-  font-weight:400;
-    margin-right:0.5rem;
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .label-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    width: min-content;
+  }
+  span.label {
+    text-align: left;
+    padding: 8px;
+    border-radius: 10px;
+    width: fit-content;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-right: 0.5rem;
+  }
+  span.category.label {
+    background: rgb(128 0 128 / 32%);
+    color: white;
+  }
 
-}
-span.category.label{
-  background: purple;
-  color:white;
-}
-
-span.level.label.deep{
-  background: #a15526;
-}
-span.level.label.lighthearted{
-  background: #308b30;
-}
-span.level.label.medium{
-  background: #249faf;
-}
-`
+  span.level.label.deep {
+    background: #a15526;
+  }
+  span.level.label.lighthearted {
+    background: #308b30;
+  }
+  span.level.label.medium {
+    background: #249faf;
+  }
+`;
 
 const SequencePage = ({ data }) => {
   const { currentQuestion, setCurrentQuestion, alreadyCalled, setAlreadyCalled } =
@@ -105,11 +104,6 @@ const [currentSequence, setCurrentSequence] = useState([])
     <>
       <SequencePageStyles>
         <div className="question-wrapper">
-          {/* <h3 className="question">
-            {currentQuestion.question ? currentQuestion.question : ''}
-          </h3> */}
-          {/* {currentSequence[0].question ? currentSequence[0].question : ""} */}
-
           {currentSequence ? (
             <Sequence sequence={currentSequence} />
           ) : (
@@ -120,23 +114,23 @@ const [currentSequence, setCurrentSequence] = useState([])
           {/* <CallSequence sequence={currentSequence}/> */}
           <div className="explainer">
             <h3>Sequence Outline</h3>
-            <p>Test out building seuqences here:</p>
+            <p>Test out building sequences here:</p>
           </div>
           <SeqBtnContainerStyles>
             <h3>Sequence 1 - Medium</h3>
 
             <div className="label-container">
-              {levelSequences3["1"].map((level, i) => {
+              {/* {levelSequences4["1"].map((level, i) => {
                 return (
                   <span key={i} className={`level label ${level}`}>
                     {level}
                   </span>
                 );
-              })}
+              })} */}
             </div>
             <button
               type="button"
-              onClick={() => clickHandler({ questions }, levelSequences3["1"])}
+              onClick={() => clickHandler({ questions }, levelSequences4["1"])}
             >
               Build sequence
             </button>
@@ -145,17 +139,17 @@ const [currentSequence, setCurrentSequence] = useState([])
             <h3>Sequence 2 - Hard</h3>
 
             <div className="label-container">
-              {levelSequences3["2"].map((level, i) => {
+              {/* {levelSequences4["2"].map((level, i) => {
                 return (
                   <span key={i} className={`level label ${level}`}>
                     {level}
                   </span>
                 );
-              })}
+              })} */}
             </div>
             <button
               type="button"
-              onClick={() => clickHandler({ questions }, levelSequences3["2"])}
+              onClick={() => clickHandler({ questions }, levelSequences4["2"])}
             >
               Build sequence
             </button>
@@ -164,7 +158,7 @@ const [currentSequence, setCurrentSequence] = useState([])
             <h3>Sequence - Build your own</h3>
 
             <div className="label-container">
-              {levelSequences3["3"].map((level, i) => {
+              {levelSequences4["3"].map((level, i) => {
                 return (
                   <span key={i} className={`level label ${level}`}>
                     {level}
@@ -174,7 +168,7 @@ const [currentSequence, setCurrentSequence] = useState([])
             </div>
             <button
               type="button"
-              onClick={() => clickHandler({ questions }, levelSequences3["3"])}
+              onClick={() => clickHandler({ questions }, levelSequences4["3"])}
             >
               Build sequence
             </button>

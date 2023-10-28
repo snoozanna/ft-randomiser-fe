@@ -91,21 +91,25 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
     for (let i = 0; i < sequenceOrder.length; i++) {
       arrayOfIndexes.push(i);
     }
-
     const randomisedIndexes = shuffleArray(arrayOfIndexes);
     const nonNegNumOfRandomisedIndexes = randomisedIndexes.slice(0, nonNegNum);
     const sequence = [];
     sequenceOrder.forEach((level, index) => {
+      // console.log("index", index)
       const chosenQuestion = shuffledQuestions.find((question) => {
         const isQuestionPickedAlready = sequence.includes(question);
         if (nonNegNumOfRandomisedIndexes.includes(index)) {
           return (
-            question.level === level &&
+            question.level === level.level &&
             !isQuestionPickedAlready &&
-            question.nonNeg
+            question.nonNeg == level.nonNeg
           );
         } else {
-          return question.level === level && !isQuestionPickedAlready;
+          return (
+            question.level === level.level &&
+            !isQuestionPickedAlready &&
+            question.nonNeg == level.nonNeg
+          );
         }
       });
       sequence.push(chosenQuestion);
@@ -126,6 +130,8 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
 
   return "not enough questions";
 };
+
+
 
 
 // exports.sortData = () => {
@@ -166,6 +172,7 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
 //         level: row.level.toLowerCase(),
 //         nonNeg: row.nonNeg === "TRUE",
 //         question: row.question,
+//         followUp: row.followUp,
 //         altQuestion: row.altQuestion,
 //         requireLockIn: row.requireLockIn === "TRUE",
 //         beenAsked: row.beenAsked === "TRUE",

@@ -28,9 +28,17 @@ export const QuestionContext = createContext({
       sequenceLevel: "",
       questions: [],
       label: "",
-      timer: "",
     },
     questionSequenceIndex: 0,
+  },
+  timer: {
+    time: "",
+    setTime: () => {},
+    isRunning: "",
+    setIsRunning: () => {},
+    startTimer: () => {},
+    stopTimer: () => {},
+    resetTimer: () => {},
   },
 });
 
@@ -49,6 +57,7 @@ export function QuestionProvider({ children }) {
    const [loadAllQuestionsRequired, setLoadAllQuestionsRequired] = useState(true)
      const [resetRequired, setResetRequired] = useState(false);
 
+    //  TIMER 
    const [time, setTime] = useState(600); 
    const [isRunning, setIsRunning] = useState(false);
 
@@ -119,9 +128,9 @@ export function QuestionProvider({ children }) {
     });
 
     Object.keys(nonNegCounts).forEach((nonNeg) => {
-      if (nonNegCounts[nonNeg] <=5) {
+      if (nonNegCounts[nonNeg] <=20) {
         console.log(
-          `Category "${nonNeg}" has ${nonNegCounts[nonNeg]} or fewer questions.`,
+          `Non Neg "${nonNeg}" has ${nonNegCounts[nonNeg]} or fewer questions.`,
         );
          setResetRequired(true);
       }
@@ -130,36 +139,46 @@ export function QuestionProvider({ children }) {
     Object.keys(levelCounts).forEach((level) => {
       if (levelCounts[level] <= 5) {
         console.log(
-          `Category "${level}" has ${levelCounts[level]} or fewer questions.`,
+          `Level "${level}" has ${levelCounts[level]} or fewer questions.`,
         );
          setResetRequired(true);
       }
     });
 
-    console.log("categoryCounts", categoryCounts);
-    console.log("levelCounts", levelCounts);
-    console.log("nonNegCounts", nonNegCounts);
   }, [allUnaskedQuestions]);   
 
-// // TIMER    
-//   useEffect(() => {
-//     let interval;
+// TIMER    
+  useEffect(() => {
+    // console.log("time", time)
+    let interval;
 
-//     if (isRunning) {
-//       interval = setInterval(() => {
-//         if (time > 0) {
-//           setTime(time - 1);
-//         } else {
-//           clearInterval(interval);
-//         }
-//       }, 1000);
-//     } else {
-//       clearInterval(interval);
-//     }
+    if (isRunning) {
+      interval = setInterval(() => {
+        if (time > 0) {
+          setTime(time - 1);
+        } else {
+          clearInterval(interval);
+        }
+      }, 1000);
+    } else {
+      clearInterval(interval);
+    }
 
-//     return () => clearInterval(interval);
-//   }, [isRunning, time]);
+    return () => clearInterval(interval);
+  }, [isRunning, time]);
  
+const startTimer = () => {
+  setIsRunning(true);
+};
+
+const stopTimer = () => {
+  setIsRunning(false);
+};
+
+const resetTimer = () => {
+  setIsRunning(false);
+  setTime(600); // Reset to 10 minutes
+};
 
 //TODO Put this in an if block 
   
@@ -185,10 +204,16 @@ export function QuestionProvider({ children }) {
         setQuestionSequenceIndex,
         loadAllQuestionsRequired,
         setLoadAllQuestionsRequired,
-        resetRequired, 
+        resetRequired,
         setResetRequired,
         removeQuestionFromUnasked,
-
+        time, 
+        setTime,
+        isRunning,
+        setIsRunning,
+        startTimer, 
+        stopTimer, 
+        resetTimer,
       }}
     >
       {children}

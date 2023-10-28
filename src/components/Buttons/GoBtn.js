@@ -17,13 +17,16 @@ const GoBtn = ({ setLockInMoment }) => {
     setQuestionSequence,
     setQuestionSequenceIndex,
     setPotentialQuestion,
-    allUnaskedQuestions, removeQuestionFromUnasked
+    allUnaskedQuestions, removeQuestionFromUnasked, startTimer,
   } = useContext(QuestionContext);
-console.log("allUnaskedQuestions",allUnaskedQuestions)
+// console.log("allUnaskedQuestions",allUnaskedQuestions)
   const handleClick = async () => {
-   
-    const nextQuestion = questionSequence.questions[questionSequenceIndex + 1];
-    if (questionSequenceIndex < questionSequence.questions.length -1) {
+   if (questionSequenceIndex === -1) {
+    console.log("starting timer");
+    startTimer();
+   }
+  const nextQuestion = questionSequence.questions[questionSequenceIndex + 1];
+if (questionSequenceIndex < questionSequence.questions.length -1) {
       // if question is lock in
       // shpw lock in options
       //STOP LOCK IN HAPPENING NOW

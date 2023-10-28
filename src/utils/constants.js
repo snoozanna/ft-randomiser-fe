@@ -152,3 +152,335 @@ exports.levelSequences3 = {
 "medium",
   ]
 };
+
+
+exports.levelSequences4 = {
+  1: [
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+  ],
+  2: [
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+  ],
+};
