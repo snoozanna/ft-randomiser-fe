@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { QuestionContext } from "./../../context/questions.context";
+import { TimerContext } from "./../../context/timer.context";
 import styled from "styled-components";
 import { sendCurrentCallToDB, updateQuestionBeenAsked } from "../../utils/utils";
 
@@ -14,8 +15,10 @@ const EndSequenceBtn = () => {
      setCurrentQuestion,
      setQuestionSequence,
      setQuestionSequenceIndex,
-     resetTimer,
    } = useContext(QuestionContext);
+      const {
+        resetTimer,
+      } = useContext(TimerContext);
 
   const handleClick = async () => {
     // console.log("ending sequence")
@@ -27,6 +30,7 @@ const EndSequenceBtn = () => {
       label: ""
     });
     resetTimer();
+
     setCurrentQuestion(null)
     // TODO NEED TO SEND TO DATABASE 
   };

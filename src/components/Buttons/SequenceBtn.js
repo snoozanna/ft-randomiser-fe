@@ -11,12 +11,8 @@ const SequenceButtonStyles = styled.div`
     border: #ffc100 solid 3px;
     background: #6fc36f;
       background: var(--lightgreen);
-      border: var(--lightgreen) 0.125em solid;
+      border: black 3px solid;
       border-radius: 0.25em;
-      box-shadow:
-        inset 0 0 0.5em 0 var(--lightgreen),
-        0 0 0.5em 0 var(--lightgreen);
-
   
   }
 `;

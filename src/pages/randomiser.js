@@ -176,9 +176,11 @@ const RandomiserPage = () => {
               </h4>
               {/* <span>s */}
               <p>
-                {questionSequence.questions.length === 0 ? (
+                {questionSequence.questions.length <= 20 ? (
                   "Pick a sequence..."
-                ) : (
+                ) 
+                : 
+                (
                   <span className="status-wrapper">
                     <img src={tick} alt="Tick" /> {questionSequence.label}{" "}
                     Sequence loaded!
@@ -187,7 +189,7 @@ const RandomiserPage = () => {
               </p>
 
               <p>
-                {questionSequenceIndex >= 0 ? (
+                {questionSequence.questions.length >= 20 && questionSequenceIndex >= 0 ? (
                   <span className="status-wrapper">
                     <img src={progress} alt="progress" /> Sequence Progress:
                     {questionSequenceIndex + 1}/

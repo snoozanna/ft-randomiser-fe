@@ -8,10 +8,10 @@ import {makeScreenBlankTemp} from "./../../utils/utils"
 const BlankScreenBtnStyles = styled.button`
   width: min-content;
   &.red {
-    background: #fe4d1c;
+    background: #00bcd4;
   }
   &.green {
-    background: var(--lightgreen);
+    background: var(--yellow);
   }
 `;
 

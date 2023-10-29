@@ -14,7 +14,7 @@ const TimerStyles = styled.div`
 `;
 
 const Timer = () => {
-  const { time, isRunning } = useContext(TimerContext);
+  const { time, isRunning, oneMinWarning } = useContext(TimerContext);
 
 
   const formatTime = (seconds) => {
@@ -26,7 +26,7 @@ const Timer = () => {
   return (
     <TimerStyles>
       {/* <span>Time: </span> */}
-       <span> {formatTime(time)}</span> 
+      <span> {formatTime(time)}</span>
     </TimerStyles>
   );
 }

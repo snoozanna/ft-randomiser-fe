@@ -103,7 +103,7 @@ export function QuestionProvider({ children }) {
      };
 
   useEffect(() => {
-    console.log("useEffect runs");
+
     const categoryCounts = countQuestionsByCategory(allUnaskedQuestions);
 
     const levelCounts = countQuestionsByLevel(allUnaskedQuestions);

@@ -5,17 +5,18 @@ import Footer from './Footer';
 import 'normalize.css';
 import GlobalStyles from '../styles/GlobalStyles';
 import Typography from '../styles/Typography';
-// import { ScrollReveal } from 'gatsby-plugin-scroll-reveal';
+import {TimerContext} from "./../context/timer.context";
 import { devices } from '../styles/breakpoints.js';
 
+const LayoutStyles = styled.div`
+  &.warning {
+    background: #f4d2f3;
+  }
+`;
 
 const ContentStyles = styled.div`
   min-height: 100vh;
-  /* background: white;*/
 
-  /*  padding: clamp(5px, 1vw, 25px); */
-  /* min-height: 100vh; */
-  /* margin: 12rem auto 4rem auto; */
 `;
 
 const MainStyles = styled.main`
@@ -28,13 +29,14 @@ const MainStyles = styled.main`
   @media ${devices.mobileL} {
     margin-bottom: 8rem;
   }
+
 `;
 
 const Layout = ({ children }) => {
-
+ const {oneMinWarning } = useContext(TimerContext);
 
 return (
-  <>
+  <LayoutStyles className={`${oneMinWarning ? "warning": ""}`}>
     <GlobalStyles />
     <Typography />
     {/* <SiteBorderStyles> */}
@@ -49,7 +51,7 @@ return (
       <Footer />
     </ContentStyles>
     {/* </SiteBorderStyles> */}
-  </>
+  </LayoutStyles>
 );
 
 }

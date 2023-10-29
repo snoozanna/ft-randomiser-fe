@@ -21,6 +21,7 @@ const CurrentQStyles = styled.div`
       font-size: 4rem;
       font-weight: 600;
     }
+   
   }
   .label-container {
     display: flex;
@@ -57,7 +58,7 @@ const CurrentQStyles = styled.div`
     border-radius: 10px;
     font-style: italic;
     color: darkslategrey;
-     p {
+    p {
       margin-bottom: 0;
     }
   }
@@ -105,16 +106,6 @@ const LockInOptionsStyles = styled.div`
 `;
 
 const CurrentQ = ({lockInMoment, setLockInMoment}) => {
-
-  //TODO EVENTUALLY NEEDS TO LISTEN TO DB
-  // const { data, loading, error } = useQuery(GET_CURRENT_QUESTION);
-  // if (loading) return <Loader />;
-  // if (error) return <p>Error: {JSON.stringify(error)}</p>;
-  // if (!data) return <text>Could not find data</text>;
-  // console.log(data);
-
-  // const currentQuestion = data.currentQ[0].question
-
   const {
     potentialQuestion,
     currentQuestion,
@@ -122,7 +113,7 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
     setQuestionSequenceIndex,
     removeQuestionFromUnasked,
   } = useContext(QuestionContext);
-  // console.log("currentQuestion", currentQuestion);
+
 
  useEffect(() => {
   // console.log("useEffect fires")
@@ -211,9 +202,13 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
       ) : (
         <CurrentQStyles>
           <div className="question-wrapper">
-            <h3 className="question">
-              {currentQuestion ? currentQuestion.question : null}
-            </h3>
+            {currentQuestion ? (
+              <h3
+                className="question"
+              >
+                {currentQuestion.question}
+              </h3>
+            ) : null}
           </div>
           <div className="follow-container">
             {" "}

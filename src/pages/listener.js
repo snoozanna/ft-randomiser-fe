@@ -51,6 +51,12 @@ const ListenerPageStyles = styled.section`
         0 0 0.45em currentColor;
       position: relative;
     }
+    h3.question.show > p.normalFont {
+      font-size: inherit;
+    }
+    h3.question.show > p.smallerFont {
+      font-size: 2rem;
+    }
   }
 `;
 function ListenerPage( {data} ) {
@@ -120,13 +126,19 @@ useEffect(() => {
       <div className="listener-question-container">
         {questionInProgressState ? (
           <h3 className="question show">
-            <p className="neon">
-         
+            {questionToDisplay ? <p
+              className={`${
+                questionToDisplay.question.length >= 120
+                  ? "smallerFont"
+                  : "normalFont"
+              } neon`}
+            > 
               {/* If the Blank Screen button is pressed, hide the current question */}
-              {blankListenerScreen ? "" : 
-              `${questionToDisplay ? questionToDisplay.question : "" }`
-        }
+              {blankListenerScreen
+                ? ""
+                : `${questionToDisplay ? questionToDisplay.question : ""}`}
             </p>
+            : ""}
           </h3>
         ) : (
           <div className="glow-logo-wrapper">

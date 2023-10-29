@@ -12,6 +12,7 @@ export const TimerContext = createContext({
     startTimer: () => {},
     stopTimer: () => {},
     resetTimer: () => {},
+    oneMinWarning: ""
   },
 
 });
@@ -22,6 +23,7 @@ export function TimerProvider({ children }) {
     //  TIMER 
    const [time, setTime] = useState(600); 
    const [isRunning, setIsRunning] = useState(false);
+    const [oneMinWarning, setOneMinWarning] = useState(false); 
 
 
 // TIMER    
@@ -33,6 +35,9 @@ export function TimerProvider({ children }) {
       interval = setInterval(() => {
         if (time > 0) {
           setTime(time - 1);
+          if(time <= 60){
+            setOneMinWarning(true)
+          }
         } else {
           clearInterval(interval);
         }
@@ -54,6 +59,7 @@ const stopTimer = () => {
 
 const resetTimer = () => {
   setIsRunning(false);
+  setOneMinWarning("");
   setTime(600); // Reset to 10 minutes
 };
 
@@ -62,13 +68,14 @@ const resetTimer = () => {
   return (
     <TimerContext.Provider
       value={{
-        time, 
+        time,
         setTime,
         isRunning,
         setIsRunning,
-        startTimer, 
-        stopTimer, 
+        startTimer,
+        stopTimer,
         resetTimer,
+        oneMinWarning,
       }}
     >
       {children}
