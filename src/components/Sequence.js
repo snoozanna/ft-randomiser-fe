@@ -40,7 +40,11 @@ const SequenceStyles = styled.div`
   }
 
   span.level.label.nonNeg {
-    background: black;
+    background: #00000057;
+    color: white;
+  }
+  span.level.label.later {
+    background: green;
     color: white;
   }
 `;
@@ -62,6 +66,11 @@ const Sequence = ({sequence}) => {
               <span className={`level label nonNeg`}>Non neg</span>
             ) : (
               ""
+            )}
+            {question.needToComeLater ? (
+              <span className={`level label later`}>Later</span>
+            ) : (
+              <span className={`level label `}>Anytime</span>
             )}
           </div>
           <p key={question._id}>{question.question}</p>

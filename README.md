@@ -3,7 +3,11 @@
 Uses GraphQL for Querying
 Uses Fetch for mutations
 
-# RESEED
+## RESEED
+
+node runSortData.js
+
+cp output.ndjson ~/Documents/coding/krishna/Randomiser/backend
 
 Delete Current Question
 

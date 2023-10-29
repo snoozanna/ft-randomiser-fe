@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { QuestionContext } from "./../../context/questions.context";
+import { TimerContext } from "./../../context/timer.context";
 import styled from "styled-components";
 import { askQuestion } from "../../utils/utils";
 
@@ -17,8 +18,11 @@ const GoBtn = ({ setLockInMoment }) => {
     setQuestionSequence,
     setQuestionSequenceIndex,
     setPotentialQuestion,
-    allUnaskedQuestions, removeQuestionFromUnasked, startTimer,
+    allUnaskedQuestions, removeQuestionFromUnasked, 
   } = useContext(QuestionContext);
+   const {
+     startTimer,
+   } = useContext(TimerContext);
 // console.log("allUnaskedQuestions",allUnaskedQuestions)
   const handleClick = async () => {
    if (questionSequenceIndex === -1) {

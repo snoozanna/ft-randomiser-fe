@@ -177,12 +177,8 @@ exports.levelSequences4 = {
       nonNeg: true,
     },
     {
-      level: "medium",
-      nonNeg: true,
-    },
-    {
       level: "deep",
-      nonNeg: false,
+      nonNeg: true,
     },
     {
       level: "lighthearted",

@@ -192,9 +192,9 @@ export const query = graphql`
           name
           _id
         }
-        requireLockIn
         nonNeg
-        documentary
+        needToComeLater
+
       }
     }
   }

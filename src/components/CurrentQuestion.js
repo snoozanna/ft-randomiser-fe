@@ -127,7 +127,6 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
  useEffect(() => {
   // console.log("useEffect fires")
   if(currentQuestion === null){
-      console.log("tying to update current Q iin useEffect");
   updateCurrentQuestionNotInProgress();
   }
 
@@ -219,7 +218,7 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
           <div className="follow-container">
             {" "}
             <p>{currentQuestion ? currentQuestion.followUp : null}</p>
-            <p>{currentQuestion ? (currentQuestion.nonNeg? "Non neg": null) : null}</p>
+            {/* <p>{currentQuestion ? (currentQuestion.nonNeg? "Non neg": null) : null}</p> */}
           </div>
         </CurrentQStyles>
       )}

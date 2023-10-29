@@ -70,6 +70,7 @@ exports.shuffleArray = (array) => {
 
 
 // put this back in to show sequences on sequence page 
+// TODO add needToComeLater
 exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
   // Function to shuffle an array using the Fisher-Yates algorithm
   const shuffleArray = (array) => {
@@ -162,8 +163,8 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
 //       const categoryId = row.category;
 
 //       const ndjsonItem = {
-//         // _type: "question",
-//         _type: "rapidFire",
+//         _type: "question",
+//         // _type: "rapidFire",
 //         category: {
 //           _ref: categoryId,
 //           _type: "reference",
@@ -174,6 +175,7 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
 //         question: row.question,
 //         followUp: row.followUp,
 //         altQuestion: row.altQuestion,
+//         needToComeLater: row.needToComeLater === "TRUE",
 //         requireLockIn: row.requireLockIn === "TRUE",
 //         beenAsked: row.beenAsked === "TRUE",
 //       };
@@ -244,7 +246,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
   const { _id } = questionToSend;
   const newQuestionID = _id;
 
-  const currentQuestion_Id = "ea3de420-22c9-4ed1-90c9-f4117ec68b75";
+  const currentQuestion_Id = "f3bc9a4d-b899-4ec0-a424-a7bfbc19693d";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -259,7 +261,8 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
             _type: "reference",
             _ref: newQuestionID, // Reference the question using _ref
           },
-          questionInProgress:true,
+          questionInProgress: true,
+          blankListenerScreen: false,
         },
       },
     };
@@ -287,7 +290,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
 };
 
 exports.updateCurrentQuestionNotInProgress = async () => {
-  const currentQuestion_Id = "ea3de420-22c9-4ed1-90c9-f4117ec68b75";
+  const currentQuestion_Id = "f3bc9a4d-b899-4ec0-a424-a7bfbc19693d";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -327,7 +330,45 @@ exports.updateCurrentQuestionNotInProgress = async () => {
   }
 };
 
+exports.makeScreenBlankTemp = async () => {
 
+  const currentQuestion_Id = "f3bc9a4d-b899-4ec0-a424-a7bfbc19693d";
+  // TODO Need better way of identifying the Current Question field in the database?
+  // TODO find the first id in the array
+  // console.log("Current Question doc id", currentQuestionId);
+  console.log("making listener blank");
+  try {
+    // Define the mutation object
+    const mutation = {
+      patch: {
+        id: currentQuestion_Id, // Use the provided questionId
+        set: {
+          blankListenerScreen: true,
+        },
+      },
+    };
+
+    // Send the mutation using fetch
+    const apiUrl = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.GATSBY_SANITY_TOKEN}`,
+      },
+      body: JSON.stringify({ mutations: [mutation] }),
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      console.log("Document updated (Current call sent to DB):", result);
+    } else {
+      console.error("Failed to update document:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error updating document:", error);
+  }
+};
 
 
 

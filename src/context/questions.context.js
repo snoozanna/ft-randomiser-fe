@@ -31,15 +31,8 @@ export const QuestionContext = createContext({
     },
     questionSequenceIndex: 0,
   },
-  timer: {
-    time: "",
-    setTime: () => {},
-    isRunning: "",
-    setIsRunning: () => {},
-    startTimer: () => {},
-    stopTimer: () => {},
-    resetTimer: () => {},
-  },
+
+
 });
 
 export function QuestionProvider({ children }) {
@@ -57,9 +50,7 @@ export function QuestionProvider({ children }) {
    const [loadAllQuestionsRequired, setLoadAllQuestionsRequired] = useState(true)
      const [resetRequired, setResetRequired] = useState(false);
 
-    //  TIMER 
-   const [time, setTime] = useState(600); 
-   const [isRunning, setIsRunning] = useState(false);
+
 
 
    const removeQuestionFromUnasked = (questionToRemove) => {
@@ -80,7 +71,7 @@ export function QuestionProvider({ children }) {
          categoryCounts[category] = 1;
        }
      });
-
+  // console.log("categoryCounts", categoryCounts);
      return categoryCounts;
    };
     const countQuestionsByLevel = (questions) => {
@@ -93,7 +84,7 @@ export function QuestionProvider({ children }) {
           levelCounts[level] = 1;
         }
       });
-
+// console.log("levelCounts", levelCounts);
       return levelCounts;
     };
 
@@ -107,7 +98,7 @@ export function QuestionProvider({ children }) {
            nonNegCounts[nonNeg] = 1;
          }
        });
-
+// console.log("nonNegCounts", nonNegCounts);
        return nonNegCounts;
      };
 
@@ -147,40 +138,8 @@ export function QuestionProvider({ children }) {
 
   }, [allUnaskedQuestions]);   
 
-// TIMER    
-  useEffect(() => {
-    // console.log("time", time)
-    let interval;
 
-    if (isRunning) {
-      interval = setInterval(() => {
-        if (time > 0) {
-          setTime(time - 1);
-        } else {
-          clearInterval(interval);
-        }
-      }, 1000);
-    } else {
-      clearInterval(interval);
-    }
 
-    return () => clearInterval(interval);
-  }, [isRunning, time]);
- 
-const startTimer = () => {
-  setIsRunning(true);
-};
-
-const stopTimer = () => {
-  setIsRunning(false);
-};
-
-const resetTimer = () => {
-  setIsRunning(false);
-  setTime(600); // Reset to 10 minutes
-};
-
-//TODO Put this in an if block 
   
     // console.log("no of unasked q", allUnaskedQuestions.length);
 
@@ -207,13 +166,7 @@ const resetTimer = () => {
         resetRequired,
         setResetRequired,
         removeQuestionFromUnasked,
-        time, 
-        setTime,
-        isRunning,
-        setIsRunning,
-        startTimer, 
-        stopTimer, 
-        resetTimer,
+ 
       }}
     >
       {children}

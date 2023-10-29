@@ -58,8 +58,9 @@ const [questionInProgressState, setQuestionInProgressState] = useState(
   data.current.nodes[0].questionInProgress,
 );
 const [questionToDisplay, setQuestionToDisplay] = useState(null)
+const [blankListenerScreen, setBlankListenerScreen] = useState(false);
 
-console.log(data)
+// console.log(data)
 
 
 
@@ -72,18 +73,19 @@ console.log(data)
     });
 
   const query = `*[_type == "currentQ"]`;
-  const params = { _id: "ea3de420-22c9-4ed1-90c9-f4117ec68b75" };
+  const params = { _id: "f3bc9a4d-b899-4ec0-a424-a7bfbc19693d" };
 
 useEffect(() => {
-  console.log("useEffect fires")
  const subscription = sanityClient
     .listen(query, params)
     .subscribe((update) => {
-       console.log("begin");
+
       const question = update.result;
       const newID = question.question._ref;
       const inProgress = question.questionInProgress;
-      console.log("subscribing", question);
+      const blankListenerScreenToggle = question.blankListenerScreen;
+      // console.log("subscribing", question);
+      console.log("subscribing", blankListenerScreen);
        setQuestionToDisplay(null);
 //fetch the question from the db 
 // TODO THIS DOES CAUSE A LITTLE FLASH
@@ -96,6 +98,7 @@ useEffect(() => {
       });
       // const newQuestion = allQuestions.find((q)=> {return q._id === newID})
       setQuestionInProgressState(inProgress)
+      setBlankListenerScreen(blankListenerScreenToggle);
      
      
     });
@@ -118,8 +121,11 @@ useEffect(() => {
         {questionInProgressState ? (
           <h3 className="question show">
             <p className="neon">
-              {/* {questionToDisplay ? questionToDisplay.question : qFromDBAtStart} */}
-              {questionToDisplay ? questionToDisplay.question : null}
+         
+              {/* If the Blank Screen button is pressed, hide the current question */}
+              {blankListenerScreen ? "" : 
+              `${questionToDisplay ? questionToDisplay.question : "" }`
+        }
             </p>
           </h3>
         ) : (

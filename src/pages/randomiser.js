@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { devices } from '../styles/breakpoints.js';
 import { QuestionContext } from "../context/questions.context";
+
 import { useQuery } from "@apollo/client";
 import CurrentQ from "./../components/CurrentQuestion.js"
 import SequenceBtn from "../components/Buttons/SequenceBtn.js";
@@ -142,6 +143,7 @@ const RandomiserPage = () => {
        loadAllQuestionsRequired,
        resetRequired,
      } = useContext(QuestionContext);
+
        const [lockInMoment, setLockInMoment] = useState(false);
 
 

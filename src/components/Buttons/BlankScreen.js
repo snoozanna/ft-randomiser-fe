@@ -1,28 +1,38 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { QuestionContext } from "./../../context/questions.context";
 import styled from "styled-components";
+import {makeScreenBlankTemp} from "./../../utils/utils"
 
 
 
 const BlankScreenBtnStyles = styled.button`
   width: min-content;
-  background: #fe4d1c;
+  &.red {
+    background: #fe4d1c;
+  }
+  &.green {
+    background: var(--lightgreen);
+  }
 `;
 
 const BlankScreenBtn = () => {
-   const {
+   const { currentQuestion } = useContext(QuestionContext);
+const [color, setColor] =  useState("red")
 
-   } = useContext(QuestionContext);
+useEffect(() => {
+  setColor("red");
+}, [currentQuestion]);
 
   const handleClick = async () => {
-   
+   await makeScreenBlankTemp()
+   setColor("green")
   };
 
 
   return (
     <>
-      <BlankScreenBtnStyles type="button" onClick={() => handleClick()} className="test">
-        Blank Screen TBC
+      <BlankScreenBtnStyles type="button" onClick={() => handleClick()} className={`${color}`} >
+        Blank Screen
       </BlankScreenBtnStyles>
      
     </>

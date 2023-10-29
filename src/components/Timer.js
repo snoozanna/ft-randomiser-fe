@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import QuestionContext from "../context/questions.context";
+import TimerContext from "../context/timer.context";
 import styled from "styled-components";
 
 const TimerStyles = styled.div`
@@ -14,8 +14,7 @@ const TimerStyles = styled.div`
 `;
 
 const Timer = () => {
-  const { time, isRunning } =
-    useContext(QuestionContext);
+  const { time, isRunning } = useContext(TimerContext);
 
 
   const formatTime = (seconds) => {
