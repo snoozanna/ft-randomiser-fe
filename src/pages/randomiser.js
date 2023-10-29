@@ -212,7 +212,7 @@ const RandomiserPage = () => {
                 <p className="resetRequired">
                   <span className="status-wrapper">
                     <img src={mark} alt="mark" />
-                    RESET REQUIRED!
+                    FULL RESET REQUIRED!
                   </span>
                 </p>
               ) : null}

@@ -39,7 +39,7 @@ const AdminStatusStyles = styled.div`
     p.resetRequired {
       background: var(--red);
       padding: 0.5rem;
-      border: 3px solid black;
+      border: 2px solid black;
       border-radius: 5px;
     }
   }
