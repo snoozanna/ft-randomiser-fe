@@ -159,340 +159,424 @@ exports.levelSequences4 = {
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: false,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: false,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: false,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: true,
     },
   ],
   2: [
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: false,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: false,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: false,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: false,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "lighthearted",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: true,
+      needToComeLater: true,
     },
     {
       level: "deep",
       nonNeg: false,
+      needToComeLater: true,
     },
     {
       level: "medium",
       nonNeg: false,
+      needToComeLater: true,
     },
   ],
 };
