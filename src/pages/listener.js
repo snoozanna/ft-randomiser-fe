@@ -16,7 +16,7 @@ const ListenerPageStyles = styled.section`
   width: 100%;
   color: var(--orange);
   .listener-question-container {
-    border: solid 2px white;
+    /* border: solid 2px white; */
     width: 70vw;
     max-width: 60%;
     display: flex;
