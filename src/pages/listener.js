@@ -52,11 +52,19 @@ const ListenerPageStyles = styled.section`
       position: relative;
     }
     h3.question.show > p.normalFont {
-      font-size: 1em;
+      font-size: 5rem;
+      line-height: 7rem;
+      letter-spacing: 0.4rem;
     }
     h3.question.show > p.smallerFont {
-      font-size: 0.75em;
+      font-size: 4rem;
+      line-height: 7rem;
     }
+    /* h3.question.show > p.bacFontSize {
+      font-size: 5rem;
+      line-height: 7rem;
+      letter-spacing: 0.4rem;
+    } */
   }
 `;
 function ListenerPage( {data} ) {
@@ -79,7 +87,7 @@ const [blankListenerScreen, setBlankListenerScreen] = useState(false);
     });
 
   const query = `*[_type == "currentQ"]`;
-  const params = { _id: "f3bc9a4d-b899-4ec0-a424-a7bfbc19693d" };
+  const params = { _id: "a98108a6-b3b3-47de-a273-9dfbc989f4dd" };
 
 useEffect(() => {
  const subscription = sanityClient
@@ -132,6 +140,8 @@ useEffect(() => {
                   ? "smallerFont"
                   : "normalFont"
               } neon`}
+              // {questionToDisplay ? <p
+              // className={`bacFontSize neon`}
             > 
               {/* If the Blank Screen button is pressed, hide the current question */}
               {blankListenerScreen
