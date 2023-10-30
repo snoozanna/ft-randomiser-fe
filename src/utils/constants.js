@@ -181,6 +181,10 @@ exports.levelSequences4 = {
       nonNeg: true,
     },
     {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
       level: "lighthearted",
       nonNeg: false,
     },
@@ -194,7 +198,91 @@ exports.levelSequences4 = {
     },
     {
       level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
       nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
     },
     {
       level: "deep",
@@ -230,87 +318,7 @@ exports.levelSequences4 = {
     },
     {
       level: "deep",
-      nonNeg: true,
-    },
-    {
-      level: "medium",
       nonNeg: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
     },
     {
       level: "medium",
@@ -343,7 +351,71 @@ exports.levelSequences4 = {
       nonNeg: true,
     },
     {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
       level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
       nonNeg: false,
     },
     {
@@ -384,62 +456,6 @@ exports.levelSequences4 = {
     },
     {
       level: "deep",
-      nonNeg: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-    },
-    {
-      level: "deep",
       nonNeg: false,
     },
     {
@@ -472,7 +488,7 @@ exports.levelSequences4 = {
     },
     {
       level: "deep",
-      nonNeg: true,
+      nonNeg: false,
     },
     {
       level: "medium",
