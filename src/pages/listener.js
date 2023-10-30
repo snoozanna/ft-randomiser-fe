@@ -52,10 +52,10 @@ const ListenerPageStyles = styled.section`
       position: relative;
     }
     h3.question.show > p.normalFont {
-      font-size: inherit;
+      font-size: 1em;
     }
     h3.question.show > p.smallerFont {
-      font-size: 2rem;
+      font-size: 0.75em;
     }
   }
 `;
