@@ -99,8 +99,11 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
       // console.log("index", index)
       const chosenQuestion = shuffledQuestions.find((question) => {
         const isQuestionPickedAlready = sequence.includes(question);
-        if (nonNegNumOfRandomisedIndexes.includes(index)) {
+        // if question.needToComeLater == true, level.needToComeLater == true
+        
+        if (question.needToComeLater) {
           return (
+            level.needToComeLater === true &&
             question.level === level.level &&
             !isQuestionPickedAlready &&
             question.nonNeg == level.nonNeg
