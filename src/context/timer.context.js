@@ -35,7 +35,7 @@ export function TimerProvider({ children }) {
       interval = setInterval(() => {
         if (time > 0) {
           setTime(time - 1);
-          if(time <= 60){
+          if(time <= 120){
             setOneMinWarning(true)
           }
         } else {
