@@ -374,11 +374,6 @@ exports.levelSequences4 = {
       needToComeLater: false,
     },
     {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: false,
-    },
-    {
       level: "medium",
       nonNeg: false,
       needToComeLater: false,
@@ -394,17 +389,12 @@ exports.levelSequences4 = {
       needToComeLater: false,
     },
     {
-      level: "medium",
+      level: "deep",
       nonNeg: true,
       needToComeLater: false,
     },
     {
       level: "medium",
-      nonNeg: false,
-      needToComeLater: false,
-    },
-    {
-      level: "lighthearted",
       nonNeg: false,
       needToComeLater: false,
     },
@@ -414,22 +404,22 @@ exports.levelSequences4 = {
       needToComeLater: false,
     },
     {
-      level: "medium",
-      nonNeg: false,
+      level: "deep",
+      nonNeg: true,
+      needToComeLater: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+      needToComeLater: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
       needToComeLater: false,
     },
     {
       level: "medium",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
       nonNeg: true,
       needToComeLater: true,
     },
@@ -446,11 +436,6 @@ exports.levelSequences4 = {
     {
       level: "medium",
       nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
       needToComeLater: true,
     },
     {
@@ -484,13 +469,33 @@ exports.levelSequences4 = {
       needToComeLater: true,
     },
     {
-      level: "lighthearted",
+      level: "deep",
+      nonNeg: true,
+      needToComeLater: true,
+    },
+    {
+      level: "deep",
       nonNeg: false,
       needToComeLater: true,
     },
     {
-      level: "lighthearted",
+      level: "deep",
+      nonNeg: true,
+      needToComeLater: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+      needToComeLater: true,
+    },
+    {
+      level: "deep",
       nonNeg: false,
+      needToComeLater: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
       needToComeLater: true,
     },
     {
