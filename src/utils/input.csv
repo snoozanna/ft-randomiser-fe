@@ -1,6 +1,6 @@
 question,questionLetterLength,altQuestion,Question,followUp,categoryName,category,level,requireLockIn,nonNeg,documentary,needToComeLater
 "Who is your favourite Spice Girl, and why?",42,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
-You find a wallet with £100 on the street. What do you do?,58,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,FALSE,FALSE,FALSE
+You find a wallet with £100 on the street. What do you do?,58,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,FALSE,FALSE,FALSE,FALSE
 What's your ideal date?,23,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,lighthearted,FALSE,FALSE,FALSE,FALSE
 How did you celebrate your most recent birthday?,48,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,FALSE,FALSE,FALSE,FALSE
 When do you feel most comfortable within yourself?,50,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,FALSE,FALSE,FALSE,FALSE
@@ -24,7 +24,6 @@ What would be your parenting discipline style?,46,,,,Cultural Background & Famil
 "If you were to be my sperm donor, what would your expectations be from me in the future?",88,"If you were to ever donate sperm or eggs to someone, what would your expectations of them be in return?",,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,TRUE,TRUE,FALSE,FALSE
 At what age should you teach children about death?,50,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,medium,FALSE,FALSE,FALSE,FALSE
 Do you plan or do you go with the flow?,39,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,FALSE,FALSE,FALSE,FALSE
-Do you believe people are inherently good or bad?,49,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
 At what age should you teach children about sex?,48,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,medium,FALSE,FALSE,FALSE,FALSE
 What’s your favourite way to move your body?,44,,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,FALSE,FALSE,FALSE,FALSE
 "When making choices, are you led by thought or feeling?",55,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,FALSE,TRUE,FALSE,FALSE
@@ -37,7 +36,6 @@ What's the fiercest animal you think you could fight and win?,61,,,,Health & Fer
 Do you like to plan?,20,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,FALSE,FALSE,FALSE
 What's your relationship to social media?,41,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,FALSE,FALSE,FALSE
 Do you have pizzazz?,20,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
-Do you love with your heart or your mind?,41,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
 Would you lend me £5?,21,,,,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,lighthearted,FALSE,FALSE,FALSE,TRUE
 Do you like your own company?,29,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,FALSE,FALSE,FALSE
 "When you're on a beach, do you look for nice shells to take home?",65,,,,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,lighthearted,FALSE,FALSE,FALSE,FALSE
@@ -105,12 +103,10 @@ Have you ever had fertility tests?,34,,,,Health & Fertility,3e87b2c3-3314-44ae-9
 Who would you climb any mountain for?,37,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,FALSE,FALSE,FALSE
 They say children should be seen and not heard. Do you agree or disagree?,73,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,medium,FALSE,FALSE,FALSE,FALSE
 Have you ever faked an injury?,30,,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,FALSE,FALSE,FALSE,FALSE
-Would you tell a little white lie just for some fun?,52,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
-"Imagine you're at a carnival, you have enough money for one game, do you: A) bob for apples B) splat a rat C) buy sweets D) go for a spliff?",140,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
+Would you tell a little white lie just for some fun?,52,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,lighthearted,FALSE,FALSE,FALSE,FALSE
 How did you feel when you heard the Queen had died?,51,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,medium,FALSE,FALSE,FALSE,FALSE
 "If you donated sperm to me, and I had twins or triplets, would you want to keep one?",84,"If you donated sperm or eggs to someone, and they had twins or triplets, would you want to keep one?",,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,TRUE,TRUE,FALSE,FALSE
-"After an argument, would you rather be alone or talk it out?",60,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,FALSE,TRUE,FALSE,FALSE
-How do you feel about socks with sandals being back in fashion?,63,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
+"After an argument, would you rather be alone or talk it out?",60,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,TRUE,FALSE,FALSE
 Would you rather be too hot or too cold?,40,,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,FALSE,FALSE,FALSE,FALSE
 Do you like to win?,19,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
 Is it important for you to be right?,36,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,FALSE,FALSE,FALSE,FALSE
@@ -120,7 +116,7 @@ Do you ever wonder what you're missing out on?,46,,,,Philosophical & Spiritual,5
 Can you keep a secret? ,23,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,FALSE,FALSE,FALSE,FALSE
 Do you think anyone can be a good parent?,41,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,medium,FALSE,TRUE,FALSE,FALSE
 Is there a specific reason you decided to be here today? ,57,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,deep,FALSE,TRUE,FALSE,TRUE
-Are you punctual?,17,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,FALSE,FALSE,FALSE,FALSE
+Are you punctual?,17,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,FALSE,FALSE,FALSE,FALSE
 What time do you usually go to bed?,35,,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,FALSE,FALSE,FALSE,FALSE
 Do your parents want grandchildren?,35,,,"FOLLOW UP: Depending on what they say, cheeky come back of ""is that why ur here vibes""??",Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,TRUE,FALSE,FALSE
 How many people do you call 'aunty' that you are not related to?,64,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,FALSE,FALSE,FALSE,FALSE
@@ -128,7 +124,6 @@ How do you define family?,25,,,,Love & Relationships,09704acd-f205-4afd-807d-692
 Is it rude to call someone 'aunty' if they are only a couple of months older than you?,86,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 Are you less inclined to donate sperm to someone with opposing political views?,79,Are you less inclined to donate sperm or eggs to someone with opposing political views?,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,TRUE,TRUE,FALSE,FALSE
 Do you think children need to be crocodile savvy?,49,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
-Do you like people ordering food for you at a restaurant?,57,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,lighthearted,FALSE,FALSE,FALSE,FALSE
 Why are you here today?,23,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,deep,FALSE,FALSE,FALSE,FALSE
 What's been the highlight of your week?,39,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,FALSE,FALSE,FALSE,FALSE
 Have you ever met your doppelganger?,36,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
@@ -140,9 +135,10 @@ Do you have children in your life?,34,,,,Love & Relationships,09704acd-f205-4afd
 Do you like kids?,17,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,lighthearted,FALSE,FALSE,FALSE,FALSE
 "If a six year-old asked you if Santa was real, what would you say?",66,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
 "If I became pregnant with twins or triplets, how would you feel if I aborted some?",82,,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,FALSE,TRUE,FALSE,FALSE
+When did you last have an sexual health test ? ,,,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,FALSE,TRUE,FALSE,FALSE
+Do you have any advice for me on becoming a parent? ,,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,TRUE,FALSE,FALSE
 "If you donated sperm to us, how would you feel if I aborted a pregnancy made from it?",85,"How would you feel if the person you donated your sperm or eggs to, aborted a pregnancy made from your donation?",,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,TRUE,TRUE,FALSE,FALSE
 "If your neighbour came and asked you for sugar, would you assume that they wanted sex or sugar?",95,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,FALSE,FALSE,FALSE,FALSE
-"If someone threw something at us right now, what would you do?",62,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,FALSE,FALSE,FALSE,FALSE
 "If you could have any fictional creature as a pet, what would it be? ",69,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
 "If you could instantly learn any skill, what would you choose?",62,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,lighthearted,FALSE,FALSE,FALSE,FALSE
 "If you could live in any historical period, which would you choose?",67,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
@@ -155,7 +151,7 @@ Favourite lyric or song?,24,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86
 Do you think  intelligence is innate or genetic?,48,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
 What do you lose the most sleep over?,37,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,deep,FALSE,FALSE,FALSE,FALSE
 Can you juggle?,15,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
-Can you solve a Rubik's cube?,29,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,FALSE,FALSE,FALSE,FALSE
+Can you solve a Rubik's cube?,29,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 What do you see?,16,,,INK BLOT TEST!,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,FALSE,FALSE,FALSE,FALSE
 "If you could choose between pursuing your passion or guaranteeing financial security for the rest of your life, what would you choose?",134,,,,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,medium,FALSE,FALSE,FALSE,FALSE
 How do you deal with difficult memories?,40,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,FALSE,FALSE
@@ -179,9 +175,9 @@ Would you have answered any questions differently if your parents were in the au
 What's something you would like to learn or be better at?,57,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
 What were you like as a kid?,28,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,FALSE,FALSE
 What do you like to do in your free time?,41,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
-Who would you say comprises your family unit?,45,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,FALSE,FALSE
+Who would you say comprises your family unit?,45,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,TRUE,FALSE,FALSE
 Do you have a five year plan?,29,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
-Do you have a vision board for your life?,41,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
+Do you have a vision board for your life?,41,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,FALSE,FALSE,FALSE,FALSE
 Are you in any relationships? ,30,,,"FOLLOW UP: If you were to consider donating sperm to me, how would this impact your partner/s? OR If you were to donate sperm or eggs to someone, how would this impact your partner/s?",Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,TRUE,FALSE,FALSE
 Have you ever considered donating sperm or eggs before?,55,,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,FALSE,TRUE,FALSE,FALSE
 What do you think is more important; individual choice or collective wellbeing?,79,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,FALSE,FALSE,FALSE
@@ -191,10 +187,10 @@ What do you think about marriage?,33,,,,Love & Relationships,09704acd-f205-4afd-
 What do you think about Artificial Intelligence?,48,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,medium,FALSE,FALSE,FALSE,FALSE
 What are you afraid of?,23,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,FALSE,FALSE,FALSE,FALSE
 How often do you speak to your closest friends?,47,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,lighthearted,FALSE,FALSE,FALSE,FALSE
-How quickly do you expect people to reply to a text message?,60,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,FALSE,FALSE,FALSE,FALSE
-How quickly do you expect people to reply to an email?,54,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,FALSE,FALSE,FALSE,FALSE
-How quickly do you usually reply to a text message?,51,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,FALSE,FALSE,FALSE,FALSE
-How quickly do you usually respond to an email?,47,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,FALSE,FALSE,FALSE,FALSE
+How quickly do you expect people to reply to a text message?,60,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,FALSE,FALSE,FALSE
+How quickly do you expect people to reply to an email?,54,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,FALSE,FALSE,FALSE
+How quickly do you usually reply to a text message?,51,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,FALSE,FALSE,FALSE
+How quickly do you usually respond to an email?,47,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,FALSE,FALSE,FALSE
 "When no one's there to see, how do you express joy?",51,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
 "When no one's there to see, how do you express anger?",53,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
 What’s the last TV series you binged?,37,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
@@ -206,7 +202,7 @@ Do you think how much someone earns is an accurate measure of how good they are 
 Have you ever ghosted someone you've slept with?,48,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,FALSE,FALSE,FALSE
 Have you ever ghosted a workplace?,34,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,FALSE,FALSE,FALSE
 Have you ever ghosted a friend?,31,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,FALSE,FALSE,FALSE
-Can people be inherently “bad”?,31,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
+Do you think people can be inherently “bad”?,44,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
 How do you deal with conflict in your close relationships?,58,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,FALSE,TRUE,FALSE,FALSE
 How good are you at remembering your friends’ birthdays?,56,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,FALSE,FALSE,FALSE
 Are you a fast swimmer? ,24,,,FOLLOW UP: Not a euphemism!,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,FALSE,FALSE,FALSE,FALSE
@@ -214,7 +210,7 @@ Did you enjoy sports day as a kid?,34,,,,Health & Fertility,3e87b2c3-3314-44ae-9
 Have you ever been a bully?,27,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,FALSE,FALSE,FALSE,FALSE
 Can you stroke your tummy and pat your head at the same time?,61,,,FOLLOW UP: Let's see it!,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 Were you good at designing houses on The Sims?,46,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
-Does anybody have a vendetta against you?,41,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,FALSE,FALSE,FALSE,FALSE
+Does anybody have a vendetta against you?,41,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,FALSE,FALSE,FALSE,FALSE
 Are you a good dancer?,22,,,FOLLOW UP: Let's see it!,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,FALSE,FALSE,FALSE,FALSE
 "At the club, do you dance in the centre or in a dark corner?",,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,FALSE,FALSE,FALSE,FALSE
 Who is your arch nemesis?,25,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,FALSE,FALSE,FALSE,FALSE
@@ -224,7 +220,7 @@ Are you a performance artist?,29,,,FOLLOW UP: Have you ever thought about making
 What cult classic do you hate?,30,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
 Do you quote movies often?,26,,,FOLLOW UP: Do you have any favourite movie quotes?,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
 "Who's your favourite Kardashian, and why?",41,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
-Do you want kids in the future?,31,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,FALSE,FALSE,FALSE
+Do you want kids in the future?,31,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,TRUE,FALSE,FALSE
 What's the most common personality quirk you think you and your family share?,77,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,FALSE,FALSE
 Do you have a family trust fund?,32,,,FOLLOW UP: Good to know. ,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,FALSE,FALSE,FALSE,FALSE
 "If you were to donate sperm to me, do you expect to financially be involved with this child? ",93,"If you were to donate sperm or eggs, do you expect to be financially involved with that child?",,,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,medium,TRUE,TRUE,FALSE,FALSE
@@ -244,7 +240,7 @@ What's your best physical feature?,34,,,,Health & Fertility,3e87b2c3-3314-44ae-9
 Have you donated sperm before?,30,Have you donated your sperm or eggs before?,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,TRUE,TRUE,FALSE,FALSE
 Do you have any allergies?,26,,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,FALSE,FALSE,FALSE,FALSE
 Can you describe what your parents or guardians looked like? ,61,,,FOLLOW UP: Are they hot?,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,medium,FALSE,FALSE,FALSE,FALSE
-Would you rather sew your own clothes or build your own home?,61,,,,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,medium,FALSE,FALSE,FALSE,FALSE
+Would you rather sew your own clothes or build your own home?,61,,,,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,lighthearted,FALSE,FALSE,FALSE,FALSE
 What are you hopeful about?,27,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,lighthearted,FALSE,FALSE,FALSE,FALSE
 Are you someone who enjoys playing? ,36,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,FALSE,FALSE,FALSE
 What makes you jealous?,23,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,FALSE,FALSE,FALSE
@@ -253,7 +249,7 @@ What are your three best qualities?,35,,,,Work & Ambition,d7afa659-277e-47f5-8d8
 How do you react to losing a game?,34,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,FALSE,FALSE,FALSE,FALSE
 How do you define success?,26,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
 What's your greatest achievement?,33,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
-What's your longest relationship or friendship?,47,,,FOLLOW UP: Tell me more?,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,deep,FALSE,FALSE,FALSE,FALSE
+What's your longest relationship or friendship?,47,,,FOLLOW UP: Tell me more?,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,FALSE,FALSE,FALSE
 What's your confrontation style?,32,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,FALSE,FALSE,FALSE,FALSE
 When was the last time you lied?,32,,,FOLLOW UP: What about?,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,FALSE,TRUE,FALSE,FALSE
 What's your relationship to authority or authority figures?,59,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,deep,FALSE,FALSE,FALSE,FALSE
@@ -264,7 +260,7 @@ When making choices are you lead by thought or feeling?,55,,,,Philosophical & Sp
 What do you think are the qualities of a life fully lived?,58,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,FALSE,FALSE,FALSE,FALSE
 Would you like a tail?,22,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 What colour are you?,20,,,,Cultural Background & Family or Personal History,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,FALSE,FALSE,FALSE,FALSE
-Are you a fan of heights?,25,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,FALSE,FALSE,FALSE
+Are you a fan of heights?,25,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,lighthearted,FALSE,FALSE,FALSE,FALSE
 Are you in the zone?,20,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 Are you a bad boi?,18,,,FOLLOW UP: Boi,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 Can you sing me a song?,23,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
@@ -273,7 +269,6 @@ Do you like the taste of coriander?,35,,,,Health & Fertility,3e87b2c3-3314-44ae-
 What's your party trick?,24,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 Have you ever been unfaithful to a partner? ,44,,,FOLLOW UP: Was there a reason? And did you tell them?,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,deep,FALSE,FALSE,FALSE,FALSE
 Do you have rhythm?,19,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,FALSE,FALSE,FALSE,FALSE
-Do you have pizzaz?,19,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 Do you play any musical instruments? ,37,,,FOLLOW UP: Which ones?,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,FALSE,FALSE,FALSE,FALSE
 What types of TV shows do you like to watch?,44,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
 What are your top three TV shows or films?,42,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
@@ -293,7 +288,7 @@ What happens when you die?,26,,,,Philosophical & Spiritual,50647b88-b49d-48c2-89
 Can you: A) Roll your tongue B) Whistle C) Handstand D) Speak more than one language?,85,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 "Do you have any fears and phobias, and do you know where they came from?",72,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,FALSE,FALSE,FALSE,FALSE
 Do you have a question I should ask the next person?,52,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,medium,FALSE,FALSE,FALSE,TRUE
-"Who did you vote for in the last election, and why?",51,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,deep,FALSE,FALSE,FALSE,FALSE
+"Who did you vote for in the last election, and why?",51,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,medium,FALSE,FALSE,FALSE,FALSE
 What makes you laugh?,21,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 When was the last time you belly laughed?,41,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 Can you tell me one of your favourite childhood memories?,57,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,FALSE,FALSE
@@ -309,7 +304,7 @@ How do you deal with grief?,27,,,,Philosophical & Spiritual,50647b88-b49d-48c2-8
 "Would you donate your sperm to me again, if I terminated a pregnancy the first time?",84,"Would you donate your sperm or eggs again, if the person terminated the pregnancy the first time?",,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,FALSE,TRUE,FALSE,FALSE
 Do you tend to get on with kids? ,33,,,"FOLLOW UP: Do you play games, which games?",Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,medium,FALSE,FALSE,FALSE,FALSE
 What are your thoughts on owning property? ,43,,,FOLLOW UP: Are you a landlord?,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,FALSE,FALSE,FALSE,FALSE
-What's your relationship with recreational substances?,54,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,deep,FALSE,FALSE,FALSE,FALSE
+What's your relationship with recreational substances?,54,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,medium,FALSE,FALSE,FALSE,FALSE
 What do you have to offer in the apocalypse?,44,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
 Do you like to draw?,20,,,FOLLOW UP: Can you draw me something?,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,lighthearted,FALSE,FALSE,FALSE,FALSE
 Do you run hot or cold?,23,,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,FALSE,FALSE,FALSE,FALSE
@@ -319,7 +314,7 @@ Have you ever broken a promise?,31,,,,Communication,7de96aae-e318-4718-bfa1-c7ec
 Are you in the public eye?,26,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
 Do your parents understand what you do for a living?,52,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
 What do you find easy?,22,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
-Do you believe crystals have special properties?,48,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
+Do you believe crystals have special properties?,48,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,lighthearted,FALSE,FALSE,FALSE,FALSE
 How are you with goodbyes?,26,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,deep,FALSE,FALSE,FALSE,FALSE
 What kind of baby were you?,27,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,FALSE,FALSE
 "If you had enough money to never work again, how would you spend your time?",75,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
@@ -335,7 +330,7 @@ What does community mean to you?,32,,,,Social practice & dependability,39a95767-
 "If you were to donate to me and my boyfriend, how would you feel about this child being raised by a white parent?",113,"How would you feel about donating your sperm or eggs, to a couple of a different race or culture than you?",,,Cultural Background & Family or Personal History,0144753f-3590-4091-bfeb-7433d137e5ba,deep,TRUE,TRUE,FALSE,FALSE
 Are you happy? ,15,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,FALSE,FALSE,FALSE,FALSE
 Do you have a will? ,20,,,FOLLOW UP: Why/why not?,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,deep,FALSE,FALSE,FALSE,FALSE
-Do you think it's important for your child to look like you?,60,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,medium,FALSE,FALSE,FALSE,FALSE
+Do you think it's important for your child to look like you?,60,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,medium,FALSE,TRUE,FALSE,FALSE
 Do you have anyone in your immediate family who isn't biologically related to you?,82,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,FALSE,FALSE
 "How would you feel if all children in the future, were conceived through donors?",80,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,FALSE,FALSE,FALSE,FALSE
 Have you or anyone you know donated sperm or eggs in the past?,62,,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,FALSE,TRUE,FALSE,FALSE
@@ -362,6 +357,7 @@ How important do you think it is for a child to have siblings?,62,,,,Cultural Ba
 "Would you be okay with donating your sperm to an immigrant couple, who at some point would have to leave the UK?",112,"Would you be okay with donating your sperm or eggs to immigrants, who at some point would have to leave the UK?",,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,TRUE,TRUE,FALSE,FALSE
 Were you raised in a single parent household?,45,,,FOLLOW UP: How do you think that has shaped your ideas or attitude towards parenting?,Cultural Background & Family or Personal History,0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,FALSE,FALSE
 Should a family stay together for the sake of their children?,61,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,TRUE,FALSE,FALSE
+How important is it for new parents to have friends who are also new parents? ,,,,,Cultural Background & Family or Personal History,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,FALSE,FALSE
 Do you think having a child could help improve ones relationship?,65,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,TRUE,FALSE,FALSE
 "If I passed away, would you be comfortable with my partner raising this child as a single parent?",97,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,TRUE,FALSE,TRUE
 "People suggest adoption when conception isn't straight-forward, what do you think about that?",93,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,deep,FALSE,TRUE,FALSE,FALSE
@@ -378,19 +374,18 @@ How soon do you think I can go back to work following childbirth?,65,,,,Life & E
 How important do you think it is for a baby to breastfeed?,58,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,TRUE,FALSE,FALSE
 How do you feel about people buying breast milk?,48,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,TRUE,FALSE,FALSE
 Which parent do you think should stay at home with the baby?,60,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,TRUE,FALSE,FALSE
-What's your relationship to your grandparents?,46,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,FALSE,FALSE
+What's your relationship to your grandparents?,46,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,FALSE,FALSE
 How involved do you think grandparents need to be?,50,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,FALSE,TRUE
 "If you were to be our donor, would your parents consider themselves grandparents to this child?",95,"If you were to donate your sperm or eggs to someone, would your parents consider themselves grandparents to the child?",,,Cultural Background & Family or Personal History,0144753f-3590-4091-bfeb-7433d137e5ba,medium,TRUE,TRUE,FALSE,TRUE
 What do you think constitutes a family?,39,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,deep,FALSE,TRUE,FALSE,FALSE
 How do you think your relationship to your own parents will impact your parenting style? ,89,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,FALSE,FALSE,FALSE
 How important is it for children to have intergenerational relationships?,73,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,FALSE,TRUE,FALSE,FALSE
 Do you think it's a privilege to have a child?,46,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,deep,FALSE,TRUE,FALSE,FALSE
-Do you think it's important for children to have pets?,54,,,"FOLLOW UP: I'm allergic to all animal hair, how do you feel about this child never having a pet?",Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,medium,FALSE,FALSE,FALSE,FALSE
+Do you think it's important for children to have pets?,54,,,"FOLLOW UP: I'm allergic to all animal hair, how do you feel about this child never having a pet?",Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,lighthearted,FALSE,FALSE,FALSE,FALSE
 "Given the climate crisis, do you think it's appropriate for me to have a child?",79,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,FALSE,TRUE,FALSE,FALSE
 Do you think it's selfish to have a child?,42,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,FALSE,TRUE,FALSE,FALSE
 What advice do you have for me as someone bringing a child into this burning world?,83,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,FALSE,FALSE,TRUE,FALSE
 How do you feel about children being raised outside their cultures? ,68,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,deep,FALSE,FALSE,TRUE,FALSE
-Do you have flat feet?,22,Are you hypermobile?,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,medium,TRUE,FALSE,FALSE,FALSE
 What was your first job?,24,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
 Do you have any tattoos?,24,,,FOLLOW UP: Where is it? what do they mean?,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,FALSE,FALSE,FALSE
 Do you collect anything?,24,,,,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,lighthearted,FALSE,FALSE,FALSE,FALSE
