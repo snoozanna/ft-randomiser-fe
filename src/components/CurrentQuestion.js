@@ -206,7 +206,7 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
               <h3 className="question">{currentQuestion.question}</h3>
             ) : null}
           </div>
-            {currentQuestion ? (  <p>{currentQuestion.nonNeg ? "non neg" : "not"}</p>) : null}
+            {/* {currentQuestion ? (  <p>{currentQuestion.nonNeg ? "non neg" : "not"}</p>) : null} */}
           <div className="follow-container">
             {" "}
             <p>{currentQuestion ? currentQuestion.followUp : null}</p>
