@@ -154,440 +154,6 @@ exports.levelSequences3 = {
 };
 
 
-exports.levelSequences4 = {
-  1: [
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: false,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: false,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: false,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: false,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-      needToComeLater: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: false,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-  ],
-  2: [
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: false,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-      needToComeLater: false,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: false,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: false,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: false,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-      needToComeLater: false,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: false,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: false,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: false,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: false,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "lighthearted",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: true,
-      needToComeLater: true,
-    },
-    {
-      level: "deep",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-    {
-      level: "medium",
-      nonNeg: false,
-      needToComeLater: true,
-    },
-  ],
-};
-
-
-
 // exports.levelSequences4 = {
 //   1: [
 //     {
@@ -814,7 +380,12 @@ exports.levelSequences4 = {
 //     },
 //     {
 //       level: "deep",
-//       nonNeg: false,
+//       nonNeg: true,
+//       needToComeLater: false,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: true,
 //       needToComeLater: false,
 //     },
 //     {
@@ -824,16 +395,6 @@ exports.levelSequences4 = {
 //     },
 //     {
 //       level: "medium",
-//       nonNeg: true,
-//       needToComeLater: false,
-//     },
-//     {
-//       level: "medium",
-//       nonNeg: true,
-//       needToComeLater: false,
-//     },
-//     {
-//       level: "lighthearted",
 //       nonNeg: false,
 //       needToComeLater: false,
 //     },
@@ -843,18 +404,28 @@ exports.levelSequences4 = {
 //       needToComeLater: false,
 //     },
 //     {
-//       level: "medium",
-//       nonNeg: false,
-//       needToComeLater: false,
-//     },
-//     {
 //       level: "deep",
-//       nonNeg: false,
+//       nonNeg: true,
 //       needToComeLater: false,
 //     },
 //     {
 //       level: "deep",
 //       nonNeg: true,
+//       needToComeLater: false,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: true,
+//       needToComeLater: false,
+//     },
+//     {
+//       level: "medium",
+//       nonNeg: true,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: false,
 //       needToComeLater: true,
 //     },
 //     {
@@ -868,8 +439,113 @@ exports.levelSequences4 = {
 //       needToComeLater: true,
 //     },
 //     {
+//       level: "lighthearted",
+//       nonNeg: false,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "medium",
+//       nonNeg: true,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: false,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: true,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: true,
+//       needToComeLater: true,
+//     },
+//     {
 //       level: "medium",
 //       nonNeg: false,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: true,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: false,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: true,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "medium",
+//       nonNeg: true,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: false,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: true,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "medium",
+//       nonNeg: true,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: false,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: true,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "medium",
+//       nonNeg: true,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "lighthearted",
+//       nonNeg: false,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "lighthearted",
+//       nonNeg: false,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "medium",
+//       nonNeg: false,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: false,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "deep",
+//       nonNeg: true,
+//       needToComeLater: true,
+//     },
+//     {
+//       level: "medium",
+//       nonNeg: true,
 //       needToComeLater: true,
 //     },
 //     {
@@ -894,41 +570,6 @@ exports.levelSequences4 = {
 //     },
 //     {
 //       level: "deep",
-//       nonNeg: false,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "medium",
-//       nonNeg: true,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "medium",
-//       nonNeg: true,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "lighthearted",
-//       nonNeg: false,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "lighthearted",
-//       nonNeg: false,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "medium",
-//       nonNeg: false,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "deep",
-//       nonNeg: false,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "deep",
 //       nonNeg: true,
 //       needToComeLater: true,
 //     },
@@ -939,74 +580,775 @@ exports.levelSequences4 = {
 //     },
 //     {
 //       level: "medium",
-//       nonNeg: true,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "lighthearted",
-//       nonNeg: true,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "lighthearted",
 //       nonNeg: false,
 //       needToComeLater: true,
 //     },
-//     {
-//       level: "medium",
-//       nonNeg: false,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "deep",
-//       nonNeg: false,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "deep",
-//       nonNeg: false,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "medium",
-//       nonNeg: true,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "lighthearted",
-//       nonNeg: true,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "lighthearted",
-//       nonNeg: false,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "medium",
-//       nonNeg: false,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "medium",
-//       nonNeg: false,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "deep",
-//       nonNeg: true,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "deep",
-//       nonNeg: true,
-//       needToComeLater: true,
-//     },
-//     {
-//       level: "medium",
-//       nonNeg: false,
-//       needToComeLater: true,
-//     },
-    
 //   ],
 // };
+
+
+// // exports.levelSequences4 = {
+// //   1: [
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: true,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //   ],
+// //   2: [
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: true,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: false,
+// //       needToComeLater: false,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "lighthearted",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "deep",
+// //       nonNeg: true,
+// //       needToComeLater: true,
+// //     },
+// //     {
+// //       level: "medium",
+// //       nonNeg: false,
+// //       needToComeLater: true,
+// //     }
+// //   ],
+// // };
+
+
+exports.levelSequences4 = {
+  1: [
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+  ],
+  2: [
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "medium",
+      nonNeg: true,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "lighthearted",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: true,
+    },
+    {
+      level: "deep",
+      nonNeg: false,
+    },
+    {
+      level: "medium",
+      nonNeg: false,
+    },
+  ],
+};
