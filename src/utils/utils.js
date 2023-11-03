@@ -250,7 +250,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
   const { _id } = questionToSend;
   const newQuestionID = _id;
 
-  const currentQuestion_Id = "2802b7fb-cfd0-4992-a02a-1dc4c2f61feb";
+  const currentQuestion_Id = "f7ba84d4-a720-4b3a-bd42-5be65e9354b3";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -294,7 +294,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
 };
 
 exports.updateCurrentQuestionNotInProgress = async () => {
-  const currentQuestion_Id = "2802b7fb-cfd0-4992-a02a-1dc4c2f61feb";
+  const currentQuestion_Id = "f7ba84d4-a720-4b3a-bd42-5be65e9354b3";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -336,7 +336,7 @@ exports.updateCurrentQuestionNotInProgress = async () => {
 
 exports.makeScreenBlankTemp = async () => {
 
-  const currentQuestion_Id = "2802b7fb-cfd0-4992-a02a-1dc4c2f61feb";
+  const currentQuestion_Id = "f7ba84d4-a720-4b3a-bd42-5be65e9354b3";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
