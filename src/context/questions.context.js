@@ -98,7 +98,7 @@ export function QuestionProvider({ children }) {
            nonNegCounts[nonNeg] = 1;
          }
        });
-// console.log("nonNegCounts", nonNegCounts);
+console.log("nonNegCounts", nonNegCounts);
        return nonNegCounts;
      };
 

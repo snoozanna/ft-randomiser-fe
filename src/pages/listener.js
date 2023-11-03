@@ -87,7 +87,7 @@ const [blankListenerScreen, setBlankListenerScreen] = useState(false);
     });
 
   const query = `*[_type == "currentQ"]`;
-  const params = { _id: "f7ba84d4-a720-4b3a-bd42-5be65e9354b3" };
+  const params = { _id: "d119e70b-9820-4949-80d6-f7502b9c1b91" };
 
 useEffect(() => {
  const subscription = sanityClient
