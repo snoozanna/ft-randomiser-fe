@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { QuestionContext } from "../../context/questions.context";
 
-import {levelSequences4} from '../../utils/constants';
+import {levelSequences5} from '../../utils/constants';
 import styled from 'styled-components';
 import { shuffleArray } from '../../utils/utils';
 
@@ -34,7 +34,7 @@ const SequenceBtn = ({ levelSequenceLabel, label }) => {
   // if (!data) return <text>Could not find data</text>;
   // const { questions } = data;
 
-  const levelSequence = levelSequences4[levelSequenceLabel];
+  const levelSequence = levelSequences5[levelSequenceLabel];
 // console.log("all unasked questions in sequence", allUnaskedQuestions.length);
 // NEW ONE 
 const buildSequence = ( sequenceOrder, nonNegNum = 2) => {
@@ -84,6 +84,7 @@ const buildSequence = ( sequenceOrder, nonNegNum = 2) => {
     });
 
     if (!sequence.includes(undefined)) {
+      console.log("sequence includes undefined")
       const listOfCategories = sequence.map((question) => question.category);
       const listOfUniqueCategories = new Set(listOfCategories);
       const arrayOfUniqueCategories = [...listOfUniqueCategories];
@@ -95,7 +96,10 @@ const buildSequence = ( sequenceOrder, nonNegNum = 2) => {
         return sequence;
       }
     }
+    console.log("sequence", sequence)
   }
+  // debugger;
+    console.log("not enough questions");
 setResetRequired(true);
   return "Not enough questions";
 };

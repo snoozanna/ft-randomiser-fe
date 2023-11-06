@@ -5,7 +5,7 @@ import { devices } from '../styles/breakpoints.js';
 import {buildSequence} from "./../utils/utils.js"
 import Sequence from '../components/Sequence.js';
 import { QuestionContext } from '../context/questions.context';
-import {levelSequences4} from '../utils/constants.js';
+import {levelSequences5} from '../utils/constants.js';
 
 
 const SequencePageStyles = styled.div`
@@ -120,7 +120,7 @@ const [currentSequence, setCurrentSequence] = useState([])
             <h3>Sequence 1 - Medium</h3>
 
             <div className="label-container">
-              {/* {levelSequences4["1"].map((level, i) => {
+              {/* {levelSequences5["1"].map((level, i) => {
                 return (
                   <span key={i} className={`level label ${level}`}>
                     {level}
@@ -130,7 +130,7 @@ const [currentSequence, setCurrentSequence] = useState([])
             </div>
             <button
               type="button"
-              onClick={() => clickHandler({ questions }, levelSequences4["1"])}
+              onClick={() => clickHandler({ questions }, levelSequences5["1"])}
             >
               Build sequence
             </button>
@@ -139,7 +139,7 @@ const [currentSequence, setCurrentSequence] = useState([])
             <h3>Sequence 2 - Hard</h3>
 
             <div className="label-container">
-              {/* {levelSequences4["2"].map((level, i) => {
+              {/* {levelSequences5["2"].map((level, i) => {
                 return (
                   <span key={i} className={`level label ${level}`}>
                     {level}
@@ -149,7 +149,7 @@ const [currentSequence, setCurrentSequence] = useState([])
             </div>
             <button
               type="button"
-              onClick={() => clickHandler({ questions }, levelSequences4["2"])}
+              onClick={() => clickHandler({ questions }, levelSequences5["2"])}
             >
               Build sequence
             </button>
@@ -158,7 +158,7 @@ const [currentSequence, setCurrentSequence] = useState([])
             <h3>Sequence - Build your own</h3>
 
             <div className="label-container">
-              {levelSequences4["3"].map((level, i) => {
+              {levelSequences5["3"].map((level, i) => {
                 return (
                   <span key={i} className={`level label ${level}`}>
                     {level}
@@ -168,7 +168,7 @@ const [currentSequence, setCurrentSequence] = useState([])
             </div>
             <button
               type="button"
-              onClick={() => clickHandler({ questions }, levelSequences4["3"])}
+              onClick={() => clickHandler({ questions }, levelSequences5["3"])}
             >
               Build sequence
             </button>

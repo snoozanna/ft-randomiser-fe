@@ -120,6 +120,7 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
     });
 
     if (!sequence.includes(undefined)) {
+      
       const listOfCategories = sequence.map((question) => question.category);
       const listOfUniqueCategories = new Set(listOfCategories);
       const arrayOfUniqueCategories = [...listOfUniqueCategories];
@@ -196,14 +197,14 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
 
 
 exports.updateQuestionBeenAsked = async (questionToUpdate, setTo=true ) => {
-    console.log("questionToUpdate in updateQuestionBeenAsked", questionToUpdate);
+    // console.log("questionToUpdate in updateQuestionBeenAsked", questionToUpdate);
      if (!questionToUpdate.question) {
        console.log("Not a valid question.");
        return;
      }
   const { _id: newQuestionID } = questionToUpdate;
 
-  console.log(`trying to update as ${setTo}:`, newQuestionID);
+  // console.log(`trying to update as ${setTo}:`, newQuestionID);
   try {
     // Define the mutation object
     const mutation = {

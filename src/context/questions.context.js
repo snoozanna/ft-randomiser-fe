@@ -38,7 +38,7 @@ export const QuestionContext = createContext({
 export function QuestionProvider({ children }) {
   const [potentialQuestion, setPotentialQuestion] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(null);
-  const [alreadyCalled, setAlreadyCalled] = useState("");
+  const [alreadyCalled, setAlreadyCalled] = useState([]);
   const [questionError, setQuestionError] = useState("");
   const [questionSequence, setQuestionSequence] = useState({
     sequenceLevel: null,

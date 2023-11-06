@@ -18,6 +18,8 @@ const GoBtn = ({ setLockInMoment }) => {
     setQuestionSequence,
     setQuestionSequenceIndex,
     setPotentialQuestion,
+    setAlreadyCalled, 
+    alreadyCalled,
     allUnaskedQuestions, removeQuestionFromUnasked, 
   } = useContext(QuestionContext);
    const {
@@ -46,6 +48,7 @@ if (questionSequenceIndex < questionSequence.questions.length -1) {
         setQuestionSequenceIndex((currentIndex) => {
           return currentIndex + 1;
         });
+        const q = nextQuestion.question;
         removeQuestionFromUnasked(nextQuestion);
       }
     } else {

@@ -28,7 +28,8 @@ const ButtonInfoStyles = styled.div`
 
 const SingleQuestionBtn = ( {buttonType}) => {
   // console.log("buttonType", buttonType);
-    const {setCurrentQuestion, questionSequence } = useContext(QuestionContext);
+    const { setCurrentQuestion, questionSequence, removeQuestionFromUnasked } =
+      useContext(QuestionContext);
 
     const [areQuestionsRemaining, setAreQuestionsRemaining] =
       useState(true);
@@ -90,6 +91,9 @@ return question._id;
   if (areQuestionsRemaining){
     await askQuestion(nextQuestion);
     setCurrentQuestion(nextQuestion);
+    if (buttonType !== "Rapid Fire") {
+      removeQuestionFromUnasked(nextQuestion);
+    }
     refetch();
     //TODO LOOK AT REFETCH
   }
