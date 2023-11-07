@@ -39,6 +39,7 @@ const ListenerPageStyles = styled.section`
       text-wrap: pretty;
       line-height: 4rem;
     }
+
     .neon {
       color: var(--clr-blue-neon);
       color: var(--clr-neon);
@@ -87,7 +88,7 @@ const [blankListenerScreen, setBlankListenerScreen] = useState(false);
     });
 
   const query = `*[_type == "currentQ"]`;
-  const params = { _id: "d119e70b-9820-4949-80d6-f7502b9c1b91" };
+  const params = { _id: "ef3a8433-7b3b-4e40-8da0-ed060b7680dd" };
 
 useEffect(() => {
  const subscription = sanityClient

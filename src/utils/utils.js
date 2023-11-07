@@ -182,7 +182,7 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
 //         needToComeLater: row.needToComeLater === "TRUE",
 //         requireLockIn: row.requireLockIn === "TRUE",
 //         beenAsked: row.beenAsked === "TRUE",
-//         needToComeLater: row.needToComeLater === "TRUE",
+   
 //       };
 //       ndjsonData.push(JSON.stringify(ndjsonItem));
 //     })
@@ -251,7 +251,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
   const { _id } = questionToSend;
   const newQuestionID = _id;
 
-  const currentQuestion_Id = "d119e70b-9820-4949-80d6-f7502b9c1b91";
+  const currentQuestion_Id = "ef3a8433-7b3b-4e40-8da0-ed060b7680dd";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -295,7 +295,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
 };
 
 exports.updateCurrentQuestionNotInProgress = async () => {
-  const currentQuestion_Id = "d119e70b-9820-4949-80d6-f7502b9c1b91";
+  const currentQuestion_Id = "ef3a8433-7b3b-4e40-8da0-ed060b7680dd";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -337,7 +337,7 @@ exports.updateCurrentQuestionNotInProgress = async () => {
 
 exports.makeScreenBlankTemp = async () => {
 
-  const currentQuestion_Id = "d119e70b-9820-4949-80d6-f7502b9c1b91";
+  const currentQuestion_Id = "ef3a8433-7b3b-4e40-8da0-ed060b7680dd";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
