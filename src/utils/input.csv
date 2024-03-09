@@ -1,6 +1,6 @@
 question,questionLetterLength,altQuestion,Question,followUp,categoryName,category,level,requireLockIn,nonNeg,documentary,needToComeLater
 "Who is your favourite Spice Girl, and why?",42,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
-You find a wallet with $200 on the street. What do you do?,58,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,FALSE,FALSE,FALSE
+You find a wallet with 2000 Kroner on the street. What do you do?,65,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,FALSE,FALSE,FALSE
 What's your ideal date?,23,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,lighthearted,FALSE,FALSE,FALSE,FALSE
 How did you celebrate your most recent birthday?,48,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,lighthearted,FALSE,FALSE,FALSE,FALSE
 When do you feel most comfortable within yourself?,50,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,deep,FALSE,FALSE,FALSE,FALSE
@@ -14,7 +14,7 @@ What makes you happy?,21,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,d
 What are you hungry for?,24,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,medium,FALSE,FALSE,FALSE,FALSE
 Have you ever tried to conceive? ,33,,,FOLLOW UP: How long did you try for?,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,deep,FALSE,TRUE,FALSE,TRUE
 Are any of your family members other races or cultures than you?,64,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,medium,FALSE,TRUE,FALSE,FALSE
-Do you own any dungarees?,25,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
+Do you own any overalls?,24,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 Do you know any magic tricks? ,30,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 Do you wish you were famous?,28,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
 What embarasses you?,20,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,medium,FALSE,FALSE,FALSE,FALSE
@@ -26,14 +26,14 @@ Do you plan or do you go with the flow?,39,,,,Social practice & dependability,39
 At what age should you teach children about sex?,48,,,,Personal views,d2886006-d0b3-4e77-abc9-b263ba51e79e,medium,FALSE,FALSE,FALSE,FALSE
 What’s your favourite way to move your body?,44,,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,FALSE,FALSE,FALSE,FALSE
 "When making choices, are you led by thought or feeling?",55,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,medium,FALSE,TRUE,FALSE,FALSE
-"If you were to go on any reality TV show, what would it be? ",60,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
+What's your favourite reality TV show?,38,,,Would you ever go on it?,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
 Why do you choose the brands you purchase?,42,,,,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,medium,FALSE,FALSE,FALSE,FALSE
 "You run into a celebrity, would you ignore them or go over and chat?",68,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
 What’s your go-to karaoke song?,31,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
 What's the fiercest animal you think you could fight and win?,61,,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,lighthearted,FALSE,FALSE,FALSE,FALSE
 What's your relationship to social media?,41,,,,Communication,7de96aae-e318-4718-bfa1-c7ecfeaa47f0,lighthearted,FALSE,FALSE,FALSE,FALSE
 Do you have pizzazz?,20,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
-Would you lend me $10?,22,,,,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,lighthearted,FALSE,FALSE,FALSE,TRUE
+Would you lend me 100 Kroner?,29,,,,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,lighthearted,FALSE,FALSE,FALSE,TRUE
 Do you like your own company?,29,,,,Social practice & dependability,39a95767-630b-44f9-8d08-67ae64c6ab35,deep,FALSE,FALSE,FALSE,FALSE
 "When you're on a beach, do you look for nice shells to take home?",65,,,,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,lighthearted,FALSE,FALSE,FALSE,FALSE
 Can you tell me about the last time you did something brave?,60,,,,Work & Ambition,d7afa659-277e-47f5-8d8a-3e12a53ca5d7,deep,FALSE,TRUE,FALSE,FALSE
@@ -54,8 +54,8 @@ Have you watched the Princess Diaries?,38,,,,Literature or Cultural,9c219554-49d
 When’s the last time you had a sexual health test?,50,,,,Health & Fertility,3e87b2c3-3314-44ae-9126-fccd8f27b1eb,deep,FALSE,FALSE,FALSE,FALSE
 Who is the first person or thing that pops into your head when I say: A) Family B) Loyalty C) Promise D) Legacy?,112,,,,Love & Relationships,09704acd-f205-4afd-807d-692f8e513840,medium,FALSE,TRUE,FALSE,FALSE
 Did you have any pets as a child?,33,,,,Cultural Background & Family or personal History,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,FALSE,FALSE,FALSE,FALSE
-Do you imagine in colour?,25,,,,Cultural Background & Family or Personal History,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,FALSE,FALSE,FALSE,FALSE
-How do you feel about the act of abstaining from voting?,56,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
+Do you imagine in colour or black and white?,44,,,,Cultural Background & Family or Personal History,0144753f-3590-4091-bfeb-7433d137e5ba,lighthearted,FALSE,FALSE,FALSE,FALSE
+How do you feel about not voting in an election?,48,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
 "If there was one thing you could immediately change about the society we live in, what would it be?",99,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
 How much does income play a part in how you define success?,59,,,,Material Possessions & Finance,36f6dee9-9426-42fb-a922-792c87db2e1e,medium,FALSE,FALSE,FALSE,FALSE
 What qualities attract you to a person?,39,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
@@ -129,7 +129,7 @@ Do you like roller coasters?,28,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,l
 "If you could have any superpower for a day, what would it be?",61,,,FOLLOW UP: how would you use it?,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
 Who would play you in the movie of your life?,45,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
 "If you were a character in a classic fairy tale, which character would you be?",78,,,FOLLOW UP: And would you change the narrative?,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,lighthearted,FALSE,FALSE,FALSE,FALSE
-"If you were to pick a form of schooling for a child,  for example: Kōhanga, Boarding, Montessori, Steiner, Public etc, what would it be and why?",144,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,medium,FALSE,FALSE,FALSE,FALSE
+"If you were to pick a form of schooling for a child, for example: Private, Boarding, Steiner, Public etc, what would it be and why?",131,,,,Literature or Cultural,9c219554-49de-4a99-8c14-86ea62a84c41,medium,FALSE,FALSE,FALSE,FALSE
 Do you think intelligence is genetic?,37,,,,Philosophical & Spiritual,50647b88-b49d-48c2-899f-01ec6f1ad77e,medium,FALSE,FALSE,FALSE,FALSE
 What do you lose the most sleep over?,37,,,,Life & Ethics,c76b8c70-efce-4474-832a-6c3cccb6550e,deep,FALSE,FALSE,FALSE,FALSE
 Can you juggle?,15,,,,Humour,ccdac514-519c-4c2c-b9e6-643688ac73ba,lighthearted,FALSE,FALSE,FALSE,FALSE
