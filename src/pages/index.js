@@ -29,7 +29,7 @@ const HomePage = () => {
  
   return (
     <HomePageStyles>
-      <h3>First Trimester Randomiser </h3>
+      <h3>First Trimester Randomiser. </h3>
     </HomePageStyles>
   );
 }
