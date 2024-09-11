@@ -193,7 +193,7 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
 //     });
 // };
 
-// // // // sortData();
+// // // sortData();
 
 
 exports.updateQuestionBeenAsked = async (questionToUpdate, setTo=true ) => {
@@ -251,7 +251,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
   const { _id } = questionToSend;
   const newQuestionID = _id;
 
-  const currentQuestion_Id = "e0889e0a-40e0-45e2-b801-7d130b2d1094";
+  const currentQuestion_Id = "5a7238b0-d4f7-4acd-870a-ddb6be42cafa";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -295,7 +295,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
 };
 
 exports.updateCurrentQuestionNotInProgress = async () => {
-  const currentQuestion_Id = "e0889e0a-40e0-45e2-b801-7d130b2d1094";
+  const currentQuestion_Id = "5a7238b0-d4f7-4acd-870a-ddb6be42cafa";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -337,7 +337,7 @@ exports.updateCurrentQuestionNotInProgress = async () => {
 
 exports.makeScreenBlankTemp = async () => {
 
-  const currentQuestion_Id = "e0889e0a-40e0-45e2-b801-7d130b2d1094";
+  const currentQuestion_Id = "5a7238b0-d4f7-4acd-870a-ddb6be42cafa";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
