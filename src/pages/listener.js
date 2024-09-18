@@ -62,8 +62,8 @@ const ListenerPageStyles = styled.section`
     h3.question.show > p.smallerFont {
       /* font-size: 4rem;
       line-height: 7rem; BAC */ 
-      font-size: 2.5rem;
-      line-height: 5rem;
+      font-size: 2rem;
+      line-height: 4.5rem;
     }
     /* h3.question.show > p.bacFontSize {
       font-size: 5rem;
