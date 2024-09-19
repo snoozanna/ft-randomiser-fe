@@ -33,6 +33,7 @@ const ListenerPageStyles = styled.section`
     }
     .glow-logo-wrapper > img {
       max-width: 50%;
+      max-width: 35%;
     }
     p {
       margin-bottom: 0;
@@ -54,12 +55,12 @@ const ListenerPageStyles = styled.section`
       position: relative;
     }
     h3.question.show > p.normalFont {
-     font-size: 5rem;
+     font-size: 4.5rem;
       line-height: 7rem;
       letter-spacing: 0.4rem;
     }
     h3.question.show > p.smallerFont {
-      font-size: 4rem;
+      font-size: 3.9rem;
       line-height: 7rem;
     }
     /* h3.question.show > p.bacFontSize {
