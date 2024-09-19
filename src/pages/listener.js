@@ -19,7 +19,7 @@ const ListenerPageStyles = styled.section`
     /* border: solid 2px white; */
     width: 70vw;
     /* max-width: 60%;*/
-    max-width: 100%;
+    max-width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@ const ListenerPageStyles = styled.section`
     }
     .glow-logo-wrapper > img {
       max-width: 50%;
-      max-width: 35%;
+      max-width: 40%;
     }
     p {
       margin-bottom: 0;
@@ -56,12 +56,12 @@ const ListenerPageStyles = styled.section`
     }
     h3.question.show > p.normalFont {
      font-size: 4.5rem;
-      line-height: 7rem;
+      line-height: 6rem;
       letter-spacing: 0.4rem;
     }
     h3.question.show > p.smallerFont {
       font-size: 3.9rem;
-      line-height: 7rem;
+      line-height: 6rem;
     }
     /* h3.question.show > p.bacFontSize {
       font-size: 5rem;
