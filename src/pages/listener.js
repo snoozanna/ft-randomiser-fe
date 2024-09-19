@@ -54,17 +54,13 @@ const ListenerPageStyles = styled.section`
       position: relative;
     }
     h3.question.show > p.normalFont {
-     /* font-size: 5rem;
-      line-height: 7rem; BAC */ 
-       font-size: 4rem;
-      line-height: 5rem; 
+     font-size: 5rem;
+      line-height: 7rem;
       letter-spacing: 0.4rem;
     }
     h3.question.show > p.smallerFont {
-      /* font-size: 4rem;
-      line-height: 7rem; BAC */ 
-      font-size: 3rem;
-      line-height: 4.5rem;
+      font-size: 4rem;
+      line-height: 7rem;
     }
     /* h3.question.show > p.bacFontSize {
       font-size: 5rem;
