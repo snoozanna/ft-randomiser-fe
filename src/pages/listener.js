@@ -19,7 +19,7 @@ const ListenerPageStyles = styled.section`
     /* border: solid 2px white; */
     width: 70vw;
     /* max-width: 60%;*/
-    max-width: 80%;
+    max-width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@ const ListenerPageStyles = styled.section`
     }
     .glow-logo-wrapper > img {
       max-width: 50%;
-      max-width: 40%;
+      max-width: 35%;
     }
     p {
       margin-bottom: 0;
