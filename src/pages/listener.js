@@ -43,7 +43,7 @@ const ListenerPageStyles = styled.section`
     .neon {
       color: var(--clr-blue-neon);
       color: var(--clr-neon);
-      /* color: white; */
+      color: white;
 
       /* color: var(--orange); */
       padding: 0.25em 0.5em;
@@ -55,14 +55,14 @@ const ListenerPageStyles = styled.section`
     h3.question.show > p.normalFont {
      /* font-size: 5rem;
       line-height: 7rem; BAC */ 
-       font-size: 3rem;
+       font-size: 4rem;
       line-height: 5rem; 
       letter-spacing: 0.4rem;
     }
     h3.question.show > p.smallerFont {
       /* font-size: 4rem;
       line-height: 7rem; BAC */ 
-      font-size: 2rem;
+      font-size: 3rem;
       line-height: 4.5rem;
     }
     /* h3.question.show > p.bacFontSize {
