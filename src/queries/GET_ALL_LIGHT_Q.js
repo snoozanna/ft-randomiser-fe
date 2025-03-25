@@ -16,6 +16,7 @@ const GET_ALL_LIGHT_Q = gql`
       requireLockIn
       nonNeg
       documentary
+      onlySuitableForSpermHaver
     }
   }
 `;

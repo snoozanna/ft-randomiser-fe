@@ -7,6 +7,7 @@ import GET_ALL_LIGHT_Q from "../../queries/GET_ALL_LIGHT_Q";
 import styled from "styled-components";
 import Loader from "../Loader";
 import { askQuestion, shuffleArray } from "../../utils/utils";
+import ParticipantContext from "../../context/participant.context";
 
 
 const SingleQuestionBtnStyles = styled.button`
@@ -30,6 +31,11 @@ const SingleQuestionBtn = ( {buttonType}) => {
   // console.log("buttonType", buttonType);
     const { setCurrentQuestion, questionSequence, removeQuestionFromUnasked } =
       useContext(QuestionContext);
+    
+      const {
+        personHasSperm
+      } = useContext(ParticipantContext)
+    
 
     const [areQuestionsRemaining, setAreQuestionsRemaining] =
       useState(true);
@@ -57,9 +63,20 @@ const SingleQuestionBtn = ( {buttonType}) => {
     // console.log("checking q", questions);
     // console.log("checking qs", questionSequence.questions);
     //shuffle q
-    const questionsCopy = questions.map((question) => {
+    let questionsCopy = questions.map((question) => {
       return { ...question };
     });
+
+    if (!personHasSperm && buttonType !== "Rapid Fire"){
+      questionsCopy = questionsCopy.filter(question=> question.onlySuitableForSpermHaver === false)
+    }
+    
+    questionsCopy.forEach(question => {
+      if (question.onlySuitableForSpermHaver){
+        console.log("This question is only suitable for a sperm haver")
+      }
+    })
+
     let shuffledQuestions = shuffleArray(questionsCopy);
 
     const questionSequenceCopy = questionSequence.questions.map((question) => {
@@ -72,7 +89,7 @@ return question._id;
     //iterate through them until matches requeiment
 
     for (let question of shuffledQuestions) {
-      console.log("should be false", !questionSequenceIDs.includes(question._id));
+      // console.log("should be false", !questionSequenceIDs.includes(question._id));
       if (!questionSequenceIDs.includes(question._id)) {
         return question;
       }

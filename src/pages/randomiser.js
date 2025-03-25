@@ -18,6 +18,7 @@ import SingleQuestionBtn from '../components/Buttons/SingleQuestionBtn.js';
 import Timer from "./../components/Timer.js"
 import BlankScreenBtn from '../components/Buttons/BlankScreen.js';
 import SetSpermHaverStatusBtn from '../components/Buttons/SetSpermHaverStatusBtn.js';
+import ParticipantContext from '../context/participant.context.js';
 
 
 
@@ -146,7 +147,9 @@ const RandomiserPage = () => {
        loadAllQuestionsRequired,
        resetRequired,
      } = useContext(QuestionContext);
-
+     const {
+      personHasSperm
+     }= useContext(ParticipantContext)
     
 
        const [lockInMoment, setLockInMoment] = useState(false);
@@ -183,6 +186,7 @@ const RandomiserPage = () => {
                 <strong>Status</strong>
               </h4>
               {/* <span>s */}
+              <p>{spermStatusConfirmed ? personHasSperm ? "Person has sperm": "Person does not have sperm": "Sperm status: TBC"}</p>
               <p>
                 {questionSequence.questions.length <= 20 ? (
                   "Pick a sequence..."
@@ -244,6 +248,7 @@ const RandomiserPage = () => {
                 setLockInMoment={setLockInMoment}
               />
             </div>
+            { spermStatusConfirmed ?
             <div className="btn-container-right">
               <div className="btn-wrapper">
                 <SingleQuestionBtn buttonType="Rapid Fire" />
@@ -254,7 +259,7 @@ const RandomiserPage = () => {
               <div className="btn-wrapper">
                 <SingleQuestionBtn buttonType="Random Light" />
               </div>
-            </div>
+            </div> : null}
           </>
         )}
       </RandomiserPageStyles>
