@@ -14,6 +14,7 @@ const GET_ALL_NONNEG_Q = gql`
       requireLockIn
       nonNeg
       documentary
+      onlySuitableForSpermHaver
     }
   }
 `;

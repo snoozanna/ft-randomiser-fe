@@ -14,6 +14,7 @@ const GET_ALL_UNASKED_Q = gql`
       requireLockIn
       nonNeg
       documentary
+      onlySuitableForSpermHaver
     }
     currentQ: allCurrentQ {
       question{

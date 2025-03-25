@@ -10,7 +10,7 @@ const EndSequenceBtnStyles = styled.button`
   background: #fe4d1c;
 `;
 
-const EndSequenceBtn = () => {
+const EndSequenceBtn = ({setSpermStatusConfirmed}) => {
    const {
      setCurrentQuestion,
      setQuestionSequence,
@@ -30,7 +30,7 @@ const EndSequenceBtn = () => {
       label: ""
     });
     resetTimer();
-
+    setSpermStatusConfirmed(false)
     setCurrentQuestion(null)
     // TODO NEED TO SEND TO DATABASE 
   };

@@ -1,5 +1,5 @@
-// const fs = require("fs");
-// const csv = require("csv-parser"); 
+//const fs = require("fs");
+//const csv = require("csv-parser"); 
 
 
 // start up process - retrevie all questions from the database
@@ -160,7 +160,7 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
 //   // Create an array to store the ndJSON data
 //   const ndjsonData = [];
 
-//   // Read the CSV file and convert it to ndJSON
+  // Read the CSV file and convert it to ndJSON
 //   fs.createReadStream("input.csv")
 //     .pipe(csv())
 //     .on("data", (row) => {
@@ -182,6 +182,7 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
 //         needToComeLater: row.needToComeLater === "TRUE",
 //         requireLockIn: row.requireLockIn === "TRUE",
 //         beenAsked: row.beenAsked === "TRUE",
+//         onlySuitableForSpermHaver: row.onlySuitableForSpermHaver === "TRUE"
    
 //       };
 //       ndjsonData.push(JSON.stringify(ndjsonItem));
@@ -251,7 +252,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
   const { _id } = questionToSend;
   const newQuestionID = _id;
 
-  const currentQuestion_Id = "9f458479-8757-47fb-a949-6909995b96ee";
+  const currentQuestion_Id = "020c24fb-fe5b-4b0b-9c7c-4025933e0eff";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -295,7 +296,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
 };
 
 exports.updateCurrentQuestionNotInProgress = async () => {
-  const currentQuestion_Id = "9f458479-8757-47fb-a949-6909995b96ee";
+  const currentQuestion_Id = "020c24fb-fe5b-4b0b-9c7c-4025933e0eff";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);
@@ -337,7 +338,7 @@ exports.updateCurrentQuestionNotInProgress = async () => {
 
 exports.makeScreenBlankTemp = async () => {
 
-  const currentQuestion_Id = "9f458479-8757-47fb-a949-6909995b96ee";
+  const currentQuestion_Id = "020c24fb-fe5b-4b0b-9c7c-4025933e0eff";
   // TODO Need better way of identifying the Current Question field in the database?
   // TODO find the first id in the array
   // console.log("Current Question doc id", currentQuestionId);

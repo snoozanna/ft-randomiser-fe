@@ -17,6 +17,7 @@ const GET_ALL_UNASKED_Q = gql`
       nonNeg
       documentary
       needToComeLater
+      onlySuitableForSpermHaver
     }
   }
 `;

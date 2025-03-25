@@ -4,6 +4,7 @@ import { QuestionContext } from "../../context/questions.context";
 import {levelSequences5} from '../../utils/constants';
 import styled from 'styled-components';
 import { shuffleArray } from '../../utils/utils';
+import ParticipantContext from '../../context/participant.context';
 
 const SequenceButtonStyles = styled.div`
   padding: 1.5rem;
@@ -28,6 +29,11 @@ const SequenceBtn = ({ levelSequenceLabel, label }) => {
     setAllUnaskedQuestions,
     setResetRequired
   } = useContext(QuestionContext);
+
+  const {
+    personHasSperm
+  } = useContext(ParticipantContext)
+
   // const { data, loading, error } = useQuery(GET_ALL_UNASKED_Q);
   // if (loading) return <Loader />;
   // if (error) return <p>Error: {JSON.stringify(error)}</p>;
@@ -47,9 +53,17 @@ const buildSequence = ( sequenceOrder, nonNegNum = 2) => {
     return array;
   };
 
-  const questionsCopy = allUnaskedQuestions.map((question) => {
+  let questionsCopy = allUnaskedQuestions.map((question) => {
     return { ...question };
   });
+
+  if (!personHasSperm){
+    console.log("Questions being filtered for non-sperm haver")
+    questionsCopy = questionsCopy.filter(question => question.onlySuitableForSpermHaver === false)
+  
+  }
+
+
   let shuffledQuestions = shuffleArray(questionsCopy);
 
   for (let i = 0; i < 150; i++) {
@@ -92,11 +106,11 @@ const buildSequence = ( sequenceOrder, nonNegNum = 2) => {
         arrayOfUniqueCategories.length >= 5 ||
         arrayOfUniqueCategories.length > sequenceOrder.length / 2
       ) {
-        console.log("sequence", sequence);
         return sequence;
       }
+    
     }
-    console.log("sequence", sequence)
+ 
   }
   // debugger;
     console.log("not enough questions");

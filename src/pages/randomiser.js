@@ -17,6 +17,9 @@ import LoadQuestionsBtn from '../components/Buttons/LoadQuestions.js';
 import SingleQuestionBtn from '../components/Buttons/SingleQuestionBtn.js';
 import Timer from "./../components/Timer.js"
 import BlankScreenBtn from '../components/Buttons/BlankScreen.js';
+import SetSpermHaverStatusBtn from '../components/Buttons/SetSpermHaverStatusBtn.js';
+
+
 
 
 
@@ -144,7 +147,10 @@ const RandomiserPage = () => {
        resetRequired,
      } = useContext(QuestionContext);
 
+    
+
        const [lockInMoment, setLockInMoment] = useState(false);
+       const [spermStatusConfirmed, setSpermStatusConfirmed] = useState(false) 
 
 
  useEffect(()=> {
@@ -161,11 +167,13 @@ const RandomiserPage = () => {
         ) : (
           <>
             <div className="btn-container-upper">
-            
+            { spermStatusConfirmed ?
               <div className="seqBtnWrapper">
                 <SequenceBtn levelSequenceLabel={1} label={"Medium"} />
                 <SequenceBtn levelSequenceLabel={2} label={"Hard"} />
-              </div>
+              </div> :
+              <SetSpermHaverStatusBtn setSpermStatusConfirmed={setSpermStatusConfirmed}/>
+            }   
             </div>
             <div className="timer-wrapper">
               <Timer />
@@ -220,7 +228,7 @@ const RandomiserPage = () => {
             </div>
             <div className="btn-container-left">
               <div className="btn-wrapper endsequence">
-                <EndSequenceBtn />
+                <EndSequenceBtn setSpermStatusConfirmed={setSpermStatusConfirmed}/>
               </div>
               <div className="btn-wrapper endsequence">
                 <BlankScreenBtn />

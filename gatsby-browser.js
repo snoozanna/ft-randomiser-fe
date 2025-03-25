@@ -4,6 +4,7 @@ import client from "./src/gatsby-plugin-apollo/client";
 import Layout from "./src/components/Layout";
 import { QuestionProvider } from "./src/context/questions.context";
 import { TimerProvider } from "./src/context/timer.context";
+import { ParticipantProvider } from "./src/context/participant.context";
 
 export const wrapPageElement = ({ element, props }) => (
   <Layout {...props}>{element}</Layout>
@@ -11,8 +12,10 @@ export const wrapPageElement = ({ element, props }) => (
 
 export const wrapRootElement = ({ element }) => (
   <ApolloProvider client={client}>
+    <ParticipantProvider>
     <QuestionProvider>
       <TimerProvider>{element}</TimerProvider>
     </QuestionProvider>
+    </ParticipantProvider>
   </ApolloProvider>
 );
