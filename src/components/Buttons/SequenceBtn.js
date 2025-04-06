@@ -42,82 +42,6 @@ const SequenceBtn = ({ levelSequenceLabel, label }) => {
 
   const levelSequence = levelSequences5[levelSequenceLabel];
 
-// NEW ONE 
-// const buildSequence = ( sequenceOrder, nonNegNum = 2) => {
-//   // Function to shuffle an array using the Fisher-Yates algorithm
-//   const shuffleArray = (array) => {
-//     for (let i = array.length - 1; i > 0; i--) {
-//       const j = Math.floor(Math.random() * (i + 1));
-//       [array[i], array[j]] = [array[j], array[i]];
-//     }
-//     return array;
-//   };
-
-//   let questionsCopy = allUnaskedQuestions.map((question) => {
-//     return { ...question };
-//   });
-
-//   if (!personHasSperm){
-//     console.log("Questions being filtered for non-sperm haver")
-//     questionsCopy = questionsCopy.filter(question => question.onlySuitableForSpermHaver === false)
-  
-//   }
-
-
-//   let shuffledQuestions = shuffleArray(questionsCopy);
-
-//   for (let i = 0; i < 150; i++) {
-//     //make an array of nonNegIndexes
-//     const arrayOfIndexes = [];
-//     for (let i = 0; i < sequenceOrder.length; i++) {
-//       arrayOfIndexes.push(i);
-//     }
-//     const randomisedIndexes = shuffleArray(arrayOfIndexes);
-//     const nonNegNumOfRandomisedIndexes = randomisedIndexes.slice(0, nonNegNum);
-//     const sequence = [];
-//     sequenceOrder.forEach((level, index) => {
-//       // console.log("index", index)
-//       const chosenQuestion = shuffledQuestions.find((question) => {
-//         const isQuestionPickedAlready = sequence.includes(question);
-//         if (question.needToComeLater) {
-//           return (
-//             level.needToComeLater === true &&
-//             question.level === level.level &&
-//             !isQuestionPickedAlready &&
-//             question.nonNeg == level.nonNeg
-//           );
-//         } else {
-//           return (
-//             question.level === level.level &&
-//             !isQuestionPickedAlready &&
-//             question.nonNeg == level.nonNeg
-//           );
-//         }
-//       });
-//       sequence.push(chosenQuestion);
-//     });
-
-//     if (!sequence.includes(undefined)) {
-//       console.log("sequence includes undefined")
-//       const listOfCategories = sequence.map((question) => question.category);
-//       const listOfUniqueCategories = new Set(listOfCategories);
-//       const arrayOfUniqueCategories = [...listOfUniqueCategories];
-//       if (
-//         arrayOfUniqueCategories.length >= 5 ||
-//         arrayOfUniqueCategories.length > sequenceOrder.length / 2
-//       ) {
-//         return sequence;
-//       }
-    
-//     }
- 
-//   }
-//   // debugger;
-//   console.log("not enough questions");
-//   setResetRequired(true);
-//   return "Not enough questions";
-// };
-
 const buildSequence = (sequenceOrder, nonNegNum = 2) => {
   const MAX_ATTEMPTS = 150;
   const MIN_CATEGORY_DIVERSITY = 5;
@@ -177,8 +101,15 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
           levelEntry,
           reason: `No match found at index ${index} for level ${levelEntry.level} and nonNeg ${levelEntry.nonNeg}`,
         });
+        // if ((levelEntry.level === "deep") && (levelEntry.nonNeg === true)){
+      // mark all nonNeg as unasked
+     // reload the questions and save them to state
+      // run the build sequence function again
+        // }
       }
 
+      
+      
       sequence.push(chosenQuestion);
     });
 
@@ -213,6 +144,7 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
 
   // Final log before failure
   console.log("Not enough questions");
+  
   setResetRequired(true);
   const log = {  error: "Failed to build sequence",
     attempts: MAX_ATTEMPTS,
@@ -232,6 +164,7 @@ console.log("log", log)
   const clickHandler = (sequenceOrder) => {
     console.log("allUnaskedQuestions in btn", allUnaskedQuestions);
     const sequence = buildSequence(sequenceOrder);
+    console.log("sequence", sequence)
     setQuestionSequence({
       sequenceLevel: levelSequenceLabel,
       questions: sequence, 

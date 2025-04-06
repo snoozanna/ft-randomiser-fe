@@ -32,7 +32,7 @@ const EndSequenceBtn = ({setSpermStatusConfirmed}) => {
     resetTimer();
     setSpermStatusConfirmed(false)
     setCurrentQuestion(null)
-    // TODO NEED TO SEND TO DATABASE 
+
   };
 
 

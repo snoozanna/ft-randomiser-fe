@@ -69,7 +69,7 @@ exports.shuffleArray = (array) => {
 }
 
 
-
+// this fn is replicated within sequence btn because it needs to use state
 exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
   // Function to shuffle an array using the Fisher-Yates algorithm
   const shuffleArray = (array) => {
@@ -280,7 +280,7 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
 
     // Send the mutation using fetch
     const apiUrl = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
-    console.log("apiUrl", apiUrl)
+    // console.log("apiUrl", apiUrl)
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
@@ -437,7 +437,7 @@ exports.fetchQuestion = async (question_id) => {
   try {
     // Construct the API URL for fetching a single question by ID
     const apiUrl = `${process.env.GATSBY_SANITY_API_URL}/data/question/${question_id}`;
-console.log("apiUrl", apiUrl);
+// console.log("apiUrl", apiUrl);
     // Send a GET request to fetch the question
     const response = await fetch(apiUrl, {
       method: "GET",
@@ -536,6 +536,43 @@ exports.markAllRapidFireAsUnasked = async () => {
   }
 };
 
+exports.markAllNonNegQuestionsAsUnasked = async () => {
+  console.log("marking all Non Neg Questions as Unasked")
+  try {
+    // Define the mutation object
+    const mutation = {
+      patch: {
+        query: "*[_type == 'question' && nonNeg == true]", 
+        set: {
+          beenAsked: false,
+        },
+      },
+    };
+ 
+    // Send the mutation using fetch
+    const apiUrl = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.GATSBY_SANITY_TOKEN}`,
+      },
+      body: JSON.stringify({ mutations: [mutation] }),
+    });
+ 
+    if (response.ok) {
+      const result = await response.json();
+      console.log(
+        `Document updated  - all questions marked as not asked"):`,
+        result,
+      );
+    } else {
+      console.error("Failed to update document:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error updating document:", error);
+  }
+ }
 
 
 exports.createAskedQuestion = async (questionId) => {
@@ -567,7 +604,7 @@ exports.createAskedQuestion = async (questionId) => {
     });
 
     const result = await response.json();
-    console.log('Sanity response:', result);
+    // console.log('Sanity response:', result);
     return result;
   } catch (err) {
     console.error('Failed to create asked question:', err);
