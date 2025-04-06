@@ -3,7 +3,7 @@ import { QuestionContext } from "../../context/questions.context";
 
 import {levelSequences5} from '../../utils/constants';
 import styled from 'styled-components';
-import { shuffleArray } from '../../utils/utils';
+import { markAllNonNegQuestionsAsUnasked, shuffleArray } from '../../utils/utils';
 import ParticipantContext from '../../context/participant.context';
 
 const SequenceButtonStyles = styled.div`
@@ -29,7 +29,6 @@ const SequenceBtn = ({ levelSequenceLabel, label }) => {
     setAllUnaskedQuestions,
     setResetRequired
   } = useContext(QuestionContext);
-
   const {
     personHasSperm
   } = useContext(ParticipantContext)
@@ -41,7 +40,7 @@ const SequenceBtn = ({ levelSequenceLabel, label }) => {
   // const { questions } = data;
 
   const levelSequence = levelSequences5[levelSequenceLabel];
-
+  let errorMessage = "Could not build sequence";
 const buildSequence = (sequenceOrder, nonNegNum = 2) => {
   const MAX_ATTEMPTS = 150;
   const MIN_CATEGORY_DIVERSITY = 5;
@@ -94,8 +93,11 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
 
         return baseMatch && needToComeLaterMatch;
       });
-
+      
       if (!chosenQuestion) {
+        if (levelEntry.level === "deep" && levelEntry.nonNeg === true){
+           errorMessage = "Not enough nonNeg deep questions" 
+        }
         attemptFailureLog.missingMatches.push({
           index,
           levelEntry,
@@ -145,26 +147,37 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
   // Final log before failure
   console.log("Not enough questions");
   
+  
+
   setResetRequired(true);
-  const log = {  error: "Failed to build sequence",
-    attempts: MAX_ATTEMPTS,
-    filterReasons: initialFilterReasons,
-    reasons: failureReasons,}
-console.log("log", log)
-  return {
-    error: "Failed to build sequence",
+  const log = {
+    error: errorMessage,
     attempts: MAX_ATTEMPTS,
     filterReasons: initialFilterReasons,
     reasons: failureReasons,
   };
+console.log("log", log)
+  return log;
 };
 
 
 
-  const clickHandler = (sequenceOrder) => {
+  const clickHandler = async (sequenceOrder) => {
     console.log("allUnaskedQuestions in btn", allUnaskedQuestions);
     const sequence = buildSequence(sequenceOrder);
     console.log("sequence", sequence)
+
+    if (sequence.error === "Not enough nonNeg deep questions"){
+      // reset all the nonNeg questions
+      console.log("sequence error", sequence.error)
+      await markAllNonNegQuestionsAsUnasked();
+      
+      // update state
+      // redo the buildSequence
+
+      sequence = buildSequence(sequenceOrder)
+    }
+
     setQuestionSequence({
       sequenceLevel: levelSequenceLabel,
       questions: sequence, 

@@ -563,7 +563,7 @@ exports.markAllNonNegQuestionsAsUnasked = async () => {
     if (response.ok) {
       const result = await response.json();
       console.log(
-        `Document updated  - all questions marked as not asked"):`,
+        `Document updated  - all nonNeg questions marked as not asked"):`,
         result,
       );
     } else {
