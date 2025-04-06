@@ -69,8 +69,7 @@ exports.shuffleArray = (array) => {
 }
 
 
-// put this back in to show sequences on sequence page 
-// TODO add needToComeLater
+
 exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
   // Function to shuffle an array using the Fisher-Yates algorithm
   const shuffleArray = (array) => {
@@ -84,6 +83,7 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
   const questionsCopy = questions.map((question) => {
     return { ...question };
   });
+  // copy of questions are shuffled 
   let shuffledQuestions = shuffleArray(questionsCopy);
 
   for (let i = 0; i < 150; i++) {
@@ -95,7 +95,7 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
     const randomisedIndexes = shuffleArray(arrayOfIndexes);
     const nonNegNumOfRandomisedIndexes = randomisedIndexes.slice(0, nonNegNum);
     const sequence = [];
-    sequenceOrder.forEach((level, index) => {
+    sequenceOrder.forEach((sequenceEntry, index) => {
       // console.log("index", index)
       const chosenQuestion = shuffledQuestions.find((question) => {
         const isQuestionPickedAlready = sequence.includes(question);
@@ -103,16 +103,17 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
         
         if (question.needToComeLater) {
           return (
-            level.needToComeLater === true &&
-            question.level === level.level &&
+            sequenceEntry.needToComeLater === true &&
+            question.level === sequenceEntry.level &&
             !isQuestionPickedAlready &&
-            question.nonNeg == level.nonNeg
+            question.nonNeg == sequenceEntry.nonNeg
+            //are all of these things true? if so pick this question
           );
         } else {
           return (
-            question.level === level.level &&
+            question.level === sequenceEntry.level &&
             !isQuestionPickedAlready &&
-            question.nonNeg == level.nonNeg
+            question.nonNeg == sequenceEntry.nonNeg
           );
         }
       });
@@ -129,12 +130,16 @@ exports.buildSequence = ({questions}, sequenceOrder, nonNegNum = 2) => {
         arrayOfUniqueCategories.length > sequenceOrder.length / 2
       ) {
         return sequence;
+      } else {
+        console.log("not enough different categories")
       }
     }
   }
 
   return "not enough questions";
 };
+
+
 
 
 
@@ -275,11 +280,13 @@ exports.sendCurrentCallToDB = async (questionToSend ) => {
 
     // Send the mutation using fetch
     const apiUrl = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
+    console.log("apiUrl", apiUrl)
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.GATSBY_SANITY_TOKEN}`,
+  
       },
       body: JSON.stringify({ mutations: [mutation] }),
     });
@@ -529,3 +536,40 @@ exports.markAllRapidFireAsUnasked = async () => {
   }
 };
 
+
+
+exports.createAskedQuestion = async (questionId) => {
+
+  const url = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
+
+  const payload = {
+    mutations: [
+      {
+        create: {
+          _type: 'collectionOfAskedQuestions',
+          question: {
+            _type: 'reference',
+            _ref: questionId,
+          },
+        },
+      },
+    ],
+  };
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${process.env.GATSBY_SANITY_TOKEN}`,
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const result = await response.json();
+    console.log('Sanity response:', result);
+    return result;
+  } catch (err) {
+    console.error('Failed to create asked question:', err);
+  }
+};

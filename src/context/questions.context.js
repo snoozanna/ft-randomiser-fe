@@ -105,9 +105,7 @@ export function QuestionProvider({ children }) {
   useEffect(() => {
 
     const categoryCounts = countQuestionsByCategory(allUnaskedQuestions);
-
     const levelCounts = countQuestionsByLevel(allUnaskedQuestions);
-
     const nonNegCounts = countQuestionsByNonNeg(allUnaskedQuestions);
     Object.keys(categoryCounts).forEach((category) => {
       if (categoryCounts[category] <= 5) {

@@ -4,7 +4,7 @@ import { QuestionContext } from '../context/questions.context';
 import GET_CURRENT_QUESTION from "../queries/GET_CURRENT_QUESTION";
 import Loader from './Loader';
 import { useQuery } from '@apollo/client';
-import { askQuestion, swapToAlternativeQuestionDB, updateCurrentQuestionNotInProgress } from '../utils/utils';
+import { askQuestion, createAskedQuestion, swapToAlternativeQuestionDB, updateCurrentQuestionNotInProgress } from '../utils/utils';
 
 const CurrentQStyles = styled.div`
   display: flex;
@@ -127,6 +127,9 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
 
   const confirmBtnHandler = async (selectedQuestion) => {
     await askQuestion(selectedQuestion);
+      // collecting all asked questions for debugging
+      await createAskedQuestion(selectedQuestion._id)
+      //ends
     setCurrentQuestion(selectedQuestion);
     setQuestionSequenceIndex((currentIndex) => {
       return currentIndex + 1;
@@ -166,6 +169,9 @@ const CurrentQ = ({lockInMoment, setLockInMoment}) => {
   
       await askQuestion(correctedQuestion);
       setCurrentQuestion(correctedQuestion);
+       // collecting all asked questions for debugging
+      await createAskedQuestion(correctedQuestion._id)
+      //ends
       setQuestionSequenceIndex((currentIndex) => {
         return currentIndex + 1;
       });

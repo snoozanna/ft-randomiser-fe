@@ -2,7 +2,9 @@ import React, { useContext } from "react";
 import { QuestionContext } from "./../../context/questions.context";
 import { TimerContext } from "./../../context/timer.context";
 import styled from "styled-components";
-import { askQuestion } from "../../utils/utils";
+import { askQuestion, createAskedQuestion } from "../../utils/utils";
+
+
 
 const GoBtnStyles = styled.button`
   width: fit-content;
@@ -45,6 +47,9 @@ if (questionSequenceIndex < questionSequence.questions.length -1) {
         await askQuestion(nextQuestion);
         // TODO REMOVE FROM UNASKED QUESTIONS 
         setCurrentQuestion(nextQuestion);
+    // collecting all asked questions for debugging
+      await createAskedQuestion(nextQuestion._id)
+   // ends
         setQuestionSequenceIndex((currentIndex) => {
           return currentIndex + 1;
         });

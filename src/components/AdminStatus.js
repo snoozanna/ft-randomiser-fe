@@ -51,7 +51,7 @@ const AdminStatus = () => {
   const [levelCounts, setLevelCounts] = useState("")
   const [nonNegCounts, setNonNegCounts] = useState("");
    const [categoryCountsState, setCategoryCountsState] = useState("");
-  console.log("nonNegCounts state", nonNegCounts[true]);
+  // console.log("nonNegCounts state", nonNegCounts);
 
    const countQuestionsByCategory = (questions) => {
      const categoryCounts = {};
@@ -63,7 +63,7 @@ const AdminStatus = () => {
          categoryCounts[category] = 1;
        }
      });
-     console.log("categoryCounts", categoryCounts);
+    //  console.log("categoryCounts", categoryCounts);
      setCategoryCountsState(categoryCounts);
      return categoryCounts;
    };
@@ -92,16 +92,14 @@ const AdminStatus = () => {
          nonNegCounts[nonNeg] = 1;
        }
      });
-     console.log("nonNegCounts", nonNegCounts);
+    //  console.log("nonNegCounts", nonNegCounts);
      setNonNegCounts(nonNegCounts);
      return nonNegCounts;
    };
 
    useEffect(() => {
      const categoryCounts = countQuestionsByCategory(allUnaskedQuestions);
-
      const levelCounts = countQuestionsByLevel(allUnaskedQuestions);
-
      const nonNegCounts = countQuestionsByNonNeg(allUnaskedQuestions);
     
    }, [allUnaskedQuestions]);   
