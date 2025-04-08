@@ -19,6 +19,7 @@ import Timer from "./../components/Timer.js"
 import BlankScreenBtn from '../components/Buttons/BlankScreen.js';
 import SetSpermHaverStatusBtn from '../components/Buttons/SetSpermHaverStatusBtn.js';
 import ParticipantContext from '../context/participant.context.js';
+import { markAllNonNegQuestionsAsUnasked } from '../utils/utils.js';
 
 
 
@@ -143,9 +144,12 @@ const RandomiserPage = () => {
      const {
        questionSequence,
        questionSequenceIndex,
-       setAllUnaskedQuestions,
+       allUnaskedQuestions,
        loadAllQuestionsRequired,
        resetRequired,
+       nonNegResetRequired, 
+       setLoadAllQuestionsRequired, 
+       setNonNegResetRequired
      } = useContext(QuestionContext);
      const {
       personHasSperm
@@ -156,11 +160,18 @@ const RandomiserPage = () => {
        const [spermStatusConfirmed, setSpermStatusConfirmed] = useState(false) 
 
 
- useEffect(()=> {
+ 
+ const resetNonNegAndReload = async() => {
+  console.log("in resetNonNegAndReload")
+  await markAllNonNegQuestionsAsUnasked();
+  setLoadAllQuestionsRequired(true);
+  setNonNegResetRequired(false);
+  window.location.reload();
+  //update state will happen in reload button
 
- }, [])
-      
-  
+
+ }
+  console.log("allUnaskedQuestions in state", allUnaskedQuestions)
     return (
       <RandomiserPageStyles>
         {loadAllQuestionsRequired ? (
@@ -220,6 +231,16 @@ const RandomiserPage = () => {
                 ) : null}
               </p>
 
+              {nonNegResetRequired ? (
+                <p className="resetRequired">
+                  <span className="status-wrapper">
+                    <img src={mark} alt="mark" />
+                   Running out of Deep NonNegs.
+                    <button onClick={()=> {resetNonNegAndReload()}}>Reset</button>
+                  </span>
+                </p>
+              ) : null}
+
               {resetRequired ? (
                 <p className="resetRequired">
                   <span className="status-wrapper">
@@ -228,7 +249,7 @@ const RandomiserPage = () => {
                   </span>
                 </p>
               ) : null}
-              {/* </span> */}
+      
             </div>
             <div className="btn-container-left">
               <div className="btn-wrapper endsequence">
@@ -270,15 +291,3 @@ const RandomiserPage = () => {
 
 export default RandomiserPage;
 
-// export const query = graphql``;
-
-
-
-// app starts
-// call to db for all unasked q
-// saved in sattae / context
-// build sequence runs from the qeustions in context
-// those questions are removed from state
-// question are marked as asked as they are clicked go
-// pressing a non neg button takes a non neg question from the remaining unasked q saved in state
-// that q is amrked as asekd 

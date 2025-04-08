@@ -27,7 +27,8 @@ const SequenceBtn = ({ levelSequenceLabel, label }) => {
     questionSequenceIndex,
     allUnaskedQuestions,
     setAllUnaskedQuestions,
-    setResetRequired
+    setResetRequired, 
+    setNonNegResetRequired
   } = useContext(QuestionContext);
   const {
     personHasSperm
@@ -54,7 +55,6 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
   };
 
   let questionsCopy = allUnaskedQuestions.map((q) => ({ ...q }));
-
   // Track filters applied to help understand failures later
   const initialFilterReasons = [];
 
@@ -86,7 +86,7 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
           question.level === levelEntry.level &&
           question.nonNeg === levelEntry.nonNeg &&
           !alreadyPicked;
-
+   
         const needToComeLaterMatch = question.needToComeLater
           ? levelEntry.needToComeLater === true
           : true;
@@ -96,22 +96,15 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
       
       if (!chosenQuestion) {
         if (levelEntry.level === "deep" && levelEntry.nonNeg === true){
-           errorMessage = "Not enough nonNeg deep questions" 
+           errorMessage = "Not enough nonNeg deep questions";
+           setNonNegResetRequired(true);
         }
         attemptFailureLog.missingMatches.push({
           index,
           levelEntry,
           reason: `No match found at index ${index} for level ${levelEntry.level} and nonNeg ${levelEntry.nonNeg}`,
         });
-        // if ((levelEntry.level === "deep") && (levelEntry.nonNeg === true)){
-      // mark all nonNeg as unasked
-     // reload the questions and save them to state
-      // run the build sequence function again
-        // }
       }
-
-      
-      
       sequence.push(chosenQuestion);
     });
 
@@ -146,10 +139,11 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
 
   // Final log before failure
   console.log("Not enough questions");
-  
-  
-
-  setResetRequired(true);
+  if (errorMessage != "Not enough nonNeg deep questions" ){
+    setResetRequired(true);
+    console.log("trying to reset here", errorMessage);
+  }
+ 
   const log = {
     error: errorMessage,
     attempts: MAX_ATTEMPTS,
@@ -165,18 +159,6 @@ console.log("log", log)
   const clickHandler = async (sequenceOrder) => {
     console.log("allUnaskedQuestions in btn", allUnaskedQuestions);
     const sequence = buildSequence(sequenceOrder);
-    console.log("sequence", sequence)
-
-    if (sequence.error === "Not enough nonNeg deep questions"){
-      // reset all the nonNeg questions
-      console.log("sequence error", sequence.error)
-      await markAllNonNegQuestionsAsUnasked();
-      
-      // update state
-      // redo the buildSequence
-
-      sequence = buildSequence(sequenceOrder)
-    }
 
     setQuestionSequence({
       sequenceLevel: levelSequenceLabel,

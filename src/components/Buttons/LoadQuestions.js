@@ -25,7 +25,7 @@ if (loading) return <Loader />;
 if (error) return <p>Error: {JSON.stringify(error)}</p>;
 if (!data) return <text>Could not find data</text>;
 const { questions } = data;
-console.log("loading data in load button",questions);
+console.log("loading data in load button - questions pulled from GET_ALL_UNASKED_Q",questions);
   const handleClick = async () => {
     // clear sequence
     setQuestionSequenceIndex(-1);

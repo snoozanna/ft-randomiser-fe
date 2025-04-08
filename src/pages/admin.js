@@ -37,7 +37,7 @@ const AdminPage = () => {
     currentQuestion,
     setCurrentQuestion,
     setLoadAllQuestionsRequired,
-
+    setNonNegResetRequired,
     questionSequenceIndex,
     questionSequence
   } = useContext(QuestionContext);
@@ -53,19 +53,20 @@ const [isLoading, setIsLoading] = useState(false)
  }, [currentQuestion]);
 
 const fullReset = async () => {
-setIsLoading(true)
-await markAllQuestionsAsUnasked()
-await markAllRapidFireAsUnasked();
- setQuestionSequenceIndex(-1);
- setQuestionSequence({
-   sequenceLevel: null,
-   questions: [],
- });
- setAllUnaskedQuestions([])
- setCurrentQuestion(null);
- setLoadAllQuestionsRequired(true);
-setIsLoading(false);
-window.location.reload();
+  setIsLoading(true)
+  await markAllQuestionsAsUnasked()
+  await markAllRapidFireAsUnasked();
+  setQuestionSequenceIndex(-1);
+  setQuestionSequence({
+    sequenceLevel: null,
+    questions: [],
+  });
+  setAllUnaskedQuestions([])
+  setCurrentQuestion(null);
+  setLoadAllQuestionsRequired(true);
+  setNonNegResetRequired(false);
+  setIsLoading(false);
+  window.location.reload();
 }
 
   const clickHandler = () => {

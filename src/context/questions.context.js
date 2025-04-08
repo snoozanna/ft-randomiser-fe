@@ -13,6 +13,7 @@ export const QuestionContext = createContext({
     questionError: "",
     loadAllQuestionsRequired: "",
     resetRequired: "",
+    nonNegResetRequired: "",
     reset: () => {},
     removeQuestionFromUnasked: () => {},
     setAlreadyCalled: () => {},
@@ -22,6 +23,7 @@ export const QuestionContext = createContext({
     setQuestionError: () => {},
     setLoadAllQuestionsRequired: () => {},
     setResetRequired: () => {},
+    setNonNegResetRequired: () => {},
   },
   sequence: {
     questionSequence: {
@@ -48,8 +50,8 @@ export function QuestionProvider({ children }) {
   const [questionSequenceIndex, setQuestionSequenceIndex] = useState(-1);
    const [allUnaskedQuestions, setAllUnaskedQuestions] = useState([]);
    const [loadAllQuestionsRequired, setLoadAllQuestionsRequired] = useState(true)
-     const [resetRequired, setResetRequired] = useState(false);
-
+  const [resetRequired, setResetRequired] = useState(false);
+  const [nonNegResetRequired, setNonNegResetRequired] = useState(false);
 
 
 
@@ -163,6 +165,8 @@ export function QuestionProvider({ children }) {
         setLoadAllQuestionsRequired,
         resetRequired,
         setResetRequired,
+        nonNegResetRequired,
+        setNonNegResetRequired,
         removeQuestionFromUnasked,
  
       }}
