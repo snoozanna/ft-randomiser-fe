@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { QuestionContext } from "./../../context/questions.context";
 import { TimerContext } from "./../../context/timer.context";
 import styled from "styled-components";
-import { askQuestion, createAskedQuestion } from "../../utils/utils";
+import { askQuestion } from "../../utils/utils";
 
 
 
@@ -48,7 +48,7 @@ if (questionSequenceIndex < questionSequence.questions.length -1) {
         // TODO REMOVE FROM UNASKED QUESTIONS 
         setCurrentQuestion(nextQuestion);
     // collecting all asked questions for debugging
-      await createAskedQuestion(nextQuestion._id)
+      // await createAskedQuestion(nextQuestion._id)
    // ends
         setQuestionSequenceIndex((currentIndex) => {
           return currentIndex + 1;

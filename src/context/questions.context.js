@@ -73,7 +73,7 @@ export function QuestionProvider({ children }) {
          categoryCounts[category] = 1;
        }
      });
-  // console.log("categoryCounts", categoryCounts);
+  console.log("categoryCounts", categoryCounts);
      return categoryCounts;
    };
     const countQuestionsByLevel = (questions) => {
@@ -86,7 +86,7 @@ export function QuestionProvider({ children }) {
           levelCounts[level] = 1;
         }
       });
-// console.log("levelCounts", levelCounts);
+console.log("levelCounts", levelCounts);
       return levelCounts;
     };
 
@@ -100,7 +100,7 @@ export function QuestionProvider({ children }) {
            nonNegCounts[nonNeg] = 1;
          }
        });
-// console.log("nonNegCounts", nonNegCounts);
+console.log("nonNegCounts", nonNegCounts);
        return nonNegCounts;
      };
 
