@@ -104,11 +104,45 @@ console.log("nonNegCounts", nonNegCounts);
        return nonNegCounts;
      };
 
+     const countDeepAndNonNegQuestions = (questions) => {
+      const count = questions.filter(
+        (q) => q.level === "deep" && q.nonNeg === true
+      ).length;
+      console.log("deep & nonNeg count:", count);
+      return count;
+    };
+
+    const countDeepAnNotNonNegQuestions = (questions) => {
+      const count = questions.filter(
+        (q) => q.level === "deep" && q.nonNeg === false
+      ).length;
+      console.log("deep & not nonNeg count:", count);
+      return count;
+    };
+
+     const countQuestionsByNeedCome = (questions) => {
+      const needComeCounts = {};
+      questions.forEach((question) => {
+        const needToComeLater = question.needToComeLater;
+        if (needComeCounts[needToComeLater]) {
+          needComeCounts[needToComeLater]++;
+        } else {
+          needComeCounts[needToComeLater] = 1;
+        }
+      });
+console.log("needComeCounts", needComeCounts);
+      return needComeCounts;
+    };
+
+
   useEffect(() => {
 
     const categoryCounts = countQuestionsByCategory(allUnaskedQuestions);
     const levelCounts = countQuestionsByLevel(allUnaskedQuestions);
     const nonNegCounts = countQuestionsByNonNeg(allUnaskedQuestions);
+    const needComeCounts = countQuestionsByNeedCome(allUnaskedQuestions)
+    const deepAndNonNegCount = countDeepAnNotNonNegQuestions(allUnaskedQuestions)
+    const deepAndNotNonNegCount = countDeepAndNonNegQuestions(allUnaskedQuestions)
     Object.keys(categoryCounts).forEach((category) => {
       if (categoryCounts[category] <= 5) {
         console.log(

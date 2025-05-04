@@ -95,14 +95,16 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
       });
       
       if (!chosenQuestion) {
-        if (levelEntry.level === "deep" && levelEntry.nonNeg === true){
+        if (levelEntry.level === "deep" && levelEntry.nonNeg === true) 
+        
+        {
            errorMessage = "Not enough nonNeg deep questions";
            setNonNegResetRequired(true);
         }
         attemptFailureLog.missingMatches.push({
           index,
           levelEntry,
-          reason: `No match found at index ${index} for level ${levelEntry.level} and nonNeg ${levelEntry.nonNeg}`,
+          reason: `No match found at index ${index} for level ${levelEntry.level} and nonNeg ${levelEntry.nonNeg} and needToComeLater ${levelEntry.needToComeLater}`,
         });
       }
       sequence.push(chosenQuestion);
