@@ -14,6 +14,7 @@ export const QuestionContext = createContext({
     loadAllQuestionsRequired: "",
     resetRequired: "",
     nonNegResetRequired: "",
+    relevantResetRequired: "",
     reset: () => {},
     removeQuestionFromUnasked: () => {},
     setAlreadyCalled: () => {},
@@ -24,6 +25,7 @@ export const QuestionContext = createContext({
     setLoadAllQuestionsRequired: () => {},
     setResetRequired: () => {},
     setNonNegResetRequired: () => {},
+    setRelevantResetRequired: () => {}
   },
   sequence: {
     questionSequence: {
@@ -52,6 +54,7 @@ export function QuestionProvider({ children }) {
    const [loadAllQuestionsRequired, setLoadAllQuestionsRequired] = useState(true)
   const [resetRequired, setResetRequired] = useState(false);
   const [nonNegResetRequired, setNonNegResetRequired] = useState(false);
+  const [relevantResetRequired, setRelevantResetRequired] = useState(false);
 
 
 
@@ -162,13 +165,22 @@ console.log("needComeCounts", needComeCounts);
     });
 
     Object.keys(levelCounts).forEach((level) => {
-      if (levelCounts[level] <= 5) {
+      if (levelCounts[level] <= 5 && level !== "relevant") {
+        console.log(
+          `Level "${level}" has ${levelCounts[level]} or fewer questions.`,
+        );
+         setResetRequired(true);
+      }
+// need to deal with relevant separately, reset is triggered is just one left 
+      if (levelCounts[level] <= 1 && level === "relevant") {
         console.log(
           `Level "${level}" has ${levelCounts[level]} or fewer questions.`,
         );
          setResetRequired(true);
       }
     });
+
+    
 
   }, [allUnaskedQuestions]);   
 
@@ -201,6 +213,8 @@ console.log("needComeCounts", needComeCounts);
         setResetRequired,
         nonNegResetRequired,
         setNonNegResetRequired,
+        relevantResetRequired, 
+        setRelevantResetRequired,
         removeQuestionFromUnasked,
  
       }}

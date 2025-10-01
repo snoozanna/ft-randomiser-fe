@@ -81,6 +81,11 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
     sequenceOrder.forEach((levelEntry, index) => {
       const chosenQuestion = shuffledQuestions.find((question) => {
         const alreadyPicked = sequence.includes(question);
+        if (levelSequenceLabel === 2 && index === 2 && personHasSperm ){
+   
+          return question.level === "relevant" && !alreadyPicked
+
+        }
 
         const baseMatch =
           question.level === levelEntry.level &&
@@ -93,6 +98,8 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
 
         return baseMatch && needToComeLaterMatch;
       });
+
+      // if level is hard and sperm is had and index is 3, pick an unasked relevant question
       
       if (!chosenQuestion) {
         if (levelEntry.level === "deep" && levelEntry.nonNeg === true) 

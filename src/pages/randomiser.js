@@ -19,7 +19,7 @@ import Timer from "./../components/Timer.js"
 import BlankScreenBtn from '../components/Buttons/BlankScreen.js';
 import SetSpermHaverStatusBtn from '../components/Buttons/SetSpermHaverStatusBtn.js';
 import ParticipantContext from '../context/participant.context.js';
-import { markAllNonNegQuestionsAsUnasked } from '../utils/utils.js';
+import { markAllNonNegQuestionsAsUnasked, markAllRelevantQuestionsAsUnasked } from '../utils/utils.js';
 
 
 
@@ -149,7 +149,8 @@ const RandomiserPage = () => {
        resetRequired,
        nonNegResetRequired, 
        setLoadAllQuestionsRequired, 
-       setNonNegResetRequired
+       setNonNegResetRequired, 
+       setRelevantResetRequired,
      } = useContext(QuestionContext);
      const {
       personHasSperm
@@ -159,8 +160,6 @@ const RandomiserPage = () => {
        const [lockInMoment, setLockInMoment] = useState(false);
        const [spermStatusConfirmed, setSpermStatusConfirmed] = useState(false) 
 
-
- 
  const resetNonNegAndReload = async() => {
   console.log("in resetNonNegAndReload")
   await markAllNonNegQuestionsAsUnasked();
@@ -168,8 +167,15 @@ const RandomiserPage = () => {
   setNonNegResetRequired(false);
   window.location.reload();
   //update state will happen in reload button
+ }
 
-
+ const resetRelevantAndReload = async() => {
+  console.log("in resetRelevantAndReload")
+  await markAllRelevantQuestionsAsUnasked();
+  setLoadAllQuestionsRequired(true);
+  setRelevantResetRequired(false);
+  window.location.reload();
+  //update state will happen in reload button
  }
   console.log("allUnaskedQuestions in state", allUnaskedQuestions)
     return (

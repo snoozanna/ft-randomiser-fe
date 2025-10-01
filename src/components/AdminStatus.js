@@ -122,6 +122,7 @@ const AdminStatus = () => {
         <p className={`${nonNegCounts[true] <= 20 ? "alert" : ""}`}>
           Non negotiable questions: {nonNegCounts[true]}
         </p>
+        <p>Relevant questions remaining: {levelCounts["relevant"]}</p>
        
        {resetRequired ? (
           <p className="resetRequired">

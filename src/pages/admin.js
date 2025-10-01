@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { devices } from '../styles/breakpoints.js';
 import { QuestionContext } from '../context/questions.context';
-import { markAllQuestionsAsUnasked, markAllRapidFireAsUnasked, updateCurrentQuestionNotInProgress } from '../utils/utils.js';
+import { markAllQuestionsAsUnasked, markAllRapidFireAsUnasked, updateCurrentQuestionNotInProgress, markAllRelevantQuestionsAsUnasked } from '../utils/utils.js';
 import mark from "./../assets/images/mark.png";
 import AdminStatus from '../components/AdminStatus.js';
 
@@ -22,7 +22,8 @@ const AdminPageStyles = styled.div`
   .resetContainer{
     display:flex;
     flex-direction:column;
-    align-items:center;
+    align-items:start;
+    gap: 2rem
   }
 `;
 
@@ -39,7 +40,8 @@ const AdminPage = () => {
     setLoadAllQuestionsRequired,
     setNonNegResetRequired,
     questionSequenceIndex,
-    questionSequence
+    questionSequence, 
+    setRelevantResetRequired
   } = useContext(QuestionContext);
 const [currentSequence, setCurrentSequence] = useState([])
 const [isLoading, setIsLoading] = useState(false)
@@ -77,18 +79,45 @@ const fullReset = async () => {
         }
   }
 
+  const clickHandlerRelevant = () => {
+    if (window.confirm("This will set all relevant questions to unasked. Are you sure?")) { resetRelevantAndReload();
+          } else {
+            console.log("no thanks");
+          }
+    }
+
+ const resetRelevantAndReload = async() => {
+  console.log("in resetRelevantAndReload")
+  setIsLoading(true)
+  await markAllRelevantQuestionsAsUnasked();
+  setLoadAllQuestionsRequired(true);
+  setRelevantResetRequired(false);
+  setIsLoading(false);
+  window.location.reload();
+  //update state will happen in reload button
+ }
+
 
   return (
     <>
       <AdminPageStyles>
         <AdminStatus/>
         <div className="resetContainer">
-          <h3>Full Reset</h3>
-          <p>This will mark all questions as unasked.</p>
+        
           {isLoading ? (
             "Reset in progress"
           ) : (
-            <button onClick={clickHandler}>Reset</button>
+           <>
+           <div>
+             <h3>Full Reset</h3>
+             <p>This will mark all questions as unasked.</p>
+                <button onClick={clickHandler}>Reset</button>
+           </div>
+             <h3>Reset just relevant</h3>
+             <p>This will mark all "relevant" questions as unasked.</p>
+              <button onClick={clickHandlerRelevant}>Reset Relevant</button>
+           </>
+         
           )}
         </div>
       </AdminPageStyles>

@@ -575,6 +575,44 @@ exports.markAllNonNegQuestionsAsUnasked = async () => {
  }
 
 
+ exports.markAllRelevantQuestionsAsUnasked = async () => {
+  console.log("marking all Relevant questions as Unasked")
+  try {
+    // Define the mutation object
+    const mutation = {
+      patch: {
+        query: "*[_type == 'question' && level == 'relevant']", 
+        set: {
+          beenAsked: false,
+        },
+      },
+    };
+ 
+    // Send the mutation using fetch
+    const apiUrl = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.GATSBY_SANITY_TOKEN}`,
+      },
+      body: JSON.stringify({ mutations: [mutation] }),
+    });
+ 
+    if (response.ok) {
+      const result = await response.json();
+      console.log(
+        `Document updated  - all relevant questions marked as not asked"):`,
+        result,
+      );
+    } else {
+      console.error("Failed to update document:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error updating document:", error);
+  }
+ }
+
 exports.createAskedQuestion = async (questionId) => {
 // this was created for debugging - not necessary to use normally
   const url = `${process.env.GATSBY_MUTATE_SANITY_API_URL}`;
