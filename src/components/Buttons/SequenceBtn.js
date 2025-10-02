@@ -81,10 +81,9 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
     sequenceOrder.forEach((levelEntry, index) => {
       const chosenQuestion = shuffledQuestions.find((question) => {
         const alreadyPicked = sequence.includes(question);
+            // first check if level is hard and sperm is had and index is 3, pick an unasked relevant question
         if (levelSequenceLabel === 2 && index === 2 && personHasSperm ){
-   
           return question.level === "relevant" && !alreadyPicked
-
         }
 
         const baseMatch =
@@ -99,15 +98,15 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
         return baseMatch && needToComeLaterMatch;
       });
 
-      // if level is hard and sperm is had and index is 3, pick an unasked relevant question
+  
       
       if (!chosenQuestion) {
-        if (levelEntry.level === "deep" && levelEntry.nonNeg === true) 
-        
-        {
-           errorMessage = "Not enough nonNeg deep questions";
-           setNonNegResetRequired(true);
+        if (levelEntry.level === "deep" && levelEntry.nonNeg === true)    
+        {errorMessage = "Not enough nonNeg deep questions";
+        setNonNegResetRequired(true);
         }
+
+        
         attemptFailureLog.missingMatches.push({
           index,
           levelEntry,
