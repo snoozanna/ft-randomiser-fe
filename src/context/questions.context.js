@@ -176,7 +176,7 @@ console.log("needComeCounts", needComeCounts);
         console.log(
           `Level "${level}" has ${levelCounts[level]} or fewer questions.`,
         );
-         setResetRequired(true);
+        setRelevantResetRequired(true);
       }
     });
 

@@ -125,6 +125,9 @@ const RandomiserPageStyles = styled.section`
       border: 3px solid black;
       border-radius: 5px;
     }
+    p.resetRequired.relevant {
+      background:var(--toxicgreen);
+    }
   }
 
   @media ${devices.mobileL} {
@@ -151,6 +154,7 @@ const RandomiserPage = () => {
        setLoadAllQuestionsRequired, 
        setNonNegResetRequired, 
        setRelevantResetRequired,
+       relevantResetRequired
      } = useContext(QuestionContext);
      const {
       personHasSperm
@@ -255,6 +259,15 @@ const RandomiserPage = () => {
                   </span>
                 </p>
               ) : null}
+
+               {relevantResetRequired ? (
+                        <p className="resetRequired relevant">
+                          <span className="status-wrapper">
+                            <img src={mark} alt="mark" />
+                            RELEVANT RESET REQUIRED!
+                          </span>
+                        </p>
+                      ) : null}
       
             </div>
             <div className="btn-container-left">

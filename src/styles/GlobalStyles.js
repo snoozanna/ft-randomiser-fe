@@ -15,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
     --pink:#ff87e5;
     --orange:#dc7a30;
     --coral:#ff7f50;
+    --toxicgreen: #b2ff4f;
     --brown: hsl(323 21% 16%);
     --mintgreen: #32D7B9;
      --lightgreen: #98e9d4;

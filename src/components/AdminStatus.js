@@ -42,11 +42,14 @@ const AdminStatusStyles = styled.div`
       border: 2px solid black;
       border-radius: 5px;
     }
+    p.resetRequired.relevant {
+      background:var(--toxicgreen);
+    }
   }
 `;
 
 const AdminStatus = () => {
-  const { allUnaskedQuestions, resetRequired, setResetRequired } =
+  const { allUnaskedQuestions, resetRequired, relevantResetRequired  } =
     useContext(QuestionContext);
   const [levelCounts, setLevelCounts] = useState("")
   const [nonNegCounts, setNonNegCounts] = useState("");
@@ -128,10 +131,21 @@ const AdminStatus = () => {
           <p className="resetRequired">
             <span className="status-wrapper">
               <img src={mark} alt="mark" />
-              RESET REQUIRED!
+             FULL RESET REQUIRED!
             </span>
           </p>
         ) : null}
+
+        {relevantResetRequired ? (
+          <p className="resetRequired relevant">
+            <span className="status-wrapper">
+              <img src={mark} alt="mark" />
+              RELEVANT RESET REQUIRED!
+            </span>
+          </p>
+        ) : null}
+
+       
         {/* </span> */}
       </div>
     </AdminStatusStyles>
