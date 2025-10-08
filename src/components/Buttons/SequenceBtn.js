@@ -82,7 +82,7 @@ const buildSequence = (sequenceOrder, nonNegNum = 2) => {
       const chosenQuestion = shuffledQuestions.find((question) => {
         const alreadyPicked = sequence.includes(question);
             // first check if level is hard and sperm is had and index is 3, pick an unasked relevant question
-        if (levelSequenceLabel === 2 && index === 2 && personHasSperm ){
+        if (levelSequenceLabel === 2 && index === 3 && personHasSperm ){
           return question.level === "relevant" && !alreadyPicked
         }
 
