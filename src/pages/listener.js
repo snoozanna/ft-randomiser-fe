@@ -59,8 +59,8 @@ const ListenerPageStyles = styled.section`
     letter-spacing: 0.4rem;
     }
     h3.question.show > p.smallerFont {
-      font-size: 3.9rem;
-      line-height: 6rem;
+      font-size: 5.5rem;
+      line-height: 8rem;
     }
     /* h3.question.show > p.bacFontSize {
       font-size: 5rem;
