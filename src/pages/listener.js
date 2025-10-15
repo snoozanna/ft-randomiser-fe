@@ -33,7 +33,6 @@ const ListenerPageStyles = styled.section`
     }
     .glow-logo-wrapper > img {
       max-width: 50%;
-      max-width: 35%;
     }
     p {
       margin-bottom: 0;
