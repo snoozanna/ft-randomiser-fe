@@ -138,7 +138,7 @@ useEffect(() => {
           <h3 className="question show">
             {questionToDisplay ? <p
               className={`${
-                questionToDisplay.question.length >= 120
+                questionToDisplay.question.length >= 115
                   ? "smallerFont"
                   : "normalFont"
               } neon`}
