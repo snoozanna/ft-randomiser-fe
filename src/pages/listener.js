@@ -24,7 +24,7 @@ const ListenerPageStyles = styled.section`
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    height: 35vh;
+    height: 60vh;
 
     .glow-logo-wrapper {
       display: flex;
